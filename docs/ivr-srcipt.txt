@@ -1,0 +1,8 @@
+IVR Script: Unauthorized Transaction Alert[System Voice: Professional, calm, and clear tone]
+
+Hello, this is Institution calling for Name regarding a security matter with your account. We’ve detected a recent transaction of $350.85, at Merchant that may be unauthorized. 
+If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3."
+
+
+
+[If 1 is pressed]
