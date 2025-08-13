@@ -1,0 +1,60 @@
+/* cdr.php */
+body { font-family: 'Roboto', sans-serif; background-color: #f4f6f9; margin: 0; height: 100vh;}
+.wrapper { display: flex; flex-direction: column; min-height: 100vh;}
+.main-header { background-color: #2c3e50; color: #fff; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; width: 100%; z-index: 1100;}
+.logo-container { display: flex; align-items: center;}
+.logo img { height: 40px; margin-right: 10px;}
+.logo-mini img { height: 30px;}
+.sidebar-toggle { color: #fff; font-size: 20px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; padding: 5px;}
+.sidebar-toggle:hover { color: #1abc9c;}
+.navbar-custom-menu .user-menu { display: flex; align-items: center;}
+.user-menu .user-info { display: flex; align-items: center; color: #fff; text-decoration: none;}
+.user-image { width: 17px; height: 19px; border-radius: 50%; margin-right: 10px;}
+.main-sidebar { width: 250px; background-color: #2c3e50; color: #fff; position: fixed; height: 100%; top: 0; left: 0; transition: left 0.3s ease; z-index: 1000;}
+.main-sidebar.active { left: -250px;}
+.sidebar { padding: 20px;}
+.user-panel { display: flex; align-items: center; padding: 15px; background-color: #344450; margin-bottom: 20px; border-radius: 6px;}
+.user-panel .image img { width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;}
+.user-panel .info p { margin: 0; font-weight: 500;}
+.sidebar-menu { list-style: none; padding: 0;}
+.sidebar-menu .header { padding: 10px 0; font-size: 14px; text-transform: uppercase; color: #b0b7c2;}
+.sidebar-menu li a { color: #fff; padding: 12px 20px; display: flex; align-items: center; text-decoration: none; font-size: 16px; border-radius: 6px;}
+.sidebar-menu li a:hover { background-color: #344450;}
+.sidebar-menu li.active a { background-color: #1abc9c;}
+.sidebar-menu li i { margin-right: 10px; font-size: 18px;}
+.content-wrapper { margin-left: 250px; padding: 80px 20px 20px; transition: margin-left 0.3s ease; min-height: calc(100vh - 60px);}
+.content-wrapper.active { margin-left: 0;}
+.content-header h1 { font-size: 24px; margin: 0 0 20px; color: #2c3e50;}
+.card { background-color: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: transform 0.2s, box-shadow 0.2s;}
+.card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);}
+.card h4 { font-size: 18px; font-weight: 500; margin-bottom: 15px; color: #2c3e50;}
+.cdr-table { width: 100%; border-collapse: collapse;}
+.cdr-table th,
+.cdr-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e0e4e8;}
+.cdr-table th { background-color: #2c3e50; color: #fff; font-weight: 500;}
+.cdr-table tr:hover { background-color: #f8f9fa;}
+.cdr-number { font-family: monospace; font-size: 16px; color: #1abc9c;}
+.pagination-controls { display: flex; justify-content: center; align-items: center; margin-top: 15px; font-size: 14px;}
+.pagination-controls button { background: none; border: none; color: #1abc9c; font-size: 16px; margin: 0 10px; cursor: pointer; transition: color 0.2s;}
+.pagination-controls button:disabled { color: #b0b7c2; cursor: not-allowed;}
+.pagination-controls button:hover:not(:disabled) { color: #16a085;}
+.pagination-controls span { margin: 0 10px; color: #2c3e50;}
+.pagination-controls select { border-radius: 6px; border: 1px solid #e0e4e8; padding: 4px 8px; font-size: 14px; margin-left: 20px; color: #2c3e50;}
+.pagination-controls select:focus { border-color: #1abc9c; outline: none;}
+.action-buttons button { margin: 0 5px; padding: 5px 10px; font-size: 14px;}
+.bulk-actions { margin-bottom: 15px; display: flex; align-items: center;}
+.select-all-checkbox { margin-right: 10px;}
+@media (max-width: 768px) { .main-sidebar { width: 200px; left: 0; }
+ .main-sidebar.active { left: -200px; }
+ .content-wrapper { margin-left: 200px; padding: 70px 15px 15px; }
+ .content-wrapper.active { margin-left: 0; }
+ .content-header h1 { font-size: 22px; }
+ .card { padding: 15px; }
+ .cdr-table th,
+ .cdr-table td { padding: 8px; font-size: 14px; }
+ .pagination-controls { font-size: 12px; }
+ .pagination-controls button { font-size: 14px; margin: 0 5px; }
+ .pagination-controls select { font-size: 12px; padding: 3px 6px; }}
+.modal-content { animation: slideIn 0.3s ease-in-out;}
+@keyframes slideIn { from { transform: translateY(-50px); opacity: 0; }
+ to { transform: translateY(0); opacity: 1; }}

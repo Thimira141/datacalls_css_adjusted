@@ -1,0 +1,165 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    magnus_username VARCHAR(20) DEFAULT NULL,
+    magnus_password VARCHAR(255) NOT NULL,
+    magnus_user_id INT,
+    aller_id VARCHAR(255),
+    sip_domain VARCHAR(255) NOT NULL DEFAULT '72.60.25.185';
+    sip_id INT,    
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+ALTER TABLE users
+ADD COLUMN magnus_password VARCHAR(255) NOT NULL DEFAULT '',
+ADD COLUMN sip_domain VARCHAR(255) NOT NULL DEFAULT '72.60.25.185';
+ALTER TABLE users ADD COLUMN caller_id VARCHAR(255);
+
+
+ALTER TABLE users MODIFY magnus_user_id INT DEFAULT NULL, MODIFY sip_id INT DEFAULT NULL;
+
+ALTER TABLE ivr_profiles ADD magnus_ivr_id INT NULL;
+ALTER TABLE users ADD magnus_password VARCHAR(255) NOT NULL,
+
+ALTER TABLE calls 
+ADD magnus_call_id VARCHAR(255) DEFAULT NULL,
+
+
+
+CREATE TABLE deleted_cdrs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    cdr_id INT NOT NULL,
+    user_id INT NOT NULL,
+    deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE KEY unique_cdr_user (cdr_id, user_id)
+);
+
+CREATE TABLE password_resets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    expires_at TIMESTAMP NOT NULL,
+    INDEX(email)
+);
+
+-- Create Contacts table
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Create Institutions table
+CREATE TABLE institutions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Create Merchants table
+CREATE TABLE merchants (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+-- Create IVR Calls table
+CREATE TABLE ivr_calls (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    institution_name VARCHAR(255) NOT NULL,
+    customer_name VARCHAR(255) NOT NULL,
+    customer_number VARCHAR(20) NOT NULL,
+    caller_id VARCHAR(20) NOT NULL,
+    callback_number VARCHAR(20) NOT NULL,
+    merchant_name VARCHAR(255) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    status ENUM('initiated', 'completed', 'failed') DEFAULT 'initiated',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+
+ALTER TABLE calls
+ADD COLUMN institution_name VARCHAR(255),
+ADD COLUMN customer_name VARCHAR(255),
+ADD COLUMN merchant_name VARCHAR(255),
+ADD COLUMN amount DECIMAL(10,2),
+ADD COLUMN dtmf_input VARCHAR(10),
+ADD COLUMN call_status VARCHAR(50);
+ADD COLUMN tts_script TEXT;
+
+
+CREATE TABLE ivr_profiles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    profile_name VARCHAR(255) NOT NULL,
+    institution_name VARCHAR(255) NOT NULL,
+    caller_id VARCHAR(20) NOT NULL,
+    callback_number VARCHAR(20) NOT NULL,
+    merchant_name VARCHAR(255) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+DROP TABLE IF EXISTS dtmf_inputs;
+CREATE TABLE dtmf_inputs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    call_id INT NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    dtmf_keys VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (call_id) REFERENCES calls(id)
+);
+
+
+CREATE TABLE calls (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    customer_number VARCHAR(20) NOT NULL,
+    caller_id VARCHAR(20) NOT NULL,
+    duration INT NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+
+CREATE TABLE password_resets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(100) NOT NULL,
+    expires_at DATETIME NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    FOREIGN KEY (email) REFERENCES users(email)
+);
+
+
+CREATE TABLE login_attempts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE invoices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    payment_id VARCHAR(255) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    created_time DATETIME NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
