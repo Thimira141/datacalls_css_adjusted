@@ -1,0 +1,10 @@
+# Prevent access to .env, config files, etc.
+<FilesMatch "\.(env|htaccess|ini|log|conf|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Optional: force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

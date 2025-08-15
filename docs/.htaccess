@@ -1,0 +1,3 @@
+# /controller/.htaccess and /inc/.htaccess and /docs/.htaccess
+Order Deny,Allow
+Deny from all

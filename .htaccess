@@ -1,0 +1,16 @@
+<FilesMatch "\.(env|htaccess|ini|log|conf|sql|json)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "config.php">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to /public only
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/index.php [L]
+
+# Block direct access to /controller and /inc
+RewriteRule ^(controller|inc|docs)/ - [F,L]

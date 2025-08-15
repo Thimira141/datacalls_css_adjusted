@@ -1,0 +1,10 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "illuminate/database": "^12.24",
+        "illuminate/events": "^12.24",
+        "illuminate/container": "^12.24",
+        "illuminate/hashing": "^12.24",
+        "rakit/validation": "^1.4"
+    }
+}
