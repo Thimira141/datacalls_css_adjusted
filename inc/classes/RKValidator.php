@@ -12,6 +12,7 @@ require_once __DIR__ . '/../../config.php';
 use Rakit\Validation\Validator;
 use inc\classes\ValidatorRules\UniqueRule;
 use inc\classes\ValidatorRules\ExistsRule;
+use inc\classes\ValidatorRules\StringRule;
 
 class RKValidator extends Validator
 {
@@ -22,6 +23,7 @@ class RKValidator extends Validator
         // Register your custom rules here
         $this->addValidator('unique', new UniqueRule());
         $this->addValidator('exists', new ExistsRule());
+        $this->addValidator('string', new StringRule());
 
         // You can also set global aliases or other config here if needed
     }
