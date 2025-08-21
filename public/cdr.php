@@ -37,7 +37,7 @@ try {
 
     // Sanitize and store in session
     $_SESSION['username'] = htmlspecialchars($user->username ?? "Unknown User", ENT_QUOTES, 'UTF-8');
-    $_SESSION['magnus_user_id'] = $user->magnus_user_id;
+    $magnus_user_id = $_SESSION['magnus_user_id'] = $user->magnus_user_id;
 
     // CSRF token generation
     if (empty($_SESSION['csrf_token'])) {
