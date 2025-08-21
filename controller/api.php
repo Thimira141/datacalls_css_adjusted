@@ -89,7 +89,7 @@ switch ($action) {
     case 'get_sip_info':
         try {
             error_log("get_sip_info requested for user_id: $user_id");
-            $user = DB::table('users')->where('id', $user_id)->first(['username, magnus_password, sip_domain']);
+            $user = DB::table('users')->where('id', $user_id)->first(['username', 'magnus_password', 'sip_domain']);
             if ($user) {
                 $response = [
                     'success' => true,
