@@ -4,10 +4,10 @@ require_once __DIR__ . '/../config.php';
 use Illuminate\Database\Capsule\Manager as DB;
 use Controller\MagnusBilling;
 
-session_start();
-ini_set('display_errors', 0); // Set to 1 for debugging
-ini_set('display_startup_errors', 0);
-error_reporting(E_ALL);
+ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
+ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);
+error_reporting(env('APP_DEBUG') ? E_ALL : 0);
+error_log('cdr_api.php_error_log');
 
 // Log to a file for debugging
 $logFile = __DIR__ . '/cdr_api_debug.log';
@@ -29,7 +29,7 @@ try {
     file_put_contents($logFile, date('Y-m-d H:i:s') . " - Database connection successful\n", FILE_APPEND);
 
     // Fetch magnus_user_id and username
-    $user = DB::table('users')->where('id', $_SESSION['user_id'])->first(['username, magnus_user_id']);
+    $user = DB::table('users')->where('id', $_SESSION['user_id'])->first(['username', 'magnus_user_id']);
 
     if (!$user || !$user->magnus_user_id) {
         file_put_contents($logFile, date('Y-m-d H:i:s') . " - No magnus_user_id for user_id: {$_SESSION['user_id']}\n", FILE_APPEND);
