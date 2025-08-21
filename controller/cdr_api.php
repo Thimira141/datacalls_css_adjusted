@@ -64,7 +64,13 @@ if ($action === 'get_calls') {
 
         // Try id_user filter
         file_put_contents($logFile, date('Y-m-d H:i:s') . " - Trying id_user filter: $magnus_user_id\n", FILE_APPEND);
-        $result = $magnusBilling->read('call', ['filter' => [['id_user', '=', $magnus_user_id]]]);
+        //set the filter to get calls from $id_user
+        $magnusBilling->setFilter('id_user', $magnus_user_id, 'eq', 'numeric');
+        $result = $magnusBilling->read('call', 1);
+        $magnusBilling->clearFilter();
+
+        file_put_contents('l.log', '['.date('Y-m-d H:i:s').']'.'L-73: '.json_encode($result) ."\n", FILE_APPEND);
+        
         file_put_contents($logFile, date('Y-m-d H:i:s') . " - id_user response: " . json_encode($result, JSON_PRETTY_PRINT) . "\n", FILE_APPEND);
 
         if (isset($result['rows']) && is_array($result['rows'])) {
