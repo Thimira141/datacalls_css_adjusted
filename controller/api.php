@@ -10,8 +10,8 @@ use Controller\MagnusBilling;
 ob_start();
 
 // Enable error reporting for debugging (disabled in production)
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
+ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
+ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);
 error_log("Starting api.php");
 
 try {
@@ -111,8 +111,7 @@ switch ($action) {
 
     case 'get_contacts':
         try {
-            $contacts = DB::table('contacts')->where('id', $user_id)->first(['contacts']);
-            $contacts = $contacts ? (array) $contacts : [];
+            $contacts = DB::table('contacts')->where('user_id', $user_id)->get()->toArray();
             error_log("Fetched " . count($contacts) . " contacts for user_id: $user_id");
             echo json_encode(['success' => true, 'contacts' => $contacts]);
         } catch (Exception $e) {
@@ -135,7 +134,7 @@ switch ($action) {
             echo json_encode(['success' => false, 'message' => 'User not logged in']);
             exit;
         }
-        // validate data
+
         $validator = new Validator;
         $rules = [
             'name' => 'required|string',
@@ -144,7 +143,7 @@ switch ($action) {
         $messages = [
             'regex' => ':attribute must start with 1 and be 10–14 digits (e.g., 12025550123)'
         ];
-        $validate = $validator->validate($_POST, $rules, $messages);
+        $validate = $validator->validate($_POST, $rules, $messages = []);
         $validate->setAlias('phone_number', 'Phone Number');
 
         if ($validate->fails()) {
@@ -260,8 +259,6 @@ switch ($action) {
         }
         $id = $validate->getValue('id');
         try {
-            $stmt = $pdo->prepare("DELETE FROM institutions WHERE id = ? AND user_id = ?");
-            $stmt->execute([$id, $user_id]);
             $query = DB::table('institutions')->where('id', $id)->where('user_id', $user_id)->delete();
             if ($query > 0) {
                 error_log("Deleted institution ID: $id for user_id: $user_id");
@@ -275,10 +272,8 @@ switch ($action) {
         }
         break;
 
-    case 'get_merchants':
+    case 'get_merchants': //FIXME::failed to get merchants
         try {
-            $stmt = $pdo->prepare("SELECT id, name FROM merchants WHERE user_id = ?");
-            $stmt->execute([$user_id]);
             $merchants = DB::table('merchants')->where('user_id', $user_id)->get(['id', 'name'])->toArray();
             error_log("Fetched " . count($merchants) . " merchants for user_id: $user_id");
             echo json_encode(['success' => true, 'merchants' => $merchants]);
