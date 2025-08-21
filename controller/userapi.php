@@ -9,6 +9,9 @@ use Controller\MagnusBilling;
 
 // Start output buffering to prevent unwanted output
 ob_start();
+ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
+ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);
+error_log('user_api.php_error_log');
 
 // Include MagnusBilling class
 // require_once __DIR__ . "/magnusBilling.php";
@@ -27,7 +30,7 @@ function sendResetEmail($email, $token)
 {
     $from = 'noreply@yourdomain.com'; // Replace with your email
     $subject = 'Password Reset Request';
-    $resetUrl = "http://localhost/reset-password.php?email=" . urlencode($email) . "&token=$token";
+    $resetUrl = env('APP_URL')."/reset-password.php?email=" . urlencode($email) . "&token=$token";
     $body = "Click this link to reset your password: <a href='$resetUrl'>Reset Password</a>";
     $headers = "From: DataCaller <$from>\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
