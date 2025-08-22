@@ -81,11 +81,10 @@ if ($action === 'get_calls') {
         }
 
         // Fallback to username filter
-        // NOTE:: CDR does not support for username filter instead user name we use users.caller_id=callerid
+        // NOTE:: CDR does not support for username filter instead username we use users.caller_id=callerid
         if (empty($callRecords) && empty($magnus_callerid) && $magnus_callerid!==null) {
             // echo 'username filter';
             file_put_contents($logFile, date('Y-m-d H:i:s') . " - No records with id_user, trying magnus_callerid: $magnus_callerid\n", FILE_APPEND);
-            // FIXME:: second error part, i check the server too, server also gives error
             $magnusBilling->setFilter('callerid', $magnus_callerid, 'eq', 'numeric');
             $result = $magnusBilling->read('call');
             // $result = is_string($result) ? $result : [];
