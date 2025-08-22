@@ -1168,6 +1168,12 @@ switch ($action) {
 
         break;
 
+    case 'tts':
+        $tts = new Inc\Classes\TTS\VoiceRssTextToSpeech;
+        $output = $tts->synthesize("hello world, im thimira dilshan");
+        echo $output;
+
+
     default:
         echo json_encode(['success' => false, 'message' => 'Invalid action']);
         error_log("Invalid action: $action");

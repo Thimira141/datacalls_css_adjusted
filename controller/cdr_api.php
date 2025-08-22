@@ -29,7 +29,7 @@ try {
     file_put_contents($logFile, date('Y-m-d H:i:s') . " - Database connection successful\n", FILE_APPEND);
 
     // Fetch magnus_user_id and username
-    $user = DB::table('users')->where('id', $_SESSION['user_id'])->first(['username', 'magnus_user_id']);
+    $user = DB::table('users')->where('id', $_SESSION['user_id'])->first(['username', 'magnus_user_id','caller_id']);
 
     if (!$user || !$user->magnus_user_id) {
         file_put_contents($logFile, date('Y-m-d H:i:s') . " - No magnus_user_id for user_id: {$_SESSION['user_id']}\n", FILE_APPEND);
@@ -38,6 +38,7 @@ try {
     }
     $magnus_user_id = $user->magnus_user_id;
     $username = $user->username;
+    $magnus_callerid = $user->caller_id;
     file_put_contents($logFile, date('Y-m-d H:i:s') . " - Fetched magnus_user_id: $magnus_user_id, username: $username\n", FILE_APPEND);
 } catch (Exception $e) {
     file_put_contents($logFile, date('Y-m-d H:i:s') . " - Database error: " . $e->getMessage() . "\n", FILE_APPEND);
@@ -69,8 +70,6 @@ if ($action === 'get_calls') {
         $result = $magnusBilling->read('call', 1);
         $magnusBilling->clearFilter();
 
-        file_put_contents('l.log', '['.date('Y-m-d H:i:s').']'.'L-73: '.json_encode($result) ."\n", FILE_APPEND);
-        
         file_put_contents($logFile, date('Y-m-d H:i:s') . " - id_user response: " . json_encode($result, JSON_PRETTY_PRINT) . "\n", FILE_APPEND);
 
         if (isset($result['rows']) && is_array($result['rows'])) {
@@ -82,24 +81,32 @@ if ($action === 'get_calls') {
         }
 
         // Fallback to username filter
-        if (empty($callRecords)) {
-            file_put_contents($logFile, date('Y-m-d H:i:s') . " - No records with id_user, trying username: $username\n", FILE_APPEND);
-            $result = $magnusBilling->read('call', ['filter' => [['username', '=', $username]]]);
-            file_put_contents($logFile, date('Y-m-d H:i:s') . " - username response: " . json_encode($result, JSON_PRETTY_PRINT) . "\n", FILE_APPEND);
+        // NOTE:: CDR does not support for username filter instead user name we use users.caller_id=callerid
+        if (empty($callRecords) && empty($magnus_callerid) && $magnus_callerid!==null) {
+            // echo 'username filter';
+            file_put_contents($logFile, date('Y-m-d H:i:s') . " - No records with id_user, trying magnus_callerid: $magnus_callerid\n", FILE_APPEND);
+            // FIXME:: second error part, i check the server too, server also gives error
+            $magnusBilling->setFilter('callerid', $magnus_callerid, 'eq', 'numeric');
+            $result = $magnusBilling->read('call');
+            // $result = is_string($result) ? $result : [];
+            $magnusBilling->clearFilter();
+            // file_put_contents('l.log', '['.date('Y-m-d H:i:s').']'.'L-89: '.json_encode($result)."\n", FILE_APPEND);
+            file_put_contents($logFile, date('Y-m-d H:i:s') . " - magnus_callerid response: " . json_encode($result, JSON_PRETTY_PRINT) . "\n", FILE_APPEND);
 
             if (isset($result['rows']) && is_array($result['rows'])) {
                 $callRecords = $result['rows'];
-                file_put_contents($logFile, date('Y-m-d H:i:s') . " - Using nested 'rows' from username filter\n", FILE_APPEND);
+                file_put_contents($logFile, date('Y-m-d H:i:s') . " - Using nested 'rows' from magnus_callerid filter\n", FILE_APPEND);
             } elseif (is_array($result)) {
                 $callRecords = $result;
-                file_put_contents($logFile, date('Y-m-d H:i:s') . " - Using flat array from username filter\n", FILE_APPEND);
+                file_put_contents($logFile, date('Y-m-d H:i:s') . " - Using flat array from magnus_callerid filter\n", FILE_APPEND);
             }
         }
 
         // Fallback to no filter
         if (empty($callRecords)) {
+            // echo 'no filter';
             file_put_contents($logFile, date('Y-m-d H:i:s') . " - No records with filters, fetching all CDRs\n", FILE_APPEND);
-            $result = $magnusBilling->read('call', []);
+            $result = $magnusBilling->read('call', 1);
             file_put_contents($logFile, date('Y-m-d H:i:s') . " - No filter response: " . json_encode($result, JSON_PRETTY_PRINT) . "\n", FILE_APPEND);
 
             if (isset($result['rows']) && is_array($result['rows'])) {

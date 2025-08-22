@@ -265,7 +265,7 @@ try {
                         populateCDRTable(cdrData, currentPage, itemsPerPage);
                     } else {
                         $('#cdrTableBody').html(
-                            `<tr><td colspan="6">Error: ${response.message || 'No call records found'}</td></tr>`
+                            `<tr><td colspan="6">${response.message || 'No call records found'}</td></tr>`
                         );
                         $('#pageInfo').text('Page 1 of 1');
                         $('#prevPage').prop('disabled', true);

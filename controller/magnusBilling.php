@@ -248,7 +248,7 @@ class MagnusBilling
 
     public function setFilter($field, $value, $comparison = 'st', $type = 'string')
     {
-        $this->filter[] = (object) [
+        $this->filter[] = [
             'type'       => $type,
             'field'      => $field,
             'value'      => $value,

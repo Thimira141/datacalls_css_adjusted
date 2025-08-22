@@ -51,7 +51,7 @@ try {
         <header class="main-header">
             <div class="logo-container">
                 <a href="#" class="logo">
-                    <span class="logo-mini"><img src="assets/img/logo.png" alt="DataCaller"></span>
+                    <span class="logo-mini"><img src="<?=$config->pUrl;?>/img/logo.png" alt="DataCaller"></span>
                 </a>
                 <a href="#" class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></a>
             </div>
