@@ -20,7 +20,7 @@ To enable Google Text-to-Speech (TTS) functionality in this project, follow thes
      ```
      inc/classes/GoogleTTS/Authentication/
      ```
-
+this program use google tts ssml [Google TTS SSML Ref](https://cloud.google.com/text-to-speech/docs/ssml)
 
 ## ⚠️ Security Reminder
 
