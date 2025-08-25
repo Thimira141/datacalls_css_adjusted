@@ -273,7 +273,7 @@ switch ($action) {
         }
         break;
 
-    case 'get_merchants': //FIXME::failed to get merchants
+    case 'get_merchants':
         try {
             $merchants = DB::table('merchants')->where('user_id', $user_id)->get(['id', 'name'])->toArray();
             error_log("Fetched " . count($merchants) . " merchants for user_id: $user_id");
