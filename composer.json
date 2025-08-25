@@ -5,6 +5,7 @@
         "illuminate/events": "^12.24",
         "illuminate/container": "^12.24",
         "illuminate/hashing": "^12.24",
-        "rakit/validation": "^1.4"
+        "rakit/validation": "^1.4",
+        "google/cloud-text-to-speech": "^2.2"
     }
 }

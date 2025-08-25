@@ -1,0 +1,27 @@
+[2025-08-25 07:36:14] [NOTICE] Starting synthesis process...
+[2025-08-25 07:36:15] [NOTICE] SSML input set.
+[2025-08-25 07:36:15] [NOTICE] Voice parameters set: en-US-Wavenet-D.
+[2025-08-25 07:36:15] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 07:36:15] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 07:36:17] [ERROR] Synthesis failed: {
+    "message": "Empty language code.",
+    "code": 3,
+    "status": "INVALID_ARGUMENT",
+    "details": []
+}
+[2025-08-25 07:38:02] [NOTICE] Starting synthesis process...
+[2025-08-25 07:38:02] [NOTICE] SSML input set.
+[2025-08-25 07:38:02] [NOTICE] Voice parameters set: en-US-Wavenet-D.
+[2025-08-25 07:38:02] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 07:38:02] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 07:38:04] [NOTICE] Speech synthesized, response received.
+[2025-08-25 07:38:04] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 07:38:04] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_07_38_02__68abf6badd0f7.mp3
+[2025-08-25 07:46:44] [NOTICE] Starting synthesis process...
+[2025-08-25 07:46:44] [NOTICE] SSML input set.
+[2025-08-25 07:46:44] [NOTICE] Voice parameters set: en-US-Wavenet-D.
+[2025-08-25 07:46:44] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 07:46:44] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 07:46:46] [NOTICE] Speech synthesized, response received.
+[2025-08-25 07:46:46] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 07:46:46] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_07_46_44__68abf8c44c829.mp3

