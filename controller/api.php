@@ -571,7 +571,7 @@ switch ($action) {
             'customer_name' => 'required|string|max:255',
             'customer_number' => 'required|string|max:20',
             'caller_id' => 'required|string|max:20',
-            'callback_method' => 'required|string|in:call,sms,email', // adjust options as needed
+            'callback_method' => 'required|string|in:softphone,phone', // adjust options as needed
             'callback_number' => 'required|string|max:20',
             'merchant_name' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0',
@@ -601,7 +601,7 @@ switch ($action) {
         if ($validate->fails()) {
             echo json_encode([
                 'success' => false,
-                'message' => implode('<br>', $validate->errors()->all()),
+                'message' => $validate->errors()->all(),
                 'status' => 'error',
                 'className' => 'error'
             ]);
