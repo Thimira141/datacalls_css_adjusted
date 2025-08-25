@@ -90,7 +90,19 @@ To enable Google Text-to-Speech (TTS) functionality in this project, follow thes
      ```
      inc/classes/GoogleTTS/Authentication/google-tts-api-credentials.json
      ```
+   ## 🎤 Google TTS Voice Settings
 
+   To customize the voice output for Google Text-to-Speech ([See Google TTS List of supported languages](https://cloud.google.com/text-to-speech/docs/list-voices-and-types#list_of_all_supported_languages)), set the following environment variables in your `.env` file:
+
+   ```env
+   GOOGLE_TTS_VOICE_NAME=en-US-Wavenet-D   # Use Wavenet voices for better SSML support
+   GOOGLE_TTS_LANGUAGE_CODE=en-US          # Language code (e.g., en-US)
+   ```
+
+   **Note:**  
+   - Wavenet voices provide higher quality and improved SSML compatibility. you need to choose voice name working with SSML compatibility.
+   - Ensure these variables match your application's requirements and supported Google TTS options.
+   - After updating `.env`, restart your application for changes to take effect.
 
 ## ⚠️ Security Reminder
 

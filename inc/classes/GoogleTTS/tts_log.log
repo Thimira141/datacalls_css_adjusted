@@ -25,3 +25,27 @@
 [2025-08-25 07:46:46] [NOTICE] Speech synthesized, response received.
 [2025-08-25 07:46:46] [NOTICE] Audio content returned from Google TTS.
 [2025-08-25 07:46:46] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_07_46_44__68abf8c44c829.mp3
+[2025-08-25 15:49:09] [NOTICE] Starting synthesis process...
+[2025-08-25 15:49:10] [NOTICE] SSML input set.
+[2025-08-25 15:49:10] [NOTICE] Voice parameters set, name: en-US-Wavenet-D, lang code: en-US, gender: 1
+[2025-08-25 15:49:10] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 15:49:10] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 15:49:12] [NOTICE] Speech synthesized, response received.
+[2025-08-25 15:49:12] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 15:49:12] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_15_49_09__68ac69d5e5abd.mp3
+[2025-08-25 15:50:07] [NOTICE] Starting synthesis process...
+[2025-08-25 15:50:07] [NOTICE] SSML input set.
+[2025-08-25 15:50:07] [NOTICE] Voice parameters set, name: en-US-Wavenet-D, lang code: en-US, gender: 2
+[2025-08-25 15:50:07] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 15:50:07] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 15:50:09] [NOTICE] Speech synthesized, response received.
+[2025-08-25 15:50:09] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 15:50:09] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_15_50_07__68ac6a0f1ca52.mp3
+[2025-08-25 15:52:14] [NOTICE] Starting synthesis process...
+[2025-08-25 15:52:14] [NOTICE] SSML input set.
+[2025-08-25 15:52:14] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-08-25 15:52:14] [NOTICE] Audio config set: MP3 encoding.
+[2025-08-25 15:52:14] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 15:52:16] [NOTICE] Speech synthesized, response received.
+[2025-08-25 15:52:16] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 15:52:16] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_15_52_14__68ac6a8ee9577.mp3

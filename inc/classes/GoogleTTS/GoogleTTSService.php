@@ -10,7 +10,7 @@ use Google\Cloud\TextToSpeech\V1\Client\TextToSpeechClient;
 use Google\Cloud\TextToSpeech\V1\VoiceSelectionParams;
 use Google\Cloud\TextToSpeech\V1\SynthesizeSpeechRequest;
 
-error_reporting(E_ALL);
+error_reporting(boolval(env('APP_DEBUG')) ? E_ALL : E_ERROR);
 
 class GoogleTTSService
 {
@@ -94,9 +94,9 @@ class GoogleTTSService
 
             // Voice parameters set: en-US-Wavenet-D.
             $voice = new VoiceSelectionParams();
-            $voice->setLanguageCode('en-US');
-            $voice->setName('en-US-Wavenet-D');
-            $this->tts_log("[NOTICE] Voice parameters set: en-US-Wavenet-D.");
+            $voice->setLanguageCode(env('GOOGLE_TTS_LANGUAGE_CODE'));
+            $voice->setName(env('GOOGLE_TTS_VOICE_NAME'));
+            $this->tts_log("[NOTICE] Voice parameters set, name: {$voice->getName()}, lang code: {$voice->getLanguageCode()}");
 
             // Audio config set: MP3 encoding.
             $audioConfig = new AudioConfig();
