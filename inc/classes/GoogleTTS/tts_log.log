@@ -49,3 +49,11 @@
 [2025-08-25 15:52:16] [NOTICE] Speech synthesized, response received.
 [2025-08-25 15:52:16] [NOTICE] Audio content returned from Google TTS.
 [2025-08-25 15:52:16] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_15_52_14__68ac6a8ee9577.mp3
+[2025-08-25 18:38:30] [NOTICE] Starting synthesis process...
+[2025-08-25 18:38:31] [NOTICE] SSML input set.
+[2025-08-25 18:38:31] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-08-25 18:38:31] [NOTICE] Audio config set: WAV encoding.
+[2025-08-25 18:38:31] [NOTICE] SynthesizeSpeechRequest built.
+[2025-08-25 18:38:33] [NOTICE] Speech synthesized, response received.
+[2025-08-25 18:38:33] [NOTICE] Audio content returned from Google TTS.
+[2025-08-25 18:38:33] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_25_18_38_30__68ac9186b9454.wav

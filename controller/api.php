@@ -5,7 +5,8 @@ use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\CSRFToken;
 use inc\classes\RKValidator as Validator;
 use Controller\MagnusBilling;
-use \inc\classes\GoogleTTS\GoogleTTSService;
+use inc\classes\GoogleTTS\GoogleTTSService;
+use inc\classes\GoogleTTS\TtsAudioApiConnection;
 
 // Start output buffering to prevent unwanted output
 ob_start();
@@ -575,7 +576,7 @@ switch ($action) {
             'callback_number' => 'required|string|max:20',
             'merchant_name' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0',
-            'magnus_ivr_id' => 'required|integer|min:1'
+            'magnus_ivr_id' => 'required|integer|min:1|nullable'
         ];
         $messages = [
             'required' => ':attribute is required',
@@ -617,6 +618,7 @@ switch ($action) {
         $merchant_name = $validate->getValue('merchant_name');
         $amount = $validate->getValue('amount');
         $magnus_ivr_id = $validate->getValue('magnus_ivr_id');
+        $magnus_ivr_id = $magnus_ivr_id==null ? '1' : $magnus_ivr_id; // for custom ivr sounds
 
         try {
 
@@ -644,6 +646,7 @@ switch ($action) {
                 $synthesize = $googleTTS->synthesize($ssml_script);
                 if ($synthesize) {
                     $tts_audio_url = $googleTTS->getFileURL();
+                    $tts_audio_path = $googleTTS->getFilePath();
                     // close the google tts
                     $googleTTS->close();
                     // call data
@@ -657,6 +660,19 @@ switch ($action) {
                         'tts_script' => $tts_script,
                         'tts_audio_url' =>$tts_audio_url
                     ];
+                    // upload tts audio
+                    $tts_audio_upload = TtsAudioApiConnection::uploadAudio(
+                        $callData['customer_number'], 
+                        $callData['id_user'],
+                        $callData['ivr_id'],
+                        $tts_audio_path
+                    );
+                    if (!$tts_audio_upload['success']) {
+                        echo json_encode(['success' => false, 'message' => 'Failed to Upload audio']);
+                        error_log("Failed to upload tts audio: " . json_encode($tts_audio_upload));
+                        break;
+                    }
+
                     $result = $magnusBilling->create('call', $callData);
                     if (!isset($result['success']) || !$result['success']) {
                         echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['error'] ?? 'Unknown error')]);
@@ -676,7 +692,8 @@ switch ($action) {
                         'institution_name' => $institution_name,
                         'merchant_name' => $merchant_name,
                         'amount' => $amount,
-                        'tts_script' => (string) $tts_script . "\n\n tts_audio_url:" .$tts_audio_url
+                        'tts_script' => $tts_script,
+                        'tts_audio_url' => $tts_audio_url
                     ]);
 
                     if ((bool) $call_id) {

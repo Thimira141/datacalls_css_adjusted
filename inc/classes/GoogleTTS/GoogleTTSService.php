@@ -65,6 +65,16 @@ class GoogleTTSService
     }
 
     /**
+     * get the audio file path
+     * @return string
+     * @author Thimira Dilshan <thimirad865@gmail.com>
+     */
+    public function getFilePath()
+    {
+        return (string) dirname(__DIR__, 3) . '/storage/audio/' . $this->filename;
+    }
+
+    /**
      * Summary of synthesize
      * @param string $ssml_script SSML script
      * @throws \RuntimeException
