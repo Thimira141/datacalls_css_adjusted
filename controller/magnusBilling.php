@@ -1,5 +1,5 @@
 <?php
-namespace Controller;
+namespace controller;
 /**
  * =======================================
  * ###################################
@@ -225,13 +225,22 @@ class MagnusBilling
 
         $this->setFilter($filed, $value, 'eq');
 
-        $query = $this->query([
+        // echo '<pre>',var_dump((array)[
+        //     'module' => $module,
+        //     'action' => 'read',
+        //     'page'   => 1,
+        //     'start'  => 0,
+        //     'limit'  => 1,
+        //     'filter' => (string)json_encode($this->filter),
+        // ]).'</pre>';
+
+        $query = $this->query((array)[
             'module' => $module,
             'action' => 'read',
             'page'   => 1,
             'start'  => 0,
             'limit'  => 1,
-            'filter' => json_encode($this->filter),
+            'filter' => (string)json_encode($this->filter),
         ]);
 
         $this->filter = [];
@@ -251,7 +260,7 @@ class MagnusBilling
         $this->filter[] = [
             'type'       => $type,
             'field'      => $field,
-            'value'      => $value,
+            'value'      => (string) $value,
             'comparison' => $comparison,
         ];
     }

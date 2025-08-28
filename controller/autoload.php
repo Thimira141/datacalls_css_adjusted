@@ -1,7 +1,7 @@
 <?php
 spl_autoload_register(function ($class) {
     // Namespace prefix (adjust if you use namespaces)
-    $prefix = 'Controller\\';
+    $prefix = 'controller\\';
     $base_dir = __DIR__ . '/';
 
     // Does the class use the namespace prefix?

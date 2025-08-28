@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../config.php';
 
 use Illuminate\Database\Capsule\Manager as DB;
-use Controller\MagnusBilling;
+use controller\MagnusBilling;
 
 ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
 ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);

@@ -4,7 +4,7 @@ require_once __DIR__ . '/../config.php';
 use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\CSRFToken;
 use inc\classes\RKValidator as Validator;
-use Controller\MagnusBilling;
+use controller\MagnusBilling;
 use inc\classes\GoogleTTS\GoogleTTSService;
 use inc\classes\GoogleTTS\TtsAudioApiConnection;
 
@@ -66,12 +66,26 @@ function updateCallerId($username, $callerId, $magnusBilling)
         return false;
     }
     try {
-        $userId = $magnusBilling->getId('user', 'firstname', $username);
-        if (!$userId) {
+        // $username = is_object($username) ? json_encode($username) : (string)$username;
+        // echo 'l-69' . json_encode($username);
+        // echo '<pre>',print_r($magnusBilling->getFields('user')).'</pre>';
+        // // $userId = $magnusBilling->getId('user', 'username', $username);
+        // // FIXME:: internal server error; preg_match(): Argument #2 ($subject) must be of type string, stdClass given
+        // $userId = $magnusBilling->getId('user', 'username', (string)$username);
+        // echo 'l-71';
+        // if (!$userId) {
+        //     error_log("No user ID found for username: $username");
+        //     return false;
+        // }
+        // echo 'l-76';
+        $userId = DB::table('users')->where('username', $username)->first(['magnus_user_id']);
+        if(!$userId) {
             error_log("No user ID found for username: $username");
             return false;
         }
+        $userId = $userId->magnus_user_id;
         $result = $magnusBilling->update('user', $userId, ['callerid' => $callerId]);
+        // echo '<pre>',print_r($result).'</pre>';
         if (isset($result['success']) && $result['success']) {
             error_log("Updated Caller ID for username: $username");
             return true;
@@ -631,6 +645,8 @@ switch ($action) {
                 break;
             }
 
+            $user = (array) $user;
+
             $callback_destination = $callback_method === 'softphone' ? $user['username'] : $callback_number;
 
             if (!updateCallerId($user['username'], $caller_id, $magnusBilling)) {
@@ -654,7 +670,7 @@ switch ($action) {
                         'destination' => 'custom-ivr-call,s,1',
                         'callerid' => $caller_id,
                         'callback' => $callback_destination,
-                        'id_user' => $magnusBilling->getId('user', 'firstname', $user['username']),
+                        'id_user' => $magnusBilling->getId('user', 'username', $user['username']),
                         'ivr_id' => $magnus_ivr_id,
                         'customer_number' => $customer_number,
                         'tts_script' => $tts_script,

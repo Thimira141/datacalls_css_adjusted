@@ -5,7 +5,7 @@ use inc\classes\CSRFToken;
 use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\Auth;
 use inc\classes\RKValidator as Validator;
-use Controller\MagnusBilling;
+use controller\MagnusBilling;
 
 // Start output buffering to prevent unwanted output
 ob_start();

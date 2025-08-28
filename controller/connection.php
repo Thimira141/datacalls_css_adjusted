@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../config.php';
-use Controller\MagnusBilling;
+use controller\MagnusBilling;
 
 // require_once __DIR__ . "/magnusBilling.php";
 

@@ -3,7 +3,7 @@ require_once __DIR__ . '/../config.php';
 
 use inc\classes\CSRFToken;
 use inc\classes\Auth;
-use Controller\MagnusBilling;
+use controller\MagnusBilling;
 use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\RKValidator as Validator;
 
