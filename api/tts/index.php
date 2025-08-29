@@ -5,7 +5,7 @@
  * @author thimira dilshan <thimirad865@gmail.com>
  */
 // CONFIG
-define('UPLOAD_DIR', (string) __DIR__ . '/storage/audio/');
+define('UPLOAD_DIR', '/var/www/html/mbilling/api/tts/storage/audio/');
 define('ASTERISK_DIR', '/var/lib/asterisk/sounds/');
 
 
@@ -69,10 +69,28 @@ if ($file['error'] !== UPLOAD_ERR_OK) {
 
 try {
     // SAVE MP3
-    $mp3Name = (string) "tts_custom_customer_ivr.mp3";
+    $mp3Name = (string) "ivr_custom.mp3";
     $mp3Path = UPLOAD_DIR . $mp3Name;
+
+    if (!is_writable(dirname($mp3Path))) {
+        json_error('Directory still not writable: ' . dirname($mp3Path));
+    }
+
+    // $mp3Path = realpath(__DIR__ . '/../storage/audio/') . '/' . $mp3Name;
+    if (!isset($_FILES['audio_file']) || $_FILES['audio_file']['error'] !== UPLOAD_ERR_OK) {
+        json_error('No valid file uploaded');
+    }
+
+    if (!is_uploaded_file($file['tmp_name'])) {
+        json_error('Temporary file is not valid');
+    }
+
+    if (!is_writable(dirname($mp3Path))) {
+        json_error('Target directory is not writable: ' . $mp3Path);
+    }
+
     if (!move_uploaded_file($file['tmp_name'], $mp3Path)) {
-        json_error('Failed to save uploaded file');
+        json_error('Failed to save uploaded file: ' . json_encode($file) . '; mp3Path: ' . $mp3Path);
     }
 
     // CONVERT TO WAV
@@ -109,15 +127,16 @@ try {
     }
 
     // Update IVR audio
-    $stmt = $pdo->prepare("UPDATE pkg_ivr SET audio = :audio WHERE id = :ivrId");
-    if (!$stmt->execute(['audio' => $wavName, 'ivrId' => $ivrId])) {
+    $stmt = $pdo->prepare("UPDATE pkg_ivr SET option_0 = :option_0 WHERE id = :ivrId");
+    $option_0 = "custom|$wavName,s,1;custom|custom-unmute,s,1";
+    if (!$stmt->execute(['option_0' => $option_0, 'ivrId' => $ivrId])) {
         json_error('Failed to update IVR audio');
     }
 
     // Reload dialplan
-    exec("asterisk -rx 'dialplan reload'", $output, $returnVar);
+    exec("sudo /usr/local/bin/reload_dialplan.sh", $output, $returnVar);
     if ($returnVar !== 0) {
-        json_error('Failed to reload Asterisk dialplan');
+        json_error('Failed to reload Asterisk dialplan' . implode("\n", $output) . '; rtVar: ' . $returnVar);
     }
 } catch (PDOException $e) {
     json_error('Database error: ' . $e->getMessage(), 500);
