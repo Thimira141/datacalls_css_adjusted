@@ -14,15 +14,19 @@ ob_start();
 // Enable error reporting for debugging (disabled in production)
 ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
 ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);
-error_log("Starting api.php");
+custom_log("Starting api.php");
+
+function custom_log($message) {
+    error_log(date("[Y-m-d H:i:s]").$message."\n", 3, 'api-php-log.log');
+}
 
 try {
     DB::connection();
-    error_log("Database connection successful");
+    custom_log("Database connection successful");
 } catch (Exception $e) {
     header('HTTP/1.1 500 Internal Server Error');
     echo json_encode(['success' => false, 'message' => 'Database connection failed']);
-    error_log("Database error: " . $e->getMessage());
+    custom_log("Database error: " . $e->getMessage());
     exit;
 }
 
@@ -32,9 +36,9 @@ try {
 try {
     $magnusBilling = new MagnusBilling(env('MAGNUS_API_KEY'), env('MAGNUS_API_SECRET'));
     $magnusBilling->public_url = env('MAGNUS_PUBLIC_URL');
-    error_log("MagnusBilling initialized successfully");
+    custom_log("MagnusBilling initialized successfully");
 } catch (Exception $e) {
-    error_log("MagnusBilling initialization error: " . $e->getMessage());
+    custom_log("MagnusBilling initialization error: " . $e->getMessage());
     $magnusBilling = null;
 }
 
@@ -43,7 +47,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : (isset($_POST['action']) ? 
 if (!isset($_SESSION['user_id'])) {
     header('HTTP/1.1 401 Unauthorized');
     echo json_encode(['success' => false, 'message' => 'Unauthorized access']);
-    error_log("Unauthorized access - No user_id in session");
+    custom_log("Unauthorized access - No user_id in session");
     exit;
 }
 
@@ -51,18 +55,18 @@ if (!isset($_SESSION['user_id'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !CSRFToken::getInstance()->validateToken($_POST['csrf_token'] ?? '')) {
     header('HTTP/1.1 403 Forbidden');
     echo json_encode(['success' => false, 'message' => 'Invalid CSRF token']);
-    error_log("Invalid CSRF token for action: $action");
+    custom_log("Invalid CSRF token for action: $action");
     exit;
 }
 
 $user_id = $_SESSION['user_id'];
-error_log("Processing action: $action, User ID: $user_id, Session data: " . json_encode($_SESSION));
+custom_log("Processing action: $action, User ID: $user_id, Session data: " . json_encode($_SESSION));
 
 // Function to update Caller ID in MagnusBilling (for user module)
 function updateCallerId($username, $callerId, $magnusBilling)
 {
     if (!$magnusBilling) {
-        error_log("updateCallerId: MagnusBilling not initialized");
+        custom_log("updateCallerId: MagnusBilling not initialized");
         return false;
     }
     try {
@@ -74,28 +78,28 @@ function updateCallerId($username, $callerId, $magnusBilling)
         // $userId = $magnusBilling->getId('user', 'username', (string)$username);
         // echo 'l-71';
         // if (!$userId) {
-        //     error_log("No user ID found for username: $username");
+        //     custom_log("No user ID found for username: $username");
         //     return false;
         // }
         // echo 'l-76';
         $userId = DB::table('users')->where('username', $username)->first(['magnus_user_id']);
         if(!$userId) {
-            error_log("No user ID found for username: $username");
+            custom_log("No user ID found for username: $username");
             return false;
         }
         $userId = $userId->magnus_user_id;
         $result = $magnusBilling->update('user', $userId, ['callerid' => $callerId]);
         // echo '<pre>',print_r($result).'</pre>';
         if (isset($result['success']) && $result['success']) {
-            error_log("Updated Caller ID for username: $username");
+            custom_log("Updated Caller ID for username: $username");
             return true;
         } else {
             $errorMsg = isset($result['error']) ? $result['error'] : 'Unknown error';
-            error_log("MagnusBilling API Error (updateCallerId): $errorMsg");
+            custom_log("MagnusBilling API Error (updateCallerId): $errorMsg");
             return false;
         }
     } catch (Exception $e) {
-        error_log("Exception in updateCallerId: " . $e->getMessage());
+        custom_log("Exception in updateCallerId: " . $e->getMessage());
         return false;
     }
 }
@@ -104,7 +108,7 @@ function updateCallerId($username, $callerId, $magnusBilling)
 switch ($action) {
     case 'get_sip_info':
         try {
-            error_log("get_sip_info requested for user_id: $user_id");
+            custom_log("get_sip_info requested for user_id: $user_id");
             $user = DB::table('users')->where('id', $user_id)->first(['username', 'magnus_password', 'sip_domain']);
             if ($user) {
                 $response = [
@@ -114,25 +118,25 @@ switch ($action) {
                     'sip_password' => $user->magnus_password ?: 'Not Available'
                 ];
                 echo json_encode($response);
-                error_log("Fetched SIP info for user_id: $user_id, username: " . ($user->username ?? 'none') . ", response: " . json_encode($response));
+                custom_log("Fetched SIP info for user_id: $user_id, username: " . ($user->username ?? 'none') . ", response: " . json_encode($response));
             } else {
                 echo json_encode(['success' => false, 'message' => 'User not found']);
-                error_log("Get SIP info error: User not found for user_id: $user_id");
+                custom_log("Get SIP info error: User not found for user_id: $user_id");
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch SIP info: ' . $e->getMessage()]);
-            error_log("Get SIP info error: " . $e->getMessage() . ", user_id: $user_id");
+            custom_log("Get SIP info error: " . $e->getMessage() . ", user_id: $user_id");
         }
         break;
 
     case 'get_contacts':
         try {
             $contacts = DB::table('contacts')->where('user_id', $user_id)->get()->toArray();
-            error_log("Fetched " . count($contacts) . " contacts for user_id: $user_id");
+            custom_log("Fetched " . count($contacts) . " contacts for user_id: $user_id");
             echo json_encode(['success' => true, 'contacts' => $contacts]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch contacts: ' . $e->getMessage()]);
-            error_log("Get contacts error: " . $e->getMessage());
+            custom_log("Get contacts error: " . $e->getMessage());
         }
         break;
 
@@ -183,7 +187,7 @@ switch ($action) {
                 echo json_encode(['success' => false, 'message' => 'Contact added failed']);
             }
         } catch (Exception $e) {
-            error_log("Add contact error: " . $e->getMessage());
+            custom_log("Add contact error: " . $e->getMessage());
             http_response_code(500);
             echo json_encode(['success' => false, 'message' => 'Failed to add contact']);
         }
@@ -206,25 +210,25 @@ switch ($action) {
         try {
             $delete = DB::table('contacts')->where('id', $id)->where('user_id', $user_id)->delete();
             if ($delete > 0) {
-                error_log("Deleted contact ID: $id for user_id: $user_id");
+                custom_log("Deleted contact ID: $id for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Contact deleted successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Contact not found or not authorized']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to delete contact: ' . $e->getMessage()]);
-            error_log("Delete contact error: " . $e->getMessage());
+            custom_log("Delete contact error: " . $e->getMessage());
         }
         break;
 
     case 'get_institutions':
         try {
             $institutions = DB::table('institutions')->where('user_id', $user_id)->get(['id', 'name'])->toArray();
-            error_log("Fetched " . count($institutions) . " institutions for user_id: $user_id");
+            custom_log("Fetched " . count($institutions) . " institutions for user_id: $user_id");
             echo json_encode(['success' => true, 'institutions' => $institutions]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch institutions: ' . $e->getMessage()]);
-            error_log("Get institutions error: " . $e->getMessage());
+            custom_log("Get institutions error: " . $e->getMessage());
         }
         break;
 
@@ -248,15 +252,15 @@ switch ($action) {
                 'name' => $name
             ]);
             if ($query) {
-                error_log("Added institution: $name for user_id: $user_id");
+                custom_log("Added institution: $name for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Institution added successfully']);
             } else {
-                error_log("Added institution Failed: $name for user_id: $user_id");
+                custom_log("Added institution Failed: $name for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'Institution added Failed']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to add institution: ' . $e->getMessage()]);
-            error_log("Add institution error: " . $e->getMessage());
+            custom_log("Add institution error: " . $e->getMessage());
         }
         break;
 
@@ -277,25 +281,25 @@ switch ($action) {
         try {
             $query = DB::table('institutions')->where('id', $id)->where('user_id', $user_id)->delete();
             if ($query > 0) {
-                error_log("Deleted institution ID: $id for user_id: $user_id");
+                custom_log("Deleted institution ID: $id for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Institution deleted successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Institution not found or not authorized']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to delete institution: ' . $e->getMessage()]);
-            error_log("Delete institution error: " . $e->getMessage());
+            custom_log("Delete institution error: " . $e->getMessage());
         }
         break;
 
     case 'get_merchants':
         try {
             $merchants = DB::table('merchants')->where('user_id', $user_id)->get(['id', 'name'])->toArray();
-            error_log("Fetched " . count($merchants) . " merchants for user_id: $user_id");
+            custom_log("Fetched " . count($merchants) . " merchants for user_id: $user_id");
             echo json_encode(['success' => true, 'merchants' => $merchants]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch merchants: ' . $e->getMessage()]);
-            error_log("Get merchants error: " . $e->getMessage());
+            custom_log("Get merchants error: " . $e->getMessage());
         }
         break;
 
@@ -319,15 +323,15 @@ switch ($action) {
                 'name' => $name
             ]);
             if ($query) {
-                error_log("Added merchant: $name for user_id: $user_id");
+                custom_log("Added merchant: $name for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Merchant added successfully']);
             } else {
-                error_log("Add merchant failed: $name for user_id: $user_id");
+                custom_log("Add merchant failed: $name for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'Merchant added failed']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to add merchant: ' . $e->getMessage()]);
-            error_log("Add merchant error: " . $e->getMessage());
+            custom_log("Add merchant error: " . $e->getMessage());
         }
         break;
 
@@ -348,25 +352,25 @@ switch ($action) {
         try {
             $query = DB::table('merchants')->where('id', $id)->where('user_id', $user_id)->delete();
             if ($query > 0) {
-                error_log("Deleted merchant ID: $id for user_id: $user_id");
+                custom_log("Deleted merchant ID: $id for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Merchant deleted successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Merchant not found or not authorized']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to delete merchant: ' . $e->getMessage()]);
-            error_log("Delete merchant error: " . $e->getMessage());
+            custom_log("Delete merchant error: " . $e->getMessage());
         }
         break;
 
     case 'get_ivr_profiles':
         try {
             $ivr_profiles = DB::table('ivr_profiles')->where('user_id', $user_id)->get()->toArray();
-            error_log("Fetched " . count($ivr_profiles) . " IVR profiles for user_id: $user_id");
+            custom_log("Fetched " . count($ivr_profiles) . " IVR profiles for user_id: $user_id");
             echo json_encode(['success' => true, 'ivr_profiles' => $ivr_profiles]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch IVR profiles: ' . $e->getMessage()]);
-            error_log("Get IVR profiles error: " . $e->getMessage());
+            custom_log("Get IVR profiles error: " . $e->getMessage());
         }
         break;
 
@@ -411,15 +415,15 @@ switch ($action) {
             $data['user_id'] = $user_id;
             $query = DB::table('ivr_profiles')->insert($data);
             if ($query) {
-                error_log("Added IVR profile: {$data['profile_name']} for user_id: $user_id");
+                custom_log("Added IVR profile: {$data['profile_name']} for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'IVR Profile added successfully']);
             } else {
-                error_log("Add IVR profile failed: {$data['profile_name']} for user_id: $user_id");
+                custom_log("Add IVR profile failed: {$data['profile_name']} for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'IVR Profile add failed']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to add IVR profile: ' . $e->getMessage()]);
-            error_log("Add IVR profile error: " . $e->getMessage());
+            custom_log("Add IVR profile error: " . $e->getMessage());
         }
         break;
 
@@ -441,14 +445,14 @@ switch ($action) {
         try {
             $deleted = DB::table('ivr_profiles')->where('id', $id)->where('user_id', $user_id)->delete();
             if ($deleted > 0) {
-                error_log("Deleted IVR profile ID: $id for user_id: $user_id");
+                custom_log("Deleted IVR profile ID: $id for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'IVR Profile deleted successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'IVR Profile not found or not authorized']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to delete IVR profile: ' . $e->getMessage()]);
-            error_log("Delete IVR profile error: " . $e->getMessage());
+            custom_log("Delete IVR profile error: " . $e->getMessage());
         }
         break;
 
@@ -469,13 +473,13 @@ switch ($action) {
                 ])
                 ->toArray();
 
-            error_log("Fetched " . count($calls) . " calls for user_id: $user_id");
+            custom_log("Fetched " . count($calls) . " calls for user_id: $user_id");
             echo json_encode([
                 'success' => true,
                 'calls' => $calls
             ]);
         } catch (Exception $e) {
-            error_log("Get calls error: " . $e->getMessage());
+            custom_log("Get calls error: " . $e->getMessage());
             echo json_encode([
                 'success' => false,
                 'message' => 'Failed to fetch call records: ' . $e->getMessage()
@@ -517,14 +521,14 @@ switch ($action) {
                 ->delete();
 
             if ($deleted > 0) {
-                error_log("Deleted $deleted call records for user_id: $user_id");
+                custom_log("Deleted $deleted call records for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Call record(s) deleted successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'No call records found or not authorized']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to delete call record(s): ' . $e->getMessage()]);
-            error_log("Delete call error: " . $e->getMessage());
+            custom_log("Delete call error: " . $e->getMessage());
         }
         break;
 
@@ -562,21 +566,21 @@ switch ($action) {
             $call = DB::table('calls')->where('id', $call_id)->where('user_id', $user_id)->first();
             if ($call) {
                 $updated = DB::table('calls')->where('id', $call_id)->update($validate->getValidData());
-                error_log("Recorded CDR for call_id: $call_id");
+                custom_log("Recorded CDR for call_id: $call_id");
                 echo json_encode(['success' => true, 'message' => 'CDR recorded']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to record CDR: ' . $e->getMessage()]);
-            error_log("Receive CDR error: " . $e->getMessage());
+            custom_log("Receive CDR error: " . $e->getMessage());
         }
         break;
 
     case 'initiate_call':
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            error_log("initiate_call: MagnusBilling not initialized");
+            custom_log("initiate_call: MagnusBilling not initialized");
             break;
         }
         // data validation
@@ -666,7 +670,7 @@ switch ($action) {
             $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
             try {
                 // $synthesize = $googleTTS->synthesize($ssml_script);
-                if ($synthesize||true) {
+                if ($synthesize??null||true) {
                     $tts_audio_url = env('APP_URL') . '/storage/audio/tts__2025_08_28_04_31_04__68afbf68b6121.mp3';//$googleTTS->getFileURL();
                     $tts_audio_path = __DIR__ . '/../storage/audio/tts__2025_08_28_04_31_04__68afbf68b6121.mp3';//$googleTTS->getFilePath();
                     // close the google tts
@@ -692,14 +696,14 @@ switch ($action) {
                     );
                     if (!$tts_audio_upload['success']) {
                         echo json_encode(['success' => false, 'message' => 'Failed to Upload audio']);
-                        error_log("Failed to upload tts audio: " . json_encode($tts_audio_upload));
+                        custom_log("Failed to upload tts audio: " . json_encode($tts_audio_upload));
                         break;
                     }
 
                     $result = $magnusBilling->create('call', $callData);
                     if (!isset($result['success']) || !$result['success']) {
-                        echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['error'] ?? 'Unknown error')]);
-                        error_log("MagnusBilling API Error (initiate_call): " . json_encode($result));
+                        echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['msg'] ?? 'Unknown error')]);
+                        custom_log("MagnusBilling API Error (initiate_call): " . json_encode($result));
                         break;
                     }
 
@@ -720,33 +724,33 @@ switch ($action) {
                     ]);
 
                     if ((bool) $call_id) {
-                        error_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
+                        custom_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
                         echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id]);
                     } else {
-                        error_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
+                        custom_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
                         echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id]);
                     }
                 } else {
                     echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize']);
-                    error_log("TTS synthesize failed ");
+                    custom_log("TTS synthesize failed ");
                     exit;
                 }
             } catch (\Throwable $th) {
                 echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize: ' . $th->getMessage()]);
-                error_log("TTS synthesize error: " . $th->getMessage());
+                custom_log("TTS synthesize error: " . $th->getMessage());
                 exit;
             }
 
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . $e->getMessage()]);
-            error_log("Initiate call error: " . $e->getMessage());
+            custom_log("Initiate call error: " . $e->getMessage());
         }
         break;
 
     case 'end_call':
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            error_log("end_call: MagnusBilling not initialized");
+            custom_log("end_call: MagnusBilling not initialized");
             break;
         }
         // Validate input
@@ -783,7 +787,7 @@ switch ($action) {
                 $result = $magnusBilling->destroy('call', $call->magnus_call_id);
 
                 if (!isset($result['success']) || !$result['success']) {
-                    error_log("MagnusBilling API Error (end_call): " . json_encode($result));
+                    custom_log("MagnusBilling API Error (end_call): " . json_encode($result));
                     echo json_encode([
                         'success' => false,
                         'message' => 'Failed to end call: ' . ($result['error'] ?? 'Unknown error')
@@ -791,13 +795,13 @@ switch ($action) {
                     exit;
                 }
 
-                error_log("Ended call: call_id=$call_id, magnus_call_id={$call->magnus_call_id}");
+                custom_log("Ended call: call_id=$call_id, magnus_call_id={$call->magnus_call_id}");
                 echo json_encode(['success' => true, 'message' => 'Call ended successfully']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
             }
         } catch (Exception $e) {
-            error_log("End call error: " . $e->getMessage());
+            custom_log("End call error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to end call: ' . $e->getMessage()]);
         }
         break;
@@ -805,7 +809,7 @@ switch ($action) {
     case 'get_call_status':
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            error_log("get_call_status: MagnusBilling not initialized");
+            custom_log("get_call_status: MagnusBilling not initialized");
             break;
         }
         // Validate input
@@ -845,7 +849,7 @@ switch ($action) {
 
                 if (!empty($result['rows'][0])) {
                     $status = strtolower($result['rows'][0]['status'] ?? 'calling');
-                    error_log("Call status for call_id=$call_id: $status");
+                    custom_log("Call status for call_id=$call_id: $status");
                     echo json_encode(['success' => true, 'status' => $status]);
                 } else {
                     echo json_encode(['success' => false, 'message' => 'Call not found in MagnusBilling']);
@@ -854,7 +858,7 @@ switch ($action) {
                 echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
             }
         } catch (Exception $e) {
-            error_log("Get call status error: " . $e->getMessage());
+            custom_log("Get call status error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to fetch call status: ' . $e->getMessage()]);
         }
         break;
@@ -862,7 +866,7 @@ switch ($action) {
     case 'check_dtmf':
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            error_log("check_dtmf: MagnusBilling not initialized");
+            custom_log("check_dtmf: MagnusBilling not initialized");
             break;
         }
         // Validate input
@@ -911,7 +915,7 @@ switch ($action) {
                         'dtmf_keys' => $dtmf
                     ]);
 
-                    error_log("DTMF '$dtmf' recorded for call_id: $call_id");
+                    custom_log("DTMF '$dtmf' recorded for call_id: $call_id");
 
                     switch ($dtmf) {
                         case '1':
@@ -950,7 +954,7 @@ switch ($action) {
                 echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
             }
         } catch (Exception $e) {
-            error_log("Check DTMF error: " . $e->getMessage());
+            custom_log("Check DTMF error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to check DTMF: ' . $e->getMessage()]);
         }
         break;
@@ -958,7 +962,7 @@ switch ($action) {
     case 'toggle_mute':
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            error_log("toggle_mute: MagnusBilling not initialized");
+            custom_log("toggle_mute: MagnusBilling not initialized");
             break;
         }
         // Validate input
@@ -1024,17 +1028,17 @@ switch ($action) {
             ]);
 
             if (!empty($result['success'])) {
-                error_log("Mute toggled for call_id: $call_id, mute: " . ($mute ? 'on' : 'off'));
+                custom_log("Mute toggled for call_id: $call_id, mute: " . ($mute ? 'on' : 'off'));
                 echo json_encode(['success' => true, 'message' => 'Mute toggled successfully']);
             } else {
-                error_log("MagnusBilling API Error (toggle_mute): " . json_encode($result));
+                custom_log("MagnusBilling API Error (toggle_mute): " . json_encode($result));
                 echo json_encode([
                     'success' => false,
                     'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error')
                 ]);
             }
         } catch (Exception $e) {
-            error_log("Toggle mute error: " . $e->getMessage());
+            custom_log("Toggle mute error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . $e->getMessage()]);
         }
         break;
@@ -1047,11 +1051,11 @@ switch ($action) {
                 ->orderBy('dtmf_inputs.created_at', 'desc')
                 ->get(['dtmf_inputs.phone_number', 'dtmf_inputs.dtmf_keys', 'dtmf_inputs.created_at'])
                 ->toArray();
-            error_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
+            custom_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
             echo json_encode(['success' => true, 'dtmf_inputs' => $dtmf_inputs]);
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch DTMF inputs: ' . $e->getMessage()]);
-            error_log("Get DTMF error: " . $e->getMessage());
+            custom_log("Get DTMF error: " . $e->getMessage());
         }
         break;
 
@@ -1093,14 +1097,14 @@ switch ($action) {
                     'phone_number' => $phone_number,
                     'dtmf_keys' => $dtmf_keys
                 ]);
-                error_log("Recorded DTMF input for call_id: $call_id, dtmf_keys: $dtmf_keys");
+                custom_log("Recorded DTMF input for call_id: $call_id, dtmf_keys: $dtmf_keys");
                 echo json_encode(['success' => true, 'message' => 'DTMF input recorded']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Invalid call ID']);
             }
         } catch (Exception $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to record DTMF input: ' . $e->getMessage()]);
-            error_log("Receive DTMF error: " . $e->getMessage());
+            custom_log("Receive DTMF error: " . $e->getMessage());
         }
         break;
 
@@ -1135,20 +1139,20 @@ switch ($action) {
                 ->first();
 
             if (!$user) {
-                error_log("User not found for user_id: $user_id");
+                custom_log("User not found for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'User not found']);
                 exit;
             }
 
             if (updateCallerId($user->username, $caller_id, $magnusBilling)) {
-                error_log("Caller ID updated to $caller_id for user_id: $user_id");
+                custom_log("Caller ID updated to $caller_id for user_id: $user_id");
                 echo json_encode(['success' => true, 'message' => 'Caller ID updated successfully']);
             } else {
-                error_log("Failed to update Caller ID for user_id: $user_id");
+                custom_log("Failed to update Caller ID for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID in MagnusBilling']);
             }
         } catch (Exception $e) {
-            error_log("Update Caller ID error: " . $e->getMessage());
+            custom_log("Update Caller ID error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID: ' . $e->getMessage()]);
         }
         break;
@@ -1156,7 +1160,7 @@ switch ($action) {
     case 'update_caller_id':
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             echo json_encode(['success' => false, 'message' => 'Invalid request method']);
-            error_log("update_caller_id error: Invalid request method, user_id: $user_id");
+            custom_log("update_caller_id error: Invalid request method, user_id: $user_id");
             break;
         }
 
@@ -1175,7 +1179,7 @@ switch ($action) {
 
         if (!$validate->passes()) {
             $caller_id = $_POST['callerid'] ?? 'none';
-            error_log("update_caller_id error: Invalid or missing caller_id, input: $caller_id, user_id: $user_id");
+            custom_log("update_caller_id error: Invalid or missing caller_id, input: $caller_id, user_id: $user_id");
             echo json_encode([
                 'success' => false,
                 'message' => implode('<br>', $validate->errors()->all())
@@ -1187,7 +1191,7 @@ switch ($action) {
 
         // Check MagnusBilling instance
         if (!$magnusBilling) {
-            error_log("update_caller_id error: MagnusBilling not initialized, user_id: $user_id");
+            custom_log("update_caller_id error: MagnusBilling not initialized, user_id: $user_id");
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             exit;
         }
@@ -1199,13 +1203,13 @@ switch ($action) {
                 ->first();
 
             if (!$user) {
-                error_log("update_caller_id error: User not found for user_id: $user_id");
+                custom_log("update_caller_id error: User not found for user_id: $user_id");
                 echo json_encode(['success' => false, 'message' => 'User not found']);
                 exit;
             }
 
             if (empty($user->sip_id)) {
-                error_log("update_caller_id error: No sip_id found for user_id: $user_id, username: {$user->username}");
+                custom_log("update_caller_id error: No sip_id found for user_id: $user_id, username: {$user->username}");
                 echo json_encode(['success' => false, 'message' => 'No SIP ID associated with this user']);
                 exit;
             }
@@ -1217,15 +1221,15 @@ switch ($action) {
                     ->where('id', $user_id)
                     ->update(['caller_id' => $caller_id]);
 
-                error_log("update_caller_id success: Caller ID updated to $caller_id for user_id: $user_id, sip_id: {$user->sip_id}, username: {$user->username}");
+                custom_log("update_caller_id success: Caller ID updated to $caller_id for user_id: $user_id, sip_id: {$user->sip_id}, username: {$user->username}");
                 echo json_encode(['success' => true, 'message' => 'Caller ID updated successfully']);
             } else {
                 $errorMsg = $result['error'] ?? 'Unknown error';
-                error_log("update_caller_id error: MagnusBilling API error: $errorMsg, user_id: $user_id, sip_id: {$user->sip_id}");
+                custom_log("update_caller_id error: MagnusBilling API error: $errorMsg, user_id: $user_id, sip_id: {$user->sip_id}");
                 echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID: ' . $errorMsg]);
             }
         } catch (Exception $e) {
-            error_log("update_caller_id error: Exception: " . $e->getMessage() . ", user_id: $user_id");
+            custom_log("update_caller_id error: Exception: " . $e->getMessage() . ", user_id: $user_id");
             echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
         }
 
@@ -1233,7 +1237,7 @@ switch ($action) {
 
     default:
         echo json_encode(['success' => false, 'message' => 'Invalid action']);
-        error_log("Invalid action: $action");
+        custom_log("Invalid action: $action");
         break;
 }
 

@@ -1,0 +1,12 @@
+[2025-08-29 19:17:43]Starting api.php
+[2025-08-29 19:17:43]Database connection successful
+[2025-08-29 19:17:43]MagnusBilling initialized successfully
+[2025-08-29 19:17:43]Processing action: initiate_call, User ID: 8, Session data: {"csrf_token":"63e002e9a43251dea6932ccd116515e6b54ae5221049b7dc9920107b4c5e56c7","user_id":8,"username":"thimirada","magnus_user_id":22}
+[2025-08-29 19:17:44]Updated Caller ID for username: thimirada
+[2025-08-29 19:17:48]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+[2025-08-29 19:18:58]Starting api.php
+[2025-08-29 19:18:58]Database connection successful
+[2025-08-29 19:18:58]MagnusBilling initialized successfully
+[2025-08-29 19:18:58]Processing action: initiate_call, User ID: 8, Session data: {"csrf_token":"63e002e9a43251dea6932ccd116515e6b54ae5221049b7dc9920107b4c5e56c7","user_id":8,"username":"thimirada","magnus_user_id":22}
+[2025-08-29 19:18:58]Updated Caller ID for username: thimirada
+[2025-08-29 19:19:00]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}

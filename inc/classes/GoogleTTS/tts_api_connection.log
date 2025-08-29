@@ -115,3 +115,19 @@
 [2025-08-29 18:58:40] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
 [2025-08-29 18:58:40] Curl complete
 [2025-08-29 18:58:40] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"
+[2025-08-29 19:09:48] Starting Audio Upload
+[2025-08-29 19:09:49] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 19:09:49] Curl complete
+[2025-08-29 19:09:49] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"
+[2025-08-29 19:13:40] Starting Audio Upload
+[2025-08-29 19:13:42] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 19:13:42] Curl complete
+[2025-08-29 19:13:42] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"
+[2025-08-29 19:17:45] Starting Audio Upload
+[2025-08-29 19:17:47] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 19:17:47] Curl complete
+[2025-08-29 19:17:47] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"
+[2025-08-29 19:18:58] Starting Audio Upload
+[2025-08-29 19:19:00] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 19:19:00] Curl complete
+[2025-08-29 19:19:00] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"
