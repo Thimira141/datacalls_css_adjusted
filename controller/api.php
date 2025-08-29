@@ -669,10 +669,10 @@ switch ($action) {
             $googleTTS = new GoogleTTSService;
             $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
             try {
-                // $synthesize = $googleTTS->synthesize($ssml_script);
-                if ($synthesize??null||true) {
-                    $tts_audio_url = env('APP_URL') . '/storage/audio/tts__2025_08_28_04_31_04__68afbf68b6121.mp3';//$googleTTS->getFileURL();
-                    $tts_audio_path = __DIR__ . '/../storage/audio/tts__2025_08_28_04_31_04__68afbf68b6121.mp3';//$googleTTS->getFilePath();
+                $synthesize = $googleTTS->synthesize($ssml_script);
+                if ($synthesize) {
+                    $tts_audio_url = $googleTTS->getFileURL();
+                    $tts_audio_path = $googleTTS->getFilePath();
                     // close the google tts
                     $googleTTS->close();
                     // call data

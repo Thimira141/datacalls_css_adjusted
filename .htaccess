@@ -9,8 +9,8 @@
 </FilesMatch>
 
 # Allow access to /public only
-RewriteCond %{REQUEST_URI} !^/public/
-RewriteRule ^(.*)$ /public/index.php [L]
+# RewriteCond %{REQUEST_URI} !^/public/
+# RewriteRule ^(.*)$ /public/index.php [L]
 
 # Block direct access to /controller and /inc
-RewriteRule ^(controller|inc|docs)/ - [F,L]
+# RewriteRule ^(controller|inc|docs)/ - [F,L]
