@@ -1,0 +1,117 @@
+[2025-08-28 04:27:31] Starting Audio Upload
+[2025-08-28 04:27:33] Curl complete
+[2025-08-28 04:27:33] error http: 301: "<!DOCTYPE HTML PUBLIC \"-\/\/IETF\/\/DTD HTML 2.0\/\/EN\">\n<html><head>\n<title>301 Moved Permanently<\/title>\n<\/head><body>\n<h1>Moved Permanently<\/h1>\n<p>The document has moved <a href=\"http:\/\/72.60.25.185\/mbilling\/api\/tts\/\">here<\/a>.<\/p>\n<hr>\n<address>Apache\/2.4.62 (Debian) Server at 72.60.25.185 Port 80<\/address>\n<\/body><\/html>\n"
+[2025-08-28 04:31:06] Starting Audio Upload
+[2025-08-28 04:31:07] Curl complete
+[2025-08-28 04:31:07] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:44:22] Starting Audio Upload
+[2025-08-28 04:44:24] Curl complete
+[2025-08-28 04:44:24] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:45:26] Starting Audio Upload
+[2025-08-28 04:45:28] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:45:28] Curl complete
+[2025-08-28 04:45:28] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:48:05] Starting Audio Upload
+[2025-08-28 04:48:07] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:48:07] Curl complete
+[2025-08-28 04:48:07] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:48:41] Starting Audio Upload
+[2025-08-28 04:48:43] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:48:43] Curl complete
+[2025-08-28 04:48:43] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:51:45] Starting Audio Upload
+[2025-08-28 04:51:47] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:51:47] Curl complete
+[2025-08-28 04:51:47] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file\"}"
+[2025-08-28 04:52:24] Starting Audio Upload
+[2025-08-28 04:52:25] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:52:25] Curl complete
+[2025-08-28 04:52:25] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file: {\\\"name\\\":\\\"tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"full_path\\\":\\\"D:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\projects\\\\\\\\datacalls_css_adjusted\\\\\\\\controller\\\\\\\/..\\\\\\\/storage\\\\\\\/audio\\\\\\\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"type\\\":\\\"application\\\\\\\/octet-stream\\\",\\\"tmp_name\\\":\\\"\\\\\\\/tmp\\\\\\\/phpbQULZu\\\",\\\"error\\\":0,\\\"size\\\":184512}\"}"
+[2025-08-28 04:56:27] Starting Audio Upload
+[2025-08-28 04:56:29] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 04:56:29] Curl complete
+[2025-08-28 04:56:29] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file: {\\\"name\\\":\\\"tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"full_path\\\":\\\"D:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\projects\\\\\\\\datacalls_css_adjusted\\\\\\\\controller\\\\\\\/..\\\\\\\/storage\\\\\\\/audio\\\\\\\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"type\\\":\\\"application\\\\\\\/octet-stream\\\",\\\"tmp_name\\\":\\\"\\\\\\\/tmp\\\\\\\/php8HbjSq\\\",\\\"error\\\":0,\\\"size\\\":184512}\"}"
+[2025-08-28 05:00:04] Starting Audio Upload
+[2025-08-28 05:00:06] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:00:06] Curl complete
+[2025-08-28 05:00:06] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file: {\\\"name\\\":\\\"tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"full_path\\\":\\\"D:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\projects\\\\\\\\datacalls_css_adjusted\\\\\\\\controller\\\\\\\/..\\\\\\\/storage\\\\\\\/audio\\\\\\\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"type\\\":\\\"application\\\\\\\/octet-stream\\\",\\\"tmp_name\\\":\\\"\\\\\\\/tmp\\\\\\\/phpH7gbDV\\\",\\\"error\\\":0,\\\"size\\\":184512}\"}"
+[2025-08-28 05:01:07] Starting Audio Upload
+[2025-08-28 05:01:08] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:01:08] Curl complete
+[2025-08-28 05:01:08] error http: 400: "{\"success\":false,\"error\":\"Failed to save uploaded file: {\\\"name\\\":\\\"tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"full_path\\\":\\\"D:\\\\\\\\xampp\\\\\\\\htdocs\\\\\\\\projects\\\\\\\\datacalls_css_adjusted\\\\\\\\controller\\\\\\\/..\\\\\\\/storage\\\\\\\/audio\\\\\\\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3\\\",\\\"type\\\":\\\"application\\\\\\\/octet-stream\\\",\\\"tmp_name\\\":\\\"\\\\\\\/tmp\\\\\\\/phpvt90Fb\\\",\\\"error\\\":0,\\\"size\\\":184512}\"}"
+[2025-08-28 05:04:10] Starting Audio Upload
+[2025-08-28 05:04:12] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:04:12] Curl complete
+[2025-08-28 05:04:12] error http: 400: "{\"success\":false,\"error\":\"Target directory is not writable\"}"
+[2025-08-28 05:04:36] Starting Audio Upload
+[2025-08-28 05:04:38] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:04:38] Curl complete
+[2025-08-28 05:04:38] error http: 400: "{\"success\":false,\"error\":\"Target directory is not writable: \\\/tts_custom_customer_ivr.mp3\"}"
+[2025-08-28 05:05:06] Starting Audio Upload
+[2025-08-28 05:05:08] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:05:08] Curl complete
+[2025-08-28 05:05:08] error http: 400: "{\"success\":false,\"error\":\"Target directory is not writable: \\\/var\\\/www\\\/html\\\/mbilling\\\/api\\\/storage\\\/audio\\\/tts_custom_customer_ivr.mp3\"}"
+[2025-08-28 05:06:42] Starting Audio Upload
+[2025-08-28 05:06:44] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:06:44] Curl complete
+[2025-08-28 05:06:44] error http: 400: "{\"success\":false,\"error\":\"Target directory is not writable: \\\/var\\\/www\\\/html\\\/mbilling\\\/api\\\/tts\\\/storage\\\/audio\\\/tts_custom_customer_ivr.mp3\"}"
+[2025-08-28 05:07:46] Starting Audio Upload
+[2025-08-28 05:07:48] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:07:48] Curl complete
+[2025-08-28 05:07:48] error http: 400: "{\"success\":false,\"error\":\"Target directory is not writable: \\\/var\\\/www\\\/html\\\/mbilling\\\/api\\\/tts\\\/storage\\\/audio\\\/tts_custom_customer_ivr.mp3\"}"
+[2025-08-28 05:09:41] Starting Audio Upload
+[2025-08-28 05:09:43] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:09:43] Curl complete
+[2025-08-28 05:09:43] error http: 400: "{\"success\":false,\"error\":\"Directory still not writable: \\\/var\\\/www\\\/html\\\/mbilling\\\/api\\\/tts\\\/storage\\\/audio\"}"
+[2025-08-28 05:11:33] Starting Audio Upload
+[2025-08-28 05:11:35] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:11:35] Curl complete
+[2025-08-28 05:11:35] error http: 500: "{\"success\":false,\"error\":\"Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'audio' in 'SET'\"}"
+[2025-08-28 05:30:19] Starting Audio Upload
+[2025-08-28 05:30:21] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:30:21] Curl complete
+[2025-08-28 05:30:21] error http: 500: "{\"success\":false,\"error\":\"Database error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'audio' in 'SET'\"}"
+[2025-08-28 05:31:05] Starting Audio Upload
+[2025-08-28 05:31:06] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:31:06] Curl complete
+[2025-08-28 05:31:06] error http: 500: "{\"success\":false,\"error\":\"Database error: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'option_0' at row 1\"}"
+[2025-08-28 05:32:46] Starting Audio Upload
+[2025-08-28 05:32:48] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:32:48] Curl complete
+[2025-08-28 05:32:48] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan\"}"
+[2025-08-28 05:42:00] Starting Audio Upload
+[2025-08-28 05:42:02] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:42:02] Curl complete
+[2025-08-28 05:42:02] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan\"}"
+[2025-08-28 05:49:21] Starting Audio Upload
+[2025-08-28 05:49:23] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-28 05:49:23] Curl complete
+[2025-08-28 05:49:23] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan\"}"
+[2025-08-29 18:40:36] Starting Audio Upload
+[2025-08-29 18:40:39] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:40:39] Curl complete
+[2025-08-29 18:40:39] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan\"}"
+[2025-08-29 18:43:24] Starting Audio Upload
+[2025-08-29 18:43:28] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:43:28] Curl complete
+[2025-08-29 18:43:28] error http: 500: ""
+[2025-08-29 18:44:34] Starting Audio Upload
+[2025-08-29 18:44:39] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:44:39] Curl complete
+[2025-08-29 18:44:39] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan; rtVar: 1\"}"
+[2025-08-29 18:53:49] Starting Audio Upload
+[2025-08-29 18:53:51] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:53:51] Curl complete
+[2025-08-29 18:53:51] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplantotal 32\\ndrwxr-xr-x 3 root root 4096 Aug 27 16:05 .\\ndrwxr-xr-x 3 root root 4096 Aug 27 16:05 ..\\n-rw-r--r-- 1 root root 2338 Aug 27 16:05 README.md\\n-rw-r--r-- 1 root root 5130 Aug 29 16:53 index.php\\ndrwxr-xr-x 3 root root 4096 Aug 27 16:05 storage; rtVar: 0\"}"
+[2025-08-29 18:55:37] Starting Audio Upload
+[2025-08-29 18:55:40] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:55:40] Curl complete
+[2025-08-29 18:55:40] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplan; rtVar: 1\"}"
+[2025-08-29 18:58:15] Starting Audio Upload
+[2025-08-29 18:58:17] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:58:17] Curl complete
+[2025-08-29 18:58:17] error http: 400: "{\"success\":false,\"error\":\"Failed to reload Asterisk dialplanDialplan reloaded.; rtVar: 1\"}"
+[2025-08-29 18:58:38] Starting Audio Upload
+[2025-08-29 18:58:40] Curl data{"customer_number":"+118005318722","user_id":22,"ivr_id":"1","audio_file":{"name":"D:\\xampp\\htdocs\\projects\\datacalls_css_adjusted\\controller\/..\/storage\/audio\/tts__2025_08_28_04_31_04__68afbf68b6121.mp3","mime":"","postname":""}}
+[2025-08-29 18:58:40] Curl complete
+[2025-08-29 18:58:40] success: "{\"success\":true,\"message\":\"Audio uploaded and converted\",\"filename\":\"ivr_custom.wav\",\"ivr_id\":\"1\"}"

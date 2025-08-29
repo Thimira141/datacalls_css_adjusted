@@ -1,0 +1,14 @@
+[2025-08-28 04:21:48] Starting uploadAudio for customer_number: +118005318722, user_id: 22, ivr_id: 1, file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_28_04_21_45__68afbd39d16fc.mp3
+[2025-08-28 04:21:48] Prepared POST fields: ["customer_number","user_id","ivr_id","audio_file"]
+[2025-08-28 04:21:48] cURL options set. Sending request to: http://72.60.25.185/mbilling/api/tts
+[2025-08-28 04:21:50] Received HTTP code: 301
+[2025-08-28 04:21:50] HTTP error: 301, response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://72.60.25.185/mbilling/api/tts/">here</a>.</p>
+<hr>
+<address>Apache/2.4.62 (Debian) Server at 72.60.25.185 Port 80</address>
+</body></html>
+

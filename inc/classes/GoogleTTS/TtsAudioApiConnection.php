@@ -8,6 +8,8 @@ namespace inc\classes\GoogleTTS;
 
 require_once dirname(__DIR__, 3) . '/config.php';
 
+error_reporting(boolval(env('APP_DEBUG')) ? E_ALL : E_ERROR);
+
 class TtsAudioApiConnection
 {
     /**
@@ -21,12 +23,13 @@ class TtsAudioApiConnection
      */
     public static function uploadAudio($customer_number, $user_id, $ivr_id, $localMp3Path)
     {
+        self::tts_log('Starting Audio Upload');
         $curl = curl_init();
         curl_setopt_array($curl, [
-            CURLOPT_URL => env('MAGNUS_PUBLIC_URL').'/api/tts',
+            CURLOPT_URL => env('MAGNUS_PUBLIC_URL').'/api/tts/index.php',
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => [
+            CURLOPT_POSTFIELDS => $data = [
                 'customer_number' => $customer_number,
                 'user_id' => $user_id,
                 'ivr_id' => $ivr_id,
@@ -42,7 +45,10 @@ class TtsAudioApiConnection
         $httpCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
         curl_close($curl);
 
+        self::tts_log('Curl data' . json_encode($data));
+        self::tts_log('Curl complete');
         if ($curlError) {
+            self::tts_log('Curl error: ' . json_encode($curlError));
             return [
                 'success' => false,
                 'response' => null,
@@ -51,6 +57,7 @@ class TtsAudioApiConnection
         }
 
         if ($httpCode !== 200) {
+            self::tts_log('error http: '. $httpCode . ': ' . json_encode($response));
             return [
                 'success' => false,
                 'response' => $response,
@@ -58,11 +65,23 @@ class TtsAudioApiConnection
             ];
         }
 
+        self::tts_log('success: ' . json_encode($response));
         return [
             'success' => true,
             'response' => $response,
             'error' => null
         ];
+    }
+
+    /**
+     * neatly log the notice/errors into log file
+     * @param string $message
+     * @return void
+     * @author Thimira Dilshan <thimirad865@gmail.com>
+     */
+    private static function tts_log(string $message): void
+    {
+        error_log(date('[Y-m-d H:i:s] ') . $message . "\n", 3, __DIR__ . "/tts_api_connection.log");
     }
 }
 

@@ -225,22 +225,13 @@ class MagnusBilling
 
         $this->setFilter($filed, $value, 'eq');
 
-        // echo '<pre>',var_dump((array)[
-        //     'module' => $module,
-        //     'action' => 'read',
-        //     'page'   => 1,
-        //     'start'  => 0,
-        //     'limit'  => 1,
-        //     'filter' => (string)json_encode($this->filter),
-        // ]).'</pre>';
-
         $query = $this->query((array)[
             'module' => $module,
             'action' => 'read',
             'page'   => 1,
             'start'  => 0,
             'limit'  => 1,
-            'filter' => (string)json_encode($this->filter),
+            'filter' => $this->filter,
         ]);
 
         $this->filter = [];
