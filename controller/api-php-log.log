@@ -10,3 +10,160 @@
 [2025-08-29 19:18:58]Processing action: initiate_call, User ID: 8, Session data: {"csrf_token":"63e002e9a43251dea6932ccd116515e6b54ae5221049b7dc9920107b4c5e56c7","user_id":8,"username":"thimirada","magnus_user_id":22}
 [2025-08-29 19:18:58]Updated Caller ID for username: thimirada
 [2025-08-29 19:19:00]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+[2025-08-30 17:10:33]Starting api.php
+[2025-08-30 17:10:33]Database connection successful
+[2025-08-30 17:10:33]MagnusBilling initialized successfully
+[2025-08-30 17:10:33]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:10:33]Fetched 3 contacts for user_id: 7
+[2025-08-30 17:10:33]Starting api.php
+[2025-08-30 17:10:33]Database connection successful
+[2025-08-30 17:10:33]MagnusBilling initialized successfully
+[2025-08-30 17:10:33]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:10:33]Fetched 1 institutions for user_id: 7
+[2025-08-30 17:10:33]Starting api.php
+[2025-08-30 17:10:33]Database connection successful
+[2025-08-30 17:10:33]MagnusBilling initialized successfully
+[2025-08-30 17:10:33]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:10:33]Fetched 1 merchants for user_id: 7
+[2025-08-30 17:10:34]Starting api.php
+[2025-08-30 17:10:34]Database connection successful
+[2025-08-30 17:10:34]MagnusBilling initialized successfully
+[2025-08-30 17:10:34]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:10:34]Fetched 0 IVR profiles for user_id: 7
+[2025-08-30 17:12:53]Starting api.php
+[2025-08-30 17:12:53]Database connection successful
+[2025-08-30 17:12:53]MagnusBilling initialized successfully
+[2025-08-30 17:12:53]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:12:53]Fetched 3 contacts for user_id: 7
+[2025-08-30 17:12:53]Starting api.php
+[2025-08-30 17:12:53]Database connection successful
+[2025-08-30 17:12:53]MagnusBilling initialized successfully
+[2025-08-30 17:12:53]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:12:53]Fetched 1 institutions for user_id: 7
+[2025-08-30 17:12:53]Starting api.php
+[2025-08-30 17:12:53]Database connection successful
+[2025-08-30 17:12:53]MagnusBilling initialized successfully
+[2025-08-30 17:12:53]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:12:53]Fetched 1 merchants for user_id: 7
+[2025-08-30 17:12:53]Starting api.php
+[2025-08-30 17:12:53]Database connection successful
+[2025-08-30 17:12:53]MagnusBilling initialized successfully
+[2025-08-30 17:12:53]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:12:53]Fetched 0 IVR profiles for user_id: 7
+[2025-08-30 17:12:59]Starting api.php
+[2025-08-30 17:12:59]Database connection successful
+[2025-08-30 17:12:59]MagnusBilling initialized successfully
+[2025-08-30 17:12:59]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:13:01]Updated Caller ID for username: ldata
+[2025-08-30 17:13:10]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+[2025-08-30 17:17:32]Starting api.php
+[2025-08-30 17:17:32]Database connection successful
+[2025-08-30 17:17:32]MagnusBilling initialized successfully
+[2025-08-30 17:17:32]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:17:34]Updated Caller ID for username: ldata
+[2025-08-30 17:17:38]TTS synthesize error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'callback_number' in 'field list' (Connection: default, SQL: insert into `calls` (`user_id`, `customer_number`, `caller_id`, `callback_method`, `callback_number`, `magnus_call_id`, `institution_name`, `merchant_name`, `amount`, `tts_script`, `tts_audio_url`) values (7, 2001, 18005318722, softphone, ldata, 0, Chase, Target, 100.12, Hello, this is Chase calling for jhone smith regarding a security matter with your account. We’ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3., http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_08_30_17_17_34__68b3160e676c5.mp3))
+[2025-08-30 17:18:20]Starting api.php
+[2025-08-30 17:18:20]Database connection successful
+[2025-08-30 17:18:20]MagnusBilling initialized successfully
+[2025-08-30 17:18:20]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:18:49]Starting api.php
+[2025-08-30 17:18:49]Database connection successful
+[2025-08-30 17:18:49]MagnusBilling initialized successfully
+[2025-08-30 17:18:49]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:18:49]Initiated call: call_id=, magnus_call_id=, customer_number=, callback_method=
+[2025-08-30 17:21:16]Starting api.php
+[2025-08-30 17:21:16]Database connection successful
+[2025-08-30 17:21:16]MagnusBilling initialized successfully
+[2025-08-30 17:21:16]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:21:16]Fetched 3 contacts for user_id: 7
+[2025-08-30 17:21:16]Starting api.php
+[2025-08-30 17:21:16]Database connection successful
+[2025-08-30 17:21:16]MagnusBilling initialized successfully
+[2025-08-30 17:21:16]Processing action: get_sip_info, User ID: 7, Session data: {"csrf_token":"f87783bc25c7589773978d23675ebd5507d2583a00c3c535263564db97fc0ecf","user_id":7,"username":"ldata"}
+[2025-08-30 17:21:16]get_sip_info requested for user_id: 7
+[2025-08-30 17:21:16]Fetched SIP info for user_id: 7, username: ldata, response: {"success":true,"sip_domain":"72.60.25.185","sip_username":"ldata","sip_password":"Data1017$$"}
+[2025-08-31 16:54:54]Starting api.php
+[2025-08-31 16:54:54]Database connection successful
+[2025-08-31 16:54:54]MagnusBilling initialized successfully
+[2025-08-31 16:54:54]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:54:54]Fetched 3 contacts for user_id: 7
+[2025-08-31 16:54:54]Starting api.php
+[2025-08-31 16:54:54]Database connection successful
+[2025-08-31 16:54:54]MagnusBilling initialized successfully
+[2025-08-31 16:54:54]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:54:54]Fetched 1 institutions for user_id: 7
+[2025-08-31 16:54:54]Starting api.php
+[2025-08-31 16:54:54]Database connection successful
+[2025-08-31 16:54:54]MagnusBilling initialized successfully
+[2025-08-31 16:54:54]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:54:54]Fetched 0 IVR profiles for user_id: 7
+[2025-08-31 16:54:54]Starting api.php
+[2025-08-31 16:54:54]Database connection successful
+[2025-08-31 16:54:54]MagnusBilling initialized successfully
+[2025-08-31 16:54:54]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:54:54]Fetched 1 merchants for user_id: 7
+[2025-08-31 16:55:11]Starting api.php
+[2025-08-31 16:55:11]Database connection successful
+[2025-08-31 16:55:11]MagnusBilling initialized successfully
+[2025-08-31 16:55:11]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:55:12]Updated Caller ID for username: ldata
+[2025-08-31 16:55:20]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+[2025-08-31 16:56:52]Starting api.php
+[2025-08-31 16:56:52]Database connection successful
+[2025-08-31 16:56:52]MagnusBilling initialized successfully
+[2025-08-31 16:56:52]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 16:56:53]Updated Caller ID for username: ldata
+[2025-08-31 16:56:58]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+[2025-08-31 17:13:01]Starting api.php
+[2025-08-31 17:13:01]Database connection successful
+[2025-08-31 17:13:01]MagnusBilling initialized successfully
+[2025-08-31 17:13:01]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 17:13:03]Updated Caller ID for username: ldata
+[2025-08-31 17:13:08]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"+94702026023","id_user":21,"ivr_id":"1","customer_number":"94702026023","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_17_13_03__68b4667f1c414.mp3"}
+[2025-08-31 17:23:51]Starting api.php
+[2025-08-31 17:23:51]Database connection successful
+[2025-08-31 17:23:51]MagnusBilling initialized successfully
+[2025-08-31 17:23:51]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 17:23:51]Fetched 3 contacts for user_id: 7
+[2025-08-31 17:23:51]Starting api.php
+[2025-08-31 17:23:51]Database connection successful
+[2025-08-31 17:23:51]MagnusBilling initialized successfully
+[2025-08-31 17:23:51]Processing action: get_sip_info, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 17:23:51]get_sip_info requested for user_id: 7
+[2025-08-31 17:23:51]Fetched SIP info for user_id: 7, username: ldata, response: {"success":true,"sip_domain":"72.60.25.185","sip_username":"ldata","sip_password":"Data1017$$"}
+[2025-08-31 17:34:13]Starting api.php
+[2025-08-31 17:34:13]Database connection successful
+[2025-08-31 17:34:13]MagnusBilling initialized successfully
+[2025-08-31 17:34:13]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 17:34:14]Updated Caller ID for username: ldata
+[2025-08-31 17:34:19]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"+94702026023","id_user":21,"ivr_id":"1","customer_number":"94702026023","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_17_34_14__68b46b76b386d.mp3"}
+[2025-08-31 19:00:03]Starting api.php
+[2025-08-31 19:00:03]Database connection successful
+[2025-08-31 19:00:03]MagnusBilling initialized successfully
+[2025-08-31 19:00:03]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 19:00:04]Updated Caller ID for username: ldata
+[2025-08-31 19:00:09]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"+94702026023","id_user":21,"ivr_id":"1","customer_number":"94702026023","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_19_00_04__68b47f94c0c7d.mp3"}
+[2025-08-31 19:19:29]Starting api.php
+[2025-08-31 19:19:29]Database connection successful
+[2025-08-31 19:19:29]MagnusBilling initialized successfully
+[2025-08-31 19:19:29]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 19:19:29]Updated Caller ID for username: ldata
+[2025-08-31 19:19:34]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"ldata","id_user":21,"ivr_id":"1","customer_number":"2002","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_19_19_30__68b484225bc6c.mp3"}
+[2025-08-31 19:24:04]Starting api.php
+[2025-08-31 19:24:04]Database connection successful
+[2025-08-31 19:24:04]MagnusBilling initialized successfully
+[2025-08-31 19:24:04]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 19:24:04]Updated Caller ID for username: ldata
+[2025-08-31 19:24:07]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"ldata","id_user":21,"ivr_id":"1","customer_number":"2002","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_19_24_04__68b48534b112d.mp3"}
+[2025-08-31 19:26:51]Starting api.php
+[2025-08-31 19:26:51]Database connection successful
+[2025-08-31 19:26:51]MagnusBilling initialized successfully
+[2025-08-31 19:26:51]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"677612f1eb6dfb9f2231dac46409afc3415564f3573049a03ac00973895c95f7","user_id":7,"username":"ldata"}
+[2025-08-31 19:26:51]Updated Caller ID for username: ldata
+[2025-08-31 19:26:55]MagnusBilling API Error (initiate_call): {"success":false,"rows":"error","msg":"Operation no allow"}
+	CallData: {"destination":"custom-ivr-call,s,1","callerid":"18005318722","callback":"ldata","id_user":21,"ivr_id":"1","customer_number":"94702026023","tts_script":"Hello, this is Chase calling for jhone smith regarding a security matter with your account. We\u2019ve detected a recent transaction of $100.12 at Target that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.","tts_audio_url":"http:\/\/localhost\/projects\/datacalls_css_adjusted\/storage\/audio\/tts__2025_08_31_19_26_51__68b485dbe5e2d.mp3"}

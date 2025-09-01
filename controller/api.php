@@ -703,7 +703,7 @@ switch ($action) {
                     $result = $magnusBilling->create('call', $callData);
                     if (!isset($result['success']) || !$result['success']) {
                         echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['msg'] ?? 'Unknown error')]);
-                        custom_log("MagnusBilling API Error (initiate_call): " . json_encode($result));
+                        custom_log("MagnusBilling API Error (initiate_call): " . json_encode($result) . "\n\tCallData: " . json_encode($callData));
                         break;
                     }
 
