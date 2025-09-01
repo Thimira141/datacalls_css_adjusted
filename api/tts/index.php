@@ -6,7 +6,7 @@
  */
 // CONFIG
 define('UPLOAD_DIR', '/var/www/html/mbilling/api/tts/storage/audio/');
-define('ASTERISK_DIR', '/var/lib/asterisk/sounds/');
+define('ASTERISK_DIR', '/var/lib/asterisk/sounds/en/');
 
 
 header('Content-Type: application/json');
@@ -132,7 +132,8 @@ try {
     if (!$stmt->execute(['option_0' => $option_0, 'ivrId' => $ivrId])) {
         json_error('Failed to update IVR audio');
     }
-
+// TODO:: if the calling via magnusAPI didnt worked i will create a custom api for that one too, seriously
+// FIXME: for now from the frontend site this .sh script worked but call didnt originated
     // Reload dialplan
     exec("sudo /usr/local/bin/reload_dialplan.sh", $output, $returnVar);
     if ($returnVar !== 0) {
