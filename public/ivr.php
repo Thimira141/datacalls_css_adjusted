@@ -41,8 +41,8 @@ try {
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
-    <link href="<?=$config->pUrl;?>/css/page-specific/ivr.css" rel="stylesheet">
-    <?=CSRFToken::getInstance()->renderToken(true);?>
+    <link href="<?= $config->pUrl; ?>/css/page-specific/ivr.css" rel="stylesheet">
+    <?= CSRFToken::getInstance()->renderToken(true); ?>
 </head>
 
 <body class="sidebar-mini ivr">
@@ -51,7 +51,7 @@ try {
         <header class="main-header">
             <div class="logo-container">
                 <a href="#" class="logo">
-                    <span class="logo-mini"><img src="<?=$config->pUrl;?>/img/logo.png" alt="DataCaller"></span>
+                    <span class="logo-mini"><img src="<?= $config->pUrl; ?>/img/logo.png" alt="DataCaller"></span>
                 </a>
                 <a href="#" class="sidebar-toggle" onclick="toggleSidebar()"><i class="fas fa-bars"></i></a>
             </div>
@@ -241,7 +241,8 @@ try {
                             </div>
                             <div class="modal-body" style="font-size: 16px;">
                                 <p>You have been successfully logged out,
-                                    <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+                                    <?php echo htmlspecialchars($_SESSION['username']); ?>!
+                                </p>
                                 <p>Redirecting you to the login page...</p>
                             </div>
                             <div class="modal-footer" style="border-top: 1px solid #344450;">
@@ -261,179 +262,180 @@ try {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script>
-    function toggleSidebar() {
-        $('.main-sidebar').toggleClass('active');
-        $('.content-wrapper').toggleClass('active');
-    }
-
-    $(document).ready(function() {
-        const ivrForm = $('#ivrForm');
-        const callButton = $('#callButton');
-        const institutionInput = $('#institutionName');
-        const callerIdInput = $('#callerId');
-        const callbackMethodSelect = $('#callbackMethod');
-        const callbackNumberInput = $('#callbackNumber');
-        const callbackNumberDropdown = $('#callbackNumberDropdown');
-        const merchantInput = $('#merchantName');
-        const customerNameInput = $('#customerName');
-        const customerNumberInput = $('#customerNumber');
-        const amountInput = $('#amount');
-        const institutionDropdown = $('#institutionDropdown');
-        const callerIdDropdown = $('#callerIdDropdown');
-        const merchantDropdown = $('#merchantDropdown');
-        const ivrProfileDropdown = $('#ivrProfileDropdown');
-        const callGrid = $('#callGrid');
-        let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
-
-        // Update live call indicator
-        function updateLiveCallIndicator() {
-            const callCount = Object.keys(activeCalls).length;
-            $('#callCount').text(callCount);
-            $('#liveCallIndicator').toggleClass('active', callCount > 0);
-            updateLiveCallWindow();
+        function toggleSidebar() {
+            $('.main-sidebar').toggleClass('active');
+            $('.content-wrapper').toggleClass('active');
         }
 
-        // Update live call window
-        function updateLiveCallWindow() {
-            const liveCallWindow = $('#liveCallWindow');
-            liveCallWindow.empty();
+        $(document).ready(function () {
+            const ivrForm = $('#ivrForm');
+            const callButton = $('#callButton');
+            const institutionInput = $('#institutionName');
+            const callerIdInput = $('#callerId');
+            const callbackMethodSelect = $('#callbackMethod');
+            const callbackNumberInput = $('#callbackNumber');
+            const callbackNumberDropdown = $('#callbackNumberDropdown');
+            const merchantInput = $('#merchantName');
+            const customerNameInput = $('#customerName');
+            const customerNumberInput = $('#customerNumber');
+            const amountInput = $('#amount');
+            const institutionDropdown = $('#institutionDropdown');
+            const callerIdDropdown = $('#callerIdDropdown');
+            const merchantDropdown = $('#merchantDropdown');
+            const ivrProfileDropdown = $('#ivrProfileDropdown');
+            const callGrid = $('#callGrid');
+            let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
 
-            if (Object.keys(activeCalls).length > 0) {
-                Object.entries(activeCalls).forEach(([callId, callData]) => {
-                    const miniCardHtml = `
+            // Update live call indicator
+            function updateLiveCallIndicator() {
+                const callCount = Object.keys(activeCalls).length;
+                $('#callCount').text(callCount);
+                $('#liveCallIndicator').toggleClass('active', callCount > 0);
+                updateLiveCallWindow();
+            }
+
+            // Update live call window
+            function updateLiveCallWindow() {
+                const liveCallWindow = $('#liveCallWindow');
+                liveCallWindow.empty();
+                let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
+
+                if (Object.keys(activeCalls).length > 0) {
+                    Object.entries(activeCalls).forEach(([callId, callData]) => {
+                        const miniCardHtml = `
                         <div class="mini-call-card" data-call-id="${callId}">
                             <h6>Call to ${callData.customerNumber}</h6>
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
                             <div class="buttons">
                                 <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
-                                <button class="btn btn-danger" data-call-id="${callId}">End Call</button>
+                                <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}">End Call</button>
                             </div>
                         </div>
                     `;
-                    liveCallWindow.append(miniCardHtml);
-                });
-                liveCallWindow.addClass('active');
-            } else {
-                liveCallWindow.removeClass('active');
+                        liveCallWindow.append(miniCardHtml);
+                    });
+                    liveCallWindow.addClass('active');
+                } else {
+                    liveCallWindow.removeClass('active');
+                }
             }
-        }
 
-        // Toggle live call window visibility
-        $('#liveCallIndicator').on('click', function() {
-            $('#liveCallWindow').toggleClass('active');
-        });
+            // Toggle live call window visibility
+            $('#liveCallIndicator').on('click', function () {
+                $('#liveCallWindow').toggleClass('active');
+            });
 
-        // Load contacts into dropdowns
-        function loadContacts() {
-            $.ajax({
-                url: '<?=$config->app->url;?>/controller/api.php',
-                method: 'GET',
-                data: {
-                    action: 'get_contacts'
-                },
-                dataType: 'json',
-                success: function(response) {
-                    callerIdDropdown.empty();
-                    callbackNumberDropdown.empty();
-                    if (response.success && response.contacts.length > 0) {
-                        response.contacts.forEach(contact => {
-                            const item =
-                                `<a class="dropdown-item" href="#" data-number="${contact.phone_number}">${contact.name} - ${contact.phone_number}</a>`;
-                            callerIdDropdown.append(item);
-                            callbackNumberDropdown.append(item);
-                        });
-                    } else {
+            // Load contacts into dropdowns
+            function loadContacts() {
+                $.ajax({
+                    url: '<?= $config->app->url; ?>/controller/api.php',
+                    method: 'GET',
+                    data: {
+                        action: 'get_contacts'
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        callerIdDropdown.empty();
+                        callbackNumberDropdown.empty();
+                        if (response.success && response.contacts.length > 0) {
+                            response.contacts.forEach(contact => {
+                                const item =
+                                    `<a class="dropdown-item" href="#" data-number="${contact.phone_number}">${contact.name} - ${contact.phone_number}</a>`;
+                                callerIdDropdown.append(item);
+                                callbackNumberDropdown.append(item);
+                            });
+                        } else {
+                            callerIdDropdown.append(
+                                '<a class="dropdown-item" href="#">No contacts saved</a>');
+                            callbackNumberDropdown.append(
+                                '<a class="dropdown-item" href="#">No contacts saved</a>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Load Contacts Error:', status, error);
                         callerIdDropdown.append(
-                            '<a class="dropdown-item" href="#">No contacts saved</a>');
+                            '<a class="dropdown-item" href="#">Error loading contacts</a>');
                         callbackNumberDropdown.append(
-                            '<a class="dropdown-item" href="#">No contacts saved</a>');
+                            '<a class="dropdown-item" href="#">Error loading contacts</a>');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Load Contacts Error:', status, error);
-                    callerIdDropdown.append(
-                        '<a class="dropdown-item" href="#">Error loading contacts</a>');
-                    callbackNumberDropdown.append(
-                        '<a class="dropdown-item" href="#">Error loading contacts</a>');
-                }
-            });
-        }
+                });
+            }
 
-        // Load institutions into dropdown
-        function loadInstitutions() {
-            $.ajax({
-                url: '<?=$config->app->url;?>/controller/api.php',
-                method: 'GET',
-                data: {
-                    action: 'get_institutions'
-                },
-                dataType: 'json',
-                success: function(response) {
-                    institutionDropdown.empty();
-                    if (response.success && response.institutions.length > 0) {
-                        response.institutions.forEach(institution => {
-                            const item =
-                                `<a class="dropdown-item" href="#" data-name="${institution.name}">${institution.name}</a>`;
-                            institutionDropdown.append(item);
-                        });
-                    } else {
+            // Load institutions into dropdown
+            function loadInstitutions() {
+                $.ajax({
+                    url: '<?= $config->app->url; ?>/controller/api.php',
+                    method: 'GET',
+                    data: {
+                        action: 'get_institutions'
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        institutionDropdown.empty();
+                        if (response.success && response.institutions.length > 0) {
+                            response.institutions.forEach(institution => {
+                                const item =
+                                    `<a class="dropdown-item" href="#" data-name="${institution.name}">${institution.name}</a>`;
+                                institutionDropdown.append(item);
+                            });
+                        } else {
+                            institutionDropdown.append(
+                                '<a class="dropdown-item" href="#">No institutions saved</a>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Load Institutions Error:', status, error);
                         institutionDropdown.append(
-                            '<a class="dropdown-item" href="#">No institutions saved</a>');
+                            '<a class="dropdown-item" href="#">Error loading institutions</a>');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Load Institutions Error:', status, error);
-                    institutionDropdown.append(
-                        '<a class="dropdown-item" href="#">Error loading institutions</a>');
-                }
-            });
-        }
+                });
+            }
 
-        // Load merchants into dropdown
-        function loadMerchants() {
-            $.ajax({
-                url: '<?=$config->app->url;?>/controller/api.php',
-                method: 'GET',
-                data: {
-                    action: 'get_merchants'
-                },
-                dataType: 'json',
-                success: function(response) {
-                    merchantDropdown.empty();
-                    if (response.success && response.merchants.length > 0) {
-                        response.merchants.forEach(merchant => {
-                            const item =
-                                `<a class="dropdown-item" href="#" data-name="${merchant.name}">${merchant.name}</a>`;
-                            merchantDropdown.append(item);
-                        });
-                    } else {
+            // Load merchants into dropdown
+            function loadMerchants() {
+                $.ajax({
+                    url: '<?= $config->app->url; ?>/controller/api.php',
+                    method: 'GET',
+                    data: {
+                        action: 'get_merchants'
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        merchantDropdown.empty();
+                        if (response.success && response.merchants.length > 0) {
+                            response.merchants.forEach(merchant => {
+                                const item =
+                                    `<a class="dropdown-item" href="#" data-name="${merchant.name}">${merchant.name}</a>`;
+                                merchantDropdown.append(item);
+                            });
+                        } else {
+                            merchantDropdown.append(
+                                '<a class="dropdown-item" href="#">No merchants saved</a>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Load Merchants Error:', status, error);
                         merchantDropdown.append(
-                            '<a class="dropdown-item" href="#">No merchants saved</a>');
+                            '<a class="dropdown-item" href="#">Error loading merchants</a>');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Load Merchants Error:', status, error);
-                    merchantDropdown.append(
-                        '<a class="dropdown-item" href="#">Error loading merchants</a>');
-                }
-            });
-        }
+                });
+            }
 
-        // Load IVR profiles into dropdown
-        function loadIvrProfiles() {
-            $.ajax({
-                url: '<?=$config->app->url;?>/controller/api.php',
-                method: 'GET',
-                data: {
-                    action: 'get_ivr_profiles'
-                },
-                dataType: 'json',
-                success: function(response) {
-                    ivrProfileDropdown.empty();
-                    if (response.success && response.ivr_profiles.length > 0) {
-                        response.ivr_profiles.forEach(profile => {
-                            const item =
-                                `<a class="dropdown-item" href="#" 
+            // Load IVR profiles into dropdown
+            function loadIvrProfiles() {
+                $.ajax({
+                    url: '<?= $config->app->url; ?>/controller/api.php',
+                    method: 'GET',
+                    data: {
+                        action: 'get_ivr_profiles'
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        ivrProfileDropdown.empty();
+                        if (response.success && response.ivr_profiles.length > 0) {
+                            response.ivr_profiles.forEach(profile => {
+                                const item =
+                                    `<a class="dropdown-item" href="#" 
                             data-profile-name="${profile.profile_name}"
                             data-institution-name="${profile.institution_name}"
                             data-caller-id="${profile.caller_id}"
@@ -441,101 +443,101 @@ try {
                             data-merchant-name="${profile.merchant_name}"
                             data-amount="${profile.amount}"
                             data-magnus-ivr-id="${profile.magnus_ivr_id || ''}">${profile.profile_name}</a>`;
-                            ivrProfileDropdown.append(item);
-                        });
-                    } else {
+                                ivrProfileDropdown.append(item);
+                            });
+                        } else {
+                            ivrProfileDropdown.append(
+                                '<a class="dropdown-item" href="#">No IVR profiles saved</a>');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        console.error('Load IVR Profiles Error:', status, error);
                         ivrProfileDropdown.append(
-                            '<a class="dropdown-item" href="#">No IVR profiles saved</a>');
+                            '<a class="dropdown-item" href="#">Error loading IVR profiles</a>');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Load IVR Profiles Error:', status, error);
-                    ivrProfileDropdown.append(
-                        '<a class="dropdown-item" href="#">Error loading IVR profiles</a>');
+                });
+            }
+
+            $('.dropdown-menu').on('click', '.dropdown-item', function (e) {
+                e.preventDefault();
+                const profileName = $(this).data('profile-name');
+                const institutionName = $(this).data('institution-name');
+                const callerId = $(this).data('caller-id');
+                const callbackNumber = $(this).data('callback-number');
+                const merchantName = $(this).data('merchant-name');
+                const amount = $(this).data('amount');
+                const magnusIvrId = $(this).data('magnus-ivr-id');
+                const number = $(this).data('number');
+                const name = $(this).data('name');
+                const input = $(this).closest('.input-group').find('input');
+
+                if (profileName) {
+                    institutionInput.val(institutionName || '');
+                    customerNameInput.val('');
+                    customerNumberInput.val('');
+                    callerIdInput.val(callerId || '');
+                    callbackNumberInput.val(callbackNumber || '');
+                    callbackMethodSelect.val('phone');
+                    callbackNumberInput.show().prop('required', true);
+                    callbackNumberInput.closest('.input-group').find('.input-group-append').show();
+                    merchantInput.val(merchantName || '');
+                    amountInput.val(amount || '');
+                    $('#magnus_ivr_id').val(magnusIvrId || '');
+                } else if (number) {
+                    input.val(number);
+                } else if (name) {
+                    input.val(name);
                 }
             });
-        }
 
-        $('.dropdown-menu').on('click', '.dropdown-item', function(e) {
-            e.preventDefault();
-            const profileName = $(this).data('profile-name');
-            const institutionName = $(this).data('institution-name');
-            const callerId = $(this).data('caller-id');
-            const callbackNumber = $(this).data('callback-number');
-            const merchantName = $(this).data('merchant-name');
-            const amount = $(this).data('amount');
-            const magnusIvrId = $(this).data('magnus-ivr-id');
-            const number = $(this).data('number');
-            const name = $(this).data('name');
-            const input = $(this).closest('.input-group').find('input');
+            // Handle callback method change
+            callbackMethodSelect.on('change', function () {
+                if ($(this).val() === 'softphone') {
+                    callbackNumberInput.hide().val('softphone').prop('required', false);
+                    callbackNumberInput.closest('.input-group').find('.input-group-append').hide();
+                } else {
+                    callbackNumberInput.show().val('').prop('required', true);
+                    callbackNumberInput.closest('.input-group').find('.input-group-append').show();
+                }
+            });
 
-            if (profileName) {
-                institutionInput.val(institutionName || '');
-                customerNameInput.val('');
-                customerNumberInput.val('');
-                callerIdInput.val(callerId || '');
-                callbackNumberInput.val(callbackNumber || '');
-                callbackMethodSelect.val('phone');
-                callbackNumberInput.show().prop('required', true);
-                callbackNumberInput.closest('.input-group').find('.input-group-append').show();
-                merchantInput.val(merchantName || '');
-                amountInput.val(amount || '');
-                $('#magnus_ivr_id').val(magnusIvrId || '');
-            } else if (number) {
-                input.val(number);
-            } else if (name) {
-                input.val(name);
-            }
-        });
+            // Handle dropdown item selection
+            $('.dropdown-menu').on('click', '.dropdown-item', function (e) {
+                e.preventDefault();
+                const profileName = $(this).data('profile-name');
+                const institutionName = $(this).data('institution-name');
+                const callerId = $(this).data('caller-id');
+                const callbackNumber = $(this).data('callback-number');
+                const merchantName = $(this).data('merchant-name');
+                const amount = $(this).data('amount');
+                const number = $(this).data('number');
+                const name = $(this).data('name');
+                const input = $(this).closest('.input-group').find('input');
 
-        // Handle callback method change
-        callbackMethodSelect.on('change', function() {
-            if ($(this).val() === 'softphone') {
-                callbackNumberInput.hide().val('softphone').prop('required', false);
-                callbackNumberInput.closest('.input-group').find('.input-group-append').hide();
-            } else {
-                callbackNumberInput.show().val('').prop('required', true);
-                callbackNumberInput.closest('.input-group').find('.input-group-append').show();
-            }
-        });
+                if (profileName) {
+                    institutionInput.val(institutionName || '');
+                    customerNameInput.val('');
+                    customerNumberInput.val('');
+                    callerIdInput.val(callerId || '');
+                    callbackNumberInput.val(callbackNumber || '');
+                    callbackMethodSelect.val('phone'); // Default to phone for profiles
+                    callbackNumberInput.show().prop('required', true);
+                    callbackNumberInput.closest('.input-group').find('.input-group-append').show();
+                    merchantInput.val(merchantName || '');
+                    amountInput.val(amount || '');
+                } else if (number) {
+                    input.val(number);
+                } else if (name) {
+                    input.val(name);
+                }
+            });
 
-        // Handle dropdown item selection
-        $('.dropdown-menu').on('click', '.dropdown-item', function(e) {
-            e.preventDefault();
-            const profileName = $(this).data('profile-name');
-            const institutionName = $(this).data('institution-name');
-            const callerId = $(this).data('caller-id');
-            const callbackNumber = $(this).data('callback-number');
-            const merchantName = $(this).data('merchant-name');
-            const amount = $(this).data('amount');
-            const number = $(this).data('number');
-            const name = $(this).data('name');
-            const input = $(this).closest('.input-group').find('input');
-
-            if (profileName) {
-                institutionInput.val(institutionName || '');
-                customerNameInput.val('');
-                customerNumberInput.val('');
-                callerIdInput.val(callerId || '');
-                callbackNumberInput.val(callbackNumber || '');
-                callbackMethodSelect.val('phone'); // Default to phone for profiles
-                callbackNumberInput.show().prop('required', true);
-                callbackNumberInput.closest('.input-group').find('.input-group-append').show();
-                merchantInput.val(merchantName || '');
-                amountInput.val(amount || '');
-            } else if (number) {
-                input.val(number);
-            } else if (name) {
-                input.val(name);
-            }
-        });
-
-        // Add call card to grid
-        function addCallCard(callId, callData) {
-            const callbackDisplay = callData.callbackMethod === 'softphone' ? 'Softphone' : callData
-                .callbackNumber;
-            const cardHtml = `
-                <div class="call-card" data-call-id="${callId}">
+            // Add call card to grid
+            function addCallCard(callId, CallChannel, CDRUniqueID, callData) {
+                const callbackDisplay = callData.callbackMethod === 'softphone' ? 'Softphone' : callData
+                    .callbackNumber;
+                const cardHtml = `
+                <div class="call-card" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}">
                     <h5><i class="fas fa-phone"></i> Call to ${callData.customerNumber} <span class="live-icon" style="color: #28a745; margin-left: 10px;"><i class="fas fa-circle"></i></span></h5>
                     <div class="status ${callData.status || 'calling'}">${callData.status ? callData.status.charAt(0).toUpperCase() + callData.status.slice(1) : 'Calling...'}</div>
                     <div class="details">
@@ -547,345 +549,360 @@ try {
                     </div>
                     <div class="buttons">
                         <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
-                        <button class="btn btn-danger" data-call-id="${callId}">End Call</button>
+                        <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" >End Call</button>
                     </div>
                 </div>
             `;
-            callGrid.append(cardHtml);
-            activeCalls[callId] = {
-                ...callData,
-                status: callData.status || 'calling',
-                muted: callData.muted !== undefined ? callData.muted : true
-            };
-            sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
-            updateLiveCallIndicator();
-            pollCallStatus(callId); // Start polling for real-time updates
-        }
+                callGrid.append(cardHtml);
+                activeCalls[callId] = {
+                    ...callData,
+                    status: callData.status || 'calling',
+                    muted: callData.muted !== undefined ? callData.muted : true
+                };
+                sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
+                updateLiveCallIndicator();
+                pollCallStatus(callId); // Start polling for real-time updates
+            }
 
-        // Poll call status
-        function pollCallStatus(callId) {
-            const interval = setInterval(() => {
-                if (!activeCalls[callId]) {
-                    clearInterval(interval);
-                    return;
-                }
-                $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'GET',
-                    data: {
-                        action: 'get_call_status',
-                        call_id: callId
-                    },
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success && activeCalls[callId]) {
-                            activeCalls[callId].status = response.status;
-                            $(`.call-card[data-call-id="${callId}"] .status`)
-                                .removeClass('calling ringing answered')
-                                .addClass(response.status)
-                                .text(response.status.charAt(0).toUpperCase() + response
-                                    .status.slice(1));
-                            $(`.mini-call-card[data-call-id="${callId}"] .status`)
-                                .removeClass('calling ringing answered')
-                                .addClass(response.status)
-                                .text(response.status.charAt(0).toUpperCase() + response
-                                    .status.slice(1));
-                            sessionStorage.setItem('activeCalls', JSON.stringify(
-                                activeCalls));
-                            if (response.status === 'answered') {
-                                pollDtmfInput(callId);
+            // TODO: Poll call status
+            function pollCallStatus(callId) {
+                const interval = setInterval(() => {
+                    if (!activeCalls[callId]) {
+                        clearInterval(interval);
+                        return;
+                    }
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'GET',
+                        data: {
+                            action: 'get_call_status',
+                            call_id: callId
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success && activeCalls[callId]) {
+                                activeCalls[callId].status = response.status;
+                                $(`.call-card[data-call-id="${callId}"] .status`)
+                                    .removeClass('calling ringing answered')
+                                    .addClass(response.status)
+                                    .text(response.status.charAt(0).toUpperCase() + response
+                                        .status.slice(1));
+                                $(`.mini-call-card[data-call-id="${callId}"] .status`)
+                                    .removeClass('calling ringing answered')
+                                    .addClass(response.status)
+                                    .text(response.status.charAt(0).toUpperCase() + response
+                                        .status.slice(1));
+                                sessionStorage.setItem('activeCalls', JSON.stringify(
+                                    activeCalls));
+                                if (response.status === 'answered') {
+                                    pollDtmfInput(callId);
+                                }
                             }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Poll Call Status Error:', status, error);
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Poll Call Status Error:', status, error);
+                    });
+                }, 2000);
+            }
+
+            // TODO: Poll for DTMF input
+
+            function pollDtmfInput(callId) {
+                const interval = setInterval(() => {
+                    if (!activeCalls[callId] || activeCalls[callId].status !== 'answered') {
+                        clearInterval(interval);
+                        return;
                     }
-                });
-            }, 2000);
-        }
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'GET',
+                        data: {
+                            action: 'check_dtmf',
+                            call_id: callId
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success && response.dtmf === '2' && activeCalls[
+                                callId]) {
+                                $(`.call-card[data-call-id="${callId}"] .status`)
+                                    .append(
+                                        ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
+                                    );
+                                $(`.mini-call-card[data-call-id="${callId}"] .status`)
+                                    .append(
+                                        ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
+                                    );
+                                clearInterval(interval);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Check DTMF Error:', status, error);
+                        }
+                    });
+                }, 2000);
+            }
+            // Handle form submission
+            ivrForm.on('submit', function (e) {
+                e.preventDefault();
+                const institutionName = institutionInput.val();
+                const customerName = customerNameInput.val();
+                let customerNumber = customerNumberInput.val().replace(/\D/g, ''); // Remove non-digits
+                const callerId = callerIdInput.val();
+                const callbackMethod = callbackMethodSelect.val();
+                const callbackNumber = callbackMethod === 'softphone' ? 'softphone' : callbackNumberInput
+                    .val();
+                const merchantName = merchantInput.val();
+                const amount = amountInput.val();
+                const magnusIvrId = $('#magnus_ivr_id').val();
 
-        // Poll for DTMF input
-
-        function pollDtmfInput(callId) {
-            const interval = setInterval(() => {
-                if (!activeCalls[callId] || activeCalls[callId].status !== 'answered') {
-                    clearInterval(interval);
+                if (!institutionName || !customerName || !customerNumber || !callerId ||
+                    (callbackMethod === 'phone' && !callbackNumber) || !merchantName || !amount) {
+                    alert('Please fill in all required fields.');
                     return;
                 }
+
+                // Validate 10 or 11 digit phone number
+                // if (!customerNumber.match(/^\d{10,11}$/)) {
+                //     alert('Customer number must be 10 or 11 digits (e.g., 12017838927)');
+                //     return;
+                // }
+
+                // Prepend +1 for API if not already present
+                // if (!customerNumber.startsWith('+1')) {
+                //     customerNumber = '+1' + customerNumber;
+                // }
+
                 $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'GET',
+                    url: '<?= $config->app->url; ?>/controller/api.php',
+                    method: 'POST',
                     data: {
-                        action: 'check_dtmf',
-                        call_id: callId
+                        action: 'initiate_call',
+                        institution_name: institutionName,
+                        customer_name: customerName,
+                        customer_number: customerNumber,
+                        caller_id: callerId,
+                        callback_method: callbackMethod,
+                        callback_number: callbackNumber,
+                        merchant_name: merchantName,
+                        amount: amount,
+                        magnus_ivr_id: magnusIvrId,
+                        csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                     },
                     dataType: 'json',
-                    success: function(response) {
-                        if (response.success && response.dtmf === '2' && activeCalls[
-                            callId]) {
-                            $(`.call-card[data-call-id="${callId}"] .status`)
-                                .append(
-                                    ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
-                                    );
-                            $(`.mini-call-card[data-call-id="${callId}"] .status`)
-                                .append(
-                                    ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
-                                    );
-                            clearInterval(interval);
+                    success: function (response) {
+                        if (response.success) {
+                            const callId = response.call_id;
+                            const CallChannel = response.callChannel;
+                            const CDRUniqueID = response.cdr_uniqueid;
+                            addCallCard(callId, CallChannel, CDRUniqueID, {
+                                institutionName,
+                                customerName,
+                                customerNumber,
+                                callerId,
+                                callbackMethod,
+                                callbackNumber,
+                                merchantName,
+                                amount,
+                                muted: true,
+                                CallChannel,
+                                CDRUniqueID
+                            });
+                            ivrForm[0].reset();
+                            callbackMethodSelect.val('phone');
+                            callbackNumberInput.show().prop('required', true);
+                            callbackNumberInput.closest('.input-group').find(
+                                '.input-group-append').show();
+                            $('#magnus_ivr_id').val('');
+                            customerNameInput.val('');
+                            customerNumberInput.val('');
+                        } else {
+                            alert('Error: ' + response.message);
                         }
                     },
-                    error: function(xhr, status, error) {
-                        console.error('Check DTMF Error:', status, error);
+                    error: function (xhr, status, error) {
+                        console.error('Initiate Call Error:', status, error);
+                        alert('Failed to initiate call.');
                     }
                 });
-            }, 2000);
-        }
-        // Handle form submission
-        ivrForm.on('submit', function(e) {
-            e.preventDefault();
-            const institutionName = institutionInput.val();
-            const customerName = customerNameInput.val();
-            let customerNumber = customerNumberInput.val().replace(/\D/g, ''); // Remove non-digits
-            const callerId = callerIdInput.val();
-            const callbackMethod = callbackMethodSelect.val();
-            const callbackNumber = callbackMethod === 'softphone' ? 'softphone' : callbackNumberInput
-                .val();
-            const merchantName = merchantInput.val();
-            const amount = amountInput.val();
-            const magnusIvrId = $('#magnus_ivr_id').val();
+            });
 
-            if (!institutionName || !customerName || !customerNumber || !callerId ||
-                (callbackMethod === 'phone' && !callbackNumber) || !merchantName || !amount) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // Validate 10 or 11 digit phone number
-            if (!customerNumber.match(/^\d{10,11}$/)) {
-                alert('Customer number must be 10 or 11 digits (e.g., 12017838927)');
-                return;
-            }
-
-            // Prepend +1 for API if not already present
-            if (!customerNumber.startsWith('+1')) {
-                customerNumber = '+1' + customerNumber;
-            }
-
-            $.ajax({
-                url: '<?=$config->app->url;?>/controller/api.php',
-                method: 'POST',
-                data: {
-                    action: 'initiate_call',
-                    institution_name: institutionName,
-                    customer_name: customerName,
-                    customer_number: customerNumber,
-                    caller_id: callerId,
-                    callback_method: callbackMethod,
-                    callback_number: callbackNumber,
-                    merchant_name: merchantName,
-                    amount: amount,
-                    magnus_ivr_id: magnusIvrId,
-                    csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
-                },
-                dataType: 'json',
-                success: function(response) {
-                    if (response.success) {
-                        const callId = response.call_id;
-                        addCallCard(callId, {
-                            institutionName,
-                            customerName,
-                            customerNumber,
-                            callerId,
-                            callbackMethod,
-                            callbackNumber,
-                            merchantName,
-                            amount,
-                            muted: true
-                        });
-                        ivrForm[0].reset();
-                        callbackMethodSelect.val('phone');
-                        callbackNumberInput.show().prop('required', true);
-                        callbackNumberInput.closest('.input-group').find(
-                            '.input-group-append').show();
-                        $('#magnus_ivr_id').val('');
-                        customerNameInput.val('');
-                        customerNumberInput.val('');
-                    } else {
-                        alert('Error: ' + response.message);
-                    }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Initiate Call Error:', status, error);
-                    alert('Failed to initiate call.');
+            // Handle mute/unmute for call grid
+            callGrid.on('click', '.btn-mute', function () {
+                const callId = $(this).data('call-id');
+                if (activeCalls[callId]) {
+                    const mute = !activeCalls[callId].muted;
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'POST',
+                        data: {
+                            action: 'toggle_mute',
+                            call_id: callId,
+                            mute: mute,
+                            csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success) {
+                                activeCalls[callId].muted = mute;
+                                $(`.call-card[data-call-id="${callId}"] .btn-mute`)
+                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
+                                $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
+                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
+                                sessionStorage.setItem('activeCalls', JSON.stringify(
+                                    activeCalls));
+                            } else {
+                                alert('Error toggling mute: ' + response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Toggle Mute Error:', status, error);
+                            alert('Failed to toggle mute.');
+                        }
+                    });
                 }
             });
-        });
 
-        // Handle mute/unmute for call grid
-        callGrid.on('click', '.btn-mute', function() {
-            const callId = $(this).data('call-id');
-            if (activeCalls[callId]) {
-                const mute = !activeCalls[callId].muted;
-                $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'POST',
-                    data: {
-                        action: 'toggle_mute',
-                        call_id: callId,
-                        mute: mute
-                    },
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success) {
-                            activeCalls[callId].muted = mute;
-                            $(`.call-card[data-call-id="${callId}"] .btn-mute`)
-                                .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                            $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
-                                .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                            sessionStorage.setItem('activeCalls', JSON.stringify(
-                                activeCalls));
-                        } else {
-                            alert('Error toggling mute: ' + response.message);
+            // Handle end call for call grid
+            callGrid.on('click', '.btn-danger', function () {
+                const callId = $(this).data('call-id');
+                const callChannel = $(this).data('call-channel');
+                const CDRUniqueID = $(this).data('cdr-unique-id');
+                if (activeCalls[callId]) {
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'POST',
+                        data: {
+                            action: 'end_call',
+                            call_id: callId,
+                            callChannel: callChannel,
+                            cdr_uniqueid: CDRUniqueID,
+                            csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success) {
+                                $(`.call-card[data-call-id="${callId}"]`).remove();
+                                $(`.mini-call-card[data-call-id="${callId}"]`).remove();
+                                delete activeCalls[callId];
+                                sessionStorage.setItem('activeCalls', JSON.stringify(
+                                    activeCalls));
+                                updateLiveCallIndicator();
+                            } else {
+                                alert('Error ending call: ' + response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('End Call Error:', status, error);
+                            alert('Failed to end call.');
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Toggle Mute Error:', status, error);
-                        alert('Failed to toggle mute.');
-                    }
-                });
-            }
-        });
+                    });
+                }
+            });
 
-        // Handle end call for call grid
-        callGrid.on('click', '.btn-danger', function() {
-            const callId = $(this).data('call-id');
-            if (activeCalls[callId]) {
-                $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'POST',
-                    data: {
-                        action: 'end_call',
-                        call_id: callId
-                    },
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success) {
-                            $(`.call-card[data-call-id="${callId}"]`).remove();
-                            $(`.mini-call-card[data-call-id="${callId}"]`).remove();
-                            delete activeCalls[callId];
-                            sessionStorage.setItem('activeCalls', JSON.stringify(
-                                activeCalls));
-                            updateLiveCallIndicator();
-                        } else {
-                            alert('Error ending call: ' + response.message);
+            // Handle mute/unmute for live call window
+            $('#liveCallWindow').on('click', '.btn-mute', function () {
+                const callId = $(this).data('call-id');
+                if (activeCalls[callId]) {
+                    const mute = !activeCalls[callId].muted;
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'POST',
+                        data: {
+                            action: 'toggle_mute',
+                            call_id: callId,
+                            mute: mute
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success) {
+                                activeCalls[callId].muted = mute;
+                                $(`.call-card[data-call-id="${callId}"] .btn-mute`)
+                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
+                                $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
+                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
+                                sessionStorage.setItem('activeCalls', JSON.stringify(
+                                    activeCalls));
+                            } else {
+                                alert('Error toggling mute: ' + response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('Toggle Mute Error:', status, error);
+                            alert('Failed to toggle mute.');
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('End Call Error:', status, error);
-                        alert('Failed to end call.');
-                    }
-                });
-            }
-        });
+                    });
+                }
+            });
 
-        // Handle mute/unmute for live call window
-        $('#liveCallWindow').on('click', '.btn-mute', function() {
-            const callId = $(this).data('call-id');
-            if (activeCalls[callId]) {
-                const mute = !activeCalls[callId].muted;
-                $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'POST',
-                    data: {
-                        action: 'toggle_mute',
-                        call_id: callId,
-                        mute: mute
-                    },
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success) {
-                            activeCalls[callId].muted = mute;
-                            $(`.call-card[data-call-id="${callId}"] .btn-mute`)
-                                .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                            $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
-                                .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                            sessionStorage.setItem('activeCalls', JSON.stringify(
-                                activeCalls));
-                        } else {
-                            alert('Error toggling mute: ' + response.message);
+            // Handle end call for live call window
+            $('#liveCallWindow').on('click', '.btn-danger', function () {
+                const callId = $(this).data('call-id');
+                const callChannel = $(this).data('call-channel');
+                const CDRUniqueID = $(this).data('cdr-unique-id');
+                if (activeCalls[callId]) {
+                    $.ajax({
+                        url: '<?= $config->app->url; ?>/controller/api.php',
+                        method: 'POST',
+                        data: {
+                            action: 'end_call',
+                            call_id: callId,
+                            callChannel: callChannel,
+                            cdr_uniqueid: CDRUniqueID,
+                            csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
+                        },
+                        dataType: 'json',
+                        success: function (response) {
+                            if (response.success) {
+                                $(`.call-card[data-call-id="${callId}"]`).remove();
+                                $(`.mini-call-card[data-call-id="${callId}"]`).remove();
+                                delete activeCalls[callId];
+                                sessionStorage.setItem('activeCalls', JSON.stringify(
+                                    activeCalls));
+                                updateLiveCallIndicator();
+                            } else {
+                                alert('Error ending call: ' + response.message);
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.error('End Call Error:', status, error);
+                            alert('Failed to end call.');
                         }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('Toggle Mute Error:', status, error);
-                        alert('Failed to toggle mute.');
-                    }
-                });
-            }
-        });
+                    });
+                }
+            });
 
-        // Handle end call for live call window
-        $('#liveCallWindow').on('click', '.btn-danger', function() {
-            const callId = $(this).data('call-id');
-            if (activeCalls[callId]) {
-                $.ajax({
-                    url: '<?=$config->app->url;?>/controller/api.php',
-                    method: 'POST',
-                    data: {
-                        action: 'end_call',
-                        call_id: callId
-                    },
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.success) {
-                            $(`.call-card[data-call-id="${callId}"]`).remove();
-                            $(`.mini-call-card[data-call-id="${callId}"]`).remove();
-                            delete activeCalls[callId];
-                            sessionStorage.setItem('activeCalls', JSON.stringify(
-                                activeCalls));
-                            updateLiveCallIndicator();
-                        } else {
-                            alert('Error ending call: ' + response.message);
-                        }
-                    },
-                    error: function(xhr, status, error) {
-                        console.error('End Call Error:', status, error);
-                        alert('Failed to end call.');
-                    }
-                });
-            }
-        });
-
-        // Logout modal functionality
-        $('#confirmLogout').on('click', function() {
-            sessionStorage.removeItem('activeCalls');
-            window.location.href = 'logout.php';
-        });
-
-        $('#logoutModal').on('shown.bs.modal', function() {
-            setTimeout(function() {
+            // Logout modal functionality
+            $('#confirmLogout').on('click', function () {
                 sessionStorage.removeItem('activeCalls');
                 window.location.href = 'logout.php';
-            }, 2000);
-        });
-
-        // Load existing calls on page load
-        function loadExistingCalls() {
-            Object.entries(activeCalls).forEach(([callId, callData]) => {
-                addCallCard(callId, callData);
             });
-        }
 
-        // Load data on page load
-        loadContacts();
-        loadInstitutions();
-        loadMerchants();
-        loadIvrProfiles();
-        loadExistingCalls();
-        updateLiveCallIndicator();
-        callbackMethodSelect.val('phone'); // Initialize to phone
-        callbackNumberInput.show().prop('required', true);
-        callbackNumberInput.closest('.input-group').find('.input-group-append').show();
-    });
+            $('#logoutModal').on('shown.bs.modal', function () {
+                setTimeout(function () {
+                    sessionStorage.removeItem('activeCalls');
+                    window.location.href = 'logout.php';
+                }, 2000);
+            });
+
+            // Load existing calls on page load
+            function loadExistingCalls() {
+                Object.entries(activeCalls).forEach(([callId, CallChannel, CDRUniqueID, callData]) => {
+                    addCallCard(callId, CallChannel, CDRUniqueID, callData);
+                });
+            }
+
+            // Load data on page load
+            loadContacts();
+            loadInstitutions();
+            loadMerchants();
+            loadIvrProfiles();
+            loadExistingCalls();
+            updateLiveCallIndicator();
+            callbackMethodSelect.val('phone'); // Initialize to phone
+            callbackNumberInput.show().prop('required', true);
+            callbackNumberInput.closest('.input-group').find('.input-group-append').show();
+        });
     </script>
 </body>
 
