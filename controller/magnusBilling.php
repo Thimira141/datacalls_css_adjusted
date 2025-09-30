@@ -231,7 +231,7 @@ class MagnusBilling
             'page'   => 1,
             'start'  => 0,
             'limit'  => 1,
-            'filter' => $this->filter,
+            'filter' => json_encode($this->filter),
         ]);
 
         $this->filter = [];

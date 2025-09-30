@@ -193,3 +193,283 @@
 [2025-08-31 19:26:53] [NOTICE] Speech synthesized, response received.
 [2025-08-31 19:26:53] [NOTICE] Audio content returned from Google TTS.
 [2025-08-31 19:26:53] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_08_31_19_26_51__68b485dbe5e2d.mp3
+[2025-09-02 12:56:25] [NOTICE] Starting synthesis process...
+[2025-09-02 12:56:26] [NOTICE] SSML input set.
+[2025-09-02 12:56:26] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-02 12:56:26] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-02 12:56:26] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-02 12:56:29] [NOTICE] Speech synthesized, response received.
+[2025-09-02 12:56:29] [NOTICE] Audio content returned from Google TTS.
+[2025-09-02 12:56:29] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_02_12_56_25__68b6cd5964d13.mp3
+[2025-09-02 12:56:52] [NOTICE] Starting synthesis process...
+[2025-09-02 12:56:52] [NOTICE] SSML input set.
+[2025-09-02 12:56:52] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-02 12:56:52] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-02 12:56:52] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-02 12:56:54] [NOTICE] Speech synthesized, response received.
+[2025-09-02 12:56:54] [NOTICE] Audio content returned from Google TTS.
+[2025-09-02 12:56:54] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_02_12_56_52__68b6cd74a6e2f.mp3
+[2025-09-19 03:32:19] [NOTICE] Starting synthesis process...
+[2025-09-19 03:32:20] [NOTICE] SSML input set.
+[2025-09-19 03:32:20] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 03:32:20] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 03:32:20] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 03:32:23] [NOTICE] Speech synthesized, response received.
+[2025-09-19 03:32:23] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 03:32:23] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_03_32_19__68ccb2a34bf2e.mp3
+[2025-09-19 03:43:48] [NOTICE] Starting synthesis process...
+[2025-09-19 03:43:48] [NOTICE] SSML input set.
+[2025-09-19 03:43:48] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 03:43:48] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 03:43:48] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 03:43:49] [NOTICE] Speech synthesized, response received.
+[2025-09-19 03:43:49] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 03:43:49] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_03_43_48__68ccb55468cef.mp3
+[2025-09-19 03:49:09] [NOTICE] Starting synthesis process...
+[2025-09-19 03:49:09] [NOTICE] SSML input set.
+[2025-09-19 03:49:09] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 03:49:09] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 03:49:09] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 03:49:10] [NOTICE] Speech synthesized, response received.
+[2025-09-19 03:49:10] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 03:49:10] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_03_49_09__68ccb69559b45.mp3
+[2025-09-19 03:51:09] [NOTICE] Starting synthesis process...
+[2025-09-19 03:51:09] [NOTICE] SSML input set.
+[2025-09-19 03:51:09] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 03:51:09] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 03:51:09] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 03:51:10] [NOTICE] Speech synthesized, response received.
+[2025-09-19 03:51:10] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 03:51:10] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_03_51_09__68ccb70d07fc9.mp3
+[2025-09-19 03:53:01] [NOTICE] Starting synthesis process...
+[2025-09-19 03:53:01] [NOTICE] SSML input set.
+[2025-09-19 03:53:01] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 03:53:01] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 03:53:01] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 03:53:02] [NOTICE] Speech synthesized, response received.
+[2025-09-19 03:53:02] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 03:53:02] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_03_53_01__68ccb77d434c6.mp3
+[2025-09-19 04:01:19] [NOTICE] Starting synthesis process...
+[2025-09-19 04:01:19] [NOTICE] SSML input set.
+[2025-09-19 04:01:19] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:01:19] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:01:19] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:01:20] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:01:20] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:01:20] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_01_19__68ccb96f143d8.mp3
+[2025-09-19 04:03:48] [NOTICE] Starting synthesis process...
+[2025-09-19 04:03:48] [NOTICE] SSML input set.
+[2025-09-19 04:03:48] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:03:48] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:03:48] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:03:49] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:03:49] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:03:49] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_03_48__68ccba0418a09.mp3
+[2025-09-19 04:05:03] [NOTICE] Starting synthesis process...
+[2025-09-19 04:05:03] [NOTICE] SSML input set.
+[2025-09-19 04:05:03] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:05:03] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:05:03] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:05:04] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:05:04] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:05:04] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_05_03__68ccba4f5729c.mp3
+[2025-09-19 04:05:45] [NOTICE] Starting synthesis process...
+[2025-09-19 04:05:45] [NOTICE] SSML input set.
+[2025-09-19 04:05:45] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:05:45] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:05:45] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:05:46] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:05:46] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:05:46] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_05_45__68ccba792d37d.mp3
+[2025-09-19 04:10:28] [NOTICE] Starting synthesis process...
+[2025-09-19 04:10:28] [NOTICE] SSML input set.
+[2025-09-19 04:10:28] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:10:28] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:10:28] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:10:29] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:10:29] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:10:29] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_10_28__68ccbb9432544.mp3
+[2025-09-19 04:15:07] [NOTICE] Starting synthesis process...
+[2025-09-19 04:15:07] [NOTICE] SSML input set.
+[2025-09-19 04:15:07] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:15:07] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:15:07] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:15:09] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:15:09] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:15:09] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_15_07__68ccbcab8fcfc.mp3
+[2025-09-19 04:17:51] [NOTICE] Starting synthesis process...
+[2025-09-19 04:17:51] [NOTICE] SSML input set.
+[2025-09-19 04:17:51] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-19 04:17:51] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-19 04:17:51] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-19 04:17:52] [NOTICE] Speech synthesized, response received.
+[2025-09-19 04:17:52] [NOTICE] Audio content returned from Google TTS.
+[2025-09-19 04:17:52] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_19_04_17_51__68ccbd4f16e22.mp3
+[2025-09-30 09:14:39] [NOTICE] Starting synthesis process...
+[2025-09-30 09:14:40] [NOTICE] SSML input set.
+[2025-09-30 09:14:40] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:14:40] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:14:40] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:14:43] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:14:43] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:14:43] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_14_39__68db835f795ed.mp3
+[2025-09-30 09:15:16] [NOTICE] Starting synthesis process...
+[2025-09-30 09:15:16] [NOTICE] SSML input set.
+[2025-09-30 09:15:16] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:15:16] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:15:16] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:15:18] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:15:18] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:15:18] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_15_16__68db8384c43ba.mp3
+[2025-09-30 09:16:35] [NOTICE] Starting synthesis process...
+[2025-09-30 09:16:35] [NOTICE] SSML input set.
+[2025-09-30 09:16:35] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:16:35] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:16:35] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:16:37] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:16:37] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:16:37] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_16_35__68db83d3b561b.mp3
+[2025-09-30 09:22:11] [NOTICE] Starting synthesis process...
+[2025-09-30 09:22:11] [NOTICE] SSML input set.
+[2025-09-30 09:22:11] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:22:11] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:22:11] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:22:13] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:22:13] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:22:13] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_22_11__68db85237f07b.mp3
+[2025-09-30 09:24:11] [NOTICE] Starting synthesis process...
+[2025-09-30 09:24:11] [NOTICE] SSML input set.
+[2025-09-30 09:24:11] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:24:11] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:24:11] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:24:12] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:24:12] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:24:12] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_24_11__68db859b675c1.mp3
+[2025-09-30 09:26:35] [NOTICE] Starting synthesis process...
+[2025-09-30 09:26:35] [NOTICE] SSML input set.
+[2025-09-30 09:26:35] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:26:35] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:26:35] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:26:37] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:26:37] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:26:37] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_26_35__68db862bba4f9.mp3
+[2025-09-30 09:27:01] [NOTICE] Starting synthesis process...
+[2025-09-30 09:27:01] [NOTICE] SSML input set.
+[2025-09-30 09:27:01] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:27:01] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:27:01] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:27:04] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:27:04] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:27:04] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_27_01__68db8645dfc4e.mp3
+[2025-09-30 09:30:07] [NOTICE] Starting synthesis process...
+[2025-09-30 09:30:07] [NOTICE] SSML input set.
+[2025-09-30 09:30:07] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:30:07] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:30:07] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:30:09] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:30:09] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:30:09] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_30_07__68db86ff5d9d9.mp3
+[2025-09-30 09:34:31] [NOTICE] Starting synthesis process...
+[2025-09-30 09:34:31] [NOTICE] SSML input set.
+[2025-09-30 09:34:31] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:34:31] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:34:31] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:34:33] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:34:33] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:34:33] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_34_31__68db8807a2943.mp3
+[2025-09-30 09:35:14] [NOTICE] Starting synthesis process...
+[2025-09-30 09:35:14] [NOTICE] SSML input set.
+[2025-09-30 09:35:14] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:35:14] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:35:14] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:35:16] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:35:16] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:35:16] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_35_14__68db883284d31.mp3
+[2025-09-30 09:37:03] [NOTICE] Starting synthesis process...
+[2025-09-30 09:37:03] [NOTICE] SSML input set.
+[2025-09-30 09:37:03] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:37:03] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:37:03] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:37:05] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:37:05] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:37:05] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_37_03__68db889f8443a.mp3
+[2025-09-30 09:39:17] [NOTICE] Starting synthesis process...
+[2025-09-30 09:39:17] [NOTICE] SSML input set.
+[2025-09-30 09:39:17] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:39:17] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:39:17] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:39:19] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:39:19] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:39:19] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_39_17__68db8925a5852.mp3
+[2025-09-30 09:39:43] [NOTICE] Starting synthesis process...
+[2025-09-30 09:39:43] [NOTICE] SSML input set.
+[2025-09-30 09:39:43] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:39:43] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:39:43] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:39:45] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:39:45] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:39:45] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_39_43__68db893faf447.mp3
+[2025-09-30 09:42:33] [NOTICE] Starting synthesis process...
+[2025-09-30 09:42:33] [NOTICE] SSML input set.
+[2025-09-30 09:42:33] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:42:33] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:42:33] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:42:35] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:42:35] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:42:35] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_42_33__68db89e982372.mp3
+[2025-09-30 09:42:55] [NOTICE] Starting synthesis process...
+[2025-09-30 09:42:55] [NOTICE] SSML input set.
+[2025-09-30 09:42:55] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:42:55] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:42:55] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:42:58] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:42:58] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:42:58] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_42_55__68db89ff5d485.mp3
+[2025-09-30 09:48:56] [NOTICE] Starting synthesis process...
+[2025-09-30 09:48:56] [NOTICE] SSML input set.
+[2025-09-30 09:48:56] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:48:56] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:48:56] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:48:58] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:48:58] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:48:58] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_48_56__68db8b6862e52.mp3
+[2025-09-30 09:50:25] [NOTICE] Starting synthesis process...
+[2025-09-30 09:50:25] [NOTICE] SSML input set.
+[2025-09-30 09:50:25] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 09:50:25] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 09:50:25] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 09:50:27] [NOTICE] Speech synthesized, response received.
+[2025-09-30 09:50:27] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 09:50:27] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_09_50_25__68db8bc124db5.mp3
+[2025-09-30 10:00:37] [NOTICE] Starting synthesis process...
+[2025-09-30 10:00:37] [NOTICE] SSML input set.
+[2025-09-30 10:00:37] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 10:00:37] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 10:00:37] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 10:00:39] [NOTICE] Speech synthesized, response received.
+[2025-09-30 10:00:39] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 10:00:39] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_10_00_37__68db8e25b53b9.mp3
+[2025-09-30 10:02:35] [NOTICE] Starting synthesis process...
+[2025-09-30 10:02:35] [NOTICE] SSML input set.
+[2025-09-30 10:02:35] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 10:02:35] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 10:02:35] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 10:02:36] [NOTICE] Speech synthesized, response received.
+[2025-09-30 10:02:36] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 10:02:36] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_10_02_35__68db8e9b5afa1.mp3
+[2025-09-30 10:05:58] [NOTICE] Starting synthesis process...
+[2025-09-30 10:05:58] [NOTICE] SSML input set.
+[2025-09-30 10:05:58] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 10:05:58] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 10:05:58] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 10:06:00] [NOTICE] Speech synthesized, response received.
+[2025-09-30 10:06:00] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 10:06:00] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_10_05_58__68db8f66570c2.mp3
+[2025-09-30 10:12:01] [NOTICE] Starting synthesis process...
+[2025-09-30 10:12:01] [NOTICE] SSML input set.
+[2025-09-30 10:12:01] [NOTICE] Voice parameters set, name: en-US-Wavenet-H, lang code: en-US
+[2025-09-30 10:12:01] [NOTICE] Audio config set: MP3 encoding.
+[2025-09-30 10:12:01] [NOTICE] SynthesizeSpeechRequest built.
+[2025-09-30 10:12:04] [NOTICE] Speech synthesized, response received.
+[2025-09-30 10:12:04] [NOTICE] Audio content returned from Google TTS.
+[2025-09-30 10:12:04] [NOTICE] Write audio file: D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_09_30_10_12_01__68db90d1ce27a.mp3

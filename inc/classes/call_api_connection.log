@@ -1,0 +1,843 @@
+[2025-09-15 00:08:10] {"success":false,"error":"Missing required fields"}
+[2025-09-15 00:08:10] 
+[2025-09-15 00:08:10] 400
+[2025-09-15 00:09:24] Starting Audio Upload
+[2025-09-15 00:09:24] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:09:24] {"success":false,"error":"Missing required fields"}
+[2025-09-15 00:09:24] 
+[2025-09-15 00:09:24] 400
+[2025-09-15 00:10:14] Starting Audio Upload
+[2025-09-15 00:10:14] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:10:14] {"success":false,"error":"Opening Asterisk CLI Failed!"}
+[2025-09-15 00:10:14] 
+[2025-09-15 00:10:14] 400
+[2025-09-15 00:14:52] Starting Audio Upload
+[2025-09-15 00:14:52] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:14:52] {"success":false,"error":"Setting Caller ID Failed!"}
+[2025-09-15 00:14:52] 
+[2025-09-15 00:14:52] 400
+[2025-09-15 00:16:25] Starting Audio Upload
+[2025-09-15 00:16:25] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:16:25] {"success":false,"error":"Setting Caller ID Failed!"}
+[2025-09-15 00:16:25] 
+[2025-09-15 00:16:25] 400
+[2025-09-15 00:16:54] Starting Audio Upload
+[2025-09-15 00:16:55] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:16:55] {"success":false,"error":"Setting Caller ID Failed!; "}
+[2025-09-15 00:16:55] 
+[2025-09-15 00:16:55] 400
+[2025-09-15 00:25:36] Starting Audio Upload
+[2025-09-15 00:25:37] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:25:37] {"success":false,"error":"Setting Caller ID Failed!; "}
+[2025-09-15 00:25:37] 
+[2025-09-15 00:25:37] 400
+[2025-09-15 00:25:53] Starting Audio Upload
+[2025-09-15 00:25:53] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:25:53] {"success":true,"output":["Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded."]}
+[2025-09-15 00:25:53] 
+[2025-09-15 00:25:53] 200
+[2025-09-15 00:28:50] Starting Audio Upload
+[2025-09-15 00:28:50] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:28:50] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded."]}
+[2025-09-15 00:28:50] 
+[2025-09-15 00:28:50] 200
+[2025-09-15 00:30:50] Starting Audio Upload
+[2025-09-15 00:30:50] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:30:50] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded."]}
+[2025-09-15 00:30:50] 
+[2025-09-15 00:30:50] 200
+[2025-09-15 00:31:05] Starting Audio Upload
+[2025-09-15 00:31:05] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:31:05] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded."]}
+[2025-09-15 00:31:05] 
+[2025-09-15 00:31:05] 200
+[2025-09-15 00:31:34] Starting Audio Upload
+[2025-09-15 00:31:35] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:31:35] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded."]}
+[2025-09-15 00:31:35] 
+[2025-09-15 00:31:35] 200
+[2025-09-15 00:31:45] Starting Audio Upload
+[2025-09-15 00:31:46] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 00:31:46] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded."]}
+[2025-09-15 00:31:46] 
+[2025-09-15 00:31:46] 200
+[2025-09-15 02:46:29] Starting Audio Upload
+[2025-09-15 02:46:30] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:46:30] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"]}
+[2025-09-15 02:46:30] 
+[2025-09-15 02:46:30] 200
+[2025-09-15 02:47:03] Starting Audio Upload
+[2025-09-15 02:47:04] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:47:04] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"]}
+[2025-09-15 02:47:04] 
+[2025-09-15 02:47:04] 200
+[2025-09-15 02:49:14] Starting Audio Upload
+[2025-09-15 02:49:15] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:49:15] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"]}
+[2025-09-15 02:49:15] 
+[2025-09-15 02:49:15] 200
+[2025-09-15 02:49:33] Starting Audio Upload
+[2025-09-15 02:49:34] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:49:34] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"]}
+[2025-09-15 02:49:34] 
+[2025-09-15 02:49:34] 200
+[2025-09-15 02:49:47] Starting Audio Upload
+[2025-09-15 02:49:48] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:49:48] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"]}
+[2025-09-15 02:49:48] 
+[2025-09-15 02:49:48] 200
+[2025-09-15 02:53:34] Starting Audio Upload
+[2025-09-15 02:53:36] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:53:36] {"success":false,"error":"Shell script failed: [\"Updated database successfully\",\"Updated database successfully\",\"Dialplan reloaded.\"]"}
+[2025-09-15 02:53:36] 
+[2025-09-15 02:53:36] 400
+[2025-09-15 02:54:36] Starting Audio Upload
+[2025-09-15 02:54:38] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:54:38] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000052;2"]}
+[2025-09-15 02:54:38] 
+[2025-09-15 02:54:38] 200
+[2025-09-15 02:55:00] Starting Audio Upload
+[2025-09-15 02:55:02] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 02:55:02] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000053;2"]}
+[2025-09-15 02:55:02] 
+[2025-09-15 02:55:02] 200
+[2025-09-15 03:06:44] Starting Audio Upload
+[2025-09-15 03:06:45] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002"}
+[2025-09-15 03:06:45] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000054;2"]}
+[2025-09-15 03:06:45] 
+[2025-09-15 03:06:45] 200
+[2025-09-15 03:08:05] Starting Audio Upload
+[2025-09-15 03:08:06] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 03:08:06] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000055;2"],"channel":"Local\/2002@from-user-00000055;2"}
+[2025-09-15 03:08:06] 
+[2025-09-15 03:08:06] 200
+[2025-09-15 03:09:08] Starting Audio Upload
+[2025-09-15 03:09:10] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 03:09:10] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000056;2"],"channel":"Local\/2002@from-user-00000056;2"}
+[2025-09-15 03:09:10] 
+[2025-09-15 03:09:10] 200
+[2025-09-15 03:09:55] Starting Audio Upload
+[2025-09-15 03:09:57] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 03:09:57] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000057;2"],"channel":"Local\/2002@from-user-00000057;2"}
+[2025-09-15 03:09:57] 
+[2025-09-15 03:09:57] 200
+[2025-09-15 03:10:18] Starting Audio Upload
+[2025-09-15 03:10:20] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 03:10:20] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000057;2"],"channel":"Local\/2002@from-user-00000057;2"}
+[2025-09-15 03:10:20] 
+[2025-09-15 03:10:20] 200
+[2025-09-15 04:06:19] Starting Calling...
+[2025-09-15 04:06:21] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:06:21] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000059;2"],"channel":"Local\/2002@from-user-00000059;2"}
+[2025-09-15 04:06:21] 
+[2025-09-15 04:06:21] 200
+[2025-09-15 04:08:30] Starting Calling...
+[2025-09-15 04:08:31] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:08:31] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005a;2"],"channel":"Local\/2002@from-user-0000005a;2"}
+[2025-09-15 04:08:31] 
+[2025-09-15 04:08:31] 200
+[2025-09-15 04:10:42] Starting Calling...
+[2025-09-15 04:10:43] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:10:43] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005b;2"],"channel":"Local\/2002@from-user-0000005b;2"}
+[2025-09-15 04:10:43] 
+[2025-09-15 04:10:43] 200
+[2025-09-15 04:12:25] Starting Call Ending...
+[2025-09-15 04:12:26] {"userId":9,"callChannel":null,"targetNumber":"2002"}
+[2025-09-15 04:12:26] {"success":false,"error":"Invalid Action!"}
+[2025-09-15 04:12:26] 
+[2025-09-15 04:12:26] 403
+[2025-09-15 04:13:23] Starting Call Ending...
+[2025-09-15 04:13:24] {"userId":9,"callChannel":null,"targetNumber":"2002"}
+[2025-09-15 04:13:24] {"success":false,"error":"Invalid Action!"}
+[2025-09-15 04:13:24] 
+[2025-09-15 04:13:24] 403
+[2025-09-15 04:13:34] Starting Calling...
+[2025-09-15 04:13:35] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:13:35] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005c;2"],"channel":"Local\/2002@from-user-0000005c;2"}
+[2025-09-15 04:13:35] 
+[2025-09-15 04:13:35] 200
+[2025-09-15 04:14:31] Starting Call Ending...
+[2025-09-15 04:14:31] {"userId":9,"callChannel":null,"targetNumber":"2002"}
+[2025-09-15 04:14:31] {"success":false,"error":"Invalid Action!"}
+[2025-09-15 04:14:31] 
+[2025-09-15 04:14:31] 403
+[2025-09-15 04:15:04] Starting Call Ending...
+[2025-09-15 04:15:05] {"userId":9,"callChannel":null,"targetNumber":"2002"}
+[2025-09-15 04:15:05] {"success":false,"error":"Invalid Action!"}
+[2025-09-15 04:15:05] 
+[2025-09-15 04:15:05] 403
+[2025-09-15 04:15:43] Starting Call Ending...
+[2025-09-15 04:15:44] {"userId":9,"callChannel":null,"targetNumber":"2002","action":"end_call"}
+[2025-09-15 04:15:44] {"success":false,"error":"Missing required fields"}
+[2025-09-15 04:15:44] 
+[2025-09-15 04:15:44] 400
+[2025-09-15 04:18:43] Starting Call Ending...
+[2025-09-15 04:18:43] {"userId":9,"callChannel":null,"targetNumber":"2002","action":"end_call"}
+[2025-09-15 04:18:43] {"success":false,"error":"Missing required fields"}
+[2025-09-15 04:18:43] 
+[2025-09-15 04:18:43] 400
+[2025-09-15 04:19:18] Starting Calling...
+[2025-09-15 04:19:20] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:19:20] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005d;2"],"channel":"Local\/2002@from-user-0000005d;2"}
+[2025-09-15 04:19:20] 
+[2025-09-15 04:19:20] 200
+[2025-09-15 04:20:13] Starting Call Ending...
+[2025-09-15 04:20:13] {"userId":9,"callChannel":"Local\/2002@from-user-0000005d;2","targetNumber":"2002","action":"end_call"}
+[2025-09-15 04:20:13] {"success":true,"output":["Local\/2002@from-user-0000005d;2 is not a known channel"]}
+[2025-09-15 04:20:13] 
+[2025-09-15 04:20:13] 200
+[2025-09-15 04:20:30] Starting Calling...
+[2025-09-15 04:20:31] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call"}
+[2025-09-15 04:20:31] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005e;2"],"channel":"Local\/2002@from-user-0000005e;2"}
+[2025-09-15 04:20:31] 
+[2025-09-15 04:20:31] 200
+[2025-09-15 04:21:18] Starting Call Ending...
+[2025-09-15 04:21:19] {"userId":9,"callChannel":"Local\/2002@from-user-0000005e;2","targetNumber":"2002","action":"end_call"}
+[2025-09-15 04:21:19] {"success":true,"output":["Requested Hangup on channel 'Local\/2002@from-user-0000005e;2'"]}
+[2025-09-15 04:21:19] 
+[2025-09-15 04:21:19] 200
+[2025-09-15 04:21:49] Starting Call Ending...
+[2025-09-15 04:21:49] {"userId":9,"callChannel":"Local\/2002@from-user-0000005e;2","targetNumber":"2002","action":"end_call"}
+[2025-09-15 04:21:49] {"success":true,"output":["Local\/2002@from-user-0000005e;2 is not a known channel"]}
+[2025-09-15 04:21:49] 
+[2025-09-15 04:21:49] 200
+[2025-09-15 16:08:16] Starting Calling...
+[2025-09-15 16:08:17] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5316593068c81bd9f21ed"}
+[2025-09-15 16:08:17] {"success":false,"error":"Missing required fields"}
+[2025-09-15 16:08:17] 
+[2025-09-15 16:08:17] 400
+[2025-09-15 16:10:12] Starting Calling...
+[2025-09-15 16:10:13] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"3491454268c81dd0644c7"}
+[2025-09-15 16:10:13] {"success":false,"error":"Missing required fields"}
+[2025-09-15 16:10:13] 
+[2025-09-15 16:10:13] 400
+[2025-09-15 16:10:54] Starting Calling...
+[2025-09-15 16:10:56] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"1185944068c81e44ecaa6"}
+[2025-09-15 16:10:56] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000005f;2"],"channel":"Local\/2002@from-user-0000005f;2"}
+[2025-09-15 16:10:56] 
+[2025-09-15 16:10:56] 200
+[2025-09-15 16:11:37] Starting Calling...
+[2025-09-15 16:11:39] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"8195855068c81e6ea8bd8"}
+[2025-09-15 16:11:39] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000060;2"],"channel":"Local\/2002@from-user-00000060;2"}
+[2025-09-15 16:11:39] 
+[2025-09-15 16:11:39] 200
+[2025-09-15 16:11:56] Starting Calling...
+[2025-09-15 16:11:57] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"7800071568c81e99c9f0d"}
+[2025-09-15 16:11:57] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000061;2"],"channel":"Local\/2002@from-user-00000061;2"}
+[2025-09-15 16:11:57] 
+[2025-09-15 16:11:57] 200
+[2025-09-15 16:13:06] Starting Calling...
+[2025-09-15 16:13:08] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"6330060468c81eac25809"}
+[2025-09-15 16:13:08] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000062;2"],"channel":"Local\/2002@from-user-00000062;2"}
+[2025-09-15 16:13:08] 
+[2025-09-15 16:13:08] 200
+[2025-09-15 16:14:00] Starting Calling...
+[2025-09-15 16:14:01] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"1865854468c81ef290bab"}
+[2025-09-15 16:14:01] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000063;2"],"channel":"Local\/2002@from-user-00000063;2"}
+[2025-09-15 16:14:01] 
+[2025-09-15 16:14:01] 200
+[2025-09-15 16:16:56] Starting Calling...
+[2025-09-15 16:16:58] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"2419430068c81f28041e1"}
+[2025-09-15 16:16:58] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:16:58] 
+[2025-09-15 16:16:58] 200
+[2025-09-15 16:17:08] Starting Calling...
+[2025-09-15 16:17:10] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5890070968c81fd86d201"}
+[2025-09-15 16:17:10] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:17:10] 
+[2025-09-15 16:17:10] 200
+[2025-09-15 16:18:16] Starting Calling...
+[2025-09-15 16:18:18] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"7478030268c81fe4d4d82"}
+[2025-09-15 16:18:18] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:18:18] 
+[2025-09-15 16:18:18] 200
+[2025-09-15 16:18:24] Starting Calling...
+[2025-09-15 16:18:26] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5060744568c82028db1d9"}
+[2025-09-15 16:18:26] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:18:26] 
+[2025-09-15 16:18:26] 200
+[2025-09-15 16:18:42] Starting Calling...
+[2025-09-15 16:18:44] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"1734481868c82030e92c3"}
+[2025-09-15 16:18:44] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:18:44] 
+[2025-09-15 16:18:44] 200
+[2025-09-15 16:18:45] Starting Calling...
+[2025-09-15 16:18:46] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"2282644768c8204259113"}
+[2025-09-15 16:18:46] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 16:18:46] 
+[2025-09-15 16:18:46] 200
+[2025-09-15 16:19:05] Starting Calling...
+[2025-09-15 16:19:07] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5934640368c820451dccd"}
+[2025-09-15 16:19:07] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006a;2"],"channel":"Local\/2002@from-user-0000006a;2"}
+[2025-09-15 16:19:07] 
+[2025-09-15 16:19:07] 200
+[2025-09-15 16:19:17] Starting Calling...
+[2025-09-15 16:19:19] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"3432892468c82059a8aa5"}
+[2025-09-15 16:19:19] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006b;2"],"channel":"Local\/2002@from-user-0000006b;2"}
+[2025-09-15 16:19:19] 
+[2025-09-15 16:19:19] 200
+[2025-09-15 16:37:58] Starting Calling...
+[2025-09-15 16:38:00] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"4515315668c820655dad2"}
+[2025-09-15 16:38:00] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006c;2"],"channel":"Local\/2002@from-user-0000006c;2"}
+[2025-09-15 16:38:00] 
+[2025-09-15 16:38:00] 200
+[2025-09-15 16:39:07] Starting Call Ending...
+[2025-09-15 16:39:07] {"userId":9,"callChannel":"","targetNumber":"2002","action":"end_call","sessionID":"2050862268c824c658acb"}
+[2025-09-15 16:39:07] {"success":false,"error":"Missing required fields"}
+[2025-09-15 16:39:07] 
+[2025-09-15 16:39:07] 400
+[2025-09-15 16:40:58] Starting Calling...
+[2025-09-15 16:40:59] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"9028573468c8250b1f033"}
+[2025-09-15 16:40:59] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006d;2"],"channel":"Local\/2002@from-user-0000006d;2"}
+[2025-09-15 16:40:59] 
+[2025-09-15 16:40:59] 200
+[2025-09-15 16:42:06] Starting Call Ending...
+[2025-09-15 16:42:07] {"userId":9,"callChannel":"Local\/2002@from-user-0000006d;2","targetNumber":"2002","action":"end_call","sessionID":"3384450968c8257a117aa"}
+[2025-09-15 16:42:07] {"success":true,"output":["Hanging up channel: database get <family> <key>","Usage: channel request hangup <channel>|<all>","       Request that a channel be hung up. The hangup takes effect","       the next time the driver reads or writes from the channel.","       If 'all' is specified instead of a channel name, all channels","       will see the hangup request.","Usage: database del <family> <key>","       Deletes an entry in the Asterisk database for a given","       family and key."]}
+[2025-09-15 16:42:07] 
+[2025-09-15 16:42:07] 200
+[2025-09-15 16:50:26] Starting Calling...
+[2025-09-15 16:50:27] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"3519105768c827a582d84"}
+[2025-09-15 16:50:27] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006e;2"],"channel":"Local\/2002@from-user-0000006e;2"}
+[2025-09-15 16:50:27] 
+[2025-09-15 16:50:27] 200
+[2025-09-15 16:51:18] Starting Call Ending...
+[2025-09-15 16:51:19] {"userId":9,"callChannel":"Local\/2002@from-user-0000006e;2","targetNumber":"2002","action":"end_call","sessionID":"3519105768c827a582d84"}
+[2025-09-15 16:51:19] {"success":true,"output":["Hanging up channel: database get <family> <key>","Usage: channel request hangup <channel>|<all>","       Request that a channel be hung up. The hangup takes effect","       the next time the driver reads or writes from the channel.","       If 'all' is specified instead of a channel name, all channels","       will see the hangup request.","Usage: database del <family> <key>","       Deletes an entry in the Asterisk database for a given","       family and key."]}
+[2025-09-15 16:51:19] 
+[2025-09-15 16:51:19] 200
+[2025-09-15 16:55:01] Starting Calling...
+[2025-09-15 16:55:03] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"2394585168c828be44aa2"}
+[2025-09-15 16:55:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000006f;2"],"channel":"Local\/2002@from-user-0000006f;2"}
+[2025-09-15 16:55:03] 
+[2025-09-15 16:55:03] 200
+[2025-09-15 16:55:50] Starting Call Ending...
+[2025-09-15 16:55:51] {"userId":9,"callChannel":"Local\/2002@from-user-0000006f;2","targetNumber":"2002","action":"end_call","sessionID":"2394585168c828be44aa2"}
+[2025-09-15 16:55:51] {"success":true,"output":["Hanging up channel: 2394585168c828be44aa2","2394585168c828be44aa2 is not a known channel","Database entry removed."]}
+[2025-09-15 16:55:51] 
+[2025-09-15 16:55:51] 200
+[2025-09-15 16:59:29] Starting Calling...
+[2025-09-15 16:59:30] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5543126168c829cce6b20"}
+[2025-09-15 16:59:30] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000070;2"],"channel":"Local\/2002@from-user-00000070;2"}
+[2025-09-15 16:59:30] 
+[2025-09-15 16:59:30] 200
+[2025-09-15 17:00:27] Starting Call Ending...
+[2025-09-15 17:00:28] {"userId":9,"callChannel":"Local\/2002@from-user-00000070;2","targetNumber":"2002","action":"end_call","sessionID":"5543126168c829cce6b20"}
+[2025-09-15 17:00:28] {"success":true,"output":["Database entry removed."]}
+[2025-09-15 17:00:28] 
+[2025-09-15 17:00:28] 200
+[2025-09-15 17:05:50] Starting Calling...
+[2025-09-15 17:05:51] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"1725157468c82b4a70c27"}
+[2025-09-15 17:05:51] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000071;2"],"channel":"Local\/2002@from-user-00000071;2"}
+[2025-09-15 17:05:51] 
+[2025-09-15 17:05:51] 200
+[2025-09-15 17:06:38] Starting Call Ending...
+[2025-09-15 17:06:39] {"userId":9,"callChannel":"Local\/2002@from-user-00000071;2","targetNumber":"2002","action":"end_call","sessionID":"1725157468c82b4a70c27"}
+[2025-09-15 17:06:39] {"success":true,"output":["Database entry removed."]}
+[2025-09-15 17:06:39] 
+[2025-09-15 17:06:39] 200
+[2025-09-15 17:08:09] Starting Calling...
+[2025-09-15 17:08:11] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"8217770868c82bd7793bb"}
+[2025-09-15 17:08:11] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000072;2"],"channel":"Local\/2002@from-user-00000072;2"}
+[2025-09-15 17:08:11] 
+[2025-09-15 17:08:11] 200
+[2025-09-15 17:08:40] Starting Call Ending...
+[2025-09-15 17:08:41] {"userId":9,"callChannel":"Local\/2002@from-user-00000072;2","targetNumber":"2002","action":"end_call","sessionID":"8217770868c82bd7793bb"}
+[2025-09-15 17:08:41] {"success":true,"output":["Inspecting SIP\/2002-0000007f","Inspecting Local\/2002@from-user-00000072;2","Inspecting Local\/2002@from-user-00000072;1","Database entry removed."]}
+[2025-09-15 17:08:41] 
+[2025-09-15 17:08:41] 200
+[2025-09-15 17:10:45] Starting Calling...
+[2025-09-15 17:10:46] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"9582135868c82c7287f89"}
+[2025-09-15 17:10:46] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000073;2"],"channel":"Local\/2002@from-user-00000073;2"}
+[2025-09-15 17:10:46] 
+[2025-09-15 17:10:46] 200
+[2025-09-15 17:10:57] Starting Call Ending...
+[2025-09-15 17:10:57] {"userId":9,"callChannel":"Local\/2002@from-user-00000073;2","targetNumber":"2002","action":"end_call","sessionID":"9582135868c82c7287f89"}
+[2025-09-15 17:10:57] {"success":true,"output":["Inspecting Local\/2002@from-user-00000073;2 : 9582135868c82c7287f89","Inspecting Local\/2002@from-user-00000073;1 : 9582135868c82c7287f89","Database entry removed."]}
+[2025-09-15 17:10:57] 
+[2025-09-15 17:10:57] 200
+[2025-09-15 17:21:48] Starting Calling...
+[2025-09-15 17:21:50] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"3883737268c82f0a0728d"}
+[2025-09-15 17:21:50] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000074;2"],"channel":"Local\/2002@from-user-00000074;2"}
+[2025-09-15 17:21:50] 
+[2025-09-15 17:21:50] 200
+[2025-09-15 17:22:05] Starting Calling...
+[2025-09-15 17:22:07] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"8489716768c82f1a42ef5"}
+[2025-09-15 17:22:07] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000075;2"],"channel":"Local\/2002@from-user-00000075;2"}
+[2025-09-15 17:22:07] 
+[2025-09-15 17:22:07] 200
+[2025-09-15 17:22:43] Starting Call Ending...
+[2025-09-15 17:22:44] {"userId":9,"callChannel":"Local\/2002@from-user-00000075;2","targetNumber":"2002","action":"end_call","sessionID":"8489716768c82f1a42ef5"}
+[2025-09-15 17:22:44] {"success":true,"output":["Database entry removed."]}
+[2025-09-15 17:22:44] 
+[2025-09-15 17:22:44] 200
+[2025-09-15 17:26:24] Starting Calling...
+[2025-09-15 17:26:26] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"8612651068c8301f371fc"}
+[2025-09-15 17:26:26] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 17:26:26] 
+[2025-09-15 17:26:26] 200
+[2025-09-15 17:28:30] Starting Call Ending...
+[2025-09-15 17:28:31] {"userId":9,"callChannel":"Local\/2002@from-user-00000076;2","targetNumber":"2002","action":"end_call","sessionID":"8612651068c8301f371fc"}
+[2025-09-15 17:28:31] {"success":true,"output":["Database entry removed."]}
+[2025-09-15 17:28:31] 
+[2025-09-15 17:28:31] 200
+[2025-09-15 17:28:35] Starting Calling...
+[2025-09-15 17:28:37] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"6403913168c830a140a6c"}
+[2025-09-15 17:28:37] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000077;2"],"channel":"Local\/2002@from-user-00000077;2"}
+[2025-09-15 17:28:37] 
+[2025-09-15 17:28:37] 200
+[2025-09-15 17:29:08] Starting Call Ending...
+[2025-09-15 17:29:09] {"userId":9,"callChannel":"Local\/2002@from-user-00000077;2","targetNumber":"2002","action":"end_call","sessionID":"6403913168c830a140a6c"}
+[2025-09-15 17:29:09] {"success":true,"output":["Database entry removed."]}
+[2025-09-15 17:29:09] 
+[2025-09-15 17:29:09] 200
+[2025-09-15 17:29:14] Starting Calling...
+[2025-09-15 17:29:16] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"9238519468c830c8a490a"}
+[2025-09-15 17:29:16] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel:"],"channel":"Channel:"}
+[2025-09-15 17:29:16] 
+[2025-09-15 17:29:16] 200
+[2025-09-15 17:40:53] Starting Calling...
+[2025-09-15 17:40:55] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"2083352368c833840a8d6"}
+[2025-09-15 17:40:55] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000079;2"],"channel":"Local\/2002@from-user-00000079;2"}
+[2025-09-15 17:40:55] 
+[2025-09-15 17:40:55] 200
+[2025-09-15 17:41:30] Starting Call Ending...
+[2025-09-15 17:41:31] {"userId":9,"callChannel":"","targetNumber":"2002","action":"end_call","sessionID":"2083352368c833840a8d6"}
+[2025-09-15 17:41:31] {"success":false,"error":"Missing required fields"}
+[2025-09-15 17:41:31] 
+[2025-09-15 17:41:31] 400
+[2025-09-15 17:42:24] Starting Calling...
+[2025-09-15 17:42:25] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"7407075368c833aec4347"}
+[2025-09-15 17:42:25] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007a;2"],"channel":"Local\/2002@from-user-0000007a"}
+[2025-09-15 17:42:25] 
+[2025-09-15 17:42:25] 200
+[2025-09-15 17:42:42] Starting Call Ending...
+[2025-09-15 17:42:43] {"userId":9,"callChannel":"Local\/2002@from-user-0000007a","targetNumber":"2002","action":"end_call","sessionID":"7407075368c833aec4347"}
+[2025-09-15 17:42:43] {"success":true,"output":["Hanging up: Local\/2002@from-user-0000007a;2","Requested Hangup on channel 'Local\/2002@from-user-0000007a;2'","Hanging up: Local\/2002@from-user-0000007a;1","Local\/2002@from-user-0000007a;1 is not a known channel"]}
+[2025-09-15 17:42:43] 
+[2025-09-15 17:42:43] 200
+[2025-09-15 17:43:11] Starting Calling...
+[2025-09-15 17:43:12] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"7407075368c833aec4347"}
+[2025-09-15 17:43:12] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007b;2"],"channel":"Local\/2002@from-user-0000007b"}
+[2025-09-15 17:43:12] 
+[2025-09-15 17:43:12] 200
+[2025-09-15 17:44:03] Starting Call Ending...
+[2025-09-15 17:44:04] {"userId":9,"callChannel":"Local\/2002@from-user-0000007b","targetNumber":"2002","action":"end_call","sessionID":"7407075368c833aec4347"}
+[2025-09-15 17:44:04] {"success":true,"output":["Hanging up: Local\/2002@from-user-0000007b;2","Requested Hangup on channel 'Local\/2002@from-user-0000007b;2'","Hanging up: Local\/2002@from-user-0000007b;1","Local\/2002@from-user-0000007b;1 is not a known channel"]}
+[2025-09-15 17:44:04] 
+[2025-09-15 17:44:04] 200
+[2025-09-15 17:49:19] Starting Calling...
+[2025-09-15 17:49:21] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"4852431468c8357a32a59"}
+[2025-09-15 17:49:21] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007c;2"],"channel":"Local\/2002@from-user-0000007c"}
+[2025-09-15 17:49:21] 
+[2025-09-15 17:49:21] 200
+[2025-09-15 17:49:38] Starting Call Ending...
+[2025-09-15 17:49:39] {"userId":9,"callChannel":"Local\/2002@from-user-0000007c;2","targetNumber":"2002","action":"end_call","sessionID":"4852431468c8357a32a59"}
+[2025-09-15 17:49:39] {"success":true,"output":["No such command 'soft hangup Local\/2002@from-user-0000007c;2' (type 'core show help soft hangup' for other possible commands)"]}
+[2025-09-15 17:49:39] 
+[2025-09-15 17:49:39] 200
+[2025-09-15 17:52:47] Starting Calling...
+[2025-09-15 17:52:49] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5129828268c8364ab631c"}
+[2025-09-15 17:52:49] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007d;2"],"channel":"Local\/2002@from-user-0000007d"}
+[2025-09-15 17:52:49] 
+[2025-09-15 17:52:49] 200
+[2025-09-15 17:53:23] Starting Call Ending...
+[2025-09-15 17:53:23] {"userId":9,"callChannel":"Channel: Local\/2002@from-user-0000007d;2","targetNumber":"2002","action":"end_call","sessionID":"5129828268c8364ab631c"}
+[2025-09-15 17:53:23] {"success":true,"output":["Usage: channel request hangup <channel>|<all>","       Request that a channel be hung up. The hangup takes effect","       the next time the driver reads or writes from the channel.","       If 'all' is specified instead of a channel name, all channels","       will see the hangup request."]}
+[2025-09-15 17:53:23] 
+[2025-09-15 17:53:23] 200
+[2025-09-15 17:56:36] Starting Calling...
+[2025-09-15 17:56:38] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"8954104868c8372c3718a"}
+[2025-09-15 17:56:38] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007e;2"],"channel":"Local\/2002@from-user-0000007e"}
+[2025-09-15 17:56:38] 
+[2025-09-15 17:56:38] 200
+[2025-09-15 17:57:11] Starting Call Ending...
+[2025-09-15 17:57:12] {"userId":9,"callChannel":"Local\/2002@from-user-0000007e;2","targetNumber":"2002","action":"end_call","sessionID":"8954104868c8372c3718a"}
+[2025-09-15 17:57:12] {"success":true,"output":["No bridged channel found for"]}
+[2025-09-15 17:57:12] 
+[2025-09-15 17:57:12] 200
+[2025-09-15 17:58:42] Starting Calling...
+[2025-09-15 17:58:44] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"9397010968c837b007980"}
+[2025-09-15 17:58:44] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000007f;2"],"channel":"Local\/2002@from-user-0000007f"}
+[2025-09-15 17:58:44] 
+[2025-09-15 17:58:44] 200
+[2025-09-15 17:59:15] Starting Call Ending...
+[2025-09-15 17:59:16] {"userId":9,"callChannel":"Channel: Local\/2002@from-user-0000007f;2","targetNumber":"2002","action":"end_call","sessionID":"9397010968c837b007980"}
+[2025-09-15 17:59:16] {"success":true,"output":["No bridged channel found for Channel:"]}
+[2025-09-15 17:59:16] 
+[2025-09-15 17:59:16] 200
+[2025-09-15 18:02:02] Starting Calling...
+[2025-09-15 18:02:03] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5244753668c8387870b45"}
+[2025-09-15 18:02:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000080;2"],"channel":"Local\/2002@from-user-00000080"}
+[2025-09-15 18:02:03] 
+[2025-09-15 18:02:03] 200
+[2025-09-15 18:03:14] Starting Call Ending...
+[2025-09-15 18:03:14] {"userId":9,"callChannel":"Channel: Local\/2002@from-user-00000080;2","targetNumber":"2002","action":"end_call","sessionID":"5244753668c8387870b45"}
+[2025-09-15 18:03:14] {"success":true,"output":["Base channel: Channel:","No bridged channel found for Channel:"]}
+[2025-09-15 18:03:14] 
+[2025-09-15 18:03:14] 200
+[2025-09-18 01:26:13] Starting Calling...
+[2025-09-18 01:26:15] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:26:15] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000081;2"],"channel":"Local\/2002@from-user-00000081"}
+[2025-09-18 01:26:15] 
+[2025-09-18 01:26:15] 200
+[2025-09-18 01:26:48] Starting Call Ending...
+[2025-09-18 01:26:49] {"userId":9,"callChannel":"Local\/2002@from-user-00000081;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:26:49] {"success":true,"output":["Base channel: Local\/2002@from-user-00000081","No bridged channel found for Local\/2002@from-user-00000081;2"]}
+[2025-09-18 01:26:49] 
+[2025-09-18 01:26:49] 200
+[2025-09-18 01:27:31] Starting Calling...
+[2025-09-18 01:27:32] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:27:32] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000082;2"],"channel":"Local\/2002@from-user-00000082"}
+[2025-09-18 01:27:32] 
+[2025-09-18 01:27:32] 200
+[2025-09-18 01:28:09] Starting Call Ending...
+[2025-09-18 01:28:09] {"userId":9,"callChannel":"Local\/2002@from-user-00000082;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:28:09] {"success":true,"output":["Base channel: Local\/2002@from-user-00000082","Hanging up: Local\/2002@from-user-00000082;2","Requested Hangup on channel 'Local\/2002@from-user-00000082;2'","Hanging up: Local\/2002@from-user-00000082;1","Local\/2002@from-user-00000082;1 is not a known channel","No bridged channel found for Local\/2002@from-user-00000082;2"]}
+[2025-09-18 01:28:09] 
+[2025-09-18 01:28:09] 200
+[2025-09-18 01:32:02] Starting Calling...
+[2025-09-18 01:32:03] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:32:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000083;2"],"channel":"Local\/2002@from-user-00000083"}
+[2025-09-18 01:32:03] 
+[2025-09-18 01:32:03] 200
+[2025-09-18 01:32:36] Starting Call Ending...
+[2025-09-18 01:32:37] {"userId":9,"callChannel":"Local\/2002@from-user-00000083;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:32:37] {"success":true,"output":["Base channel: Local\/2002@from-user-00000083","Hanging up: Local\/2002@from-user-00000083;2","Requested Hangup on channel 'Local\/2002@from-user-00000083;2'","Hanging up: Local\/2002@from-user-00000083;1","Local\/2002@from-user-00000083;1 is not a known channel","No bridged channel found for Local\/2002@from-user-00000083;2"]}
+[2025-09-18 01:32:37] 
+[2025-09-18 01:32:37] 200
+[2025-09-18 01:36:12] Starting Calling...
+[2025-09-18 01:36:13] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:36:13] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000084;2"],"channel":"Local\/2002@from-user-00000084"}
+[2025-09-18 01:36:13] 
+[2025-09-18 01:36:13] 200
+[2025-09-18 01:36:51] Starting Call Ending...
+[2025-09-18 01:36:51] {"userId":9,"callChannel":"Local\/2002@from-user-00000084;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:36:51] {"success":true,"output":["Base channel: Local\/2002@from-user-00000084","Hanging up: Local\/2002@from-user-00000084;2","Requested Hangup on channel 'Local\/2002@from-user-00000084;2'","Hanging up: Local\/2002@from-user-00000084;1","Local\/2002@from-user-00000084;1 is not a known channel"]}
+[2025-09-18 01:36:51] 
+[2025-09-18 01:36:51] 200
+[2025-09-18 01:37:05] Starting Calling...
+[2025-09-18 01:37:06] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:37:06] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000085;2"],"channel":"Local\/2002@from-user-00000085"}
+[2025-09-18 01:37:06] 
+[2025-09-18 01:37:06] 200
+[2025-09-18 01:37:53] Starting Call Ending...
+[2025-09-18 01:37:54] {"userId":9,"callChannel":"Local\/2002@from-user-00000085;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:37:54] {"success":true,"output":["Base channel: Local\/2002@from-user-00000085","Hanging up: Local\/2002@from-user-00000085;2","Requested Hangup on channel 'Local\/2002@from-user-00000085;2'","Hanging up: Local\/2002@from-user-00000085;1","Local\/2002@from-user-00000085;1 is not a known channel"]}
+[2025-09-18 01:37:54] 
+[2025-09-18 01:37:54] 200
+[2025-09-18 01:38:01] Starting Calling...
+[2025-09-18 01:38:03] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:38:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000086;2"],"channel":"Local\/2002@from-user-00000086"}
+[2025-09-18 01:38:03] 
+[2025-09-18 01:38:03] 200
+[2025-09-18 01:38:13] Starting Calling...
+[2025-09-18 01:38:15] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:38:15] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000087;2"],"channel":"Local\/2002@from-user-00000087"}
+[2025-09-18 01:38:15] 
+[2025-09-18 01:38:15] 200
+[2025-09-18 01:38:21] Starting Calling...
+[2025-09-18 01:38:23] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:38:23] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000088;2"],"channel":"Local\/2002@from-user-00000088"}
+[2025-09-18 01:38:23] 
+[2025-09-18 01:38:23] 200
+[2025-09-18 01:39:03] Starting Call Ending...
+[2025-09-18 01:39:03] {"userId":9,"callChannel":"Local\/2002@from-user-00000087;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:39:03] {"success":true,"output":["Base channel: Local\/2002@from-user-00000087","Hanging up: Local\/2002@from-user-00000087;2","Requested Hangup on channel 'Local\/2002@from-user-00000087;2'","Hanging up: Local\/2002@from-user-00000087;1","Local\/2002@from-user-00000087;1 is not a known channel"]}
+[2025-09-18 01:39:03] 
+[2025-09-18 01:39:03] 200
+[2025-09-18 01:39:30] Starting Call Ending...
+[2025-09-18 01:39:31] {"userId":9,"callChannel":"Local\/2002@from-user-00000088;1","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:39:31] {"success":true,"output":["Base channel: Local\/2002@from-user-00000088","Hanging up: Local\/2002@from-user-00000088;2","Requested Hangup on channel 'Local\/2002@from-user-00000088;2'","Hanging up: Local\/2002@from-user-00000088;1","Local\/2002@from-user-00000088;1 is not a known channel"]}
+[2025-09-18 01:39:31] 
+[2025-09-18 01:39:31] 200
+[2025-09-18 01:39:47] Starting Calling...
+[2025-09-18 01:39:48] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:39:48] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000089;2"],"channel":"Local\/2002@from-user-00000089"}
+[2025-09-18 01:39:48] 
+[2025-09-18 01:39:48] 200
+[2025-09-18 01:40:21] Starting Call Ending...
+[2025-09-18 01:40:22] {"userId":9,"callChannel":"Local\/2002@from-user-00000089;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:40:22] {"success":true,"output":["Base channel: Local\/2002@from-user-00000089","Hanging up: Local\/2002@from-user-00000089;2","Requested Hangup on channel 'Local\/2002@from-user-00000089;2'","Hanging up: Local\/2002@from-user-00000089;1","Local\/2002@from-user-00000089;1 is not a known channel"]}
+[2025-09-18 01:40:22] 
+[2025-09-18 01:40:22] 200
+[2025-09-18 01:41:09] Starting Calling...
+[2025-09-18 01:41:11] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:41:11] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008a;2"],"channel":"Local\/2002@from-user-0000008a"}
+[2025-09-18 01:41:11] 
+[2025-09-18 01:41:11] 200
+[2025-09-18 01:41:54] Starting Call Ending...
+[2025-09-18 01:41:54] {"userId":9,"callChannel":"Local\/2002@from-user-0000008a;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:41:54] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008a","Hanging up: Local\/2002@from-user-0000008a;2","Requested Hangup on channel 'Local\/2002@from-user-0000008a;2'","Hanging up: Local\/2002@from-user-0000008a;1","Local\/2002@from-user-0000008a;1 is not a known channel"]}
+[2025-09-18 01:41:54] 
+[2025-09-18 01:41:54] 200
+[2025-09-18 01:42:15] Starting Calling...
+[2025-09-18 01:42:17] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:42:17] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008b;2"],"channel":"Local\/2002@from-user-0000008b"}
+[2025-09-18 01:42:17] 
+[2025-09-18 01:42:17] 200
+[2025-09-18 01:42:36] Starting Calling...
+[2025-09-18 01:42:37] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:42:37] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008c;2"],"channel":"Local\/2002@from-user-0000008c"}
+[2025-09-18 01:42:37] 
+[2025-09-18 01:42:37] 200
+[2025-09-18 01:43:41] Starting Call Ending...
+[2025-09-18 01:43:41] {"userId":9,"callChannel":"Local\/2002@from-user-0000008c;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:43:41] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008c","Hanging up: Local\/2002@from-user-0000008c;2","Requested Hangup on channel 'Local\/2002@from-user-0000008c;2'","Hanging up: Local\/2002@from-user-0000008c;1","Local\/2002@from-user-0000008c;1 is not a known channel"]}
+[2025-09-18 01:43:41] 
+[2025-09-18 01:43:41] 200
+[2025-09-18 01:47:24] Starting Calling...
+[2025-09-18 01:47:26] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:47:26] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008d;2"],"channel":"Local\/2002@from-user-0000008d"}
+[2025-09-18 01:47:26] 
+[2025-09-18 01:47:26] 200
+[2025-09-18 01:48:08] Starting Call Ending...
+[2025-09-18 01:48:09] {"userId":9,"callChannel":"Local\/2002@from-user-0000008d;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:48:09] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008d","Attempting hangup: Local\/2002@from-user-0000008d;2","Hangup succeeded on: Local\/2002@from-user-0000008d;2"]}
+[2025-09-18 01:48:09] 
+[2025-09-18 01:48:09] 200
+[2025-09-18 01:55:24] Starting Calling...
+[2025-09-18 01:55:25] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:55:25] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008e;2"],"channel":"Local\/2002@from-user-0000008e"}
+[2025-09-18 01:55:25] 
+[2025-09-18 01:55:25] 200
+[2025-09-18 01:56:02] Starting Call Ending...
+[2025-09-18 01:56:02] {"userId":9,"callChannel":"Local\/2002@from-user-0000008e;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:56:02] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008e","No active bridge found for Local\/2002@from-user-0000008e;2"]}
+[2025-09-18 01:56:02] 
+[2025-09-18 01:56:02] 200
+[2025-09-18 01:56:06] Starting Calling...
+[2025-09-18 01:56:08] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:56:08] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008f;2"],"channel":"Local\/2002@from-user-0000008f"}
+[2025-09-18 01:56:08] 
+[2025-09-18 01:56:08] 200
+[2025-09-18 01:56:31] Starting Calling...
+[2025-09-18 01:56:32] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:56:32] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000008f;2"],"channel":"Local\/2002@from-user-0000008f"}
+[2025-09-18 01:56:32] 
+[2025-09-18 01:56:32] 200
+[2025-09-18 01:57:11] Starting Call Ending...
+[2025-09-18 01:57:12] {"userId":9,"callChannel":"Local\/2002@from-user-0000008f;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:57:12] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008f","Attempting hangup: Local\/2002@from-user-0000008f;2","No active bridge found for Local\/2002@from-user-0000008f;2"]}
+[2025-09-18 01:57:12] 
+[2025-09-18 01:57:12] 200
+[2025-09-18 01:57:38] Starting Call Ending...
+[2025-09-18 01:57:39] {"userId":9,"callChannel":"Local\/2002@from-user-0000008f;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:57:39] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008f","No active bridge found for Local\/2002@from-user-0000008f;2"]}
+[2025-09-18 01:57:39] 
+[2025-09-18 01:57:39] 200
+[2025-09-18 01:57:41] Starting Call Ending...
+[2025-09-18 01:57:42] {"userId":9,"callChannel":"Local\/2002@from-user-0000008f;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:57:42] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008f","No active bridge found for Local\/2002@from-user-0000008f;2"]}
+[2025-09-18 01:57:42] 
+[2025-09-18 01:57:42] 200
+[2025-09-18 01:57:43] Starting Call Ending...
+[2025-09-18 01:57:44] {"userId":9,"callChannel":"Local\/2002@from-user-0000008f;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:57:44] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008f","No active bridge found for Local\/2002@from-user-0000008f;2"]}
+[2025-09-18 01:57:44] 
+[2025-09-18 01:57:44] 200
+[2025-09-18 01:57:45] Starting Call Ending...
+[2025-09-18 01:57:45] {"userId":9,"callChannel":"Local\/2002@from-user-0000008f;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:57:45] {"success":true,"output":["Base channel: Local\/2002@from-user-0000008f","No active bridge found for Local\/2002@from-user-0000008f;2"]}
+[2025-09-18 01:57:45] 
+[2025-09-18 01:57:45] 200
+[2025-09-18 01:59:16] Starting Calling...
+[2025-09-18 01:59:17] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:59:17] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000091;2"],"channel":"Local\/2002@from-user-00000091"}
+[2025-09-18 01:59:17] 
+[2025-09-18 01:59:17] 200
+[2025-09-18 01:59:41] Starting Call Ending...
+[2025-09-18 01:59:42] {"userId":9,"callChannel":"Local\/2002@from-user-00000091;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 01:59:42] {"success":true,"output":["Scanning for channels related to extension: Local\/2002@from-user-00000091;2","Hanging up: Local\/2002@from-user-00000091;2","Requested Hangup on channel 'Local\/2002@from-user-00000091;2'"]}
+[2025-09-18 01:59:42] 
+[2025-09-18 01:59:42] 200
+[2025-09-18 02:00:14] Starting Calling...
+[2025-09-18 02:00:15] {"ivrId":1,"userId":9,"callerId":"36580677653345","targetNumber":"2002","action":"make_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 02:00:15] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000092;2"],"channel":"Local\/2002@from-user-00000092"}
+[2025-09-18 02:00:15] 
+[2025-09-18 02:00:15] 200
+[2025-09-18 02:00:49] Starting Call Ending...
+[2025-09-18 02:00:50] {"userId":9,"callChannel":"Local\/2002@from-user-00000092;2","targetNumber":"2002","action":"end_call","sessionID":"5268790768cb42d461ff4"}
+[2025-09-18 02:00:50] {"success":true,"output":["Scanning for channels related to extension: Local\/2002@from-user-00000092;2","Hanging up: Local\/2002@from-user-00000092;2","Requested Hangup on channel 'Local\/2002@from-user-00000092;2'"]}
+[2025-09-18 02:00:50] 
+[2025-09-18 02:00:50] 200
+[2025-09-18 04:36:45] Starting Calling...
+[2025-09-18 04:36:46] {"callerId":"36580677653345","callerName":9,"targetNumber":"2002","action":"make_call"}
+[2025-09-18 04:36:46] {"success":false,"error":"Missing required fields"}
+[2025-09-18 04:36:46] 
+[2025-09-18 04:36:46] 400
+[2025-09-19 03:32:25] Starting Calling...
+[2025-09-19 03:32:28] {"action":"make_call","id_user":123,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 03:32:25","stoptime":"2025-09-19 03:32:25","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb2a9d582d"}
+[2025-09-19 03:32:28] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000093;2"],"channel":"Local\/2002@from-user-00000093;2","cdr_uniqueid":"call_68ccb2a9d582d"}
+[2025-09-19 03:32:28] 
+[2025-09-19 03:32:28] 200
+[2025-09-19 03:43:51] Starting Calling...
+[2025-09-19 03:43:53] {"callerName":"testuserIVR","action":"make_call","id_user":123,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 03:43:51","stoptime":"2025-09-19 03:43:51","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb55784dcd"}
+[2025-09-19 03:43:53] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000094;2"],"channel":"Local\/2002@from-user-00000094;2","cdr_uniqueid":"call_68ccb55784dcd"}
+[2025-09-19 03:43:53] 
+[2025-09-19 03:43:53] 200
+[2025-09-19 03:49:12] Starting Calling...
+[2025-09-19 03:49:14] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 03:49:12","stoptime":"2025-09-19 03:49:12","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb69896fa3"}
+[2025-09-19 03:49:14] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000095;2"],"channel":"Local\/2002@from-user-00000095;2","cdr_uniqueid":"call_68ccb69896fa3"}
+[2025-09-19 03:49:14] 
+[2025-09-19 03:49:14] 200
+[2025-09-19 03:51:11] Starting Calling...
+[2025-09-19 03:51:13] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 03:51:11","stoptime":"2025-09-19 03:51:11","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb70fed41e"}
+[2025-09-19 03:51:13] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000096;2"],"channel":"Local\/2002@from-user-00000096;2","cdr_uniqueid":"call_68ccb70fed41e"}
+[2025-09-19 03:51:13] 
+[2025-09-19 03:51:13] 200
+[2025-09-19 03:53:04] Starting Calling...
+[2025-09-19 03:53:06] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 03:53:04","stoptime":"2025-09-19 03:53:04","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb780a3d12"}
+[2025-09-19 03:53:06] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000097;2"],"channel":"Local\/2002@from-user-00000097;2","cdr_uniqueid":"call_68ccb780a3d12"}
+[2025-09-19 03:53:06] 
+[2025-09-19 03:53:06] 200
+[2025-09-19 04:01:22] Starting Calling...
+[2025-09-19 04:01:23] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:01:22","stoptime":"2025-09-19 04:01:22","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccb9722e691"}
+[2025-09-19 04:01:23] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000098;2"],"channel":"Local\/2002@from-user-00000098;2","cdr_uniqueid":"call_68ccb9722e691"}
+[2025-09-19 04:01:23] 
+[2025-09-19 04:01:23] 200
+[2025-09-19 04:03:51] Starting Calling...
+[2025-09-19 04:03:53] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:03:51","stoptime":"2025-09-19 04:03:51","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccba074d8cc"}
+[2025-09-19 04:03:53] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-00000099;2"],"channel":"Local\/2002@from-user-00000099;2","cdr_uniqueid":"call_68ccba074d8cc"}
+[2025-09-19 04:03:53] 
+[2025-09-19 04:03:53] 200
+[2025-09-19 04:05:06] Starting Calling...
+[2025-09-19 04:05:08] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:05:06","stoptime":"2025-09-19 04:05:06","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccba52ae813"}
+[2025-09-19 04:05:08] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000009a;2"],"channel":"Local\/2002@from-user-0000009a;2","cdr_uniqueid":"call_68ccba52ae813"}
+[2025-09-19 04:05:08] 
+[2025-09-19 04:05:08] 200
+[2025-09-19 04:05:48] Starting Calling...
+[2025-09-19 04:05:49] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:05:48","stoptime":"2025-09-19 04:05:48","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccba7c1daa0"}
+[2025-09-19 04:05:49] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000009b;2"],"channel":"Local\/2002@from-user-0000009b;2","cdr_uniqueid":"call_68ccba7c1daa0"}
+[2025-09-19 04:05:49] 
+[2025-09-19 04:05:49] 200
+[2025-09-19 04:10:31] Starting Calling...
+[2025-09-19 04:10:33] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:10:31","stoptime":"2025-09-19 04:10:31","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccbb97c4d7b"}
+[2025-09-19 04:10:33] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000009c;2"],"channel":"Local\/2002@from-user-0000009c;2","cdr_uniqueid":"call_68ccbb97c4d7b"}
+[2025-09-19 04:10:33] 
+[2025-09-19 04:10:33] 200
+[2025-09-19 04:15:11] Starting Calling...
+[2025-09-19 04:15:13] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:15:11","stoptime":"2025-09-19 04:15:11","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccbcaf6afeb"}
+[2025-09-19 04:15:13] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000009d;2"],"channel":"Local\/2002@from-user-0000009d;2","cdr_uniqueid":"call_68ccbcaf6afeb"}
+[2025-09-19 04:15:13] 
+[2025-09-19 04:15:13] 200
+[2025-09-19 04:17:54] Starting Calling...
+[2025-09-19 04:17:56] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-19 04:17:54","stoptime":"2025-09-19 04:17:54","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68ccbd524c98d"}
+[2025-09-19 04:17:56] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-0000009e;2"],"channel":"Local\/2002@from-user-0000009e;2","cdr_uniqueid":"call_68ccbd524c98d"}
+[2025-09-19 04:17:56] 
+[2025-09-19 04:17:56] 200
+[2025-09-30 09:14:45] Starting Calling...
+[2025-09-30 09:14:47] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:14:45","stoptime":"2025-09-30 09:14:45","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8365c692f"}
+[2025-09-30 09:14:47] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-0000009f;2\",\"Hanging up: Local\\\/2002@from-user-0000009f;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-0000009f;2'\"]"}
+[2025-09-30 09:14:47] 
+[2025-09-30 09:14:47] 400
+[2025-09-30 09:15:20] Starting Calling...
+[2025-09-30 09:15:21] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:15:20","stoptime":"2025-09-30 09:15:20","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db838828471"}
+[2025-09-30 09:15:21] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a0;2\",\"Hanging up: Local\\\/2002@from-user-000000a0;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a0;2'\"]"}
+[2025-09-30 09:15:21] 
+[2025-09-30 09:15:21] 400
+[2025-09-30 09:16:39] Starting Calling...
+[2025-09-30 09:16:40] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:16:39","stoptime":"2025-09-30 09:16:39","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db83d701a97"}
+[2025-09-30 09:16:40] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a1;2\",\"Hanging up: Local\\\/2002@from-user-000000a1;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a1;2'\"]"}
+[2025-09-30 09:16:40] 
+[2025-09-30 09:16:40] 400
+[2025-09-30 09:22:15] Starting Calling...
+[2025-09-30 09:22:17] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:22:15","stoptime":"2025-09-30 09:22:15","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8527db6c8"}
+[2025-09-30 09:22:17] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a2;2\",\"Hanging up: Local\\\/2002@from-user-000000a2;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a2;2'\"]"}
+[2025-09-30 09:22:17] 
+[2025-09-30 09:22:17] 400
+[2025-09-30 09:24:14] Starting Calling...
+[2025-09-30 09:24:16] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:24:14","stoptime":"2025-09-30 09:24:14","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db859e762e5"}
+[2025-09-30 09:24:16] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a3;2\",\"Hanging up: Local\\\/2002@from-user-000000a3;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a3;2'\"]"}
+[2025-09-30 09:24:16] 
+[2025-09-30 09:24:16] 400
+[2025-09-30 09:26:38] Starting Calling...
+[2025-09-30 09:26:40] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:26:38","stoptime":"2025-09-30 09:26:38","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db862eddcad"}
+[2025-09-30 09:26:40] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a4;2\",\"Hanging up: Local\\\/2002@from-user-000000a4;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a4;2'\"]"}
+[2025-09-30 09:26:40] 
+[2025-09-30 09:26:40] 400
+[2025-09-30 09:27:05] Starting Calling...
+[2025-09-30 09:27:07] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:27:05","stoptime":"2025-09-30 09:27:05","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8649e1448"}
+[2025-09-30 09:27:07] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a5;2\",\"Hanging up: Local\\\/2002@from-user-000000a5;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a5;2'\"]"}
+[2025-09-30 09:27:07] 
+[2025-09-30 09:27:07] 400
+[2025-09-30 09:30:11] Starting Calling...
+[2025-09-30 09:30:12] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:30:11","stoptime":"2025-09-30 09:30:11","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db870320d0a"}
+[2025-09-30 09:30:12] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a6;2\",\"Hanging up: Local\\\/2002@from-user-000000a6;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a6;2'\"]"}
+[2025-09-30 09:30:12] 
+[2025-09-30 09:30:12] 400
+[2025-09-30 09:34:35] Starting Calling...
+[2025-09-30 09:34:37] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:34:35","stoptime":"2025-09-30 09:34:35","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db880b50cf2"}
+[2025-09-30 09:34:37] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a7;2\",\"Hanging up: Local\\\/2002@from-user-000000a7;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a7;2'\"]"}
+[2025-09-30 09:34:37] 
+[2025-09-30 09:34:37] 400
+[2025-09-30 09:35:18] Starting Calling...
+[2025-09-30 09:35:19] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:35:18","stoptime":"2025-09-30 09:35:18","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db88361c772"}
+[2025-09-30 09:35:19] {"success":false,"error":"\nShell Execute Failed! : [\"Scanning for channels related to extension: Local\\\/2002@from-user-000000a8;2\",\"Hanging up: Local\\\/2002@from-user-000000a8;2\",\"Requested Hangup on channel 'Local\\\/2002@from-user-000000a8;2'\"]"}
+[2025-09-30 09:35:19] 
+[2025-09-30 09:35:19] 400
+[2025-09-30 09:37:06] Starting Calling...
+[2025-09-30 09:37:08] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:37:06","stoptime":"2025-09-30 09:37:06","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db88a2cf69f"}
+[2025-09-30 09:37:08] {"success":false,"error":"CDR DB Failed!Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stoptime' in 'INSERT INTO' ---- "}
+[2025-09-30 09:37:08] 
+[2025-09-30 09:37:08] 400
+[2025-09-30 09:39:21] Starting Calling...
+[2025-09-30 09:39:23] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:39:21","stoptime":"2025-09-30 09:39:21","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db89294e3a6"}
+[2025-09-30 09:39:23] {"success":false,"error":"CDR DB Failed!Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stoptime' in 'INSERT INTO' ---- "}
+[2025-09-30 09:39:23] 
+[2025-09-30 09:39:23] 400
+[2025-09-30 09:39:47] Starting Calling...
+[2025-09-30 09:39:48] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:39:47","stoptime":"2025-09-30 09:39:47","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db89432444c"}
+[2025-09-30 09:39:48] {"success":false,"error":"CDR DB Failed!Error: SQLSTATE[HY000]: General error: 1364 Field 'src' doesn't have a default value ---- "}
+[2025-09-30 09:39:48] 
+[2025-09-30 09:39:48] 400
+[2025-09-30 09:42:37] Starting Calling...
+[2025-09-30 09:42:38] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:42:37","stoptime":"2025-09-30 09:42:37","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db89ed1c35b"}
+[2025-09-30 09:42:38] {"success":false,"error":"CDR DB Failed!Error: SQLSTATE[HY000]: General error: 1364 Field 'src' doesn't have a default value ---- "}
+[2025-09-30 09:42:38] 
+[2025-09-30 09:42:38] 400
+[2025-09-30 09:43:00] Starting Calling...
+[2025-09-30 09:43:02] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:43:00","stoptime":"2025-09-30 09:43:00","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8a042eded"}
+[2025-09-30 09:43:02] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000ad;2"],"channel":"Local\/2002@from-user-000000ad;2","cdr_uniqueid":"call_68db8a042eded"}
+[2025-09-30 09:43:02] 
+[2025-09-30 09:43:02] 200
+[2025-09-30 09:49:00] Starting Calling...
+[2025-09-30 09:49:01] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:49:00","stoptime":"2025-09-30 09:49:00","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8b6c0e9f0"}
+[2025-09-30 09:49:01] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000ae;2"],"channel":"Local\/2002@from-user-000000ae;2","cdr_uniqueid":"call_68db8b6c0e9f0"}
+[2025-09-30 09:49:01] 
+[2025-09-30 09:49:01] 200
+[2025-09-30 09:50:28] Starting Calling...
+[2025-09-30 09:50:30] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 09:50:28","stoptime":"2025-09-30 09:50:28","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8bc4ca3b0"}
+[2025-09-30 09:50:30] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000af;2"],"channel":"Local\/2002@from-user-000000af;2","cdr_uniqueid":"call_68db8bc4ca3b0"}
+[2025-09-30 09:50:30] 
+[2025-09-30 09:50:30] 200
+[2025-09-30 10:00:41] Starting Calling...
+[2025-09-30 10:00:43] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 10:00:41","stoptime":"2025-09-30 10:00:41","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8e298b9e3"}
+[2025-09-30 10:00:43] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000b0;2"],"channel":"Local\/2002@from-user-000000b0;2","cdr_uniqueid":"call_68db8e298b9e3"}
+[2025-09-30 10:00:43] 
+[2025-09-30 10:00:43] 200
+[2025-09-30 10:02:38] Starting Calling...
+[2025-09-30 10:02:40] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 10:02:38","stoptime":"2025-09-30 10:02:38","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8e9eb0e7c"}
+[2025-09-30 10:02:40] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000b1;2"],"channel":"Local\/2002@from-user-000000b1;2","cdr_uniqueid":"call_68db8e9eb0e7c"}
+[2025-09-30 10:02:40] 
+[2025-09-30 10:02:40] 200
+[2025-09-30 10:06:02] Starting Calling...
+[2025-09-30 10:06:03] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 10:06:02","stoptime":"2025-09-30 10:06:02","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db8f6a3b772"}
+[2025-09-30 10:06:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000b2;2"],"channel":"Local\/2002@from-user-000000b2;2","cdr_uniqueid":"call_68db8f6a3b772"}
+[2025-09-30 10:06:03] 
+[2025-09-30 10:06:03] 200
+[2025-09-30 10:12:05] Starting Calling...
+[2025-09-30 10:12:07] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-09-30 10:12:05","stoptime":"2025-09-30 10:12:05","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68db90d5b20c1"}
+[2025-09-30 10:12:07] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000b3;2"],"channel":"Local\/2002@from-user-000000b3;2","cdr_uniqueid":"call_68db90d5b20c1"}
+[2025-09-30 10:12:07] 
+[2025-09-30 10:12:07] 200
+[2025-09-30 10:12:31] Starting Call Ending...
+[2025-09-30 10:12:31] {"action":"end_call","stoptime":"2025-09-30 10:12:31","sessiontime":26,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68db90d5b20c1","callChannel":"Local\/2002@from-user-000000b3;2"}
+[2025-09-30 10:12:31] {"success":false,"error":"Missing required field(s)"}
+[2025-09-30 10:12:31] 
+[2025-09-30 10:12:31] 400
+[2025-09-30 10:15:52] Starting Call Ending...
+[2025-09-30 10:15:53] {"action":"end_call","stoptime":"2025-09-30 10:15:52","sessiontime":227,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68db90d5b20c1","callChannel":"Local\/2002@from-user-000000b3;2"}
+[2025-09-30 10:15:53] {"success":true,"output":["Scanning for channels related to extension: Local\/2002@from-user-000000b3;2","No active channels found for extension Local\/2002@from-user-000000b3;2"]}
+[2025-09-30 10:15:53] 
+[2025-09-30 10:15:53] 200

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/../config.php';
 
+use GPBMetadata\Google\Type\Datetime;
 use Illuminate\Database\Capsule\Manager as DB;
 use inc\classes\CSRFToken;
 use inc\classes\RKValidator as Validator;
@@ -16,8 +17,9 @@ ini_set('display_errors', env('APP_DEBUG') ? E_ALL : 0);
 ini_set('log_errors', env('APP_DEBUG') ? E_ALL : 0);
 custom_log("Starting api.php");
 
-function custom_log($message) {
-    error_log(date("[Y-m-d H:i:s]").$message."\n", 3, 'api-php-log.log');
+function custom_log($message)
+{
+    error_log(date("[Y-m-d H:i:s]") . $message . "\n", 3, 'api-php-log.log');
 }
 
 try {
@@ -69,40 +71,36 @@ function updateCallerId($username, $callerId, $magnusBilling)
         custom_log("updateCallerId: MagnusBilling not initialized");
         return false;
     }
+
     try {
-        // $username = is_object($username) ? json_encode($username) : (string)$username;
-        // echo 'l-69' . json_encode($username);
-        // echo '<pre>',print_r($magnusBilling->getFields('user')).'</pre>';
-        // // $userId = $magnusBilling->getId('user', 'username', $username);
-        // // FIXME:: internal server error; preg_match(): Argument #2 ($subject) must be of type string, stdClass given
-        // $userId = $magnusBilling->getId('user', 'username', (string)$username);
-        // echo 'l-71';
-        // if (!$userId) {
-        //     custom_log("No user ID found for username: $username");
-        //     return false;
-        // }
-        // echo 'l-76';
-        $userId = DB::table('users')->where('username', $username)->first(['magnus_user_id']);
-        if(!$userId) {
-            custom_log("No user ID found for username: $username");
+        // Lookup MagnusBilling user ID from local DB
+        $userRecord = DB::table('users')->where('username', $username)->first(['magnus_user_id']);
+
+        if (!$userRecord || !isset($userRecord->magnus_user_id)) {
+            custom_log("No MagnusBilling user ID found for username: $username");
             return false;
         }
-        $userId = $userId->magnus_user_id;
+
+        $userId = (int) $userRecord->magnus_user_id;
+
+        // Update caller ID via MagnusBilling API
         $result = $magnusBilling->update('user', $userId, ['callerid' => $callerId]);
-        // echo '<pre>',print_r($result).'</pre>';
-        if (isset($result['success']) && $result['success']) {
+
+        if (!empty($result['success'])) {
             custom_log("Updated Caller ID for username: $username");
             return true;
-        } else {
-            $errorMsg = isset($result['error']) ? $result['error'] : 'Unknown error';
-            custom_log("MagnusBilling API Error (updateCallerId): $errorMsg");
-            return false;
         }
+
+        $errorMsg = $result['error'] ?? $result['msg'] ?? 'Unknown Error';
+        custom_log("MagnusBilling API Error (updateCallerId): $errorMsg" . json_encode($result));
+        return false;
+
     } catch (Exception $e) {
         custom_log("Exception in updateCallerId: " . $e->getMessage());
         return false;
     }
 }
+
 
 // Handle API requests
 switch ($action) {
@@ -636,15 +634,16 @@ switch ($action) {
         $merchant_name = $validate->getValue('merchant_name');
         $amount = $validate->getValue('amount');
         $magnus_ivr_id = $validate->getValue('magnus_ivr_id');
-        $magnus_ivr_id = $magnus_ivr_id==null ? '1' : $magnus_ivr_id; // for custom ivr sounds
+        $magnus_ivr_id = $magnus_ivr_id == null ? '1' : $magnus_ivr_id; // for custom ivr sounds
 
         try {
 
             $user = DB::table('users')
-                ->select('username', 'magnus_password', 'magnus_user_id')
+                ->select('username', 'magnus_password', 'magnus_user_id', 'sip_id')
                 ->where('id', $user_id)
                 ->first();
             if (!$user) {
+                custom_log("user not found!");
                 echo json_encode(['success' => false, 'message' => 'User not found']);
                 break;
             }
@@ -653,16 +652,11 @@ switch ($action) {
 
             $callback_destination = $callback_method === 'softphone' ? $user['username'] : $callback_number;
 
-            if (!updateCallerId($user['username'], $caller_id, $magnusBilling)) {
-                echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID']);
-                break;
-            }
-
-            // $magnusBilling->setFilter('username', $user['username'], 'eq', 'string');
-            // $result = $magnusBilling->read('user');
-            // echo '659';
-            // echo '<pre>',print_r($magnusBilling->getId('user', 'username', $user['username'])).'</pre>';
-            // exit;
+            // FIXME: this part is not working so i ignore it, now its work @since 2025/09/19
+            // if (!updateCallerId($user['username'], $caller_id, $magnusBilling)) {
+            //     echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID']);
+            //     break;
+            // }
 
             $tts_script = "Hello, this is $institution_name calling for $customer_name regarding a security matter with your account. We’ve detected a recent transaction of $$amount at $merchant_name that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.";
             // google tts api
@@ -685,29 +679,72 @@ switch ($action) {
                         'ivr_id' => $magnus_ivr_id,
                         'customer_number' => $customer_number,
                         'tts_script' => $tts_script,
-                        'tts_audio_url' =>$tts_audio_url
+                        'tts_audio_url' => $tts_audio_url
                     ];
                     // upload tts audio
                     $tts_audio_upload = TtsAudioApiConnection::uploadAudio(
-                        $callData['customer_number'], 
+                        $callData['customer_number'],
                         $callData['id_user'],
                         $callData['ivr_id'],
                         $tts_audio_path
                     );
                     if (!$tts_audio_upload['success']) {
-                        echo json_encode(['success' => false, 'message' => 'Failed to Upload audio']);
                         custom_log("Failed to upload tts audio: " . json_encode($tts_audio_upload));
+                        echo json_encode(['success' => false, 'message' => 'Failed to Upload audio']);
                         break;
                     }
 
-                    $result = $magnusBilling->create('call', $callData);
-                    if (!isset($result['success']) || !$result['success']) {
-                        echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['msg'] ?? 'Unknown error')]);
-                        custom_log("MagnusBilling API Error (initiate_call): " . json_encode($result) . "\n\tCallData: " . json_encode($callData));
+                    // NOTE: this create('call'); this module don't work like that, thus we use custom api;
+                    // $result = $magnusBilling->create('call', $callData);
+                    // if (!isset($result['success']) || !$result['success']) {
+                    //     // try 2nd step; added by thimira for debug
+                    //     // $callManager = new \inc\classes\CallManager($magnusBilling);
+                    //     // $result = $callManager->callNumber($callData['customer_number'], $callData['callerid'], $magnus_user_id, $magnus_ivr_id);
+                    //     // echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['msg'] ?? 'Unknown error')]);
+                    //     // custom_log("MagnusBilling API Error (initiate_call): " . json_encode($result) . "\n\tCallData: " . json_encode($callData));
+                    //     // break;
+                    // }
+                    $uniqueid = substr(uniqid('call_'), 0, 50); // String ≤ 50 chars
+                    $result = \inc\classes\CallManager::callNumber($CDRData = [
+                        'id_user' => (int) $user['sip_id'] ?? $user['magnus_user_id'] ?? '0',                      // Integer
+                        'id_plan' => 1,                        // Integer
+                        'calledstation' => $callback_destination,                   // String ≤ 50 chars
+                        'callerid' => $caller_id,         // String ≤ 50 chars
+                        'starttime' => date('Y-m-d H:i:s'),      // MySQL datetime
+                        'stoptime' => date('Y-m-d H:i:s'),      // MySQL datetime
+                        'sessiontime' => 60,                       // Integer (seconds)
+                        'sessionbill' => '0.00',                   // String/decimal ≤ 50 chars
+                        'buycost' => '0.00',                   // String/decimal ≤ 50 chars
+                        'uniqueid' => $uniqueid,
+                    ], $user['username'] ?? 'support');
+                    // call init failed!
+                    custom_log('CallManager Output: ' . json_encode($result));
+                    if (!$result['success']) {
+                        custom_log('721: Failed to initiate call: ' . ($result['error'] ?? 'Unknown error'));
+                        echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . ($result['error'] ?? 'Unknown error')]);
                         break;
                     }
-
-                    $magnus_call_id = $result['id'] ?? DB::getPdo()->lastInsertId();
+                    // calling channel
+                    $result = $result['response'];
+                    $callChannel = $result['channel'] ?? null;
+                    custom_log('CallManager Output(2): ' . json_encode($result));
+                    if (!$callChannel || empty($callChannel)) {
+                        // when empty call channel got
+                        custom_log("Failed to fetch call channel!");
+                        echo json_encode(['success' => false, 'message' => "Failed to fetch call channel!"]);
+                        break;
+                    }
+                    // handle cdr id
+                    $cdr_uniqueid = $result['cdr_uniqueid'] ?? null;
+                    if (!$callChannel || empty($callChannel)) {
+                        // when empty call channel got
+                        custom_log("Failed to fetch CDR uniqueid!");
+                        echo json_encode(['success' => false, 'message' => "Failed to fetch CDR uniqueid!"]);
+                        break;
+                    }
+                    // handle the db record keeping part.
+                    // $magnus_call_id = $result['id'] ?? DB::getPdo()->lastInsertId();
+                    $magnus_call_id = $cdr_uniqueid;
 
                     $call_id = DB::table('calls')->insertGetId([
                         'user_id' => $user_id,
@@ -720,43 +757,49 @@ switch ($action) {
                         'merchant_name' => $merchant_name,
                         'amount' => $amount,
                         'tts_script' => $tts_script,
-                        'tts_audio_url' => $tts_audio_url
+                        'tts_audio_url' => $tts_audio_url,
+                        'duration' => $CDRData['sessiontime'],
+                        'created_at' => $CDRData['starttime']
                     ]);
 
                     if ((bool) $call_id) {
                         custom_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id]);
+                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid]);
                     } else {
                         custom_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id]);
+                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid]);
                     }
                 } else {
-                    echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize']);
                     custom_log("TTS synthesize failed ");
+                    echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize']);
                     exit;
                 }
             } catch (\Throwable $th) {
-                echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize: ' . $th->getMessage()]);
                 custom_log("TTS synthesize error: " . $th->getMessage());
+                echo json_encode(['success' => false, 'message' => 'Failed to TTS synthesize: ' . $th->getMessage()]);
                 exit;
             }
 
-        } catch (Exception $e) {
+        } catch (\Throwable $e) {
+            custom_log("783: Initiate call error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to initiate call: ' . $e->getMessage()]);
-            custom_log("Initiate call error: " . $e->getMessage());
         }
         break;
 
     case 'end_call':
         if (!$magnusBilling) {
-            echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             custom_log("end_call: MagnusBilling not initialized");
+            echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             break;
         }
         // Validate input
         $validator = new Validator;
-
-        $rules = ['call_id' => 'required|integer|min:1'];
+        // 'stoptime', 'sessiontime', 'sessionbill', 'buycost', 'terminatecauseid', 'uniqueid', 'callChannel'
+        $rules = [
+            'call_id' => 'required|integer|min:1',
+            'callChannel' => 'required|string',
+            'cdr_uniqueid' => 'required|string'
+        ];
         $messages = [
             'required' => ':attribute is required',
             'integer' => ':attribute must be a valid integer',
@@ -764,7 +807,7 @@ switch ($action) {
         ];
 
         $validate = $validator->validate($_POST, $rules, $messages);
-        $validate->setAlias('call_id', 'Call ID');
+        $validate->setAliases(['call_id' => 'Call ID', 'callChannel' => 'Call Channel', 'cdr_uniqueid' => 'CDR Uniqueid']);
 
         if (!$validate->passes()) {
             echo json_encode([
@@ -775,31 +818,78 @@ switch ($action) {
         }
 
         $call_id = $validate->getValue('call_id');
+        $callChannel = $validate->getValue('callChannel');
+        $cdr_uniqueid = $validate->getValue('cdr_uniqueid');
 
         try {
-            $call = DB::table('calls')
-                ->select('magnus_call_id')
-                ->where('id', $call_id)
-                ->where('user_id', $user_id)
-                ->first();
-
-            if ($call && $call->magnus_call_id) {
-                $result = $magnusBilling->destroy('call', $call->magnus_call_id);
-
-                if (!isset($result['success']) || !$result['success']) {
-                    custom_log("MagnusBilling API Error (end_call): " . json_encode($result));
-                    echo json_encode([
-                        'success' => false,
-                        'message' => 'Failed to end call: ' . ($result['error'] ?? 'Unknown error')
-                    ]);
-                    exit;
-                }
-
-                custom_log("Ended call: call_id=$call_id, magnus_call_id={$call->magnus_call_id}");
-                echo json_encode(['success' => true, 'message' => 'Call ended successfully']);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
+            // get call record
+            $callRecord = DB::table('calls')
+                ->where('id', $call_id)->where('user_id', $user_id)
+                ->first(['created_at']);
+            if (!$callRecord) {
+                custom_log("Call Record Fetch Failed or not Found!");
+                echo json_encode([
+                    'success' => false,
+                    'message' => 'Call record fetch failed or not found!'
+                ]);
             }
+            // calculate the session time; unit seconds
+            $start = new \Datetime($callRecord->created_at);
+            $end = new \Datetime($stop_time = date('Y-m-d H:i:s'));
+            $sessiontime = $end->getTimestamp() - $start->getTimestamp();
+            // call end request to server
+            $result = \inc\classes\CallManager::endCall($CDRData = [
+                'stoptime' => $stop_time,      // MySQL datetime,
+                'sessiontime' => $sessiontime,
+                'sessionbill' => '0.00',
+                'buycost' => '0.00',
+                'terminatecauseid' => '1',
+                'uniqueid' => $cdr_uniqueid,
+                'callChannel' => $callChannel
+            ]);
+            // check result success
+            custom_log('CallManager Output: ' . json_encode($result));
+            if (!$result['success']) {
+                custom_log('Failed to end call: ' . ($result['error'] ?? 'Unknown error'));
+                echo json_encode(['success' => false, 'message' => 'Failed to end call: ' . ($result['error'] ?? 'Unknown error')]);
+                break;
+            }
+            // update calls table
+            $callRecordUpdate = DB::table('calls')
+                ->where('id', $call_id)->where('user_id', $user_id)
+                ->update(['duration' => $sessiontime]);
+            // echo result as json
+            if ($callRecordUpdate) {
+                custom_log("Ended call: call_id=$call_id, callChannel=$callChannel, CDR Uniqueid=$cdr_uniqueid");
+                echo json_encode(['success' => true, 'message' => 'Call ended successfully']);
+                break;
+            } else {
+                echo json_encode(['success' => true, 'message' => 'Call ended, Local DB Update Failed!']);
+            }
+
+            // $call = DB::table('calls')
+            //     ->select('magnus_call_id')
+            //     ->where('id', $call_id)
+            //     ->where('user_id', $user_id)
+            //     ->first();
+
+            // if ($call && $call->magnus_call_id) {
+            //     $result = $magnusBilling->destroy('call', $call->magnus_call_id);
+
+            //     if (!isset($result['success']) || !$result['success']) {
+            //         custom_log("MagnusBilling API Error (end_call): " . json_encode($result));
+            //         echo json_encode([
+            //             'success' => false,
+            //             'message' => 'Failed to end call: ' . ($result['error'] ?? 'Unknown error')
+            //         ]);
+            //         exit;
+            //     }
+
+            //     custom_log("Ended call: call_id=$call_id, magnus_call_id={$call->magnus_call_id}");
+            //     echo json_encode(['success' => true, 'message' => 'Call ended successfully']);
+            // } else {
+            //     echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
+            // }
         } catch (Exception $e) {
             custom_log("End call error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to end call: ' . $e->getMessage()]);
@@ -807,23 +897,16 @@ switch ($action) {
         break;
 
     case 'get_call_status':
-        if (!$magnusBilling) {
-            echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            custom_log("get_call_status: MagnusBilling not initialized");
-            break;
-        }
         // Validate input
         $validator = new Validator;
 
-        $rules = ['call_id' => 'required|integer|min:1'];
+        $rules = ['callChannel' => 'required|string'];
         $messages = [
             'required' => ':attribute is required',
-            'integer' => ':attribute must be a valid integer',
-            'min' => ':attribute must be at least :min'
         ];
 
         $validate = $validator->validate($_GET, $rules, $messages);
-        $validate->setAlias('call_id', 'Call ID');
+        $validate->setAlias('callChannel', 'Call Channel');
 
         if (!$validate->passes()) {
             echo json_encode([
@@ -833,34 +916,73 @@ switch ($action) {
             exit;
         }
 
-        $call_id = $validate->getValue('call_id');
-
-        try {
-            $call = DB::table('calls')
-                ->select('magnus_call_id')
-                ->where('id', $call_id)
-                ->where('user_id', $user_id)
-                ->first();
-
-            if ($call && $call->magnus_call_id) {
-                $magnusBilling->setFilter('id', $call->magnus_call_id, 'eq', 'integer');
-                $result = $magnusBilling->read('callOnLine');
-                $magnusBilling->clearFilter();
-
-                if (!empty($result['rows'][0])) {
-                    $status = strtolower($result['rows'][0]['status'] ?? 'calling');
-                    custom_log("Call status for call_id=$call_id: $status");
-                    echo json_encode(['success' => true, 'status' => $status]);
-                } else {
-                    echo json_encode(['success' => false, 'message' => 'Call not found in MagnusBilling']);
-                }
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
-            }
-        } catch (Exception $e) {
-            custom_log("Get call status error: " . $e->getMessage());
-            echo json_encode(['success' => false, 'message' => 'Failed to fetch call status: ' . $e->getMessage()]);
+        $callChannel = $validate->getValue('callChannel');
+        // callManager class
+        $result = \inc\classes\CallManager::getCallStat($callChannel);
+        custom_log("Raw Call Stat: " . json_encode($result));
+        // check  success
+        if (!$result['success']) {
+            custom_log('Failed to get call status: ' . ($result['error'] ?? 'Unknown error'));
+            echo json_encode(['success' => false, 'message' => 'Failed to get call status: ' . ($result['error'] ?? 'Unknown error')]);
+            break;
         }
+        // todo: phrase json output for js process
+        
+
+        // if (!$magnusBilling) {
+        //     echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
+        //     custom_log("get_call_status: MagnusBilling not initialized");
+        //     break;
+        // }
+        // // Validate input
+        // $validator = new Validator;
+
+        // $rules = ['call_id' => 'required|integer|min:1'];
+        // $messages = [
+        //     'required' => ':attribute is required',
+        //     'integer' => ':attribute must be a valid integer',
+        //     'min' => ':attribute must be at least :min'
+        // ];
+
+        // $validate = $validator->validate($_GET, $rules, $messages);
+        // $validate->setAlias('call_id', 'Call ID');
+
+        // if (!$validate->passes()) {
+        //     echo json_encode([
+        //         'success' => false,
+        //         'message' => implode('<br>', $validate->errors()->all())
+        //     ]);
+        //     exit;
+        // }
+
+        // $call_id = $validate->getValue('call_id');
+
+        // try {
+        //     $call = DB::table('calls')
+        //         ->select('magnus_call_id')
+        //         ->where('id', $call_id)
+        //         ->where('user_id', $user_id)
+        //         ->first();
+
+        //     if ($call && $call->magnus_call_id) {
+        //         $magnusBilling->setFilter('id', $call->magnus_call_id, 'eq', 'integer');
+        //         $result = $magnusBilling->read('callOnLine');
+        //         $magnusBilling->clearFilter();
+
+        //         if (!empty($result['rows'][0])) {
+        //             $status = strtolower($result['rows'][0]['status'] ?? 'calling');
+        //             custom_log("Call status for call_id=$call_id: $status");
+        //             echo json_encode(['success' => true, 'status' => $status]);
+        //         } else {
+        //             echo json_encode(['success' => false, 'message' => 'Call not found in MagnusBilling']);
+        //         }
+        //     } else {
+        //         echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
+        //     }
+        // } catch (Exception $e) {
+        //     custom_log("Get call status error: " . $e->getMessage());
+        //     echo json_encode(['success' => false, 'message' => 'Failed to fetch call status: ' . $e->getMessage()]);
+        // }
         break;
 
     case 'check_dtmf':
