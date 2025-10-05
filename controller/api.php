@@ -576,6 +576,14 @@ switch ($action) {
         break;
 
     case 'initiate_call':
+        // echo json_encode([
+        //     "success"=>true,
+        //     "message"=>"Call initiated successfully",
+        //     "call_id"=>89,
+        //     "callChannel"=>"Local/2002@from-user-000000dd;2",
+        //     "cdr_uniqueid"=>"call_68e186309be20"
+        // ]);
+        // break;
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             custom_log("initiate_call: MagnusBilling not initialized");
@@ -787,6 +795,8 @@ switch ($action) {
         break;
 
     case 'end_call':
+        // echo json_encode(['success' => true, 'message' => 'Call ended successfully']);
+        // break;
         if (!$magnusBilling) {
             custom_log("end_call: MagnusBilling not initialized");
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
@@ -897,15 +907,28 @@ switch ($action) {
         break;
 
     case 'get_call_status':
+        // $o = [
+        // 'ring'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ring","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null],
+        // 'up'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"up","status_detail"=>null,"dtmf_input"=>1,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null],
+        // 'end'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ended","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null]
+        // ];
+        // echo json_encode($o['end']);
+        // break;
         // Validate input
         $validator = new Validator;
 
-        $rules = ['callChannel' => 'required|string'];
+        $rules = [
+            'call_id' => 'required|integer|min:1',
+            'callChannel' => 'required|string',
+            'cdr_uniqueid' => 'required|string'
+        ];
         $messages = [
             'required' => ':attribute is required',
+            'integer' => ':attribute must be a valid integer',
+            'min' => ':attribute must be at least :min'
         ];
 
-        $validate = $validator->validate($_GET, $rules, $messages);
+        $validate = $validator->validate($_POST, $rules, $messages);
         $validate->setAlias('callChannel', 'Call Channel');
 
         if (!$validate->passes()) {
@@ -926,8 +949,8 @@ switch ($action) {
             echo json_encode(['success' => false, 'message' => 'Failed to get call status: ' . ($result['error'] ?? 'Unknown error')]);
             break;
         }
-        // todo: phrase json output for js process
-        
+        // json decode and client side connect
+        echo json_encode($result);
 
         // if (!$magnusBilling) {
         //     echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
@@ -994,14 +1017,18 @@ switch ($action) {
         // Validate input
         $validator = new Validator;
 
-        $rules = ['call_id' => 'required|integer|min:1'];
+        $rules = [
+            'call_id' => 'required|integer|min:1',
+            'callChannel' => 'required|string',
+            'cdr_uniqueid' => 'required|string'
+        ];
         $messages = [
             'required' => ':attribute is required',
             'integer' => ':attribute must be a valid integer',
             'min' => ':attribute must be at least :min'
         ];
 
-        $validate = $validator->validate($_GET, $rules, $messages);
+        $validate = $validator->validate($_POST, $rules, $messages);
         $validate->setAlias('call_id', 'Call ID');
 
         if (!$validate->passes()) {

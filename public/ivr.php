@@ -306,6 +306,7 @@ try {
                         <div class="mini-call-card" data-call-id="${callId}">
                             <h6>Call to ${callData.customerNumber}</h6>
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
+                            <h6 class="dtmf_input">DTMF: ${callData.dtmf_input??'N/A'}</h6>
                             <div class="buttons">
                                 <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
                                 <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}">End Call</button>
@@ -547,6 +548,7 @@ try {
                         <p><strong>Merchant:</strong> ${callData.merchantName}</p>
                         <p><strong>Amount:</strong> $${parseFloat(callData.amount).toFixed(2)}</p>
                     </div>
+                    <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input??'N/A'}</h4>
                     <div class="buttons">
                         <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
                         <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" >End Call</button>
@@ -561,41 +563,59 @@ try {
                 };
                 sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
                 updateLiveCallIndicator();
-                pollCallStatus(callId); // Start polling for real-time updates
+                pollCallStatus(callData); // Start polling for real-time updates
             }
 
-            // TODO: Poll call status
-            function pollCallStatus(callId) {
+            // Poll call status
+            function pollCallStatus(callData) {
+                let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
                 const interval = setInterval(() => {
-                    if (!activeCalls[callId]) {
+                    const callId = callData.callId;
+                    if (!activeCalls[callId] || ['end', 'ended'].includes(callData.status)) {
                         clearInterval(interval);
                         return;
                     }
                     $.ajax({
                         url: '<?= $config->app->url; ?>/controller/api.php',
-                        method: 'GET',
+                        method: 'POST',
                         data: {
                             action: 'get_call_status',
-                            call_id: callId
+                            call_id: callId,
+                            callChannel: callData.CallChannel,
+                            cdr_uniqueid: callData.CDRUniqueID,
+                            csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                         },
                         dataType: 'json',
-                        success: function (response) {
+                        success: function (main_response) {
+                            const response = main_response.response;
                             if (response.success && activeCalls[callId]) {
                                 activeCalls[callId].status = response.status;
+                                activeCalls[callId].dtmf_input = response.dtmf_input??'N/A';
                                 $(`.call-card[data-call-id="${callId}"] .status`)
-                                    .removeClass('calling ringing answered')
                                     .addClass(response.status)
                                     .text(response.status.charAt(0).toUpperCase() + response
                                         .status.slice(1));
+                                // dtmf write
+                                $(`.call-card[data-call-id="${callId}"] .dtmf_input`)
+                                    .text(`DTMF: ${response.dtmf_input??'N/A'}`);
                                 $(`.mini-call-card[data-call-id="${callId}"] .status`)
-                                    .removeClass('calling ringing answered')
                                     .addClass(response.status)
                                     .text(response.status.charAt(0).toUpperCase() + response
                                         .status.slice(1));
+                                // dtmf write
+                                $(`.mini-call-card[data-call-id="${callId}"] .dtmf_input`)
+                                    .text(`DTMF: ${response.dtmf_input??'N/A'}`);
                                 sessionStorage.setItem('activeCalls', JSON.stringify(
                                     activeCalls));
-                                if (response.status === 'answered') {
-                                    pollDtmfInput(callId);
+                                if (['answered', 'up'].includes(response.status)) {
+                                    // pollDtmfInput(callData);
+                                    // alert('call picked up');
+                                }
+                                // call ended TODO: fix when call ended clear interval
+                                if (['ended'].includes(response.status)) {
+                                    alert("Call ended! channel:");
+                                    clearInterval(interval);
+                                    return;
                                 }
                             }
                         },
@@ -608,40 +628,44 @@ try {
 
             // TODO: Poll for DTMF input
 
-            function pollDtmfInput(callId) {
-                const interval = setInterval(() => {
-                    if (!activeCalls[callId] || activeCalls[callId].status !== 'answered') {
-                        clearInterval(interval);
-                        return;
-                    }
-                    $.ajax({
-                        url: '<?= $config->app->url; ?>/controller/api.php',
-                        method: 'GET',
-                        data: {
-                            action: 'check_dtmf',
-                            call_id: callId
-                        },
-                        dataType: 'json',
-                        success: function (response) {
-                            if (response.success && response.dtmf === '2' && activeCalls[
-                                callId]) {
-                                $(`.call-card[data-call-id="${callId}"] .status`)
-                                    .append(
-                                        ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
-                                    );
-                                $(`.mini-call-card[data-call-id="${callId}"] .status`)
-                                    .append(
-                                        ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
-                                    );
-                                clearInterval(interval);
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.error('Check DTMF Error:', status, error);
-                        }
-                    });
-                }, 2000);
-            }
+            // function pollDtmfInput(callData) {
+            //     const interval = setInterval(() => {
+            //         const callId = callData.callId;
+            //         if (!activeCalls[callId] || activeCalls[callId].status !== 'answered') {
+            //             clearInterval(interval);
+            //             return;
+            //         }
+            //         $.ajax({                        
+            //             url: '<?= $config->app->url; ?>/controller/api.php',
+            //             method: 'POST',
+            //             data: {
+            //                 action: 'check_dtmf',
+            //                 call_id: callId,
+            //                 callChannel: callData.CallChannel,
+            //                 cdr_uniqueid: callData.CDRUniqueID,
+            //                 csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
+            //             },
+            //             dataType: 'json',
+            //             success: function (response) {
+            //                 if (response.success && response.dtmf === '2' && activeCalls[
+            //                     callId]) {
+            //                     $(`.call-card[data-call-id="${callId}"] .status`)
+            //                         .append(
+            //                             ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
+            //                         );
+            //                     $(`.mini-call-card[data-call-id="${callId}"] .status`)
+            //                         .append(
+            //                             ' <span style="color: #1abc9c;">(DTMF 2 Received - Waiting for Unmute)</span>'
+            //                         );
+            //                     clearInterval(interval);
+            //                 }
+            //             },
+            //             error: function (xhr, status, error) {
+            //                 console.error('Check DTMF Error:', status, error);
+            //             }
+            //         });
+            //     }, 2000);
+            // }
             // Handle form submission
             ivrForm.on('submit', function (e) {
                 e.preventDefault();
@@ -706,7 +730,8 @@ try {
                                 amount,
                                 muted: true,
                                 CallChannel,
-                                CDRUniqueID
+                                CDRUniqueID,
+                                callId
                             });
                             ivrForm[0].reset();
                             callbackMethodSelect.val('phone');

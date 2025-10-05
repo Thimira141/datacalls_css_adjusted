@@ -1,7 +1,5 @@
 <?php
 require_once 'function.php';
-require_once 'AsteriskClient.php';
-require_once './vendor/autoload.php';
 // set up the script validation data
 header('Content-Type: application/json');
 
@@ -106,7 +104,7 @@ switch ($_POST['action']) {
         }
         $callChannel = $data['callChannel'];
         unset($data['callChannel']);
-        // shell execute TODO: use AMI interface for call hangup
+        // shell execute
         $call_end = call_end($callChannel);
         // check execution
         if ($call_end['status'] !== 0) {
@@ -129,47 +127,9 @@ switch ($_POST['action']) {
         if (!$fullChannel || empty($fullChannel)) {
             json_error('Missing required field(s)');
         }
-        $channel = $fullChannel;//explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
+        $channel = explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
         try {
-            // use AMI php interface
-            $ami = new AsteriskClient();
-            $status = $ami->getChannelStatus($channel);
-            $ami->close();
-            // status details TODO: handle better status names with array dict
-            $statusDetails = [
-                'ring' => "Call is ringing at the destination (not yet answered)",
-                'ringing' => "Call is ringing at the destination (not yet answered)",
-                'up' => "Call is active and answered - media is flowing",
-                'dialing' => "Asterisk is attempting to dial the destination",
-                'busy' => "Destination is busy",
-                'hangup' => "Call is in the process of being torn down",
-                'ended' => "Channel no longer exists",
-                'unknown' => "Couldn't parse state - fallback case",
-            ];
-            // Get DTMF from DB
-            $stmt = $pdo->prepare("SELECT dtmf_input, updated_at FROM call_tracking WHERE channel = :channel");
-            $stmt->execute(['channel' => $channel]);
-            $dtmf = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            // $options = [
-            //     'host' => '127.0.0.1',
-            //     'port' => 5038,
-            //     'username' => 'admin',
-            //     'secret' => 'cxx_68e169ac7d0be',
-            //     'connect_timeout' => 10,
-            //     'read_timeout' => 10
-            // ];
-
-            // $client = new \PAMI\Client\Impl\ClientImpl($options);
-            // $client->open();
-
-            // $response = $client->send(new \PAMI\Message\Action\StatusAction());
-            // foreach ($response->getEvents() as $event) {
-            //     echo $event->getKey('Channel') . ' - ' . $event->getKey('ChannelStateDesc') . "\n";
-            // }
-
-            // $client->close();
-            /*call status details
+            // call status details
             $statusDetails = [
                 'ringing' => "Call is ringing at the destination (not yet answered)",
                 'up' => "Call is active and answered - media is flowing",
@@ -185,18 +145,8 @@ switch ($_POST['action']) {
             $dtmf = (array) $stmt->fetchColumn();
             // Get live call status from Asterisk
             $escapedChannel = $channel;// escapeshellarg($channel);
-            $output = exec("sudo /usr/local/bin/channel_status.sh $escapedChannel", $output_array, $status);
-            if ($status !== 0) {
-                json_error("Shell script failed: " . json_encode($output_array));
-            }
-
-            $rawStatus = null;
-            foreach ($output_array as $line) {
-                if (strpos($line, 'Status:') === 0) {
-                    $rawStatus = strtolower(trim(str_replace('Status:', '', $line)));
-                    break;
-                }
-            }
+            $output = shell_exec("/usr/sbin/asterisk -rx 'core show channel $escapedChannel'");
+            $rawState = null;
             if (strpos($output, 'No such channel') !== false) {
                 $status = 'ended';
             } elseif (preg_match('/State\s*:\s*(\w+)/', $output, $match)) {
@@ -217,7 +167,7 @@ switch ($_POST['action']) {
             } else {
                 $status = 'unknown';
             }
-            */// Return JSON
+            // Return JSON
             echo json_encode([
                 'success' => true,
                 'channel' => $channel,
@@ -225,11 +175,11 @@ switch ($_POST['action']) {
                 'status_detail' => $statusDetails[$status] ?? null,
                 'dtmf_input' => $dtmf['dtmf_input'] ?? null,
                 'dtmf_updated_at' => $dtmf['updated_at'] ?? null,
-                'dtmf_array' => $dtmf
+                'raw_stat' => $rawState
             ]);
             break;
         } catch (\Throwable $th) {
-            json_error("Error:x: " . $th->getMessage() . ' Line: ' . $th->getLine() . ' File:' . $th->getFile());
+            json_error("Error: " . $th->getMessage());
         }
 
     default:

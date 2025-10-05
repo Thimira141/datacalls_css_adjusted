@@ -6,7 +6,7 @@
  * @since 2025-09-22
  */
 $channel = $argv[1] ?? '';
-$dtmf    = $argv[2] ?? '';
+$dtmf = $argv[2] ?? '';
 
 if (!$channel || !$dtmf) {
     exit(1);
@@ -34,28 +34,24 @@ try {
             PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
         ]
     );
-} catch (PDOException $e) {
-    exit(1);
-}
-
-// --- Check and Create Table if Missing ---
-$tableCheck = $pdo->query("SHOW TABLES LIKE 'call_tracking'");
-if ($tableCheck->rowCount() === 0) {
+    // --- Check and Create Table if Missing ---
     $pdo->exec("
-        CREATE TABLE call_tracking (
+        CREATE TABLE IF NOT EXISTS call_tracking (
             channel VARCHAR(255) PRIMARY KEY,
             dtmf_input VARCHAR(10),
             updated_at DATETIME
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ");
+
+    // --- Insert or Update DTMF ---
+    $stmt = $pdo->prepare("
+        INSERT INTO call_tracking (channel, dtmf_input, updated_at)
+        VALUES (?, ?, NOW())
+        ON DUPLICATE KEY UPDATE dtmf_input = VALUES(dtmf_input), updated_at = NOW()
+    ");
+
+    $stmt->execute([$channel, $dtmf]);
+    exit(0);
+} catch (PDOException $e) {
+    exit(1);
 }
-
-// --- Insert or Update DTMF ---
-$stmt = $pdo->prepare("
-    INSERT INTO call_tracking (channel, dtmf_input, updated_at)
-    VALUES (?, ?, NOW())
-    ON DUPLICATE KEY UPDATE dtmf_input = VALUES(dtmf_input), updated_at = NOW()
-");
-
-$stmt->execute([$channel, $dtmf]);
-exit(0);
