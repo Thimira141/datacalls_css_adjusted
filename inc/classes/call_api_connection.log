@@ -6366,3 +6366,1828 @@ Local/2002@from-user-000000d6;2 - Ring
 [2025-10-05 14:58:02] {"success":true,"channel":"Local\/2002@from-user-000000e3;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-10-05 09:28:00","dtmf_array":{"dtmf_input":"2","updated_at":"2025-10-05 09:28:00"}}
 [2025-10-05 14:58:02] 
 [2025-10-05 14:58:02] 200
+[2025-10-06 21:07:34] Starting Calling...
+[2025-10-06 21:07:36] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-06 21:07:34","stoptime":"2025-10-06 21:07:34","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e23ed8811"}
+[2025-10-06 21:07:36] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000e4;2"],"channel":"Local\/2002@from-user-000000e4;2","cdr_uniqueid":"call_68e3e23ed8811"}
+[2025-10-06 21:07:36] 
+[2025-10-06 21:07:36] 200
+[2025-10-06 21:07:38] Starting get call stat...
+[2025-10-06 21:07:39] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:39] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:39] 
+[2025-10-06 21:07:39] 200
+[2025-10-06 21:07:40] Starting get call stat...
+[2025-10-06 21:07:41] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:41] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:41] 
+[2025-10-06 21:07:41] 200
+[2025-10-06 21:07:42] Starting get call stat...
+[2025-10-06 21:07:43] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:43] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:43] 
+[2025-10-06 21:07:43] 200
+[2025-10-06 21:07:44] Starting get call stat...
+[2025-10-06 21:07:45] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:45] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:45] 
+[2025-10-06 21:07:45] 200
+[2025-10-06 21:07:46] Starting get call stat...
+[2025-10-06 21:07:47] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:47] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:47] 
+[2025-10-06 21:07:47] 200
+[2025-10-06 21:07:48] Starting get call stat...
+[2025-10-06 21:07:49] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:49] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:49] 
+[2025-10-06 21:07:49] 200
+[2025-10-06 21:07:50] Starting get call stat...
+[2025-10-06 21:07:51] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:51] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:51] 
+[2025-10-06 21:07:51] 200
+[2025-10-06 21:07:52] Starting get call stat...
+[2025-10-06 21:07:53] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:53] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:53] 
+[2025-10-06 21:07:53] 200
+[2025-10-06 21:07:54] Starting get call stat...
+[2025-10-06 21:07:55] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:55] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:55] 
+[2025-10-06 21:07:55] 200
+[2025-10-06 21:07:56] Starting get call stat...
+[2025-10-06 21:07:57] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:57] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:57] 
+[2025-10-06 21:07:57] 200
+[2025-10-06 21:07:58] Starting get call stat...
+[2025-10-06 21:07:59] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:07:59] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:07:59] 
+[2025-10-06 21:07:59] 200
+[2025-10-06 21:08:00] Starting get call stat...
+[2025-10-06 21:08:01] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:01] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:01] 
+[2025-10-06 21:08:01] 200
+[2025-10-06 21:08:02] Starting get call stat...
+[2025-10-06 21:08:03] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:03] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:03] 
+[2025-10-06 21:08:03] 200
+[2025-10-06 21:08:04] Starting get call stat...
+[2025-10-06 21:08:05] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:05] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:05] 
+[2025-10-06 21:08:05] 200
+[2025-10-06 21:08:06] Starting get call stat...
+[2025-10-06 21:08:07] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:07] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:07] 
+[2025-10-06 21:08:07] 200
+[2025-10-06 21:08:08] Starting get call stat...
+[2025-10-06 21:08:09] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:09] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:09] 
+[2025-10-06 21:08:09] 200
+[2025-10-06 21:08:10] Starting get call stat...
+[2025-10-06 21:08:11] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:11] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:11] 
+[2025-10-06 21:08:11] 200
+[2025-10-06 21:08:12] Starting get call stat...
+[2025-10-06 21:08:13] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:13] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:13] 
+[2025-10-06 21:08:13] 200
+[2025-10-06 21:08:14] Starting get call stat...
+[2025-10-06 21:08:15] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:15] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:15] 
+[2025-10-06 21:08:15] 200
+[2025-10-06 21:08:16] Starting get call stat...
+[2025-10-06 21:08:17] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:17] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:17] 
+[2025-10-06 21:08:17] 200
+[2025-10-06 21:08:18] Starting get call stat...
+[2025-10-06 21:08:19] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:19] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:19] 
+[2025-10-06 21:08:19] 200
+[2025-10-06 21:08:20] Starting get call stat...
+[2025-10-06 21:08:21] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:21] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:21] 
+[2025-10-06 21:08:21] 200
+[2025-10-06 21:08:22] Starting get call stat...
+[2025-10-06 21:08:23] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:23] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:23] 
+[2025-10-06 21:08:23] 200
+[2025-10-06 21:08:24] Starting get call stat...
+[2025-10-06 21:08:25] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:25] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:25] 
+[2025-10-06 21:08:25] 200
+[2025-10-06 21:08:26] Starting get call stat...
+[2025-10-06 21:08:27] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:27] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:27] 
+[2025-10-06 21:08:27] 200
+[2025-10-06 21:08:28] Starting get call stat...
+[2025-10-06 21:08:29] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:29] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:29] 
+[2025-10-06 21:08:29] 200
+[2025-10-06 21:08:30] Starting get call stat...
+[2025-10-06 21:08:31] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:31] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:31] 
+[2025-10-06 21:08:31] 200
+[2025-10-06 21:08:32] Starting get call stat...
+[2025-10-06 21:08:33] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:33] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:33] 
+[2025-10-06 21:08:33] 200
+[2025-10-06 21:08:34] Starting get call stat...
+[2025-10-06 21:08:35] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:35] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:35] 
+[2025-10-06 21:08:35] 200
+[2025-10-06 21:08:36] Starting get call stat...
+[2025-10-06 21:08:37] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:37] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:37] 
+[2025-10-06 21:08:37] 200
+[2025-10-06 21:08:38] Starting get call stat...
+[2025-10-06 21:08:39] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:39] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:39] 
+[2025-10-06 21:08:39] 200
+[2025-10-06 21:08:40] Starting get call stat...
+[2025-10-06 21:08:41] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:41] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:41] 
+[2025-10-06 21:08:41] 200
+[2025-10-06 21:08:42] Starting get call stat...
+[2025-10-06 21:08:43] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:43] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:43] 
+[2025-10-06 21:08:43] 200
+[2025-10-06 21:08:44] Starting get call stat...
+[2025-10-06 21:08:45] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:45] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:45] 
+[2025-10-06 21:08:45] 200
+[2025-10-06 21:08:46] Starting get call stat...
+[2025-10-06 21:08:47] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:47] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:47] 
+[2025-10-06 21:08:47] 200
+[2025-10-06 21:08:48] Starting get call stat...
+[2025-10-06 21:08:49] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:49] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:49] 
+[2025-10-06 21:08:49] 200
+[2025-10-06 21:08:50] Starting get call stat...
+[2025-10-06 21:08:51] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:51] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:51] 
+[2025-10-06 21:08:51] 200
+[2025-10-06 21:08:52] Starting get call stat...
+[2025-10-06 21:08:53] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:53] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:08:53] 
+[2025-10-06 21:08:53] 200
+[2025-10-06 21:08:54] Starting get call stat...
+[2025-10-06 21:08:55] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:55] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:08:55] 
+[2025-10-06 21:08:55] 200
+[2025-10-06 21:08:56] Starting get call stat...
+[2025-10-06 21:08:57] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:57] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:08:57] 
+[2025-10-06 21:08:57] 200
+[2025-10-06 21:08:58] Starting get call stat...
+[2025-10-06 21:08:59] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:08:59] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:08:59] 
+[2025-10-06 21:08:59] 200
+[2025-10-06 21:09:00] Starting get call stat...
+[2025-10-06 21:09:01] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:01] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:01] 
+[2025-10-06 21:09:01] 200
+[2025-10-06 21:09:02] Starting get call stat...
+[2025-10-06 21:09:03] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:03] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:03] 
+[2025-10-06 21:09:03] 200
+[2025-10-06 21:09:04] Starting get call stat...
+[2025-10-06 21:09:05] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:05] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:05] 
+[2025-10-06 21:09:05] 200
+[2025-10-06 21:09:06] Starting get call stat...
+[2025-10-06 21:09:07] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:07] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:07] 
+[2025-10-06 21:09:07] 200
+[2025-10-06 21:09:08] Starting get call stat...
+[2025-10-06 21:09:09] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:09] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:09] 
+[2025-10-06 21:09:09] 200
+[2025-10-06 21:09:10] Starting get call stat...
+[2025-10-06 21:09:11] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:11] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:11] 
+[2025-10-06 21:09:11] 200
+[2025-10-06 21:09:12] Starting get call stat...
+[2025-10-06 21:09:13] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:13] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:13] 
+[2025-10-06 21:09:13] 200
+[2025-10-06 21:09:14] Starting get call stat...
+[2025-10-06 21:09:15] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:15] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:15] 
+[2025-10-06 21:09:15] 200
+[2025-10-06 21:09:16] Starting get call stat...
+[2025-10-06 21:09:17] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:17] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:17] 
+[2025-10-06 21:09:17] 200
+[2025-10-06 21:09:18] Starting get call stat...
+[2025-10-06 21:09:19] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:19] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:19] 
+[2025-10-06 21:09:19] 200
+[2025-10-06 21:09:20] Starting get call stat...
+[2025-10-06 21:09:21] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:21] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:38:53","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:38:53"}}
+[2025-10-06 21:09:21] 
+[2025-10-06 21:09:21] 200
+[2025-10-06 21:09:22] Starting get call stat...
+[2025-10-06 21:09:23] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:23] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-10-06 15:39:22","dtmf_array":{"dtmf_input":"2","updated_at":"2025-10-06 15:39:22"}}
+[2025-10-06 21:09:23] 
+[2025-10-06 21:09:23] 200
+[2025-10-06 21:09:24] Starting get call stat...
+[2025-10-06 21:09:25] {"callChannel":"Local\/2002@from-user-000000e4;2","action":"status_call"}
+[2025-10-06 21:09:25] {"success":true,"channel":"Local\/2002@from-user-000000e4;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-10-06 15:39:22","dtmf_array":{"dtmf_input":"2","updated_at":"2025-10-06 15:39:22"}}
+[2025-10-06 21:09:25] 
+[2025-10-06 21:09:25] 200
+[2025-10-06 21:15:07] Starting Calling...
+[2025-10-06 21:15:09] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2001","callerid":"18005318722","starttime":"2025-10-06 21:15:07","stoptime":"2025-10-06 21:15:07","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e403e0792"}
+[2025-10-06 21:15:09] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2001@from-user-000000e5;1"],"channel":"Local\/2001@from-user-000000e5;1","cdr_uniqueid":"call_68e3e403e0792"}
+[2025-10-06 21:15:09] 
+[2025-10-06 21:15:09] 200
+[2025-10-06 21:15:11] Starting get call stat...
+[2025-10-06 21:15:12] {"callChannel":"Local\/2001@from-user-000000e5;1","action":"status_call"}
+[2025-10-06 21:15:12] {"success":true,"channel":"Local\/2001@from-user-000000e5;1","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:15:12] 
+[2025-10-06 21:15:12] 200
+[2025-10-06 21:15:13] Starting get call stat...
+[2025-10-06 21:15:14] {"callChannel":"Local\/2001@from-user-000000e5;1","action":"status_call"}
+[2025-10-06 21:15:14] {"success":true,"channel":"Local\/2001@from-user-000000e5;1","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:15:14] 
+[2025-10-06 21:15:14] 200
+[2025-10-06 21:15:15] Starting get call stat...
+[2025-10-06 21:15:16] {"callChannel":"Local\/2001@from-user-000000e5;1","action":"status_call"}
+[2025-10-06 21:15:16] {"success":true,"channel":"Local\/2001@from-user-000000e5;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:15:16] 
+[2025-10-06 21:15:16] 200
+[2025-10-06 21:15:17] Starting get call stat...
+[2025-10-06 21:15:18] {"callChannel":"Local\/2001@from-user-000000e5;1","action":"status_call"}
+[2025-10-06 21:15:18] {"success":true,"channel":"Local\/2001@from-user-000000e5;1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:15:18] 
+[2025-10-06 21:15:18] 200
+[2025-10-06 21:15:42] Starting Call Ending...
+[2025-10-06 21:15:43] {"action":"end_call","stoptime":"2025-10-06 21:15:42","sessiontime":35,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e403e0792","callChannel":"Local\/2001@from-user-000000e5;1"}
+[2025-10-06 21:15:43] {"success":true,"output":["Scanning for channels related to extension: Local\/2001@from-user-000000e5;1","No active channels found for extension Local\/2001@from-user-000000e5;1"]}
+[2025-10-06 21:15:43] 
+[2025-10-06 21:15:43] 200
+[2025-10-06 21:15:56] Starting Calling...
+[2025-10-06 21:15:57] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2001","callerid":"18005318722","starttime":"2025-10-06 21:15:56","stoptime":"2025-10-06 21:15:56","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e43437d7e"}
+[2025-10-06 21:15:57] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2001@from-user-000000e6;1"],"channel":"Local\/2001@from-user-000000e6;1","cdr_uniqueid":"call_68e3e43437d7e"}
+[2025-10-06 21:15:57] 
+[2025-10-06 21:15:57] 200
+[2025-10-06 21:16:00] Starting get call stat...
+[2025-10-06 21:16:00] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:00] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:00] 
+[2025-10-06 21:16:00] 200
+[2025-10-06 21:16:02] Starting get call stat...
+[2025-10-06 21:16:02] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:02] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:02] 
+[2025-10-06 21:16:02] 200
+[2025-10-06 21:16:04] Starting get call stat...
+[2025-10-06 21:16:04] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:04] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:04] 
+[2025-10-06 21:16:04] 200
+[2025-10-06 21:16:06] Starting get call stat...
+[2025-10-06 21:16:06] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:06] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:06] 
+[2025-10-06 21:16:06] 200
+[2025-10-06 21:16:08] Starting get call stat...
+[2025-10-06 21:16:08] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:08] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:08] 
+[2025-10-06 21:16:08] 200
+[2025-10-06 21:16:10] Starting get call stat...
+[2025-10-06 21:16:10] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:10] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:10] 
+[2025-10-06 21:16:10] 200
+[2025-10-06 21:16:12] Starting get call stat...
+[2025-10-06 21:16:12] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:12] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:12] 
+[2025-10-06 21:16:12] 200
+[2025-10-06 21:16:14] Starting get call stat...
+[2025-10-06 21:16:14] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:14] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:14] 
+[2025-10-06 21:16:14] 200
+[2025-10-06 21:16:16] Starting get call stat...
+[2025-10-06 21:16:16] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:16] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:16] 
+[2025-10-06 21:16:16] 200
+[2025-10-06 21:16:18] Starting get call stat...
+[2025-10-06 21:16:18] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:18] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:18] 
+[2025-10-06 21:16:18] 200
+[2025-10-06 21:16:20] Starting get call stat...
+[2025-10-06 21:16:20] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:20] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:20] 
+[2025-10-06 21:16:20] 200
+[2025-10-06 21:16:22] Starting get call stat...
+[2025-10-06 21:16:22] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:22] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:22] 
+[2025-10-06 21:16:22] 200
+[2025-10-06 21:16:24] Starting get call stat...
+[2025-10-06 21:16:24] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:24] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:24] 
+[2025-10-06 21:16:24] 200
+[2025-10-06 21:16:26] Starting get call stat...
+[2025-10-06 21:16:26] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:26] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:26] 
+[2025-10-06 21:16:26] 200
+[2025-10-06 21:16:28] Starting get call stat...
+[2025-10-06 21:16:28] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:28] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:28] 
+[2025-10-06 21:16:28] 200
+[2025-10-06 21:16:30] Starting get call stat...
+[2025-10-06 21:16:30] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:30] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:30] 
+[2025-10-06 21:16:30] 200
+[2025-10-06 21:16:32] Starting get call stat...
+[2025-10-06 21:16:32] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:32] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:32] 
+[2025-10-06 21:16:32] 200
+[2025-10-06 21:16:34] Starting get call stat...
+[2025-10-06 21:16:34] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:34] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:34] 
+[2025-10-06 21:16:34] 200
+[2025-10-06 21:16:36] Starting get call stat...
+[2025-10-06 21:16:36] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:36] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:36] 
+[2025-10-06 21:16:36] 200
+[2025-10-06 21:16:38] Starting get call stat...
+[2025-10-06 21:16:38] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:38] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:38] 
+[2025-10-06 21:16:38] 200
+[2025-10-06 21:16:40] Starting get call stat...
+[2025-10-06 21:16:40] {"callChannel":"Local\/2001@from-user-000000e6;1","action":"status_call"}
+[2025-10-06 21:16:40] {"success":true,"channel":"Local\/2001@from-user-000000e6;1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:16:40] 
+[2025-10-06 21:16:40] 200
+[2025-10-06 21:17:24] Starting Call Ending...
+[2025-10-06 21:17:25] {"action":"end_call","stoptime":"2025-10-06 21:17:24","sessiontime":590,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e23ed8811","callChannel":"Local\/2002@from-user-000000e4;2"}
+[2025-10-06 21:17:25] {"success":true,"output":["Scanning for channels related to extension: Local\/2002@from-user-000000e4;2","No active channels found for extension Local\/2002@from-user-000000e4;2"]}
+[2025-10-06 21:17:25] 
+[2025-10-06 21:17:25] 200
+[2025-10-06 21:17:27] Starting Call Ending...
+[2025-10-06 21:17:28] {"action":"end_call","stoptime":"2025-10-06 21:17:27","sessiontime":91,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e43437d7e","callChannel":"Local\/2001@from-user-000000e6;1"}
+[2025-10-06 21:17:28] {"success":true,"output":["Scanning for channels related to extension: Local\/2001@from-user-000000e6;1","No active channels found for extension Local\/2001@from-user-000000e6;1"]}
+[2025-10-06 21:17:28] 
+[2025-10-06 21:17:28] 200
+[2025-10-06 21:17:29] Starting Call Ending...
+[2025-10-06 21:17:30] {"action":"end_call","stoptime":"2025-10-06 21:17:29","sessiontime":109241,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e239d847707","callChannel":"Local\/2002@from-user-000000e3;2"}
+[2025-10-06 21:17:30] {"success":true,"output":["Scanning for channels related to extension: Local\/2002@from-user-000000e3;2","No active channels found for extension Local\/2002@from-user-000000e3;2"]}
+[2025-10-06 21:17:30] 
+[2025-10-06 21:17:30] 200
+[2025-10-06 21:17:58] Starting Calling...
+[2025-10-06 21:18:00] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2000","callerid":"18005318722","starttime":"2025-10-06 21:17:58","stoptime":"2025-10-06 21:17:58","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e4ae867a1"}
+[2025-10-06 21:18:00] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2000@from-user-000000e7;2"],"channel":"Local\/2000@from-user-000000e7;2","cdr_uniqueid":"call_68e3e4ae867a1"}
+[2025-10-06 21:18:00] 
+[2025-10-06 21:18:00] 200
+[2025-10-06 21:18:02] Starting get call stat...
+[2025-10-06 21:18:02] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:02] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:02] 
+[2025-10-06 21:18:02] 200
+[2025-10-06 21:18:04] Starting get call stat...
+[2025-10-06 21:18:04] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:04] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:04] 
+[2025-10-06 21:18:04] 200
+[2025-10-06 21:18:06] Starting get call stat...
+[2025-10-06 21:18:06] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:06] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:06] 
+[2025-10-06 21:18:06] 200
+[2025-10-06 21:18:08] Starting get call stat...
+[2025-10-06 21:18:08] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:08] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:08] 
+[2025-10-06 21:18:08] 200
+[2025-10-06 21:18:10] Starting get call stat...
+[2025-10-06 21:18:10] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:10] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:10] 
+[2025-10-06 21:18:10] 200
+[2025-10-06 21:18:12] Starting get call stat...
+[2025-10-06 21:18:12] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:12] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:12] 
+[2025-10-06 21:18:12] 200
+[2025-10-06 21:18:14] Starting get call stat...
+[2025-10-06 21:18:14] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:14] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:14] 
+[2025-10-06 21:18:14] 200
+[2025-10-06 21:18:16] Starting Call Ending...
+[2025-10-06 21:18:16] {"action":"end_call","stoptime":"2025-10-06 21:18:16","sessiontime":18,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e4ae867a1","callChannel":"Local\/2000@from-user-000000e7;2"}
+[2025-10-06 21:18:16] {"success":true,"output":["Scanning for channels related to extension: Local\/2000@from-user-000000e7;2","Hanging up: Local\/2000@from-user-000000e7;2","Requested Hangup on channel 'Local\/2000@from-user-000000e7;2'"]}
+[2025-10-06 21:18:16] 
+[2025-10-06 21:18:16] 200
+[2025-10-06 21:18:17] Starting get call stat...
+[2025-10-06 21:18:17] {"callChannel":"Local\/2000@from-user-000000e7;2","action":"status_call"}
+[2025-10-06 21:18:17] {"success":true,"channel":"Local\/2000@from-user-000000e7;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:17] 
+[2025-10-06 21:18:17] 200
+[2025-10-06 21:18:33] Starting Calling...
+[2025-10-06 21:18:35] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2001","callerid":"18005318722","starttime":"2025-10-06 21:18:33","stoptime":"2025-10-06 21:18:33","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e4d19ff63"}
+[2025-10-06 21:18:35] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2001@from-user-000000e8;1"],"channel":"Local\/2001@from-user-000000e8;1","cdr_uniqueid":"call_68e3e4d19ff63"}
+[2025-10-06 21:18:35] 
+[2025-10-06 21:18:35] 200
+[2025-10-06 21:18:37] Starting get call stat...
+[2025-10-06 21:18:38] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:38] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:38] 
+[2025-10-06 21:18:38] 200
+[2025-10-06 21:18:39] Starting get call stat...
+[2025-10-06 21:18:40] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:40] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:40] 
+[2025-10-06 21:18:40] 200
+[2025-10-06 21:18:41] Starting get call stat...
+[2025-10-06 21:18:42] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:42] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:42] 
+[2025-10-06 21:18:42] 200
+[2025-10-06 21:18:43] Starting get call stat...
+[2025-10-06 21:18:44] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:44] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:44] 
+[2025-10-06 21:18:44] 200
+[2025-10-06 21:18:45] Starting get call stat...
+[2025-10-06 21:18:46] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:46] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:46] 
+[2025-10-06 21:18:46] 200
+[2025-10-06 21:18:47] Starting get call stat...
+[2025-10-06 21:18:48] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:48] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:48] 
+[2025-10-06 21:18:48] 200
+[2025-10-06 21:18:49] Starting get call stat...
+[2025-10-06 21:18:50] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:50] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:50] 
+[2025-10-06 21:18:50] 200
+[2025-10-06 21:18:51] Starting get call stat...
+[2025-10-06 21:18:52] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:52] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:52] 
+[2025-10-06 21:18:52] 200
+[2025-10-06 21:18:53] Starting get call stat...
+[2025-10-06 21:18:54] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:54] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:54] 
+[2025-10-06 21:18:54] 200
+[2025-10-06 21:18:55] Starting get call stat...
+[2025-10-06 21:18:56] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:56] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:56] 
+[2025-10-06 21:18:56] 200
+[2025-10-06 21:18:57] Starting get call stat...
+[2025-10-06 21:18:58] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:18:58] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:18:58] 
+[2025-10-06 21:18:58] 200
+[2025-10-06 21:18:59] Starting get call stat...
+[2025-10-06 21:19:00] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:00] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:00] 
+[2025-10-06 21:19:00] 200
+[2025-10-06 21:19:01] Starting get call stat...
+[2025-10-06 21:19:02] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:02] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:02] 
+[2025-10-06 21:19:02] 200
+[2025-10-06 21:19:03] Starting get call stat...
+[2025-10-06 21:19:04] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:04] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:04] 
+[2025-10-06 21:19:04] 200
+[2025-10-06 21:19:05] Starting get call stat...
+[2025-10-06 21:19:06] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:06] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:06] 
+[2025-10-06 21:19:06] 200
+[2025-10-06 21:19:07] Starting get call stat...
+[2025-10-06 21:19:08] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:08] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:08] 
+[2025-10-06 21:19:08] 200
+[2025-10-06 21:19:09] Starting get call stat...
+[2025-10-06 21:19:10] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:10] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:10] 
+[2025-10-06 21:19:10] 200
+[2025-10-06 21:19:11] Starting get call stat...
+[2025-10-06 21:19:12] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:12] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:12] 
+[2025-10-06 21:19:12] 200
+[2025-10-06 21:19:13] Starting get call stat...
+[2025-10-06 21:19:14] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:14] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:14] 
+[2025-10-06 21:19:14] 200
+[2025-10-06 21:19:15] Starting get call stat...
+[2025-10-06 21:19:16] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:16] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:16] 
+[2025-10-06 21:19:16] 200
+[2025-10-06 21:19:17] Starting get call stat...
+[2025-10-06 21:19:18] {"callChannel":"Local\/2001@from-user-000000e8;1","action":"status_call"}
+[2025-10-06 21:19:18] {"success":true,"channel":"Local\/2001@from-user-000000e8;1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:19:18] 
+[2025-10-06 21:19:18] 200
+[2025-10-06 21:22:01] Starting Calling...
+[2025-10-06 21:22:03] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2001","callerid":"18005318722","starttime":"2025-10-06 21:22:01","stoptime":"2025-10-06 21:22:01","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e3e5a18f73b"}
+[2025-10-06 21:22:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2001@from-user-000000e9;1"],"channel":"Local\/2001@from-user-000000e9;1","cdr_uniqueid":"call_68e3e5a18f73b"}
+[2025-10-06 21:22:03] 
+[2025-10-06 21:22:03] 200
+[2025-10-06 21:22:05] Starting get call stat...
+[2025-10-06 21:22:06] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:06] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:06] 
+[2025-10-06 21:22:06] 200
+[2025-10-06 21:22:07] Starting get call stat...
+[2025-10-06 21:22:08] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:08] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:08] 
+[2025-10-06 21:22:08] 200
+[2025-10-06 21:22:09] Starting get call stat...
+[2025-10-06 21:22:10] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:10] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:10] 
+[2025-10-06 21:22:10] 200
+[2025-10-06 21:22:11] Starting get call stat...
+[2025-10-06 21:22:12] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:12] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:12] 
+[2025-10-06 21:22:12] 200
+[2025-10-06 21:22:13] Starting get call stat...
+[2025-10-06 21:22:14] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:14] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:14] 
+[2025-10-06 21:22:14] 200
+[2025-10-06 21:22:15] Starting get call stat...
+[2025-10-06 21:22:16] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:16] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:16] 
+[2025-10-06 21:22:16] 200
+[2025-10-06 21:22:17] Starting get call stat...
+[2025-10-06 21:22:18] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:18] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:18] 
+[2025-10-06 21:22:18] 200
+[2025-10-06 21:22:19] Starting get call stat...
+[2025-10-06 21:22:20] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:20] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:20] 
+[2025-10-06 21:22:20] 200
+[2025-10-06 21:22:21] Starting get call stat...
+[2025-10-06 21:22:22] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:22] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:22] 
+[2025-10-06 21:22:22] 200
+[2025-10-06 21:22:23] Starting get call stat...
+[2025-10-06 21:22:24] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:24] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:24] 
+[2025-10-06 21:22:24] 200
+[2025-10-06 21:22:25] Starting get call stat...
+[2025-10-06 21:22:26] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:26] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:26] 
+[2025-10-06 21:22:26] 200
+[2025-10-06 21:22:27] Starting get call stat...
+[2025-10-06 21:22:28] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:28] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:28] 
+[2025-10-06 21:22:28] 200
+[2025-10-06 21:22:29] Starting get call stat...
+[2025-10-06 21:22:30] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:30] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:30] 
+[2025-10-06 21:22:30] 200
+[2025-10-06 21:22:31] Starting get call stat...
+[2025-10-06 21:22:32] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:32] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-06 21:22:32] 
+[2025-10-06 21:22:32] 200
+[2025-10-06 21:22:33] Starting get call stat...
+[2025-10-06 21:22:34] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:34] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:34] 
+[2025-10-06 21:22:34] 200
+[2025-10-06 21:22:35] Starting get call stat...
+[2025-10-06 21:22:36] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:36] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:36] 
+[2025-10-06 21:22:36] 200
+[2025-10-06 21:22:37] Starting get call stat...
+[2025-10-06 21:22:38] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:38] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:38] 
+[2025-10-06 21:22:38] 200
+[2025-10-06 21:22:39] Starting get call stat...
+[2025-10-06 21:22:40] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:40] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:40] 
+[2025-10-06 21:22:40] 200
+[2025-10-06 21:22:41] Starting get call stat...
+[2025-10-06 21:22:42] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:42] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:42] 
+[2025-10-06 21:22:42] 200
+[2025-10-06 21:22:43] Starting get call stat...
+[2025-10-06 21:22:44] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:44] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:44] 
+[2025-10-06 21:22:44] 200
+[2025-10-06 21:22:45] Starting get call stat...
+[2025-10-06 21:22:46] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:46] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:46] 
+[2025-10-06 21:22:46] 200
+[2025-10-06 21:22:47] Starting get call stat...
+[2025-10-06 21:22:48] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:48] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:48] 
+[2025-10-06 21:22:48] 200
+[2025-10-06 21:22:49] Starting get call stat...
+[2025-10-06 21:22:50] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:50] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:50] 
+[2025-10-06 21:22:50] 200
+[2025-10-06 21:22:51] Starting get call stat...
+[2025-10-06 21:22:52] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:52] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:52] 
+[2025-10-06 21:22:52] 200
+[2025-10-06 21:22:53] Starting get call stat...
+[2025-10-06 21:22:54] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:54] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:54] 
+[2025-10-06 21:22:54] 200
+[2025-10-06 21:22:55] Starting get call stat...
+[2025-10-06 21:22:56] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:56] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-06 15:52:33","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-06 15:52:33"}}
+[2025-10-06 21:22:56] 
+[2025-10-06 21:22:56] 200
+[2025-10-06 21:22:57] Starting get call stat...
+[2025-10-06 21:22:58] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:22:58] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"1","dtmf_updated_at":"2025-10-06 15:52:57","dtmf_array":{"dtmf_input":"1","updated_at":"2025-10-06 15:52:57"}}
+[2025-10-06 21:22:58] 
+[2025-10-06 21:22:58] 200
+[2025-10-06 21:22:59] Starting get call stat...
+[2025-10-06 21:23:00] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:23:00] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"1","dtmf_updated_at":"2025-10-06 15:52:57","dtmf_array":{"dtmf_input":"1","updated_at":"2025-10-06 15:52:57"}}
+[2025-10-06 21:23:00] 
+[2025-10-06 21:23:00] 200
+[2025-10-06 21:23:01] Starting get call stat...
+[2025-10-06 21:23:02] {"callChannel":"Local\/2001@from-user-000000e9;1","action":"status_call"}
+[2025-10-06 21:23:02] {"success":true,"channel":"Local\/2001@from-user-000000e9;1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"1","dtmf_updated_at":"2025-10-06 15:52:57","dtmf_array":{"dtmf_input":"1","updated_at":"2025-10-06 15:52:57"}}
+[2025-10-06 21:23:02] 
+[2025-10-06 21:23:02] 200
+[2025-10-06 21:23:12] Starting Call Ending...
+[2025-10-06 21:23:13] {"action":"end_call","stoptime":"2025-10-06 21:23:12","sessiontime":279,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e4d19ff63","callChannel":"Local\/2001@from-user-000000e8;1"}
+[2025-10-06 21:23:13] {"success":true,"output":["Scanning for channels related to extension: Local\/2001@from-user-000000e8;1","No active channels found for extension Local\/2001@from-user-000000e8;1"]}
+[2025-10-06 21:23:13] 
+[2025-10-06 21:23:13] 200
+[2025-10-06 21:23:15] Starting Call Ending...
+[2025-10-06 21:23:15] {"action":"end_call","stoptime":"2025-10-06 21:23:15","sessiontime":74,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e3e5a18f73b","callChannel":"Local\/2001@from-user-000000e9;1"}
+[2025-10-06 21:23:15] {"success":true,"output":["Scanning for channels related to extension: Local\/2001@from-user-000000e9;1","No active channels found for extension Local\/2001@from-user-000000e9;1"]}
+[2025-10-06 21:23:15] 
+[2025-10-06 21:23:15] 200
+[2025-10-07 23:31:50] Starting Calling...
+[2025-10-07 23:31:51] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-07 23:31:50","stoptime":"2025-10-07 23:31:50","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e5558e399a4"}
+[2025-10-07 23:31:51] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000ea;2"],"channel":"Local\/2002@from-user-000000ea;2","cdr_uniqueid":"call_68e5558e399a4"}
+[2025-10-07 23:31:51] 
+[2025-10-07 23:31:51] 200
+[2025-10-07 23:31:54] Starting get call stat...
+[2025-10-07 23:31:54] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:31:54] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:31:54] 
+[2025-10-07 23:31:54] 200
+[2025-10-07 23:31:56] Starting get call stat...
+[2025-10-07 23:31:56] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:31:56] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:31:56] 
+[2025-10-07 23:31:56] 200
+[2025-10-07 23:31:58] Starting get call stat...
+[2025-10-07 23:31:58] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:31:58] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:31:58] 
+[2025-10-07 23:31:58] 200
+[2025-10-07 23:32:00] Starting get call stat...
+[2025-10-07 23:32:00] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:00] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:00] 
+[2025-10-07 23:32:00] 200
+[2025-10-07 23:32:02] Starting get call stat...
+[2025-10-07 23:32:02] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:02] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:02] 
+[2025-10-07 23:32:02] 200
+[2025-10-07 23:32:04] Starting get call stat...
+[2025-10-07 23:32:04] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:04] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:04] 
+[2025-10-07 23:32:04] 200
+[2025-10-07 23:32:06] Starting get call stat...
+[2025-10-07 23:32:06] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:06] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:06] 
+[2025-10-07 23:32:06] 200
+[2025-10-07 23:32:08] Starting get call stat...
+[2025-10-07 23:32:08] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:08] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:08] 
+[2025-10-07 23:32:08] 200
+[2025-10-07 23:32:10] Starting get call stat...
+[2025-10-07 23:32:10] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:10] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:10] 
+[2025-10-07 23:32:10] 200
+[2025-10-07 23:32:12] Starting get call stat...
+[2025-10-07 23:32:12] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:12] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:12] 
+[2025-10-07 23:32:12] 200
+[2025-10-07 23:32:14] Starting get call stat...
+[2025-10-07 23:32:14] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:14] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:14] 
+[2025-10-07 23:32:14] 200
+[2025-10-07 23:32:16] Starting get call stat...
+[2025-10-07 23:32:16] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:16] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:16] 
+[2025-10-07 23:32:16] 200
+[2025-10-07 23:32:18] Starting get call stat...
+[2025-10-07 23:32:18] {"callChannel":"Local\/2002@from-user-000000ea;2","action":"status_call"}
+[2025-10-07 23:32:18] {"success":true,"channel":"Local\/2002@from-user-000000ea;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:32:18] 
+[2025-10-07 23:32:18] 200
+[2025-10-07 23:32:32] Starting Call Ending...
+[2025-10-07 23:32:33] {"action":"end_call","stoptime":"2025-10-07 23:32:32","sessiontime":42,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:32:33] {"success":false,"error":"Response: Error | Message: No such channel"}
+[2025-10-07 23:32:33] 
+[2025-10-07 23:32:33] 400
+[2025-10-07 23:32:36] Starting Call Ending...
+[2025-10-07 23:32:37] {"action":"end_call","stoptime":"2025-10-07 23:32:36","sessiontime":46,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:32:37] {"success":false,"error":"Response: Error | Message: No such channel"}
+[2025-10-07 23:32:37] 
+[2025-10-07 23:32:37] 400
+[2025-10-07 23:34:14] Starting Call Ending...
+[2025-10-07 23:34:15] {"action":"end_call","stoptime":"2025-10-07 23:34:14","sessiontime":144,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:34:15] {"success":false,"error":"Response: Error | Message: No such channel"}
+[2025-10-07 23:34:15] 
+[2025-10-07 23:34:15] 400
+[2025-10-07 23:35:16] Starting Call Ending...
+[2025-10-07 23:35:17] {"action":"end_call","stoptime":"2025-10-07 23:35:16","sessiontime":206,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:35:17] {"success":false,"error":"Response: Error | Message: No such channel"}
+[2025-10-07 23:35:17] 
+[2025-10-07 23:35:17] 400
+[2025-10-07 23:37:19] Starting Call Ending...
+[2025-10-07 23:37:20] {"action":"end_call","stoptime":"2025-10-07 23:37:19","sessiontime":329,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:37:20] {"success":false,"error":"Response: Error | Message: No such channel"}
+[2025-10-07 23:37:20] 
+[2025-10-07 23:37:20] 400
+[2025-10-07 23:40:20] Starting Call Ending...
+[2025-10-07 23:40:21] {"action":"end_call","stoptime":"2025-10-07 23:40:20","sessiontime":510,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5558e399a4","callChannel":"Local\/2002@from-user-000000ea;2"}
+[2025-10-07 23:40:21] {"success":true,"output":"No such channel"}
+[2025-10-07 23:40:21] 
+[2025-10-07 23:40:21] 200
+[2025-10-07 23:40:36] Starting Calling...
+[2025-10-07 23:40:37] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-07 23:40:36","stoptime":"2025-10-07 23:40:36","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e5579c3ba6f"}
+[2025-10-07 23:40:37] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000eb;2"],"channel":"Local\/2002@from-user-000000eb;2","cdr_uniqueid":"call_68e5579c3ba6f"}
+[2025-10-07 23:40:37] 
+[2025-10-07 23:40:37] 200
+[2025-10-07 23:40:39] Starting get call stat...
+[2025-10-07 23:40:40] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:40] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:40] 
+[2025-10-07 23:40:40] 200
+[2025-10-07 23:40:41] Starting get call stat...
+[2025-10-07 23:40:42] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:42] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:42] 
+[2025-10-07 23:40:42] 200
+[2025-10-07 23:40:43] Starting get call stat...
+[2025-10-07 23:40:44] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:44] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:44] 
+[2025-10-07 23:40:44] 200
+[2025-10-07 23:40:45] Starting get call stat...
+[2025-10-07 23:40:46] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:46] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:46] 
+[2025-10-07 23:40:46] 200
+[2025-10-07 23:40:47] Starting get call stat...
+[2025-10-07 23:40:48] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:48] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:48] 
+[2025-10-07 23:40:48] 200
+[2025-10-07 23:40:49] Starting get call stat...
+[2025-10-07 23:40:50] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:50] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:50] 
+[2025-10-07 23:40:50] 200
+[2025-10-07 23:40:51] Starting get call stat...
+[2025-10-07 23:40:52] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:52] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:52] 
+[2025-10-07 23:40:52] 200
+[2025-10-07 23:40:53] Starting get call stat...
+[2025-10-07 23:40:54] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:54] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:54] 
+[2025-10-07 23:40:54] 200
+[2025-10-07 23:40:55] Starting get call stat...
+[2025-10-07 23:40:56] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:56] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:56] 
+[2025-10-07 23:40:56] 200
+[2025-10-07 23:40:57] Starting get call stat...
+[2025-10-07 23:40:58] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:40:58] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:40:58] 
+[2025-10-07 23:40:58] 200
+[2025-10-07 23:40:59] Starting get call stat...
+[2025-10-07 23:41:00] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:00] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:00] 
+[2025-10-07 23:41:00] 200
+[2025-10-07 23:41:01] Starting get call stat...
+[2025-10-07 23:41:02] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:02] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:02] 
+[2025-10-07 23:41:02] 200
+[2025-10-07 23:41:03] Starting get call stat...
+[2025-10-07 23:41:04] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:04] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:04] 
+[2025-10-07 23:41:04] 200
+[2025-10-07 23:41:05] Starting get call stat...
+[2025-10-07 23:41:06] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:06] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:06] 
+[2025-10-07 23:41:06] 200
+[2025-10-07 23:41:07] Starting get call stat...
+[2025-10-07 23:41:08] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:08] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:08] 
+[2025-10-07 23:41:08] 200
+[2025-10-07 23:41:09] Starting get call stat...
+[2025-10-07 23:41:10] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:10] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:10] 
+[2025-10-07 23:41:10] 200
+[2025-10-07 23:41:11] Starting get call stat...
+[2025-10-07 23:41:12] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:12] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:12] 
+[2025-10-07 23:41:12] 200
+[2025-10-07 23:41:13] Starting get call stat...
+[2025-10-07 23:41:14] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:14] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:14] 
+[2025-10-07 23:41:14] 200
+[2025-10-07 23:41:15] Starting get call stat...
+[2025-10-07 23:41:16] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:16] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:16] 
+[2025-10-07 23:41:16] 200
+[2025-10-07 23:41:17] Starting get call stat...
+[2025-10-07 23:41:18] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:18] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:18] 
+[2025-10-07 23:41:18] 200
+[2025-10-07 23:41:19] Starting get call stat...
+[2025-10-07 23:41:20] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:20] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:20] 
+[2025-10-07 23:41:20] 200
+[2025-10-07 23:41:21] Starting get call stat...
+[2025-10-07 23:41:22] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:22] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:22] 
+[2025-10-07 23:41:22] 200
+[2025-10-07 23:41:23] Starting get call stat...
+[2025-10-07 23:41:24] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:24] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:24] 
+[2025-10-07 23:41:24] 200
+[2025-10-07 23:41:25] Starting get call stat...
+[2025-10-07 23:41:26] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:26] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:26] 
+[2025-10-07 23:41:26] 200
+[2025-10-07 23:41:27] Starting get call stat...
+[2025-10-07 23:41:28] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:28] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:28] 
+[2025-10-07 23:41:28] 200
+[2025-10-07 23:41:29] Starting get call stat...
+[2025-10-07 23:41:30] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:30] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:30] 
+[2025-10-07 23:41:30] 200
+[2025-10-07 23:41:31] Starting get call stat...
+[2025-10-07 23:41:32] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:32] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:32] 
+[2025-10-07 23:41:32] 200
+[2025-10-07 23:41:33] Starting get call stat...
+[2025-10-07 23:41:34] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:34] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:34] 
+[2025-10-07 23:41:34] 200
+[2025-10-07 23:41:35] Starting get call stat...
+[2025-10-07 23:41:36] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:36] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:36] 
+[2025-10-07 23:41:36] 200
+[2025-10-07 23:41:37] Starting get call stat...
+[2025-10-07 23:41:38] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:38] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:38] 
+[2025-10-07 23:41:38] 200
+[2025-10-07 23:41:39] Starting get call stat...
+[2025-10-07 23:41:40] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:40] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:40] 
+[2025-10-07 23:41:40] 200
+[2025-10-07 23:41:41] Starting get call stat...
+[2025-10-07 23:41:42] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:42] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:42] 
+[2025-10-07 23:41:42] 200
+[2025-10-07 23:41:43] Starting get call stat...
+[2025-10-07 23:41:44] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:44] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:44] 
+[2025-10-07 23:41:44] 200
+[2025-10-07 23:41:45] Starting get call stat...
+[2025-10-07 23:41:46] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:46] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:46] 
+[2025-10-07 23:41:46] 200
+[2025-10-07 23:41:47] Starting get call stat...
+[2025-10-07 23:41:48] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:48] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:48] 
+[2025-10-07 23:41:48] 200
+[2025-10-07 23:41:49] Starting get call stat...
+[2025-10-07 23:41:50] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:50] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:50] 
+[2025-10-07 23:41:50] 200
+[2025-10-07 23:41:51] Starting get call stat...
+[2025-10-07 23:41:52] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:52] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:52] 
+[2025-10-07 23:41:52] 200
+[2025-10-07 23:41:53] Starting get call stat...
+[2025-10-07 23:41:54] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:54] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:54] 
+[2025-10-07 23:41:54] 200
+[2025-10-07 23:41:55] Starting get call stat...
+[2025-10-07 23:41:56] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:56] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:56] 
+[2025-10-07 23:41:56] 200
+[2025-10-07 23:41:57] Starting get call stat...
+[2025-10-07 23:41:58] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:41:58] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:41:58] 
+[2025-10-07 23:41:58] 200
+[2025-10-07 23:41:59] Starting get call stat...
+[2025-10-07 23:42:00] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:42:00] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:42:00] 
+[2025-10-07 23:42:00] 200
+[2025-10-07 23:42:01] Starting get call stat...
+[2025-10-07 23:42:02] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:42:02] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:42:02] 
+[2025-10-07 23:42:02] 200
+[2025-10-07 23:42:03] Starting get call stat...
+[2025-10-07 23:42:04] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:42:04] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:42:04] 
+[2025-10-07 23:42:04] 200
+[2025-10-07 23:42:05] Starting get call stat...
+[2025-10-07 23:42:06] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:42:06] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:42:06] 
+[2025-10-07 23:42:06] 200
+[2025-10-07 23:42:07] Starting get call stat...
+[2025-10-07 23:42:08] {"callChannel":"Local\/2002@from-user-000000eb;2","action":"status_call"}
+[2025-10-07 23:42:08] {"success":true,"channel":"Local\/2002@from-user-000000eb;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:42:08] 
+[2025-10-07 23:42:08] 200
+[2025-10-07 23:43:19] Starting Calling...
+[2025-10-07 23:43:21] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-07 23:43:19","stoptime":"2025-10-07 23:43:19","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e5583fdf208"}
+[2025-10-07 23:43:21] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000ec;2"],"channel":"Local\/2002@from-user-000000ec;2","cdr_uniqueid":"call_68e5583fdf208"}
+[2025-10-07 23:43:21] 
+[2025-10-07 23:43:21] 200
+[2025-10-07 23:43:23] Starting get call stat...
+[2025-10-07 23:43:24] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:24] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:24] 
+[2025-10-07 23:43:24] 200
+[2025-10-07 23:43:25] Starting get call stat...
+[2025-10-07 23:43:26] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:26] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:26] 
+[2025-10-07 23:43:26] 200
+[2025-10-07 23:43:27] Starting get call stat...
+[2025-10-07 23:43:28] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:28] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:28] 
+[2025-10-07 23:43:28] 200
+[2025-10-07 23:43:29] Starting get call stat...
+[2025-10-07 23:43:30] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:30] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:30] 
+[2025-10-07 23:43:30] 200
+[2025-10-07 23:43:31] Starting get call stat...
+[2025-10-07 23:43:32] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:32] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:32] 
+[2025-10-07 23:43:32] 200
+[2025-10-07 23:43:33] Starting get call stat...
+[2025-10-07 23:43:34] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:34] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:34] 
+[2025-10-07 23:43:34] 200
+[2025-10-07 23:43:35] Starting get call stat...
+[2025-10-07 23:43:36] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:36] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:36] 
+[2025-10-07 23:43:36] 200
+[2025-10-07 23:43:37] Starting get call stat...
+[2025-10-07 23:43:38] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:38] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:38] 
+[2025-10-07 23:43:38] 200
+[2025-10-07 23:43:39] Starting get call stat...
+[2025-10-07 23:43:40] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:40] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:40] 
+[2025-10-07 23:43:40] 200
+[2025-10-07 23:43:41] Starting get call stat...
+[2025-10-07 23:43:42] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:42] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:42] 
+[2025-10-07 23:43:42] 200
+[2025-10-07 23:43:43] Starting get call stat...
+[2025-10-07 23:43:44] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:44] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:44] 
+[2025-10-07 23:43:44] 200
+[2025-10-07 23:43:45] Starting get call stat...
+[2025-10-07 23:43:46] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:46] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:46] 
+[2025-10-07 23:43:46] 200
+[2025-10-07 23:43:47] Starting get call stat...
+[2025-10-07 23:43:48] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:48] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:48] 
+[2025-10-07 23:43:48] 200
+[2025-10-07 23:43:49] Starting get call stat...
+[2025-10-07 23:43:50] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:50] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:50] 
+[2025-10-07 23:43:50] 200
+[2025-10-07 23:43:51] Starting get call stat...
+[2025-10-07 23:43:52] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:52] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:52] 
+[2025-10-07 23:43:52] 200
+[2025-10-07 23:43:53] Starting get call stat...
+[2025-10-07 23:43:54] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:54] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:54] 
+[2025-10-07 23:43:54] 200
+[2025-10-07 23:43:55] Starting get call stat...
+[2025-10-07 23:43:56] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:56] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:56] 
+[2025-10-07 23:43:56] 200
+[2025-10-07 23:43:57] Starting get call stat...
+[2025-10-07 23:43:58] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:43:58] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:43:58] 
+[2025-10-07 23:43:58] 200
+[2025-10-07 23:43:59] Starting get call stat...
+[2025-10-07 23:44:00] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:00] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:00] 
+[2025-10-07 23:44:00] 200
+[2025-10-07 23:44:01] Starting get call stat...
+[2025-10-07 23:44:02] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:02] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:02] 
+[2025-10-07 23:44:02] 200
+[2025-10-07 23:44:03] Starting get call stat...
+[2025-10-07 23:44:04] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:04] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:04] 
+[2025-10-07 23:44:04] 200
+[2025-10-07 23:44:05] Starting get call stat...
+[2025-10-07 23:44:06] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:06] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:06] 
+[2025-10-07 23:44:06] 200
+[2025-10-07 23:44:07] Starting get call stat...
+[2025-10-07 23:44:08] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:08] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:08] 
+[2025-10-07 23:44:08] 200
+[2025-10-07 23:44:09] Starting get call stat...
+[2025-10-07 23:44:10] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:10] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:10] 
+[2025-10-07 23:44:10] 200
+[2025-10-07 23:44:11] Starting get call stat...
+[2025-10-07 23:44:12] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:12] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:12] 
+[2025-10-07 23:44:12] 200
+[2025-10-07 23:44:13] Starting get call stat...
+[2025-10-07 23:44:14] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:14] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:14] 
+[2025-10-07 23:44:14] 200
+[2025-10-07 23:44:15] Starting get call stat...
+[2025-10-07 23:44:16] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:16] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:16] 
+[2025-10-07 23:44:16] 200
+[2025-10-07 23:44:17] Starting get call stat...
+[2025-10-07 23:44:18] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:18] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:18] 
+[2025-10-07 23:44:18] 200
+[2025-10-07 23:44:19] Starting get call stat...
+[2025-10-07 23:44:20] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:20] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:20] 
+[2025-10-07 23:44:20] 200
+[2025-10-07 23:44:21] Starting get call stat...
+[2025-10-07 23:44:22] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:22] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:22] 
+[2025-10-07 23:44:22] 200
+[2025-10-07 23:44:23] Starting get call stat...
+[2025-10-07 23:44:24] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:24] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:24] 
+[2025-10-07 23:44:24] 200
+[2025-10-07 23:44:25] Starting get call stat...
+[2025-10-07 23:44:26] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:26] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:26] 
+[2025-10-07 23:44:26] 200
+[2025-10-07 23:44:27] Starting get call stat...
+[2025-10-07 23:44:28] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:28] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:28] 
+[2025-10-07 23:44:28] 200
+[2025-10-07 23:44:29] Starting get call stat...
+[2025-10-07 23:44:30] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:30] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:30] 
+[2025-10-07 23:44:30] 200
+[2025-10-07 23:44:31] Starting get call stat...
+[2025-10-07 23:44:32] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:32] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:32] 
+[2025-10-07 23:44:32] 200
+[2025-10-07 23:44:33] Starting get call stat...
+[2025-10-07 23:44:34] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:34] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:34] 
+[2025-10-07 23:44:34] 200
+[2025-10-07 23:44:35] Starting get call stat...
+[2025-10-07 23:44:36] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:36] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:36] 
+[2025-10-07 23:44:36] 200
+[2025-10-07 23:44:37] Starting get call stat...
+[2025-10-07 23:44:38] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:38] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:38] 
+[2025-10-07 23:44:38] 200
+[2025-10-07 23:44:39] Starting get call stat...
+[2025-10-07 23:44:40] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:40] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:40] 
+[2025-10-07 23:44:40] 200
+[2025-10-07 23:44:41] Starting get call stat...
+[2025-10-07 23:44:42] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:42] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:42] 
+[2025-10-07 23:44:42] 200
+[2025-10-07 23:44:43] Starting get call stat...
+[2025-10-07 23:44:44] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:44] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:44] 
+[2025-10-07 23:44:44] 200
+[2025-10-07 23:44:45] Starting get call stat...
+[2025-10-07 23:44:46] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:46] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:46] 
+[2025-10-07 23:44:46] 200
+[2025-10-07 23:44:47] Starting get call stat...
+[2025-10-07 23:44:48] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:48] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:48] 
+[2025-10-07 23:44:48] 200
+[2025-10-07 23:44:49] Starting get call stat...
+[2025-10-07 23:44:50] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:50] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:50] 
+[2025-10-07 23:44:50] 200
+[2025-10-07 23:44:51] Starting get call stat...
+[2025-10-07 23:44:52] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:52] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:52] 
+[2025-10-07 23:44:52] 200
+[2025-10-07 23:44:53] Starting get call stat...
+[2025-10-07 23:44:54] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:54] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:54] 
+[2025-10-07 23:44:54] 200
+[2025-10-07 23:44:55] Starting get call stat...
+[2025-10-07 23:44:56] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:56] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:56] 
+[2025-10-07 23:44:56] 200
+[2025-10-07 23:44:57] Starting get call stat...
+[2025-10-07 23:44:58] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:44:58] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:44:58] 
+[2025-10-07 23:44:58] 200
+[2025-10-07 23:44:59] Starting get call stat...
+[2025-10-07 23:45:00] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:00] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:00] 
+[2025-10-07 23:45:00] 200
+[2025-10-07 23:45:01] Starting get call stat...
+[2025-10-07 23:45:02] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:02] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:02] 
+[2025-10-07 23:45:02] 200
+[2025-10-07 23:45:03] Starting get call stat...
+[2025-10-07 23:45:04] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:04] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:04] 
+[2025-10-07 23:45:04] 200
+[2025-10-07 23:45:05] Starting get call stat...
+[2025-10-07 23:45:06] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:06] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:06] 
+[2025-10-07 23:45:06] 200
+[2025-10-07 23:45:07] Starting get call stat...
+[2025-10-07 23:45:08] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:08] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:08] 
+[2025-10-07 23:45:08] 200
+[2025-10-07 23:45:09] Starting get call stat...
+[2025-10-07 23:45:10] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:10] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:10] 
+[2025-10-07 23:45:10] 200
+[2025-10-07 23:45:11] Starting get call stat...
+[2025-10-07 23:45:12] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:12] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:12] 
+[2025-10-07 23:45:12] 200
+[2025-10-07 23:45:13] Starting get call stat...
+[2025-10-07 23:45:14] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:14] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:14] 
+[2025-10-07 23:45:14] 200
+[2025-10-07 23:45:15] Starting get call stat...
+[2025-10-07 23:45:16] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:16] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:16] 
+[2025-10-07 23:45:16] 200
+[2025-10-07 23:45:17] Starting get call stat...
+[2025-10-07 23:45:18] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:18] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:18] 
+[2025-10-07 23:45:18] 200
+[2025-10-07 23:45:19] Starting get call stat...
+[2025-10-07 23:45:20] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:20] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:20] 
+[2025-10-07 23:45:20] 200
+[2025-10-07 23:45:21] Starting get call stat...
+[2025-10-07 23:45:22] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:22] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:22] 
+[2025-10-07 23:45:22] 200
+[2025-10-07 23:45:23] Starting get call stat...
+[2025-10-07 23:45:24] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:24] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:24] 
+[2025-10-07 23:45:24] 200
+[2025-10-07 23:45:25] Starting get call stat...
+[2025-10-07 23:45:26] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:26] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:26] 
+[2025-10-07 23:45:26] 200
+[2025-10-07 23:45:27] Starting get call stat...
+[2025-10-07 23:45:28] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:28] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:28] 
+[2025-10-07 23:45:28] 200
+[2025-10-07 23:45:29] Starting get call stat...
+[2025-10-07 23:45:30] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:30] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:30] 
+[2025-10-07 23:45:30] 200
+[2025-10-07 23:45:31] Starting get call stat...
+[2025-10-07 23:45:32] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:32] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:32] 
+[2025-10-07 23:45:32] 200
+[2025-10-07 23:45:33] Starting get call stat...
+[2025-10-07 23:45:34] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:34] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:34] 
+[2025-10-07 23:45:34] 200
+[2025-10-07 23:45:35] Starting get call stat...
+[2025-10-07 23:45:36] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:36] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:36] 
+[2025-10-07 23:45:36] 200
+[2025-10-07 23:45:37] Starting get call stat...
+[2025-10-07 23:45:38] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:38] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:38] 
+[2025-10-07 23:45:38] 200
+[2025-10-07 23:45:39] Starting get call stat...
+[2025-10-07 23:45:40] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:40] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:40] 
+[2025-10-07 23:45:40] 200
+[2025-10-07 23:45:41] Starting get call stat...
+[2025-10-07 23:45:42] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:42] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:42] 
+[2025-10-07 23:45:42] 200
+[2025-10-07 23:45:43] Starting get call stat...
+[2025-10-07 23:45:44] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:44] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:44] 
+[2025-10-07 23:45:44] 200
+[2025-10-07 23:45:45] Starting get call stat...
+[2025-10-07 23:45:46] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:46] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:46] 
+[2025-10-07 23:45:46] 200
+[2025-10-07 23:45:47] Starting get call stat...
+[2025-10-07 23:45:48] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:48] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:48] 
+[2025-10-07 23:45:48] 200
+[2025-10-07 23:45:49] Starting get call stat...
+[2025-10-07 23:45:50] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:50] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:50] 
+[2025-10-07 23:45:50] 200
+[2025-10-07 23:45:51] Starting get call stat...
+[2025-10-07 23:45:52] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:52] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:52] 
+[2025-10-07 23:45:52] 200
+[2025-10-07 23:45:53] Starting get call stat...
+[2025-10-07 23:45:54] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:54] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:54] 
+[2025-10-07 23:45:54] 200
+[2025-10-07 23:45:55] Starting get call stat...
+[2025-10-07 23:45:56] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:56] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:56] 
+[2025-10-07 23:45:56] 200
+[2025-10-07 23:45:57] Starting get call stat...
+[2025-10-07 23:45:58] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:45:58] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:45:58] 
+[2025-10-07 23:45:58] 200
+[2025-10-07 23:45:59] Starting get call stat...
+[2025-10-07 23:46:00] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:46:00] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:46:00] 
+[2025-10-07 23:46:00] 200
+[2025-10-07 23:46:01] Starting get call stat...
+[2025-10-07 23:46:02] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:46:02] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:46:02] 
+[2025-10-07 23:46:02] 200
+[2025-10-07 23:46:03] Starting get call stat...
+[2025-10-07 23:46:04] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:46:04] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:46:04] 
+[2025-10-07 23:46:04] 200
+[2025-10-07 23:46:05] Starting get call stat...
+[2025-10-07 23:46:06] {"callChannel":"Local\/2002@from-user-000000ec;2","action":"status_call"}
+[2025-10-07 23:46:06] {"success":true,"channel":"Local\/2002@from-user-000000ec;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:46:06] 
+[2025-10-07 23:46:06] 200
+[2025-10-07 23:53:25] Starting Calling...
+[2025-10-07 23:53:27] {"callerName":"testuserIVR","action":"make_call","id_user":24,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-07 23:53:25","stoptime":"2025-10-07 23:53:25","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68e55a9d67352"}
+[2025-10-07 23:53:27] {"success":true,"output":["Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@from-user-000000ed;2"],"channel":"Local\/2002@from-user-000000ed;2","cdr_uniqueid":"call_68e55a9d67352"}
+[2025-10-07 23:53:27] 
+[2025-10-07 23:53:27] 200
+[2025-10-07 23:53:29] Starting get call stat...
+[2025-10-07 23:53:29] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:29] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:29] 
+[2025-10-07 23:53:29] 200
+[2025-10-07 23:53:31] Starting get call stat...
+[2025-10-07 23:53:31] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:31] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:31] 
+[2025-10-07 23:53:31] 200
+[2025-10-07 23:53:33] Starting get call stat...
+[2025-10-07 23:53:33] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:33] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:33] 
+[2025-10-07 23:53:33] 200
+[2025-10-07 23:53:35] Starting get call stat...
+[2025-10-07 23:53:35] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:35] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:35] 
+[2025-10-07 23:53:35] 200
+[2025-10-07 23:53:37] Starting get call stat...
+[2025-10-07 23:53:37] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:37] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:37] 
+[2025-10-07 23:53:37] 200
+[2025-10-07 23:53:39] Starting get call stat...
+[2025-10-07 23:53:39] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:39] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:39] 
+[2025-10-07 23:53:39] 200
+[2025-10-07 23:53:41] Starting get call stat...
+[2025-10-07 23:53:41] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:41] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:41] 
+[2025-10-07 23:53:41] 200
+[2025-10-07 23:53:43] Starting get call stat...
+[2025-10-07 23:53:43] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:43] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:43] 
+[2025-10-07 23:53:43] 200
+[2025-10-07 23:53:45] Starting get call stat...
+[2025-10-07 23:53:45] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:45] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:45] 
+[2025-10-07 23:53:45] 200
+[2025-10-07 23:53:47] Starting get call stat...
+[2025-10-07 23:53:47] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:47] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:47] 
+[2025-10-07 23:53:47] 200
+[2025-10-07 23:53:49] Starting get call stat...
+[2025-10-07 23:53:49] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:49] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:49] 
+[2025-10-07 23:53:49] 200
+[2025-10-07 23:53:51] Starting get call stat...
+[2025-10-07 23:53:51] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:51] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:51] 
+[2025-10-07 23:53:51] 200
+[2025-10-07 23:53:53] Starting get call stat...
+[2025-10-07 23:53:53] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:53] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:53] 
+[2025-10-07 23:53:53] 200
+[2025-10-07 23:53:55] Starting get call stat...
+[2025-10-07 23:53:55] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:55] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:55] 
+[2025-10-07 23:53:55] 200
+[2025-10-07 23:53:57] Starting get call stat...
+[2025-10-07 23:53:57] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:57] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:57] 
+[2025-10-07 23:53:57] 200
+[2025-10-07 23:53:59] Starting get call stat...
+[2025-10-07 23:53:59] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:53:59] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:53:59] 
+[2025-10-07 23:53:59] 200
+[2025-10-07 23:54:01] Starting get call stat...
+[2025-10-07 23:54:01] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:01] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:01] 
+[2025-10-07 23:54:01] 200
+[2025-10-07 23:54:03] Starting get call stat...
+[2025-10-07 23:54:03] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:03] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:03] 
+[2025-10-07 23:54:03] 200
+[2025-10-07 23:54:05] Starting get call stat...
+[2025-10-07 23:54:05] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:05] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:05] 
+[2025-10-07 23:54:05] 200
+[2025-10-07 23:54:07] Starting get call stat...
+[2025-10-07 23:54:07] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:07] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:07] 
+[2025-10-07 23:54:07] 200
+[2025-10-07 23:54:09] Starting get call stat...
+[2025-10-07 23:54:09] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:09] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:09] 
+[2025-10-07 23:54:09] 200
+[2025-10-07 23:54:11] Starting get call stat...
+[2025-10-07 23:54:11] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:11] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:11] 
+[2025-10-07 23:54:11] 200
+[2025-10-07 23:54:13] Starting get call stat...
+[2025-10-07 23:54:13] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:13] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:13] 
+[2025-10-07 23:54:13] 200
+[2025-10-07 23:54:15] Starting get call stat...
+[2025-10-07 23:54:15] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:15] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:15] 
+[2025-10-07 23:54:15] 200
+[2025-10-07 23:54:17] Starting get call stat...
+[2025-10-07 23:54:17] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:17] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:17] 
+[2025-10-07 23:54:17] 200
+[2025-10-07 23:54:19] Starting get call stat...
+[2025-10-07 23:54:19] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:19] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:19] 
+[2025-10-07 23:54:19] 200
+[2025-10-07 23:54:21] Starting get call stat...
+[2025-10-07 23:54:21] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:21] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:21] 
+[2025-10-07 23:54:21] 200
+[2025-10-07 23:54:23] Starting get call stat...
+[2025-10-07 23:54:23] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:23] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:23] 
+[2025-10-07 23:54:23] 200
+[2025-10-07 23:54:25] Starting get call stat...
+[2025-10-07 23:54:25] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:25] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:25] 
+[2025-10-07 23:54:25] 200
+[2025-10-07 23:54:27] Starting get call stat...
+[2025-10-07 23:54:27] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:27] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:27] 
+[2025-10-07 23:54:27] 200
+[2025-10-07 23:54:29] Starting get call stat...
+[2025-10-07 23:54:29] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:29] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":false}
+[2025-10-07 23:54:29] 
+[2025-10-07 23:54:29] 200
+[2025-10-07 23:54:31] Starting get call stat...
+[2025-10-07 23:54:31] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:31] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:31] 
+[2025-10-07 23:54:31] 200
+[2025-10-07 23:54:33] Starting get call stat...
+[2025-10-07 23:54:33] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:33] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:33] 
+[2025-10-07 23:54:33] 200
+[2025-10-07 23:54:35] Starting get call stat...
+[2025-10-07 23:54:35] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:35] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:35] 
+[2025-10-07 23:54:35] 200
+[2025-10-07 23:54:37] Starting get call stat...
+[2025-10-07 23:54:37] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:37] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:37] 
+[2025-10-07 23:54:37] 200
+[2025-10-07 23:54:39] Starting get call stat...
+[2025-10-07 23:54:39] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:39] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:39] 
+[2025-10-07 23:54:39] 200
+[2025-10-07 23:54:41] Starting get call stat...
+[2025-10-07 23:54:41] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:41] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:41] 
+[2025-10-07 23:54:41] 200
+[2025-10-07 23:54:43] Starting get call stat...
+[2025-10-07 23:54:43] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:43] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:43] 
+[2025-10-07 23:54:43] 200
+[2025-10-07 23:54:45] Starting get call stat...
+[2025-10-07 23:54:45] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:45] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:45] 
+[2025-10-07 23:54:45] 200
+[2025-10-07 23:54:47] Starting get call stat...
+[2025-10-07 23:54:47] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:47] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:47] 
+[2025-10-07 23:54:47] 200
+[2025-10-07 23:54:49] Starting get call stat...
+[2025-10-07 23:54:49] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:49] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:49] 
+[2025-10-07 23:54:49] 200
+[2025-10-07 23:54:51] Starting get call stat...
+[2025-10-07 23:54:51] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:51] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:51] 
+[2025-10-07 23:54:51] 200
+[2025-10-07 23:54:53] Starting get call stat...
+[2025-10-07 23:54:53] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:53] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:53] 
+[2025-10-07 23:54:53] 200
+[2025-10-07 23:54:55] Starting get call stat...
+[2025-10-07 23:54:55] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:55] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:55] 
+[2025-10-07 23:54:55] 200
+[2025-10-07 23:54:57] Starting get call stat...
+[2025-10-07 23:54:57] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:57] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:57] 
+[2025-10-07 23:54:57] 200
+[2025-10-07 23:54:59] Starting get call stat...
+[2025-10-07 23:54:59] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:54:59] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:54:59] 
+[2025-10-07 23:54:59] 200
+[2025-10-07 23:55:01] Starting get call stat...
+[2025-10-07 23:55:01] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:01] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:01] 
+[2025-10-07 23:55:01] 200
+[2025-10-07 23:55:03] Starting get call stat...
+[2025-10-07 23:55:03] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:03] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:03] 
+[2025-10-07 23:55:03] 200
+[2025-10-07 23:55:05] Starting get call stat...
+[2025-10-07 23:55:05] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:05] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:05] 
+[2025-10-07 23:55:05] 200
+[2025-10-07 23:55:07] Starting get call stat...
+[2025-10-07 23:55:07] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:07] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:07] 
+[2025-10-07 23:55:07] 200
+[2025-10-07 23:55:09] Starting get call stat...
+[2025-10-07 23:55:09] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:09] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:09] 
+[2025-10-07 23:55:09] 200
+[2025-10-07 23:55:11] Starting get call stat...
+[2025-10-07 23:55:11] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:11] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:11] 
+[2025-10-07 23:55:11] 200
+[2025-10-07 23:55:13] Starting get call stat...
+[2025-10-07 23:55:13] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:13] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:13] 
+[2025-10-07 23:55:13] 200
+[2025-10-07 23:55:15] Starting get call stat...
+[2025-10-07 23:55:15] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:15] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:15] 
+[2025-10-07 23:55:15] 200
+[2025-10-07 23:55:17] Starting get call stat...
+[2025-10-07 23:55:17] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:17] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:17] 
+[2025-10-07 23:55:17] 200
+[2025-10-07 23:55:19] Starting get call stat...
+[2025-10-07 23:55:19] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:19] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:19] 
+[2025-10-07 23:55:19] 200
+[2025-10-07 23:55:21] Starting get call stat...
+[2025-10-07 23:55:21] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:21] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:21] 
+[2025-10-07 23:55:21] 200
+[2025-10-07 23:55:23] Starting get call stat...
+[2025-10-07 23:55:23] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:23] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:23] 
+[2025-10-07 23:55:23] 200
+[2025-10-07 23:55:25] Starting get call stat...
+[2025-10-07 23:55:25] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:25] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:25] 
+[2025-10-07 23:55:25] 200
+[2025-10-07 23:55:27] Starting get call stat...
+[2025-10-07 23:55:27] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:27] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:27] 
+[2025-10-07 23:55:27] 200
+[2025-10-07 23:55:29] Starting get call stat...
+[2025-10-07 23:55:29] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:29] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"3","dtmf_updated_at":"2025-10-07 18:24:31","dtmf_array":{"dtmf_input":"3","updated_at":"2025-10-07 18:24:31"}}
+[2025-10-07 23:55:29] 
+[2025-10-07 23:55:29] 200
+[2025-10-07 23:55:31] Starting get call stat...
+[2025-10-07 23:55:31] {"callChannel":"Local\/2002@from-user-000000ed;2","action":"status_call"}
+[2025-10-07 23:55:31] {"success":true,"channel":"Local\/2002@from-user-000000ed;2","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-10-07 18:25:29","dtmf_array":{"dtmf_input":"2","updated_at":"2025-10-07 18:25:29"}}
+[2025-10-07 23:55:31] 
+[2025-10-07 23:55:31] 200
+[2025-10-07 23:55:38] Starting Call Ending...
+[2025-10-07 23:55:38] {"action":"end_call","stoptime":"2025-10-07 23:55:38","sessiontime":739,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5583fdf208","callChannel":"Local\/2002@from-user-000000ec;2"}
+[2025-10-07 23:55:38] {"success":true,"output":"No such channel"}
+[2025-10-07 23:55:38] 
+[2025-10-07 23:55:38] 200
+[2025-10-07 23:55:44] Starting Call Ending...
+[2025-10-07 23:55:45] {"action":"end_call","stoptime":"2025-10-07 23:55:44","sessiontime":908,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e5579c3ba6f","callChannel":"Local\/2002@from-user-000000eb;2"}
+[2025-10-07 23:55:45] {"success":true,"output":"No such channel"}
+[2025-10-07 23:55:45] 
+[2025-10-07 23:55:45] 200
+[2025-10-07 23:55:48] Starting Call Ending...
+[2025-10-07 23:55:49] {"action":"end_call","stoptime":"2025-10-07 23:55:48","sessiontime":143,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68e55a9d67352","callChannel":"Local\/2002@from-user-000000ed;2"}
+[2025-10-07 23:55:49] {"success":true,"output":"No such channel"}
+[2025-10-07 23:55:49] 
+[2025-10-07 23:55:49] 200
