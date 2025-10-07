@@ -1,10 +1,26 @@
 <?php
 /**
- * CLI safe dtmf logger for dial-plan
- * @author Thimira Dilshan <thimirad865@gmail.com>
- * @version 1.0.0
- * @since 2025-09-22
+ * DTMF Logging Endpoint
+ *
+ * This script is triggered by Asterisk dialplan via the `System()` application to log
+ * DTMF input received during an active call. It captures the normalized channel name
+ * and the digit pressed, then inserts or updates the `call_tracking` table accordingly.
+ *
+ * Key Features:
+ * - Inserts new tracking records or updates existing ones
+ * - Timestamped logging for frontend status display
+ *
+ * Triggered from dialplan:
+ *   System(/usr/bin/php /path/to/log-dtmf.php "${CHANNEL}" "${DTMF}")
+ *
+ * Expected Arguments:
+ * - $argv[1]: Full channel name (e.g., Local/2002@from-user-000000ec;2)
+ * - $argv[2]: DTMF digit pressed (e.g., "3")
+ *
+ * @Author thimira dilshan <thimirad865@gmail.com>
+ * @LastUpdated 2025-10-07
  */
+
 $channel = $argv[1] ?? '';
 $dtmf = $argv[2] ?? '';
 

@@ -1,5 +1,15 @@
 <?php
 /**
+ * Common Utility Functions
+ *
+ * This file contains reusable helper functions used across the Asterisk call control API.
+ * It centralizes logic for input sanitization, error handling, response formatting, and
+ * other shared tasks to keep endpoint scripts clean and modular.
+ *
+ * @Author thimira dilshan <thimirad865@gmail.com>
+ * @LastUpdated 2025-10-07
+ */
+/**
  * echo an json string as json response
  * @param string $message 
  * @param mixed $code

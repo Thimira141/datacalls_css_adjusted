@@ -1,9 +1,33 @@
 <?php
 /**
- * File: api/tts/index.php
- * Description: Handles audio file uploads to magnusBilling, convert into wav and set ivr audio
- * @author thimira dilshan <thimirad865@gmail.com>
+ * IVR Audio Upload & Conversion Endpoint
+ *
+ * This script handles secure upload of custom IVR audio files (MP3), converts them to Asterisk-compatible WAV format,
+ * updates the corresponding IVR configuration in the database, and reloads the dialplan to apply changes.
+ *
+ * Key Features:
+ * - Authenticated access via hashed API key
+ * - Validates and stores uploaded MP3 files
+ * - Converts MP3 to WAV using ffmpeg (8000 Hz, mono)
+ * - Sets correct file ownership and permissions for Asterisk
+ * - Updates `pkg_ivr.option_0` with new playback sequence
+ * - Reloads Asterisk dialplan via shell script
+ *
+ * Expected POST fields:
+ * - customer_number: Target customer identifier
+ * - user_id: Uploading user ID
+ * - ivr_id: IVR configuration ID (default: 1)
+ * - audio_file: Uploaded MP3 file (via multipart/form-data)
+ *
+ * Dependencies:
+ * - ffmpeg (for audio conversion)
+ * - /usr/local/bin/reload_dialplan.sh (for dialplan reload)
+ * - MySQL config from /etc/asterisk/res_config_mysql.conf
+ *
+ * @Author thimira dilshan <thimirad865@gmail.com>
+ * @LastUpdated 2025-10-07
  */
+
 // CONFIG
 define('UPLOAD_DIR', '/var/www/html/mbilling/api/tts/storage/audio/');
 define('ASTERISK_DIR', '/var/lib/asterisk/sounds/en/');
@@ -132,9 +156,7 @@ try {
     if (!$stmt->execute(['option_0' => $option_0, 'ivrId' => $ivrId])) {
         json_error('Failed to update IVR audio');
     }
-// TODO:: if the calling via magnusAPI didnt worked i will create a custom api for that one too, seriously
-// FIXME: for now from the frontend site this .sh script worked but call didnt originated
-    // Reload dialplan
+    // Reload dial-plan
     exec("sudo /usr/local/bin/reload_dialplan.sh", $output, $returnVar);
     if ($returnVar !== 0) {
         json_error('Failed to reload Asterisk dialplan' . implode("\n", $output) . '; rtVar: ' . $returnVar);

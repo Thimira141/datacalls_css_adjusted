@@ -1,4 +1,32 @@
 <?php
+/**
+ * Asterisk Call Control API
+ *
+ * This script provides a secure HTTP interface for initiating, managing, and tracking VoIP calls
+ * via Asterisk. It supports call origination, termination, status checks, and DTMF logging.
+ *
+ * Key Features:
+ * - Authenticated access using hashed API keys
+ * - Dynamic call creation via shell script execution
+ * - Real-time channel status via AMI (Asterisk Manager Interface)
+ * - DTMF input capture and database logging
+ * - CDR (Call Detail Record) creation and update
+ *
+ * Dependencies:
+ * - AsteriskClient.php: AMI wrapper for call control
+ * - function.php: Utility functions (e.g., sanitization, error handling)
+ * - Composer autoload: Includes PAMI and other dependencies
+ *
+ * Expected POST actions:
+ * - make_call: Initiates a call and logs CDR
+ * - end_call: Terminates a call and updates CDR
+ * - status_call: Retrieves channel status and DTMF input
+ * - hold_call: (Reserved for future use)
+ *
+ * @Author thimira dilshan <thimirad865@gmail.com>
+ * @LastUpdated 2025-10-07
+ */
+
 require_once 'function.php';
 require_once 'AsteriskClient.php';
 require_once './vendor/autoload.php';
@@ -106,18 +134,26 @@ switch ($_POST['action']) {
         }
         $callChannel = $data['callChannel'];
         unset($data['callChannel']);
-        // shell execute TODO: use AMI interface for call hangup
-        $call_end = call_end($callChannel);
-        // check execution
-        if ($call_end['status'] !== 0) {
-            json_error("Shell script failed: " . json_encode($call_end['output']));
+        // shell execute
+        // $call_end = call_end($callChannel);
+        // // check execution
+        // if ($call_end['status'] !== 0) {
+        //     json_error("Shell script failed: " . json_encode($call_end['output']));
+        // }
+        // use AMI interface for call hangup
+        $ami = new AsteriskClient();
+        $status = $ami->getChannelStatus($callChannel);
+        $hangup = $ami->hangupChannel($callChannel);
+        $ami->close();
+        if ($hangup->getKey('Response') != 'Success' && $status != 'ended') {
+            json_error("Response: {$hangup->getKey('Response')} | Message: {$hangup->getKey('Message')}");
         }
         // db update
         $db_output = cdr_update_data($pdo, $data);
         if (!$db_output['success']) {
             json_error($db_output['message']);
         }
-        echo json_encode(['success' => true, 'output' => $call_end['output']]);
+        echo json_encode(['success' => true, 'output' => $hangup->getKey('Message')]);
         break;
 
     case 'hold_call':
@@ -129,13 +165,13 @@ switch ($_POST['action']) {
         if (!$fullChannel || empty($fullChannel)) {
             json_error('Missing required field(s)');
         }
-        $channel = $fullChannel;//explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
+        $channel = (string) explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
         try {
             // use AMI php interface
             $ami = new AsteriskClient();
-            $status = $ami->getChannelStatus($channel);
+            $status = $ami->getChannelStatus($fullChannel);
             $ami->close();
-            // status details TODO: handle better status names with array dict
+            // status details
             $statusDetails = [
                 'ring' => "Call is ringing at the destination (not yet answered)",
                 'ringing' => "Call is ringing at the destination (not yet answered)",
@@ -147,77 +183,11 @@ switch ($_POST['action']) {
                 'unknown' => "Couldn't parse state - fallback case",
             ];
             // Get DTMF from DB
-            $stmt = $pdo->prepare("SELECT dtmf_input, updated_at FROM call_tracking WHERE channel = :channel");
-            $stmt->execute(['channel' => $channel]);
-            $dtmf = $stmt->fetch(PDO::FETCH_ASSOC);
+            $stmt = $pdo->prepare("SELECT dtmf_input, updated_at FROM call_tracking WHERE channel LIKE :channel");
+            $stmt->execute(['channel' => (string) $channel . '%']);
+            $dtmf = (array) $stmt->fetch(PDO::FETCH_ASSOC);
 
-            // $options = [
-            //     'host' => '127.0.0.1',
-            //     'port' => 5038,
-            //     'username' => 'admin',
-            //     'secret' => 'cxx_68e169ac7d0be',
-            //     'connect_timeout' => 10,
-            //     'read_timeout' => 10
-            // ];
-
-            // $client = new \PAMI\Client\Impl\ClientImpl($options);
-            // $client->open();
-
-            // $response = $client->send(new \PAMI\Message\Action\StatusAction());
-            // foreach ($response->getEvents() as $event) {
-            //     echo $event->getKey('Channel') . ' - ' . $event->getKey('ChannelStateDesc') . "\n";
-            // }
-
-            // $client->close();
-            /*call status details
-            $statusDetails = [
-                'ringing' => "Call is ringing at the destination (not yet answered)",
-                'up' => "Call is active and answered - media is flowing",
-                'dialing' => "Asterisk is attempting to dial the destination",
-                'busy' => "Destination is busy",
-                'hangup' => "Call is in the process of being torn down",
-                'ended' => "Channel no longer exists",
-                'unknown' => "Couldn't parse state - fallback case",
-            ];
-            // Get DTMF from DB
-            $stmt = $pdo->prepare("SELECT dtmf_input,updated_at FROM call_tracking WHERE channel = ?");
-            $stmt->execute([$channel]);
-            $dtmf = (array) $stmt->fetchColumn();
-            // Get live call status from Asterisk
-            $escapedChannel = $channel;// escapeshellarg($channel);
-            $output = exec("sudo /usr/local/bin/channel_status.sh $escapedChannel", $output_array, $status);
-            if ($status !== 0) {
-                json_error("Shell script failed: " . json_encode($output_array));
-            }
-
-            $rawStatus = null;
-            foreach ($output_array as $line) {
-                if (strpos($line, 'Status:') === 0) {
-                    $rawStatus = strtolower(trim(str_replace('Status:', '', $line)));
-                    break;
-                }
-            }
-            if (strpos($output, 'No such channel') !== false) {
-                $status = 'ended';
-            } elseif (preg_match('/State\s*:\s*(\w+)/', $output, $match)) {
-                $rawState = strtolower($match[1]);
-                // mapping and normalizing
-                $stateMap = [
-                    'ring' => 'ringing',
-                    'ringing' => 'ringing',
-                    'up' => 'up',
-                    'dialing' => 'dialing',
-                    'busy' => 'busy',
-                    'hangup' => 'hangup',
-                    'down' => 'ended',
-                    'reserved' => 'unknown',
-                    'offhook' => 'up'
-                ];
-                $status = $stateMap[$rawState] ?? (isset($statusDetails[$rawState]) ? $rawState : 'unknown');
-            } else {
-                $status = 'unknown';
-            }
-            */// Return JSON
+            // Return JSON
             echo json_encode([
                 'success' => true,
                 'channel' => $channel,
