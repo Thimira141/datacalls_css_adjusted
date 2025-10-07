@@ -64,7 +64,7 @@ fi
 
 ```
 
-## Dial-plan script
+# Dial-plan script
 
 **Path:** `/etc/asterisk/extensions.conf`  
 **Purpose:** script to manage outgoing calls from server
@@ -80,11 +80,11 @@ exten => _X.,1,Goto(s,start)                  ; Catch-all: redirect to IVR entry
 
 exten => s,1,Answer()                         ; Answer the call
  same => n,Set(CHANNEL_ID=${CHANNEL})         ; Capture full channel name
- same => n,Wait(1)                             ; Brief pause
+ same => n,Wait(2)                            ; Brief pause
  same => n(start),Background(ivr_custom)      ; Play main IVR prompt
  same => n,Set(TIMEOUT(response)=10)          ; Set DTMF timeout
  same => n,Background(beep)                   ; Audible cue
- same => n,Read(DTMF,,1,,3,5)                 ; Capture 1-digit DTMF input
+ same => n,Read(DTMF,,1,,3,5)             ; Capture 1-digit DTMF input
  same => n,System(/usr/bin/php /var/www/html/mbilling/api/call/log-dtmf.php "${CHANNEL_ID}" "${DTMF}") ; Log to backend
  same => n,Goto(${DTMF},1)                    ; Route based on input
  same => n,Hangup()                           ; Fallback hangup
@@ -100,7 +100,7 @@ exten => i,1,Playback(pbx-invalid)            ; Invalid input handler
 exten => 1,1,Playback(agent-user)             ; Example option
  same => n,Hangup()
 
-exten => 2,1,Playback(auth-thankyou)             ; Another example
+exten => 2,1,Playback(auth-thankyou)          ; Another example
  same => n,Hangup()
 
 ; =========================
