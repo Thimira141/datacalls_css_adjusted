@@ -724,6 +724,7 @@ switch ($action) {
                         'sessionbill' => '0.00',                   // String/decimal ≤ 50 chars
                         'buycost' => '0.00',                   // String/decimal ≤ 50 chars
                         'uniqueid' => $uniqueid,
+                        'dp_context' => $callback_method
                     ], $user['username'] ?? 'support');
                     // call init failed!
                     custom_log('CallManager Output: ' . json_encode($result));

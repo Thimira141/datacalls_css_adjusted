@@ -72,7 +72,7 @@ switch ($_POST['action']) {
     case 'make_call':
         // sanitize data
         $data = [];
-        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid'];
+        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'dp_context'];
         foreach ($cols as $col) {
             $data[$col] = sanitizeText($_POST[$col] ?? null);
             if (!$data[$col] || empty($data[$col])) {
@@ -85,8 +85,11 @@ switch ($_POST['action']) {
         $callerId = $data['callerid'];
         $callerName = sanitizeText($_POST['callerName'] ?? 'Support');
         $targetNumber = $data['calledstation'];
+        // dial-plan context (for-user-sip | for-user-tel)
+        $context = $data['dp_context'] == "softphone" ? "for-user-sip":"for-user-tel";
+        unset($data['dp_context']);
         // shell execute
-        $cmd = escapeshellcmd("/usr/local/bin/asterisk_call.sh $userId $callerId $callerName $targetNumber");
+        $cmd = escapeshellcmd("/usr/local/bin/asterisk_call.sh $userId $callerId $callerName $targetNumber $context");
         exec("sudo $cmd", $output, $status);
         // check execution
         if ($status !== 0) {

@@ -12,6 +12,7 @@ USERID="$1"
 CALLERID="$2"
 CALLERNAME="$3"
 TARGET="$4"
+CONTEXT="$5"  # New: Dialplan context (e.g. for-user-sip, for-user-tel)
 
 # Set caller ID in AstDB
 asterisk -rx "database put dialplan cid $CALLERID"
@@ -21,14 +22,15 @@ asterisk -rx "database put dialplan cidname $CALLERNAME"
 asterisk -rx "dialplan reload"
 
 # Originate and capture channel
-asterisk -rx "channel originate Local/$TARGET@from-user extension $TARGET@from-user"
+asterisk -rx "channel originate Local/$TARGET@$CONTEXT extension $TARGET@$CONTEXT"
 
 # Wait briefly to let the channel start
 sleep 1
 
 # Capture the most recent Local channel
 CHANNEL=$(asterisk -rx "core show channels concise" | grep "Local/$TARGET@" | head -n 1 | cut -d '!' -f1)
-# echo the channel
+
+# Echo the channel
 echo "Channel: $CHANNEL"
 
 # added by thimirad865@gmail.com
