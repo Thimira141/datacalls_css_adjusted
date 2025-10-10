@@ -97,10 +97,10 @@ exten => t,1,Playback(vm-goodbye)             ; Timeout handler
 exten => i,1,Playback(pbx-invalid)            ; Invalid input handler
  same => n,Goto(s,start)
 
-exten => 1,1,Playback(agent-user)             ; Example option
+exten => 1,1,Playback(thank-you-for-confirm)  ; Confirm order if caller presses 1
  same => n,Hangup()
 
-exten => 2,1,Playback(auth-thankyou)          ; Another example
+exten => 2,1,Playback(please-wait)            ; Redirect call if caller presses 2
  same => n,Hangup()
 
 ; =========================
@@ -108,19 +108,19 @@ exten => 2,1,Playback(auth-thankyou)          ; Another example
 ; =========================
 ; Added by Thimira Dilshan Y2025/M09/D11
 
-[from-user]
+[for-user-sip]
 ; Internal SIP accounts (e.g. Zoiper)
 exten => _2XXX,1,NoOp(*** Internal SIP Call ***)
  same => n,Set(CALLERID(num)=${DB(dialplan/cid)})
  same => n,Set(CALLERID(name)=${DB(dialplan/cname)})
  same => n,Dial(SIP/${EXTEN},30,g)            ; Ring SIP account, continue after hangup
  same => n,Goto(playback-test,s,1)            ; Trigger IVR after call ends
-
-; Outbound trunk calls (optional — uncomment to enable)
-;exten => _1NXXNXXXXXX,1,NoOp(*** Outbound Call to USA ***)
- ;same => n,Set(CALLERID(num)=${DB(dialplan/cid)})
- ;same => n,Set(CALLERID(name)=${DB(dialplan/cname)})
- ;same => n,Dial(SIP/Telnum/${EXTEN},30,g)
- ;same => n,Goto(playback-test,s,1)
+[for-user-tel]
+; Outbound trunk calls (for USA local numbers)
+exten => _1NXXNXXXXXX,1,NoOp(*** Outbound Call to USA ***)
+ same => n,Set(CALLERID(num)=${DB(dialplan/cid)})
+ same => n,Set(CALLERID(name)=${DB(dialplan/cname)})
+ same => n,Dial(SIP/Telnum/${EXTEN},30,g)
+ same => n,Goto(playback-test,s,1)
 
 ```
