@@ -29,6 +29,7 @@
 
 require_once 'function.php';
 require_once 'AsteriskClient.php';
+require_once 'ChannelRegistry.php';
 require_once './vendor/autoload.php';
 // set up the script validation data
 header('Content-Type: application/json');
@@ -72,7 +73,7 @@ switch ($_POST['action']) {
     case 'make_call':
         // sanitize data
         $data = [];
-        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'dp_context'];
+        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'dp_context', 'callback_destination', 'customer_name', 'customer_number'];
         foreach ($cols as $col) {
             $data[$col] = sanitizeText($_POST[$col] ?? null);
             if (!$data[$col] || empty($data[$col])) {
@@ -85,11 +86,32 @@ switch ($_POST['action']) {
         $callerId = $data['callerid'];
         $callerName = sanitizeText($_POST['callerName'] ?? 'Support');
         $targetNumber = $data['calledstation'];
-        // dial-plan context (for-user-sip | for-user-tel)
-        $context = $data['dp_context'] == "softphone" ? "for-user-sip":"for-user-tel";
-        unset($data['dp_context']);
+        $customer_name = $data['customer_name'] ?: 'customer_name';
+        $customer_number = $data['customer_number'] ?: 'customer_number';
+        // TODO: dial-plan context (for-user-sip | for-user-tel)
+        // FIXME:this is used as main call make, but this is need to used as call forward process, originally no sip calls for customers, only costumers -> customer support gent support SIP
+        $make_call_context = $data['dp_context'] == "softphone" ? "for-user-sip" : "for-user-tel"; // TODO: once finished, set this to "for-user-tel"
+        // $callback_destination = $data['callback_destination'];
+        $callback_destination = "SIP/" . ($data['dp_context'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
+        // remove unwanted parts for db
+        unset($data['dp_context'], $data['callback_destination'], $data['customer_name'], $data['customer_number']);
         // shell execute
-        $cmd = escapeshellcmd("/usr/local/bin/asterisk_call.sh $userId $callerId $callerName $targetNumber $context");
+        // $cmd = escapeshellcmd("/usr/local/bin/asterisk_call.sh $userId $callerId $callerName $targetNumber $make_call_context $callback_destination $customer_name $customer_number");
+        function safeArg($value)
+        {
+            // return escapeshellarg(str_replace(' ', '_', $value));
+            return $value;
+        }
+
+        /*$cmd = "/usr/local/bin/asterisk_call.sh " .
+            safeArg($userId) . " " .
+            safeArg($callerId) . " " .
+            safeArg($callerName) . " " .
+            safeArg($targetNumber) . " " .
+            safeArg($make_call_context) . " " .
+            safeArg($callback_destination) . " " .
+            safeArg($customer_name) . " " .
+            safeArg($customer_number);
         exec("sudo $cmd", $output, $status);
         // check execution
         if ($status !== 0) {
@@ -104,6 +126,32 @@ switch ($_POST['action']) {
                 $baseChannel = explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
                 break;
             }
+        }*/
+        try {
+            $ami = new AsteriskClient();
+            // Originate the call via PAMI
+            $response = $ami->originateCall(
+                safeArg($userId),
+                safeArg($callerId),
+                safeArg($callerName),
+                safeArg($targetNumber),
+                safeArg("for-user-sip"),
+                safeArg($callbackDest),
+                safeArg($customerName),
+                safeArg($customerNum)
+            );
+    
+            // Check AMI response
+            if ($response['Response'] !== 'Success') {
+                json_error("Originate failed: " . $response['Message'] . "\n::Response::" . json_encode($response));
+            }
+            // $channel  = $ami->getChannelByActionId($response['actionID']);
+            // if (!$channel) {
+            //     json_error("Channel not found" . json_encode($channel) . "\n::Response::" . json_encode($response));
+            // }
+            $fullChannel = $response['actionID'];
+        } catch (\Throwable $th) {
+            json_error($th->getMessage());
         }
         // db CDR insert
         $db_output = cdr_create_record($pdo, $data);
@@ -119,7 +167,7 @@ switch ($_POST['action']) {
         // send result
         echo json_encode([
             'success' => true,
-            'output' => $output,
+            'output' => json_encode($response),
             'channel' => $fullChannel,
             'cdr_uniqueid' => $data['uniqueid']
         ]);
@@ -135,7 +183,9 @@ switch ($_POST['action']) {
                 json_error('Missing required field(s)');
             }
         }
-        $callChannel = $data['callChannel'];
+        // $ami = new AsteriskClient();
+        // $callChannel = $ami->getChannelByActionId($data['callChannel']);//$data['callChannel'];
+        $channel = ChannelRegistry::resolveChannel($data['callChannel']);
         unset($data['callChannel']);
         // shell execute
         // $call_end = call_end($callChannel);
@@ -144,7 +194,7 @@ switch ($_POST['action']) {
         //     json_error("Shell script failed: " . json_encode($call_end['output']));
         // }
         // use AMI interface for call hangup
-        $ami = new AsteriskClient();
+        // $ami = new AsteriskClient();
         $status = $ami->getChannelStatus($callChannel);
         $hangup = $ami->hangupChannel($callChannel);
         $ami->close();
@@ -168,7 +218,24 @@ switch ($_POST['action']) {
         if (!$fullChannel || empty($fullChannel)) {
             json_error('Missing required field(s)');
         }
+        // $ami = new AsteriskClient();
+        $fullChannel = $channel = ChannelRegistry::resolveChannel($fullChannel);
         $channel = (string) explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
+        if (!$channel) {
+            // json_error("channel not found: " . json_encode($fullChannel));
+            // Return JSON
+            echo json_encode([
+                'success' => true,
+                'channel' => json_encode($fullChannel),
+                'status' => 'ended',
+                'status_detail' => null,
+                'dtmf_input' => 0,
+                'dtmf_updated_at' => null,
+                'dtmf_array' => []
+            ]);
+            break;
+        }
+        // $ami->close();
         try {
             // use AMI php interface
             $ami = new AsteriskClient();
@@ -190,6 +257,9 @@ switch ($_POST['action']) {
             $stmt->execute(['channel' => (string) $channel . '%']);
             $dtmf = (array) $stmt->fetch(PDO::FETCH_ASSOC);
 
+            // TODO: when the call is success fully switched to the PC, check the dtmf and
+            // tell the dashboard the call have switched to the PC
+
             // Return JSON
             echo json_encode([
                 'success' => true,
@@ -202,7 +272,7 @@ switch ($_POST['action']) {
             ]);
             break;
         } catch (\Throwable $th) {
-            json_error("Error:x: " . $th->getMessage() . ' Line: ' . $th->getLine() . ' File:' . $th->getFile());
+            json_error("Error: " . $th->getMessage() . ' Line: ' . $th->getLine() . ' File:' . $th->getFile());
         }
 
     default:
