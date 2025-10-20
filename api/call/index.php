@@ -70,9 +70,8 @@ try {
 // check action
 switch ($_POST['action']) {
     case 'make_call':
-        // sanitize data
         $data = [];
-        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'dp_context'];
+        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'dp_context', 'callback_destination', 'customer_name', 'customer_number'];
         foreach ($cols as $col) {
             $data[$col] = sanitizeText($_POST[$col] ?? null);
             if (!$data[$col] || empty($data[$col])) {
@@ -85,9 +84,15 @@ switch ($_POST['action']) {
         $callerId = $data['callerid'];
         $callerName = sanitizeText($_POST['callerName'] ?? 'Support');
         $targetNumber = $data['calledstation'];
-        // dial-plan context (for-user-sip | for-user-tel)
-        $context = $data['dp_context'] == "softphone" ? "for-user-sip":"for-user-tel";
-        unset($data['dp_context']);
+        $customer_name = $data['customer_name'] ?: 'customer_name';
+        $customer_number = $data['customer_number'] ?: 'customer_number';
+        // TODO: dial-plan context (for-user-sip | for-user-tel)
+        // FIXME:this is used as main call make, but this is need to used as call forward process, originally no sip calls for customers, only costumers -> customer support gent support SIP
+        $make_call_context = $data['dp_context'] == "softphone" ? "for-user-sip" : "for-user-tel"; // TODO: once finished, set this to "for-user-tel"
+        // $callback_destination = $data['callback_destination'];
+        $callback_destination = "SIP/" . ($data['dp_context'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
+        // remove unwanted parts for db
+        unset($data['dp_context'], $data['callback_destination'], $data['customer_name'], $data['customer_number']);
         // shell execute
         function safeArg($value)
         {

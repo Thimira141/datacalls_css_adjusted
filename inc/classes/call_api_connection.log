@@ -8241,3 +8241,8 @@ Local/2002@from-user-000000d6;2 - Ring
 [2025-10-20 20:22:06] {"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
 [2025-10-20 20:22:06] 
 [2025-10-20 20:22:06] 200
+[2025-10-20 20:26:02] Starting Calling...
+[2025-10-20 20:26:03] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"ldata","callerid":"18005318700","starttime":"2025-10-20 20:26:02","stoptime":"2025-10-20 20:26:02","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f64d826895d","dp_context":"softphone"}
+[2025-10-20 20:26:03] {"success":false,"error":"Missing required field(s)"}
+[2025-10-20 20:26:03] 
+[2025-10-20 20:26:03] 400

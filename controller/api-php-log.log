@@ -26295,3 +26295,9 @@
 [2025-10-20 20:22:05]MagnusBilling initialized successfully
 [2025-10-20 20:22:05]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
 [2025-10-20 20:22:06]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:25:58]Starting api.php
+[2025-10-20 20:25:58]Database connection successful
+[2025-10-20 20:25:58]MagnusBilling initialized successfully
+[2025-10-20 20:25:58]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:26:03]CallManager Output: {"success":false,"response":"{\"success\":false,\"error\":\"Missing required field(s)\"}","error":"HTTP Error: 400"}
+[2025-10-20 20:26:03]721: Failed to initiate call: HTTP Error: 400
