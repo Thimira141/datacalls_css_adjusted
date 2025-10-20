@@ -667,16 +667,19 @@ switch ($action) {
             // }
 
             $tts_script = "Hello, this is $institution_name calling for $customer_name regarding a security matter with your account. We’ve detected a recent transaction of $$amount at $merchant_name that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.";
-            // google tts api
-            $googleTTS = new GoogleTTSService;
-            $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
+            // google tts api TODO: disable the google tts for debug process
+            // $googleTTS = new GoogleTTSService;
+            // $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
             try {
-                $synthesize = $googleTTS->synthesize($ssml_script);
-                if ($synthesize) {
-                    $tts_audio_url = $googleTTS->getFileURL();
-                    $tts_audio_path = $googleTTS->getFilePath();
+                // $synthesize = $googleTTS->synthesize($ssml_script);
+                if (/*$synthesize*/true) {
+                    // $tts_audio_url = $googleTTS->getFileURL();
+                    $tts_audio_url = 'http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3';
+                    // $tts_audio_path = $googleTTS->getFilePath();
+                    // custom_log("tts url: $tts_audio_url\n tts path: $tts_audio_path");
+                    $tts_audio_path = 'D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3';
                     // close the google tts
-                    $googleTTS->close();
+                    // $googleTTS->close();
                     // call data
                     $callData = [
                         'destination' => 'custom-ivr-call,s,1',
@@ -716,7 +719,7 @@ switch ($action) {
                     $result = \inc\classes\CallManager::callNumber($CDRData = [
                         'id_user' => (int) $user['sip_id'] ?? $user['magnus_user_id'] ?? '0',                      // Integer
                         'id_plan' => 1,                        // Integer
-                        'calledstation' => $callback_destination,                   // String ≤ 50 chars
+                        'calledstation' => $customer_number,                   // String ≤ 50 chars
                         'callerid' => $caller_id,         // String ≤ 50 chars
                         'starttime' => date('Y-m-d H:i:s'),      // MySQL datetime
                         'stoptime' => date('Y-m-d H:i:s'),      // MySQL datetime
@@ -724,7 +727,10 @@ switch ($action) {
                         'sessionbill' => '0.00',                   // String/decimal ≤ 50 chars
                         'buycost' => '0.00',                   // String/decimal ≤ 50 chars
                         'uniqueid' => $uniqueid,
-                        'dp_context' => $callback_method
+                        'dp_context' => $callback_method,
+                        'customer_name' => $customer_name,
+                        'customer_number' => $customer_number,
+                        'callback_destination' => '2001'//FIXME:$callback_destination
                     ], $user['username'] ?? 'support');
                     // call init failed!
                     custom_log('CallManager Output: ' . json_encode($result));

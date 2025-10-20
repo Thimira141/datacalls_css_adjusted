@@ -26301,3 +26301,342 @@
 [2025-10-20 20:25:58]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
 [2025-10-20 20:26:03]CallManager Output: {"success":false,"response":"{\"success\":false,\"error\":\"Missing required field(s)\"}","error":"HTTP Error: 400"}
 [2025-10-20 20:26:03]721: Failed to initiate call: HTTP Error: 400
+[2025-10-20 20:29:00]Starting api.php
+[2025-10-20 20:29:00]Database connection successful
+[2025-10-20 20:29:00]MagnusBilling initialized successfully
+[2025-10-20 20:29:00]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:05]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000af;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b0;2"],"channel":"Local\/2002@for-user-sip-000000af;2","cdr_uniqueid":"call_68f64e3651cf9"},"error:x:x:":null}
+[2025-10-20 20:29:05]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000af;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b0;2"],"channel":"Local\/2002@for-user-sip-000000af;2","cdr_uniqueid":"call_68f64e3651cf9"}
+[2025-10-20 20:29:05]Initiated call: call_id=258, magnus_call_id=call_68f64e3651cf9, customer_number=2002, callback_method=softphone
+[2025-10-20 20:29:07]Starting api.php
+[2025-10-20 20:29:07]Database connection successful
+[2025-10-20 20:29:07]MagnusBilling initialized successfully
+[2025-10-20 20:29:07]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:07]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:09]Starting api.php
+[2025-10-20 20:29:09]Database connection successful
+[2025-10-20 20:29:09]MagnusBilling initialized successfully
+[2025-10-20 20:29:09]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:09]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:11]Starting api.php
+[2025-10-20 20:29:11]Database connection successful
+[2025-10-20 20:29:11]MagnusBilling initialized successfully
+[2025-10-20 20:29:11]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:11]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:13]Starting api.php
+[2025-10-20 20:29:13]Database connection successful
+[2025-10-20 20:29:13]MagnusBilling initialized successfully
+[2025-10-20 20:29:13]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:13]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:15]Starting api.php
+[2025-10-20 20:29:15]Database connection successful
+[2025-10-20 20:29:15]MagnusBilling initialized successfully
+[2025-10-20 20:29:15]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:15]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:17]Starting api.php
+[2025-10-20 20:29:17]Database connection successful
+[2025-10-20 20:29:17]MagnusBilling initialized successfully
+[2025-10-20 20:29:17]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:17]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:19]Starting api.php
+[2025-10-20 20:29:19]Database connection successful
+[2025-10-20 20:29:19]MagnusBilling initialized successfully
+[2025-10-20 20:29:19]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:19]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:21]Starting api.php
+[2025-10-20 20:29:21]Database connection successful
+[2025-10-20 20:29:21]MagnusBilling initialized successfully
+[2025-10-20 20:29:21]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:21]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:23]Starting api.php
+[2025-10-20 20:29:23]Database connection successful
+[2025-10-20 20:29:23]MagnusBilling initialized successfully
+[2025-10-20 20:29:23]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:23]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:25]Starting api.php
+[2025-10-20 20:29:25]Database connection successful
+[2025-10-20 20:29:25]MagnusBilling initialized successfully
+[2025-10-20 20:29:25]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:25]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:27]Starting api.php
+[2025-10-20 20:29:27]Database connection successful
+[2025-10-20 20:29:27]MagnusBilling initialized successfully
+[2025-10-20 20:29:27]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:27]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:29]Starting api.php
+[2025-10-20 20:29:29]Database connection successful
+[2025-10-20 20:29:29]MagnusBilling initialized successfully
+[2025-10-20 20:29:29]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:29]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:31]Starting api.php
+[2025-10-20 20:29:31]Database connection successful
+[2025-10-20 20:29:31]MagnusBilling initialized successfully
+[2025-10-20 20:29:31]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:31]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:33]Starting api.php
+[2025-10-20 20:29:33]Database connection successful
+[2025-10-20 20:29:33]MagnusBilling initialized successfully
+[2025-10-20 20:29:33]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:34]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:35]Starting api.php
+[2025-10-20 20:29:35]Database connection successful
+[2025-10-20 20:29:35]MagnusBilling initialized successfully
+[2025-10-20 20:29:35]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:35]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:37]Starting api.php
+[2025-10-20 20:29:37]Database connection successful
+[2025-10-20 20:29:37]MagnusBilling initialized successfully
+[2025-10-20 20:29:37]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:37]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:39]Starting api.php
+[2025-10-20 20:29:39]Database connection successful
+[2025-10-20 20:29:39]MagnusBilling initialized successfully
+[2025-10-20 20:29:39]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:39]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:41]Starting api.php
+[2025-10-20 20:29:41]Database connection successful
+[2025-10-20 20:29:41]MagnusBilling initialized successfully
+[2025-10-20 20:29:41]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:41]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:43]Starting api.php
+[2025-10-20 20:29:43]Database connection successful
+[2025-10-20 20:29:43]MagnusBilling initialized successfully
+[2025-10-20 20:29:43]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:43]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:45]Starting api.php
+[2025-10-20 20:29:45]Database connection successful
+[2025-10-20 20:29:45]MagnusBilling initialized successfully
+[2025-10-20 20:29:45]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:45]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:47]Starting api.php
+[2025-10-20 20:29:47]Database connection successful
+[2025-10-20 20:29:47]MagnusBilling initialized successfully
+[2025-10-20 20:29:47]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:47]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:29:49]Starting api.php
+[2025-10-20 20:29:49]Database connection successful
+[2025-10-20 20:29:49]MagnusBilling initialized successfully
+[2025-10-20 20:29:49]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:29:49]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:31]Starting api.php
+[2025-10-20 20:32:31]Database connection successful
+[2025-10-20 20:32:31]MagnusBilling initialized successfully
+[2025-10-20 20:32:31]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:35]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b1;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b2;2"],"channel":"Local\/2002@for-user-sip-000000b1;2","cdr_uniqueid":"call_68f64f090b79d"},"error:x:x:":null}
+[2025-10-20 20:32:35]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b1;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b2;2"],"channel":"Local\/2002@for-user-sip-000000b1;2","cdr_uniqueid":"call_68f64f090b79d"}
+[2025-10-20 20:32:35]Initiated call: call_id=259, magnus_call_id=call_68f64f090b79d, customer_number=2002, callback_method=softphone
+[2025-10-20 20:32:37]Starting api.php
+[2025-10-20 20:32:37]Database connection successful
+[2025-10-20 20:32:37]MagnusBilling initialized successfully
+[2025-10-20 20:32:37]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:38]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:39]Starting api.php
+[2025-10-20 20:32:39]Database connection successful
+[2025-10-20 20:32:39]MagnusBilling initialized successfully
+[2025-10-20 20:32:39]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:40]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:41]Starting api.php
+[2025-10-20 20:32:41]Database connection successful
+[2025-10-20 20:32:41]MagnusBilling initialized successfully
+[2025-10-20 20:32:41]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:42]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:43]Starting api.php
+[2025-10-20 20:32:43]Database connection successful
+[2025-10-20 20:32:43]MagnusBilling initialized successfully
+[2025-10-20 20:32:43]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:44]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:45]Starting api.php
+[2025-10-20 20:32:45]Database connection successful
+[2025-10-20 20:32:45]MagnusBilling initialized successfully
+[2025-10-20 20:32:45]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:46]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:47]Starting api.php
+[2025-10-20 20:32:47]Database connection successful
+[2025-10-20 20:32:47]MagnusBilling initialized successfully
+[2025-10-20 20:32:47]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:48]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:49]Starting api.php
+[2025-10-20 20:32:49]Database connection successful
+[2025-10-20 20:32:49]MagnusBilling initialized successfully
+[2025-10-20 20:32:49]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:50]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:51]Starting api.php
+[2025-10-20 20:32:51]Database connection successful
+[2025-10-20 20:32:51]MagnusBilling initialized successfully
+[2025-10-20 20:32:51]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:52]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:32:53]Starting api.php
+[2025-10-20 20:32:53]Database connection successful
+[2025-10-20 20:32:53]MagnusBilling initialized successfully
+[2025-10-20 20:32:53]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:32:54]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:33:57]Starting api.php
+[2025-10-20 20:33:57]Database connection successful
+[2025-10-20 20:33:57]MagnusBilling initialized successfully
+[2025-10-20 20:33:57]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:33:57]Fetched 3 contacts for user_id: 7
+[2025-10-20 20:33:57]Starting api.php
+[2025-10-20 20:33:57]Database connection successful
+[2025-10-20 20:33:57]MagnusBilling initialized successfully
+[2025-10-20 20:33:57]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:33:57]Fetched 1 merchants for user_id: 7
+[2025-10-20 20:33:57]Starting api.php
+[2025-10-20 20:33:57]Database connection successful
+[2025-10-20 20:33:57]MagnusBilling initialized successfully
+[2025-10-20 20:33:57]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:33:57]Fetched 0 IVR profiles for user_id: 7
+[2025-10-20 20:33:57]Starting api.php
+[2025-10-20 20:33:57]Database connection successful
+[2025-10-20 20:33:57]MagnusBilling initialized successfully
+[2025-10-20 20:33:57]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:33:58]Fetched 1 institutions for user_id: 7
+[2025-10-20 20:36:12]Starting api.php
+[2025-10-20 20:36:12]Database connection successful
+[2025-10-20 20:36:12]MagnusBilling initialized successfully
+[2025-10-20 20:36:12]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:36:16]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2"],"channel":"Local\/2002@for-user-sip-000000b3","cdr_uniqueid":"call_68f64fe611850"},"error:x:x:":null}
+[2025-10-20 20:36:16]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2"],"channel":"Local\/2002@for-user-sip-000000b3","cdr_uniqueid":"call_68f64fe611850"}
+[2025-10-20 20:36:16]Initiated call: call_id=260, magnus_call_id=call_68f64fe611850, customer_number=2002, callback_method=softphone
+[2025-10-20 20:36:18]Starting api.php
+[2025-10-20 20:36:18]Database connection successful
+[2025-10-20 20:36:18]MagnusBilling initialized successfully
+[2025-10-20 20:36:18]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:36:19]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b3","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:37:43]Starting api.php
+[2025-10-20 20:37:43]Database connection successful
+[2025-10-20 20:37:43]MagnusBilling initialized successfully
+[2025-10-20 20:37:43]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:44]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:44]Ended call: call_id=260, callChannel=Local/2002@for-user-sip-000000b3, CDR Uniqueid=call_68f64fe611850
+[2025-10-20 20:37:44]Starting api.php
+[2025-10-20 20:37:45]Database connection successful
+[2025-10-20 20:37:45]MagnusBilling initialized successfully
+[2025-10-20 20:37:45]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:45]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:45]Ended call: call_id=258, callChannel=Local/2002@for-user-sip-000000af;2, CDR Uniqueid=call_68f64e3651cf9
+[2025-10-20 20:37:45]Starting api.php
+[2025-10-20 20:37:45]Database connection successful
+[2025-10-20 20:37:45]MagnusBilling initialized successfully
+[2025-10-20 20:37:45]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:46]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:46]Ended call: call_id=257, callChannel=Channel:, CDR Uniqueid=call_68f64c90ac3e3
+[2025-10-20 20:37:46]Starting api.php
+[2025-10-20 20:37:46]Database connection successful
+[2025-10-20 20:37:46]MagnusBilling initialized successfully
+[2025-10-20 20:37:46]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:47]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:47]Ended call: call_id=256, callChannel=Channel:, CDR Uniqueid=call_68f5edbe4b7bf
+[2025-10-20 20:37:47]Starting api.php
+[2025-10-20 20:37:47]Database connection successful
+[2025-10-20 20:37:47]MagnusBilling initialized successfully
+[2025-10-20 20:37:47]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:47]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:47]Ended call: call_id=256, callChannel=Channel:, CDR Uniqueid=call_68f5edbe4b7bf
+[2025-10-20 20:37:48]Starting api.php
+[2025-10-20 20:37:48]Database connection successful
+[2025-10-20 20:37:48]MagnusBilling initialized successfully
+[2025-10-20 20:37:48]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:48]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:37:48]Ended call: call_id=259, callChannel=Local/2002@for-user-sip-000000b1;2, CDR Uniqueid=call_68f64f090b79d
+[2025-10-20 20:37:53]Starting api.php
+[2025-10-20 20:37:53]Database connection successful
+[2025-10-20 20:37:53]MagnusBilling initialized successfully
+[2025-10-20 20:37:53]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:37:58]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b5;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b6;2"],"channel":"Local\/2002@for-user-sip-000000b5","cdr_uniqueid":"call_68f6504b71d8c"},"error:x:x:":null}
+[2025-10-20 20:37:58]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b5;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b6;2"],"channel":"Local\/2002@for-user-sip-000000b5","cdr_uniqueid":"call_68f6504b71d8c"}
+[2025-10-20 20:37:58]Initiated call: call_id=261, magnus_call_id=call_68f6504b71d8c, customer_number=2002, callback_method=softphone
+[2025-10-20 20:38:00]Starting api.php
+[2025-10-20 20:38:00]Database connection successful
+[2025-10-20 20:38:00]MagnusBilling initialized successfully
+[2025-10-20 20:38:00]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:38:00]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b5","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:38:11]Starting api.php
+[2025-10-20 20:38:11]Database connection successful
+[2025-10-20 20:38:11]MagnusBilling initialized successfully
+[2025-10-20 20:38:11]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:38:11]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:38:11]Ended call: call_id=261, callChannel=Local/2002@for-user-sip-000000b5, CDR Uniqueid=call_68f6504b71d8c
+[2025-10-20 20:41:16]Starting api.php
+[2025-10-20 20:41:16]Database connection successful
+[2025-10-20 20:41:16]MagnusBilling initialized successfully
+[2025-10-20 20:41:16]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:41:21]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b7;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b8;2"],"channel":"Local\/2002@for-user-sip-000000b7","cdr_uniqueid":"call_68f6511686a9c"},"error:x:x:":null}
+[2025-10-20 20:41:21]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b7;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b8;2"],"channel":"Local\/2002@for-user-sip-000000b7","cdr_uniqueid":"call_68f6511686a9c"}
+[2025-10-20 20:41:21]Initiated call: call_id=262, magnus_call_id=call_68f6511686a9c, customer_number=2002, callback_method=softphone
+[2025-10-20 20:41:23]Starting api.php
+[2025-10-20 20:41:23]Database connection successful
+[2025-10-20 20:41:23]MagnusBilling initialized successfully
+[2025-10-20 20:41:23]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:41:24]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b7","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:43:34]Starting api.php
+[2025-10-20 20:43:34]Database connection successful
+[2025-10-20 20:43:34]MagnusBilling initialized successfully
+[2025-10-20 20:43:34]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:43:39]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b9;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000ba;2"],"channel":"Local\/2002@for-user-sip-000000b9","cdr_uniqueid":"call_68f651a04d51e"},"error:x:x:":null}
+[2025-10-20 20:43:39]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b9;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000ba;2"],"channel":"Local\/2002@for-user-sip-000000b9","cdr_uniqueid":"call_68f651a04d51e"}
+[2025-10-20 20:43:39]Initiated call: call_id=263, magnus_call_id=call_68f651a04d51e, customer_number=2002, callback_method=softphone
+[2025-10-20 20:43:41]Starting api.php
+[2025-10-20 20:43:41]Database connection successful
+[2025-10-20 20:43:41]MagnusBilling initialized successfully
+[2025-10-20 20:43:41]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:43:41]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000b9","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:45:33]Starting api.php
+[2025-10-20 20:45:33]Database connection successful
+[2025-10-20 20:45:33]MagnusBilling initialized successfully
+[2025-10-20 20:45:33]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:45:37]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2"],"channel":"Local\/2002@for-user-sip-000000bb","cdr_uniqueid":"call_68f6521716b73"},"error:x:x:":null}
+[2025-10-20 20:45:37]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2"],"channel":"Local\/2002@for-user-sip-000000bb","cdr_uniqueid":"call_68f6521716b73"}
+[2025-10-20 20:45:37]Initiated call: call_id=264, magnus_call_id=call_68f6521716b73, customer_number=2002, callback_method=softphone
+[2025-10-20 20:45:39]Starting api.php
+[2025-10-20 20:45:39]Database connection successful
+[2025-10-20 20:45:39]MagnusBilling initialized successfully
+[2025-10-20 20:45:39]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:45:40]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000bb","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:51:58]Starting api.php
+[2025-10-20 20:51:58]Database connection successful
+[2025-10-20 20:51:58]MagnusBilling initialized successfully
+[2025-10-20 20:51:58]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:51:59]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:51:59]Ended call: call_id=262, callChannel=Local/2002@for-user-sip-000000b7, CDR Uniqueid=call_68f6511686a9c
+[2025-10-20 20:52:00]Starting api.php
+[2025-10-20 20:52:00]Database connection successful
+[2025-10-20 20:52:00]MagnusBilling initialized successfully
+[2025-10-20 20:52:00]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:52:01]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:52:01]Ended call: call_id=263, callChannel=Local/2002@for-user-sip-000000b9, CDR Uniqueid=call_68f651a04d51e
+[2025-10-20 20:52:01]Starting api.php
+[2025-10-20 20:52:01]Database connection successful
+[2025-10-20 20:52:01]MagnusBilling initialized successfully
+[2025-10-20 20:52:01]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:52:02]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:52:02]Ended call: call_id=264, callChannel=Local/2002@for-user-sip-000000bb, CDR Uniqueid=call_68f6521716b73
+[2025-10-20 20:52:05]Starting api.php
+[2025-10-20 20:52:05]Database connection successful
+[2025-10-20 20:52:05]MagnusBilling initialized successfully
+[2025-10-20 20:52:05]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:52:09]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2"],"channel":"Local\/2002@for-user-sip-000000bd","cdr_uniqueid":"call_68f6539f26fa4"},"error:x:x:":null}
+[2025-10-20 20:52:09]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2"],"channel":"Local\/2002@for-user-sip-000000bd","cdr_uniqueid":"call_68f6539f26fa4"}
+[2025-10-20 20:52:09]Initiated call: call_id=265, magnus_call_id=call_68f6539f26fa4, customer_number=2002, callback_method=softphone
+[2025-10-20 20:52:11]Starting api.php
+[2025-10-20 20:52:11]Database connection successful
+[2025-10-20 20:52:11]MagnusBilling initialized successfully
+[2025-10-20 20:52:11]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:52:12]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000bd","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:53:29]Starting api.php
+[2025-10-20 20:53:29]Database connection successful
+[2025-10-20 20:53:29]MagnusBilling initialized successfully
+[2025-10-20 20:53:29]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:53:30]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 20:53:30]Ended call: call_id=265, callChannel=Local/2002@for-user-sip-000000bd, CDR Uniqueid=call_68f6539f26fa4
+[2025-10-20 20:53:45]Starting api.php
+[2025-10-20 20:53:45]Database connection successful
+[2025-10-20 20:53:45]MagnusBilling initialized successfully
+[2025-10-20 20:53:45]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:53:50]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2"],"channel":"Local\/2002@for-user-sip-000000bf","cdr_uniqueid":"call_68f6540361709"},"error:x:x:":null}
+[2025-10-20 20:53:50]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2"],"channel":"Local\/2002@for-user-sip-000000bf","cdr_uniqueid":"call_68f6540361709"}
+[2025-10-20 20:53:50]Initiated call: call_id=266, magnus_call_id=call_68f6540361709, customer_number=2002, callback_method=softphone
+[2025-10-20 20:53:52]Starting api.php
+[2025-10-20 20:53:52]Database connection successful
+[2025-10-20 20:53:52]MagnusBilling initialized successfully
+[2025-10-20 20:53:52]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:53:52]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Local\/2002@for-user-sip-000000bf","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}

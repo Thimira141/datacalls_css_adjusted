@@ -541,6 +541,7 @@ try {
                 <div class="call-card" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}">
                     <h5><i class="fas fa-phone"></i> Call to ${callData.customerNumber} <span class="live-icon" style="color: #28a745; margin-left: 10px;"><i class="fas fa-circle"></i></span></h5>
                     <div class="status ${callData.status || 'calling'}">${callData.status ? callData.status.charAt(0).toUpperCase() + callData.status.slice(1) : 'Calling...'}</div>
+                    <p>Channel: ${callData.CallChannel}</p>
                     <div class="details">
                         <p><strong>Institution:</strong> ${callData.institutionName}</p>
                         <p><strong>Customer:</strong> ${callData.customerName}</p>

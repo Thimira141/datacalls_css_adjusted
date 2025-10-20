@@ -8246,3 +8246,293 @@ Local/2002@from-user-000000d6;2 - Ring
 [2025-10-20 20:26:03] {"success":false,"error":"Missing required field(s)"}
 [2025-10-20 20:26:03] 
 [2025-10-20 20:26:03] 400
+[2025-10-20 20:29:02] Starting Calling...
+[2025-10-20 20:29:05] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318700","starttime":"2025-10-20 20:29:02","stoptime":"2025-10-20 20:29:02","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f64e3651cf9","dp_context":"softphone","customer_name":"jhone smith cdr","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:29:05] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000af;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b0;2"],"channel":"Local\/2002@for-user-sip-000000af;2","cdr_uniqueid":"call_68f64e3651cf9"}
+[2025-10-20 20:29:05] 
+[2025-10-20 20:29:05] 200
+[2025-10-20 20:29:07] Starting get call stat...
+[2025-10-20 20:29:07] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:07] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:07] 
+[2025-10-20 20:29:07] 200
+[2025-10-20 20:29:09] Starting get call stat...
+[2025-10-20 20:29:09] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:09] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:09] 
+[2025-10-20 20:29:09] 200
+[2025-10-20 20:29:11] Starting get call stat...
+[2025-10-20 20:29:11] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:11] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:11] 
+[2025-10-20 20:29:11] 200
+[2025-10-20 20:29:13] Starting get call stat...
+[2025-10-20 20:29:13] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:13] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:13] 
+[2025-10-20 20:29:13] 200
+[2025-10-20 20:29:15] Starting get call stat...
+[2025-10-20 20:29:15] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:15] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:15] 
+[2025-10-20 20:29:15] 200
+[2025-10-20 20:29:17] Starting get call stat...
+[2025-10-20 20:29:17] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:17] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:17] 
+[2025-10-20 20:29:17] 200
+[2025-10-20 20:29:19] Starting get call stat...
+[2025-10-20 20:29:19] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:19] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:19] 
+[2025-10-20 20:29:19] 200
+[2025-10-20 20:29:21] Starting get call stat...
+[2025-10-20 20:29:21] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:21] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:21] 
+[2025-10-20 20:29:21] 200
+[2025-10-20 20:29:23] Starting get call stat...
+[2025-10-20 20:29:23] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:23] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:23] 
+[2025-10-20 20:29:23] 200
+[2025-10-20 20:29:25] Starting get call stat...
+[2025-10-20 20:29:25] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:25] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:25] 
+[2025-10-20 20:29:25] 200
+[2025-10-20 20:29:27] Starting get call stat...
+[2025-10-20 20:29:27] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:27] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:27] 
+[2025-10-20 20:29:27] 200
+[2025-10-20 20:29:29] Starting get call stat...
+[2025-10-20 20:29:29] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:29] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:29] 
+[2025-10-20 20:29:29] 200
+[2025-10-20 20:29:31] Starting get call stat...
+[2025-10-20 20:29:31] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:31] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:31] 
+[2025-10-20 20:29:31] 200
+[2025-10-20 20:29:33] Starting get call stat...
+[2025-10-20 20:29:33] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:34] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:34] 
+[2025-10-20 20:29:34] 200
+[2025-10-20 20:29:35] Starting get call stat...
+[2025-10-20 20:29:35] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:35] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:35] 
+[2025-10-20 20:29:35] 200
+[2025-10-20 20:29:37] Starting get call stat...
+[2025-10-20 20:29:37] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:37] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:37] 
+[2025-10-20 20:29:37] 200
+[2025-10-20 20:29:39] Starting get call stat...
+[2025-10-20 20:29:39] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:39] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:39] 
+[2025-10-20 20:29:39] 200
+[2025-10-20 20:29:41] Starting get call stat...
+[2025-10-20 20:29:41] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:41] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:41] 
+[2025-10-20 20:29:41] 200
+[2025-10-20 20:29:43] Starting get call stat...
+[2025-10-20 20:29:43] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:43] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:43] 
+[2025-10-20 20:29:43] 200
+[2025-10-20 20:29:45] Starting get call stat...
+[2025-10-20 20:29:45] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:45] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:45] 
+[2025-10-20 20:29:45] 200
+[2025-10-20 20:29:47] Starting get call stat...
+[2025-10-20 20:29:47] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:47] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:47] 
+[2025-10-20 20:29:47] 200
+[2025-10-20 20:29:49] Starting get call stat...
+[2025-10-20 20:29:49] {"callChannel":"Local\/2002@for-user-sip-000000af;2","action":"status_call"}
+[2025-10-20 20:29:49] {"success":true,"channel":"Local\/2002@for-user-sip-000000af","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:29:49] 
+[2025-10-20 20:29:49] 200
+[2025-10-20 20:32:33] Starting Calling...
+[2025-10-20 20:32:35] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:32:33","stoptime":"2025-10-20 20:32:33","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f64f090b79d","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:32:35] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b1;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b2;2"],"channel":"Local\/2002@for-user-sip-000000b1;2","cdr_uniqueid":"call_68f64f090b79d"}
+[2025-10-20 20:32:35] 
+[2025-10-20 20:32:35] 200
+[2025-10-20 20:32:37] Starting get call stat...
+[2025-10-20 20:32:38] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:38] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:38] 
+[2025-10-20 20:32:38] 200
+[2025-10-20 20:32:39] Starting get call stat...
+[2025-10-20 20:32:40] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:40] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:40] 
+[2025-10-20 20:32:40] 200
+[2025-10-20 20:32:41] Starting get call stat...
+[2025-10-20 20:32:42] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:42] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:42] 
+[2025-10-20 20:32:42] 200
+[2025-10-20 20:32:43] Starting get call stat...
+[2025-10-20 20:32:44] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:44] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:44] 
+[2025-10-20 20:32:44] 200
+[2025-10-20 20:32:45] Starting get call stat...
+[2025-10-20 20:32:46] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:46] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:46] 
+[2025-10-20 20:32:46] 200
+[2025-10-20 20:32:47] Starting get call stat...
+[2025-10-20 20:32:48] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:48] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:48] 
+[2025-10-20 20:32:48] 200
+[2025-10-20 20:32:49] Starting get call stat...
+[2025-10-20 20:32:50] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:50] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:50] 
+[2025-10-20 20:32:50] 200
+[2025-10-20 20:32:51] Starting get call stat...
+[2025-10-20 20:32:52] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:52] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ring","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:52] 
+[2025-10-20 20:32:52] 200
+[2025-10-20 20:32:53] Starting get call stat...
+[2025-10-20 20:32:54] {"callChannel":"Local\/2002@for-user-sip-000000b1;2","action":"status_call"}
+[2025-10-20 20:32:54] {"success":true,"channel":"Local\/2002@for-user-sip-000000b1","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:32:54] 
+[2025-10-20 20:32:54] 200
+[2025-10-20 20:36:14] Starting Calling...
+[2025-10-20 20:36:16] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:36:14","stoptime":"2025-10-20 20:36:14","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f64fe611850","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:36:16] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b3;2"],"channel":"Local\/2002@for-user-sip-000000b3","cdr_uniqueid":"call_68f64fe611850"}
+[2025-10-20 20:36:16] 
+[2025-10-20 20:36:16] 200
+[2025-10-20 20:36:18] Starting get call stat...
+[2025-10-20 20:36:19] {"callChannel":"Local\/2002@for-user-sip-000000b3","action":"status_call"}
+[2025-10-20 20:36:19] {"success":true,"channel":"Local\/2002@for-user-sip-000000b3","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:36:19] 
+[2025-10-20 20:36:19] 200
+[2025-10-20 20:37:43] Starting Call Ending...
+[2025-10-20 20:37:44] {"action":"end_call","stoptime":"2025-10-20 20:37:43","sessiontime":89,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f64fe611850","callChannel":"Local\/2002@for-user-sip-000000b3"}
+[2025-10-20 20:37:44] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:44] 
+[2025-10-20 20:37:44] 200
+[2025-10-20 20:37:45] Starting Call Ending...
+[2025-10-20 20:37:45] {"action":"end_call","stoptime":"2025-10-20 20:37:45","sessiontime":523,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f64e3651cf9","callChannel":"Local\/2002@for-user-sip-000000af;2"}
+[2025-10-20 20:37:45] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:45] 
+[2025-10-20 20:37:45] 200
+[2025-10-20 20:37:45] Starting Call Ending...
+[2025-10-20 20:37:46] {"action":"end_call","stoptime":"2025-10-20 20:37:45","sessiontime":945,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f64c90ac3e3","callChannel":"Channel:"}
+[2025-10-20 20:37:46] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:46] 
+[2025-10-20 20:37:46] 200
+[2025-10-20 20:37:46] Starting Call Ending...
+[2025-10-20 20:37:47] {"action":"end_call","stoptime":"2025-10-20 20:37:46","sessiontime":25220,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f5edbe4b7bf","callChannel":"Channel:"}
+[2025-10-20 20:37:47] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:47] 
+[2025-10-20 20:37:47] 200
+[2025-10-20 20:37:47] Starting Call Ending...
+[2025-10-20 20:37:47] {"action":"end_call","stoptime":"2025-10-20 20:37:47","sessiontime":25221,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f5edbe4b7bf","callChannel":"Channel:"}
+[2025-10-20 20:37:47] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:47] 
+[2025-10-20 20:37:47] 200
+[2025-10-20 20:37:48] Starting Call Ending...
+[2025-10-20 20:37:48] {"action":"end_call","stoptime":"2025-10-20 20:37:48","sessiontime":315,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f64f090b79d","callChannel":"Local\/2002@for-user-sip-000000b1;2"}
+[2025-10-20 20:37:48] {"success":true,"output":"No such channel"}
+[2025-10-20 20:37:48] 
+[2025-10-20 20:37:48] 200
+[2025-10-20 20:37:55] Starting Calling...
+[2025-10-20 20:37:58] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:37:55","stoptime":"2025-10-20 20:37:55","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f6504b71d8c","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:37:58] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b5;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b6;2"],"channel":"Local\/2002@for-user-sip-000000b5","cdr_uniqueid":"call_68f6504b71d8c"}
+[2025-10-20 20:37:58] 
+[2025-10-20 20:37:58] 200
+[2025-10-20 20:38:00] Starting get call stat...
+[2025-10-20 20:38:00] {"callChannel":"Local\/2002@for-user-sip-000000b5","action":"status_call"}
+[2025-10-20 20:38:00] {"success":true,"channel":"Local\/2002@for-user-sip-000000b5","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:38:00] 
+[2025-10-20 20:38:00] 200
+[2025-10-20 20:38:11] Starting Call Ending...
+[2025-10-20 20:38:11] {"action":"end_call","stoptime":"2025-10-20 20:38:11","sessiontime":16,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f6504b71d8c","callChannel":"Local\/2002@for-user-sip-000000b5"}
+[2025-10-20 20:38:11] {"success":true,"output":"No such channel"}
+[2025-10-20 20:38:11] 
+[2025-10-20 20:38:11] 200
+[2025-10-20 20:41:18] Starting Calling...
+[2025-10-20 20:41:21] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:41:18","stoptime":"2025-10-20 20:41:18","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f6511686a9c","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:41:21] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b7;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b8;2"],"channel":"Local\/2002@for-user-sip-000000b7","cdr_uniqueid":"call_68f6511686a9c"}
+[2025-10-20 20:41:21] 
+[2025-10-20 20:41:21] 200
+[2025-10-20 20:41:23] Starting get call stat...
+[2025-10-20 20:41:24] {"callChannel":"Local\/2002@for-user-sip-000000b7","action":"status_call"}
+[2025-10-20 20:41:24] {"success":true,"channel":"Local\/2002@for-user-sip-000000b7","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:41:24] 
+[2025-10-20 20:41:24] 200
+[2025-10-20 20:43:36] Starting Calling...
+[2025-10-20 20:43:39] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:43:36","stoptime":"2025-10-20 20:43:36","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f651a04d51e","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:43:39] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000b9;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000ba;2"],"channel":"Local\/2002@for-user-sip-000000b9","cdr_uniqueid":"call_68f651a04d51e"}
+[2025-10-20 20:43:39] 
+[2025-10-20 20:43:39] 200
+[2025-10-20 20:43:41] Starting get call stat...
+[2025-10-20 20:43:41] {"callChannel":"Local\/2002@for-user-sip-000000b9","action":"status_call"}
+[2025-10-20 20:43:41] {"success":true,"channel":"Local\/2002@for-user-sip-000000b9","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:43:41] 
+[2025-10-20 20:43:41] 200
+[2025-10-20 20:45:35] Starting Calling...
+[2025-10-20 20:45:37] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:45:35","stoptime":"2025-10-20 20:45:35","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f6521716b73","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:45:37] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bb;2"],"channel":"Local\/2002@for-user-sip-000000bb","cdr_uniqueid":"call_68f6521716b73"}
+[2025-10-20 20:45:37] 
+[2025-10-20 20:45:37] 200
+[2025-10-20 20:45:39] Starting get call stat...
+[2025-10-20 20:45:40] {"callChannel":"Local\/2002@for-user-sip-000000bb","action":"status_call"}
+[2025-10-20 20:45:40] {"success":true,"channel":"Local\/2002@for-user-sip-000000bb","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:45:40] 
+[2025-10-20 20:45:40] 200
+[2025-10-20 20:51:58] Starting Call Ending...
+[2025-10-20 20:51:59] {"action":"end_call","stoptime":"2025-10-20 20:51:58","sessiontime":640,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f6511686a9c","callChannel":"Local\/2002@for-user-sip-000000b7"}
+[2025-10-20 20:51:59] {"success":true,"output":"No such channel"}
+[2025-10-20 20:51:59] 
+[2025-10-20 20:51:59] 200
+[2025-10-20 20:52:00] Starting Call Ending...
+[2025-10-20 20:52:01] {"action":"end_call","stoptime":"2025-10-20 20:52:00","sessiontime":504,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f651a04d51e","callChannel":"Local\/2002@for-user-sip-000000b9"}
+[2025-10-20 20:52:01] {"success":true,"output":"No such channel"}
+[2025-10-20 20:52:01] 
+[2025-10-20 20:52:01] 200
+[2025-10-20 20:52:01] Starting Call Ending...
+[2025-10-20 20:52:02] {"action":"end_call","stoptime":"2025-10-20 20:52:01","sessiontime":386,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f6521716b73","callChannel":"Local\/2002@for-user-sip-000000bb"}
+[2025-10-20 20:52:02] {"success":true,"output":"No such channel"}
+[2025-10-20 20:52:02] 
+[2025-10-20 20:52:02] 200
+[2025-10-20 20:52:07] Starting Calling...
+[2025-10-20 20:52:09] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:52:07","stoptime":"2025-10-20 20:52:07","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f6539f26fa4","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:52:09] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bd;2"],"channel":"Local\/2002@for-user-sip-000000bd","cdr_uniqueid":"call_68f6539f26fa4"}
+[2025-10-20 20:52:09] 
+[2025-10-20 20:52:09] 200
+[2025-10-20 20:52:11] Starting get call stat...
+[2025-10-20 20:52:12] {"callChannel":"Local\/2002@for-user-sip-000000bd","action":"status_call"}
+[2025-10-20 20:52:12] {"success":true,"channel":"Local\/2002@for-user-sip-000000bd","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:52:12] 
+[2025-10-20 20:52:12] 200
+[2025-10-20 20:53:29] Starting Call Ending...
+[2025-10-20 20:53:30] {"action":"end_call","stoptime":"2025-10-20 20:53:29","sessiontime":82,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f6539f26fa4","callChannel":"Local\/2002@for-user-sip-000000bd"}
+[2025-10-20 20:53:30] {"success":true,"output":"No such channel"}
+[2025-10-20 20:53:30] 
+[2025-10-20 20:53:30] 200
+[2025-10-20 20:53:47] Starting Calling...
+[2025-10-20 20:53:50] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-10-20 20:53:47","stoptime":"2025-10-20 20:53:47","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f6540361709","dp_context":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"2001"}
+[2025-10-20 20:53:50] {"success":true,"output":["Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Updated database successfully","Dialplan reloaded.","Channel: Local\/2002@for-user-sip-000000bf;2"],"channel":"Local\/2002@for-user-sip-000000bf","cdr_uniqueid":"call_68f6540361709"}
+[2025-10-20 20:53:50] 
+[2025-10-20 20:53:50] 200
+[2025-10-20 20:53:52] Starting get call stat...
+[2025-10-20 20:53:52] {"callChannel":"Local\/2002@for-user-sip-000000bf","action":"status_call"}
+[2025-10-20 20:53:52] {"success":true,"channel":"Local\/2002@for-user-sip-000000bf","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:53:52] 
+[2025-10-20 20:53:52] 200

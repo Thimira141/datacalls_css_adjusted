@@ -132,7 +132,7 @@ switch ($_POST['action']) {
         $db_output = cdr_create_record($pdo, $data);
         if (!$db_output['success']) {
             // CDR db failed, then cancel the call
-            $call_end = call_end($fullChannel);
+            $call_end = call_end($baseChannel);
             $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
             $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
             json_error(
@@ -143,7 +143,7 @@ switch ($_POST['action']) {
         echo json_encode([
             'success' => true,
             'output' => $output,
-            'channel' => $fullChannel,
+            'channel' => $baseChannel,
             'cdr_uniqueid' => $data['uniqueid']
         ]);
         break;
