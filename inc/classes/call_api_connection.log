@@ -8191,3 +8191,53 @@ Local/2002@from-user-000000d6;2 - Ring
 [2025-10-07 23:55:49] {"success":true,"output":"No such channel"}
 [2025-10-07 23:55:49] 
 [2025-10-07 23:55:49] 200
+[2025-10-20 13:30:01] Starting Calling...
+[2025-10-20 13:30:03] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"ldata","callerid":"18005318722","starttime":"2025-10-20 13:30:01","stoptime":"2025-10-20 13:30:01","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f5ec0175688","dp_context":"softphone"}
+[2025-10-20 13:30:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ec0175688"}
+[2025-10-20 13:30:03] 
+[2025-10-20 13:30:03] 200
+[2025-10-20 13:30:05] Starting get call stat...
+[2025-10-20 13:30:05] {"callChannel":"Channel:","action":"status_call"}
+[2025-10-20 13:30:05] {"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 13:30:05] 
+[2025-10-20 13:30:05] 200
+[2025-10-20 13:30:10] Starting Call Ending...
+[2025-10-20 13:30:11] {"action":"end_call","stoptime":"2025-10-20 13:30:10","sessiontime":9,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f5ec0175688","callChannel":"Channel:"}
+[2025-10-20 13:30:11] {"success":true,"output":"No such channel"}
+[2025-10-20 13:30:11] 
+[2025-10-20 13:30:11] 200
+[2025-10-20 13:32:55] Starting Calling...
+[2025-10-20 13:32:57] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"ldata","callerid":"18005318722","starttime":"2025-10-20 13:32:55","stoptime":"2025-10-20 13:32:55","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f5ecaf2d6cc","dp_context":"softphone"}
+[2025-10-20 13:32:57] {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ecaf2d6cc"}
+[2025-10-20 13:32:57] 
+[2025-10-20 13:32:57] 200
+[2025-10-20 13:33:00] Starting get call stat...
+[2025-10-20 13:33:00] {"callChannel":"Channel:","action":"status_call"}
+[2025-10-20 13:33:00] {"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 13:33:00] 
+[2025-10-20 13:33:00] 200
+[2025-10-20 13:34:26] Starting Call Ending...
+[2025-10-20 13:34:27] {"action":"end_call","stoptime":"2025-10-20 13:34:26","sessiontime":91,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_68f5ecaf2d6cc","callChannel":"Channel:"}
+[2025-10-20 13:34:27] {"success":true,"output":"No such channel"}
+[2025-10-20 13:34:27] 
+[2025-10-20 13:34:27] 200
+[2025-10-20 13:37:26] Starting Calling...
+[2025-10-20 13:37:29] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"ldata","callerid":"18005318722","starttime":"2025-10-20 13:37:26","stoptime":"2025-10-20 13:37:26","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f5edbe4b7bf","dp_context":"softphone"}
+[2025-10-20 13:37:29] {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5edbe4b7bf"}
+[2025-10-20 13:37:29] 
+[2025-10-20 13:37:29] 200
+[2025-10-20 13:37:31] Starting get call stat...
+[2025-10-20 13:37:31] {"callChannel":"Channel:","action":"status_call"}
+[2025-10-20 13:37:31] {"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 13:37:31] 
+[2025-10-20 13:37:31] 200
+[2025-10-20 20:22:00] Starting Calling...
+[2025-10-20 20:22:03] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"ldata","callerid":"18005318700","starttime":"2025-10-20 20:22:00","stoptime":"2025-10-20 20:22:00","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_68f64c90ac3e3","dp_context":"softphone"}
+[2025-10-20 20:22:03] {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f64c90ac3e3"}
+[2025-10-20 20:22:03] 
+[2025-10-20 20:22:03] 200
+[2025-10-20 20:22:05] Starting get call stat...
+[2025-10-20 20:22:06] {"callChannel":"Channel:","action":"status_call"}
+[2025-10-20 20:22:06] {"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-10-20 20:22:06] 
+[2025-10-20 20:22:06] 200

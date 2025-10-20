@@ -26215,3 +26215,83 @@
 [2025-10-07 23:56:16]Processing action: get_sip_info, User ID: 9, Session data: {"csrf_token":"348b506d5305fe2f10e925eb42e1c06814b5db971828ea5d7d2900aba45fbab2","user_id":9,"username":"testuserIVR","magnus_user_id":25}
 [2025-10-07 23:56:16]get_sip_info requested for user_id: 9
 [2025-10-07 23:56:16]Fetched SIP info for user_id: 9, username: testuserIVR, response: {"success":true,"sip_domain":"72.60.25.185","sip_username":"testuserIVR","sip_password":"securepass123IVR"}
+[2025-10-20 13:29:42]Starting api.php
+[2025-10-20 13:29:42]Database connection successful
+[2025-10-20 13:29:42]MagnusBilling initialized successfully
+[2025-10-20 13:29:42]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:29:42]Fetched 3 contacts for user_id: 7
+[2025-10-20 13:29:42]Starting api.php
+[2025-10-20 13:29:42]Database connection successful
+[2025-10-20 13:29:42]MagnusBilling initialized successfully
+[2025-10-20 13:29:42]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:29:42]Fetched 1 institutions for user_id: 7
+[2025-10-20 13:29:42]Starting api.php
+[2025-10-20 13:29:42]Database connection successful
+[2025-10-20 13:29:42]MagnusBilling initialized successfully
+[2025-10-20 13:29:42]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:29:42]Fetched 0 IVR profiles for user_id: 7
+[2025-10-20 13:29:42]Starting api.php
+[2025-10-20 13:29:42]Database connection successful
+[2025-10-20 13:29:42]MagnusBilling initialized successfully
+[2025-10-20 13:29:42]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:29:42]Fetched 1 merchants for user_id: 7
+[2025-10-20 13:29:49]Starting api.php
+[2025-10-20 13:29:49]Database connection successful
+[2025-10-20 13:29:49]MagnusBilling initialized successfully
+[2025-10-20 13:29:49]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:30:03]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ec0175688"},"error:x:x:":null}
+[2025-10-20 13:30:03]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ec0175688"}
+[2025-10-20 13:30:03]Initiated call: call_id=254, magnus_call_id=call_68f5ec0175688, customer_number=2002, callback_method=softphone
+[2025-10-20 13:30:05]Starting api.php
+[2025-10-20 13:30:05]Database connection successful
+[2025-10-20 13:30:05]MagnusBilling initialized successfully
+[2025-10-20 13:30:05]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:30:05]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 13:30:10]Starting api.php
+[2025-10-20 13:30:10]Database connection successful
+[2025-10-20 13:30:10]MagnusBilling initialized successfully
+[2025-10-20 13:30:10]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:30:11]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 13:30:11]Ended call: call_id=254, callChannel=Channel:, CDR Uniqueid=call_68f5ec0175688
+[2025-10-20 13:32:51]Starting api.php
+[2025-10-20 13:32:51]Database connection successful
+[2025-10-20 13:32:51]MagnusBilling initialized successfully
+[2025-10-20 13:32:51]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:32:57]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ecaf2d6cc"},"error:x:x:":null}
+[2025-10-20 13:32:57]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5ecaf2d6cc"}
+[2025-10-20 13:32:57]Initiated call: call_id=255, magnus_call_id=call_68f5ecaf2d6cc, customer_number=2002, callback_method=softphone
+[2025-10-20 13:33:00]Starting api.php
+[2025-10-20 13:33:00]Database connection successful
+[2025-10-20 13:33:00]MagnusBilling initialized successfully
+[2025-10-20 13:33:00]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:33:00]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 13:34:26]Starting api.php
+[2025-10-20 13:34:26]Database connection successful
+[2025-10-20 13:34:26]MagnusBilling initialized successfully
+[2025-10-20 13:34:26]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:34:27]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
+[2025-10-20 13:34:27]Ended call: call_id=255, callChannel=Channel:, CDR Uniqueid=call_68f5ecaf2d6cc
+[2025-10-20 13:37:22]Starting api.php
+[2025-10-20 13:37:22]Database connection successful
+[2025-10-20 13:37:22]MagnusBilling initialized successfully
+[2025-10-20 13:37:22]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:37:29]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5edbe4b7bf"},"error:x:x:":null}
+[2025-10-20 13:37:29]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f5edbe4b7bf"}
+[2025-10-20 13:37:29]Initiated call: call_id=256, magnus_call_id=call_68f5edbe4b7bf, customer_number=2002, callback_method=softphone
+[2025-10-20 13:37:31]Starting api.php
+[2025-10-20 13:37:31]Database connection successful
+[2025-10-20 13:37:31]MagnusBilling initialized successfully
+[2025-10-20 13:37:31]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 13:37:31]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}
+[2025-10-20 20:21:49]Starting api.php
+[2025-10-20 20:21:49]Database connection successful
+[2025-10-20 20:21:49]MagnusBilling initialized successfully
+[2025-10-20 20:21:49]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:22:03]CallManager Output: {"success":true,"response":{"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f64c90ac3e3"},"error:x:x:":null}
+[2025-10-20 20:22:03]CallManager Output(2): {"success":true,"output":["Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:","Updated database successfully","Updated database successfully","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Usage: database put <family> <key> <value>","       Adds or updates an entry in the Asterisk database for","       a given family, key, and value.","Dialplan reloaded.","Channel:"],"channel":"Channel:","cdr_uniqueid":"call_68f64c90ac3e3"}
+[2025-10-20 20:22:03]Initiated call: call_id=257, magnus_call_id=call_68f64c90ac3e3, customer_number=2002, callback_method=softphone
+[2025-10-20 20:22:05]Starting api.php
+[2025-10-20 20:22:05]Database connection successful
+[2025-10-20 20:22:05]MagnusBilling initialized successfully
+[2025-10-20 20:22:05]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"35b713cc28babaf589a8fa2518cc56bdc060ba8ee7fee1fecd6aa00810a3d27d","user_id":7,"username":"ldata"}
+[2025-10-20 20:22:06]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"Channel:","status":"ended","status_detail":"Channel no longer exists","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error:x:x:":null}

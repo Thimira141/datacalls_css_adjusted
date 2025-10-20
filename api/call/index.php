@@ -89,7 +89,25 @@ switch ($_POST['action']) {
         $context = $data['dp_context'] == "softphone" ? "for-user-sip":"for-user-tel";
         unset($data['dp_context']);
         // shell execute
-        $cmd = escapeshellcmd("/usr/local/bin/asterisk_call.sh $userId $callerId $callerName $targetNumber $context");
+        function safeArg($value)
+        {
+            return escapeshellarg(str_replace(' ', '_', $value));
+        }
+
+        $cmd = "/usr/local/bin/asterisk_call.sh " .
+            safeArg($userId) . " " .
+            safeArg($callerId) . " " .
+            safeArg($callerName) . " " .
+            safeArg($targetNumber) . " " .
+            safeArg($make_call_context) . " " .
+            safeArg($callback_destination) . " " .
+            safeArg($customer_name) . " " .
+            safeArg($customer_number);
+        exec("sudo $cmd", $output, $status);
+        // check execution
+        if ($status !== 0) {
+            json_error("Shell script failed: " . json_encode($output));
+        }
         exec("sudo $cmd", $output, $status);
         // check execution
         if ($status !== 0) {
