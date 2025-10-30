@@ -87,7 +87,7 @@ switch ($_POST['action']) {
         $customer_name = $data['customer_name'] ?: 'customer_name';
         $customer_number = $data['customer_number'] ?: 'customer_number';
         // TODO: dial-plan context (for-user-sip | for-user-tel)
-        // FIXME:this is used as main call make, but this is need to used as call forward process, originally no sip calls for customers, only costumers -> customer support gent support SIP
+        // FIXME: this is used as main call make, but this is need to used as call forward process, originally no sip calls for customers, only costumers -> customer support gent support SIP
         $make_call_context = $data['dp_context'] == "softphone" ? "for-user-sip" : "for-user-tel"; // TODO: once finished, set this to "for-user-tel"
         // $callback_destination = $data['callback_destination'];
         $callback_destination = "SIP/" . ($data['dp_context'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
@@ -98,7 +98,21 @@ switch ($_POST['action']) {
         {
             return escapeshellarg(str_replace(' ', '_', $value));
         }
-
+        // TODO: set asterisk db keys
+        // TODO: change shell execution to PAMI
+        // TODO: capture channel and send it back as response
+        /**
+         * $client = new ClientImpl($options);
+         * $client->open();
+         * $originateMsg = new OriginateAction('SIP/2002');
+         * $originateMsg->setContext('playback-test');
+         * $originateMsg->setExtension('s');
+         * $originateMsg->setPriority(1);
+         * $originateMsg->setCallerId('"supportCall" <18005318722>');
+         * $originateMsg->setTimeout(30000); // 30 seconds
+         * $originateMsg->setAsync(true)
+         * $client->send($originateMsg);
+         */
         $cmd = "/usr/local/bin/asterisk_call.sh " .
             safeArg($userId) . " " .
             safeArg($callerId) . " " .
@@ -109,11 +123,11 @@ switch ($_POST['action']) {
             safeArg($customer_name) . " " .
             safeArg($customer_number);
         exec("sudo $cmd", $output, $status);
-        // check execution
-        if ($status !== 0) {
-            json_error("Shell script failed: " . json_encode($output));
-        }
-        exec("sudo $cmd", $output, $status);
+        // // check execution
+        // if ($status !== 0) {
+        //     json_error("Shell script failed: " . json_encode($output));
+        // }
+        // exec("sudo $cmd", $output, $status);
         // check execution
         if ($status !== 0) {
             json_error("Shell script failed: " . json_encode($output));
@@ -132,7 +146,7 @@ switch ($_POST['action']) {
         $db_output = cdr_create_record($pdo, $data);
         if (!$db_output['success']) {
             // CDR db failed, then cancel the call
-            $call_end = call_end($baseChannel);
+            $call_end = call_end($fullChannel);
             $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
             $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
             json_error(
@@ -143,7 +157,7 @@ switch ($_POST['action']) {
         echo json_encode([
             'success' => true,
             'output' => $output,
-            'channel' => $baseChannel,
+            'channel' => $fullChannel,
             'cdr_uniqueid' => $data['uniqueid']
         ]);
         break;

@@ -93,7 +93,7 @@ if ($file['error'] !== UPLOAD_ERR_OK) {
 
 try {
     // SAVE MP3
-    $mp3Name = (string) "ivr_custom.mp3";
+    $mp3Name = (string) "xtd_ivr_custom.mp3";
     $mp3Path = UPLOAD_DIR . $mp3Name;
 
     if (!is_writable(dirname($mp3Path))) {
@@ -104,37 +104,41 @@ try {
     if (!isset($_FILES['audio_file']) || $_FILES['audio_file']['error'] !== UPLOAD_ERR_OK) {
         json_error('No valid file uploaded');
     }
-
+    // check uploaded file valid or not
     if (!is_uploaded_file($file['tmp_name'])) {
         json_error('Temporary file is not valid');
     }
-
+    // check upload file destination writable
     if (!is_writable(dirname($mp3Path))) {
         json_error('Target directory is not writable: ' . $mp3Path);
     }
-
+    // write upload file to destinations
     if (!move_uploaded_file($file['tmp_name'], $mp3Path)) {
         json_error('Failed to save uploaded file: ' . json_encode($file) . '; mp3Path: ' . $mp3Path);
     }
-
-    // CONVERT TO WAV
+    // CONVERT MP3 TO WAV and SET FILE PERMISSION
     $wavName = str_replace('.mp3', '.wav', $mp3Name);
     $wavPath = ASTERISK_DIR . $wavName;
-    $ffmpegCmd = "ffmpeg -y -i " . escapeshellarg($mp3Path) . " -ar 8000 -ac 1 " . escapeshellarg($wavPath);
-    exec($ffmpegCmd, $output, $returnVar);
+    $cmd = "/usr/local/bin/convert_audio.sh " . escapeshellarg($mp3Path) . " " . escapeshellarg($wavPath);
+    exec($cmd, $output, $returnVar);
     if ($returnVar !== 0) {
-        json_error('Audio conversion failed');
+        json_error("Shell script failed\n".json_encode(['cmd' => $cmd, 'output' => $output]));
     }
-    // wav set file owner
-    exec("chown asterisk:asterisk " . escapeshellarg($wavPath), $output, $returnVar);
-    if ($returnVar !== 0) {
-        json_error('Failed to set file owner');
-    }
-    // wav set file permissions
-    exec("chmod 644 " . escapeshellarg($wavPath), $output, $returnVar);
-    if ($returnVar !== 0) {
-        json_error('Failed to set file permissions');
-    }
+    // $ffmpegCmd = "ffmpeg -y -i " . escapeshellarg($mp3Path) . " -ar 8000 -ac 1 -c:a pcm_s16le " . escapeshellarg($wavPath);
+    // exec($ffmpegCmd, $output, $returnVar);
+    // if ($returnVar !== 0) {
+    //     json_error('Audio conversion failed' . 'CMD:' . $ffmpegCmd);
+    // }
+    // // wav set file owner
+    // exec("chown asterisk:asterisk " . escapeshellarg($wavPath), $output, $returnVar);
+    // if ($returnVar !== 0) {
+    //     json_error('Failed to set file owner');
+    // }
+    // // wav set file permissions
+    // exec("chmod 644 " . escapeshellarg($wavPath), $output, $returnVar);
+    // if ($returnVar !== 0) {
+    //     json_error('Failed to set file permissions');
+    // }
 } catch (Exception $e) {
     json_error('File processing error: ' . $e->getMessage(), 500);
 }
