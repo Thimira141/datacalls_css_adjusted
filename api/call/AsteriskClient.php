@@ -29,10 +29,11 @@ class AsteriskClient {
      * @param string $targetNumber endpoint or address you're calling
      * @param string $extension entry point to dial-plan
      * @param string $context dial-plan context where Asterisk looks for the extension.
+     * @param array $variables {$key => $value, ...}
      * @return array{ami_response: array|string, channel: null, error: null, success: bool|array{ami_response: array|string, channel: string|null, error: null, success: bool}|array{ami_response: null, channel: null, error: string, success: bool}|array{ami_response: string[], channel: null, error: null, success: bool}}
      * @author Thimira Dilshan <thimirad865@gmail.com>
      */
-    public function originateCall(string $tech = 'SIP', string $callerId, string $callerName, string $targetNumber, string $extension = 's', string $context)
+    public function originateCall(string $tech = 'SIP', string $callerId, string $callerName, string $targetNumber, string $extension = 's', string $context, $variables = [])
     {
         try {
             // Build originate action correctly
@@ -64,6 +65,10 @@ class AsteriskClient {
             }
             if (method_exists($action, 'setActionId')) {
                 $action->setActionId('orig_' . uniqid());
+            }
+            // set variables
+            foreach ($variables as $key => $value) {
+                $action->setVariable($key, $value);
             }
 
             $response = $this->client->send($action);
@@ -135,7 +140,7 @@ class AsteriskClient {
     {
         try {
             // Use AMI CommandAction to execute 'database put' which is universally supported
-            $command = sprintf('database put %s %s %s', $family, $key, $value);
+            $command = sprintf("database put %s %s %s", $family, $key, $value);
             $action = new \PAMI\Message\Action\CommandAction($command);
             $response = $this->client->send($action);
 

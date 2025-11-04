@@ -94,13 +94,68 @@ switch ($_POST['action']) {
         // remove unwanted parts for db
         unset($data['dp_context'], $data['callback_destination'], $data['customer_name'], $data['customer_number']);
         // shell execute
-        function safeArg($value)
-        {
-            return escapeshellarg(str_replace(' ', '_', $value));
-        }
+        // function safeArg($value)
+        // {
+        //     return escapeshellarg(str_replace(' ', '_', $value));
+        // }
+        // new PAMI instance
+        $ami = new AsteriskClient();
         // TODO: set asterisk db keys
+        // $astDBkeys = [
+        //     'cid' => safeArg($callerId),
+        //     'cname' => safeArg($callerName),
+        //     'customer_num' => safeArg($customer_number),
+        //     'customer_name' => safeArg($customer_name),
+        //     'callback_destination' => safeArg($callback_destination),
+        // ];
+        $astDBkeys = [
+            'CID' => $callerId,
+            'CNAME' => $callerName,
+            'CUSTOMER_NUM' => $customer_number,
+            'CUSTOMER_NAME' => $customer_name,
+            'CALLBACK_DESTINATION' => $callback_destination,
+        ];
+        // foreach ($astDBkeys as $key => $value) {
+        //     $put = $ami->astdbPut('dialplan', $key, $value);
+        //     if (!$put['success']) {
+        //         json_error("ASTDB put Error: " . $put['error']);
+        //     }
+        // }
         // TODO: change shell execution to PAMI
-        // TODO: capture channel and send it back as response
+        $tech = 'SIP';
+        $originateCall = $ami->originateCall($tech, $callerId, $callerName, $targetNumber, 's', 'playback-test', $astDBkeys);
+        if ($originateCall['success']) {
+            // TODO: capture channel and send it back as response
+            $channel = $originateCall['channel']??'NULL';
+            // get channel formatted
+            // $baseChannel = null;
+            // $fullChannel = null;
+            // foreach ($output as $line) {
+            //     if (strpos($line, 'Channel:') === 0) {
+            //         $fullChannel = trim(str_replace('Channel: ', '', $line));
+            //         $baseChannel = explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
+            //         break;
+            //     }
+            // }
+            // db CDR insert
+            $db_output = cdr_create_record($pdo, $data);
+            if (!$db_output['success']) {
+                // CDR db failed, then cancel the call
+                $call_end = call_end($channel);
+                $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
+                $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
+                json_error(
+                    $message
+                );
+            }
+            // send result
+            echo json_encode([
+                'success' => true,
+                'output' => $originateCall,
+                'channel' => $channel,
+                'cdr_uniqueid' => $data['uniqueid']
+            ]);
+        }
         /**
          * $client = new ClientImpl($options);
          * $client->open();
@@ -113,53 +168,25 @@ switch ($_POST['action']) {
          * $originateMsg->setAsync(true)
          * $client->send($originateMsg);
          */
-        $cmd = "/usr/local/bin/asterisk_call.sh " .
-            safeArg($userId) . " " .
-            safeArg($callerId) . " " .
-            safeArg($callerName) . " " .
-            safeArg($targetNumber) . " " .
-            safeArg($make_call_context) . " " .
-            safeArg($callback_destination) . " " .
-            safeArg($customer_name) . " " .
-            safeArg($customer_number);
-        exec("sudo $cmd", $output, $status);
+        // $cmd = "/usr/local/bin/asterisk_call.sh " .
+        //     safeArg($userId) . " " .
+        //     safeArg($callerId) . " " .
+        //     safeArg($callerName) . " " .
+        //     safeArg($targetNumber) . " " .
+        //     safeArg($make_call_context) . " " .
+        //     safeArg($callback_destination) . " " .
+        //     safeArg($customer_name) . " " .
+        //     safeArg($customer_number);
+        // exec("sudo $cmd", $output, $status);
         // // check execution
         // if ($status !== 0) {
         //     json_error("Shell script failed: " . json_encode($output));
         // }
         // exec("sudo $cmd", $output, $status);
         // check execution
-        if ($status !== 0) {
-            json_error("Shell script failed: " . json_encode($output));
-        }
-        // get channel formatted
-        $baseChannel = null;
-        $fullChannel = null;
-        foreach ($output as $line) {
-            if (strpos($line, 'Channel:') === 0) {
-                $fullChannel = trim(str_replace('Channel: ', '', $line));
-                $baseChannel = explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
-                break;
-            }
-        }
-        // db CDR insert
-        $db_output = cdr_create_record($pdo, $data);
-        if (!$db_output['success']) {
-            // CDR db failed, then cancel the call
-            $call_end = call_end($fullChannel);
-            $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
-            $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
-            json_error(
-                $message
-            );
-        }
-        // send result
-        echo json_encode([
-            'success' => true,
-            'output' => $output,
-            'channel' => $fullChannel,
-            'cdr_uniqueid' => $data['uniqueid']
-        ]);
+        // if ($status !== 0) {
+        //     json_error("Shell script failed: " . json_encode($output));
+        // }
         break;
 
     case 'end_call':

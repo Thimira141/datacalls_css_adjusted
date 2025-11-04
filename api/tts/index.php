@@ -120,7 +120,7 @@ try {
     $wavName = str_replace('.mp3', '.wav', $mp3Name);
     $wavPath = ASTERISK_DIR . $wavName;
     $cmd = "/usr/local/bin/convert_audio.sh " . escapeshellarg($mp3Path) . " " . escapeshellarg($wavPath);
-    exec($cmd, $output, $returnVar);
+    exec($cmd . ' 2>&1', $output, $returnVar);
     if ($returnVar !== 0) {
         json_error("Shell script failed\n".json_encode(['cmd' => $cmd, 'output' => $output]));
     }
@@ -155,6 +155,7 @@ try {
     }
 
     // Update IVR audio
+    // IMPORTANT: RUN IN CLI-> ALTER TABLE pkg_ivr MODIFY option_0 VARCHAR(255);
     $stmt = $pdo->prepare("UPDATE pkg_ivr SET option_0 = :option_0 WHERE id = :ivrId");
     $option_0 = "custom|$wavName,s,1;custom|custom-unmute,s,1";
     if (!$stmt->execute(['option_0' => $option_0, 'ivrId' => $ivrId])) {
