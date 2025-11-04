@@ -93,21 +93,9 @@ switch ($_POST['action']) {
         $callback_destination = "SIP/" . ($data['dp_context'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
         // remove unwanted parts for db
         unset($data['dp_context'], $data['callback_destination'], $data['customer_name'], $data['customer_number']);
-        // shell execute
-        // function safeArg($value)
-        // {
-        //     return escapeshellarg(str_replace(' ', '_', $value));
-        // }
         // new PAMI instance
         $ami = new AsteriskClient();
-        // TODO: set asterisk db keys
-        // $astDBkeys = [
-        //     'cid' => safeArg($callerId),
-        //     'cname' => safeArg($callerName),
-        //     'customer_num' => safeArg($customer_number),
-        //     'customer_name' => safeArg($customer_name),
-        //     'callback_destination' => safeArg($callback_destination),
-        // ];
+        // set asterisk variables
         $astDBkeys = [
             'CID' => $callerId,
             'CNAME' => $callerName,
@@ -115,28 +103,12 @@ switch ($_POST['action']) {
             'CUSTOMER_NAME' => $customer_name,
             'CALLBACK_DESTINATION' => $callback_destination,
         ];
-        // foreach ($astDBkeys as $key => $value) {
-        //     $put = $ami->astdbPut('dialplan', $key, $value);
-        //     if (!$put['success']) {
-        //         json_error("ASTDB put Error: " . $put['error']);
-        //     }
-        // }
-        // TODO: change shell execution to PAMI
+        // originate call
         $tech = 'SIP';
         $originateCall = $ami->originateCall($tech, $callerId, $callerName, $targetNumber, 's', 'playback-test', $astDBkeys);
         if ($originateCall['success']) {
-            // TODO: capture channel and send it back as response
+            // capture channel and send it back as response
             $channel = $originateCall['channel']??'NULL';
-            // get channel formatted
-            // $baseChannel = null;
-            // $fullChannel = null;
-            // foreach ($output as $line) {
-            //     if (strpos($line, 'Channel:') === 0) {
-            //         $fullChannel = trim(str_replace('Channel: ', '', $line));
-            //         $baseChannel = explode(';', $fullChannel)[0]; // Strip the ;2 or ;1 suffix
-            //         break;
-            //     }
-            // }
             // db CDR insert
             $db_output = cdr_create_record($pdo, $data);
             if (!$db_output['success']) {
@@ -156,37 +128,6 @@ switch ($_POST['action']) {
                 'cdr_uniqueid' => $data['uniqueid']
             ]);
         }
-        /**
-         * $client = new ClientImpl($options);
-         * $client->open();
-         * $originateMsg = new OriginateAction('SIP/2002');
-         * $originateMsg->setContext('playback-test');
-         * $originateMsg->setExtension('s');
-         * $originateMsg->setPriority(1);
-         * $originateMsg->setCallerId('"supportCall" <18005318722>');
-         * $originateMsg->setTimeout(30000); // 30 seconds
-         * $originateMsg->setAsync(true)
-         * $client->send($originateMsg);
-         */
-        // $cmd = "/usr/local/bin/asterisk_call.sh " .
-        //     safeArg($userId) . " " .
-        //     safeArg($callerId) . " " .
-        //     safeArg($callerName) . " " .
-        //     safeArg($targetNumber) . " " .
-        //     safeArg($make_call_context) . " " .
-        //     safeArg($callback_destination) . " " .
-        //     safeArg($customer_name) . " " .
-        //     safeArg($customer_number);
-        // exec("sudo $cmd", $output, $status);
-        // // check execution
-        // if ($status !== 0) {
-        //     json_error("Shell script failed: " . json_encode($output));
-        // }
-        // exec("sudo $cmd", $output, $status);
-        // check execution
-        // if ($status !== 0) {
-        //     json_error("Shell script failed: " . json_encode($output));
-        // }
         break;
 
     case 'end_call':
