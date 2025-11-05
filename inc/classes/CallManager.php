@@ -99,7 +99,7 @@ class CallManager
         return [
             'success' => isset($result['success']) && $result['success'] == true,
             'response' => $result,
-            'error:x:x:' => isset($result['error']) ? $result['error'] : null
+            'error' => isset($result['error']) ? $result['error'] : null
         ];
     }
 
