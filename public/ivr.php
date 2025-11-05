@@ -306,7 +306,7 @@ try {
                         <div class="mini-call-card" data-call-id="${callId}">
                             <h6>Call to ${callData.customerNumber}</h6>
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
-                            <h6 class="dtmf_input">DTMF: ${callData.dtmf_input??'N/A'}</h6>
+                            <h6 class="dtmf_input">DTMF: ${callData.dtmf_input ?? 'N/A'}</h6>
                             <div class="buttons">
                                 <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
                                 <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}">End Call</button>
@@ -541,7 +541,7 @@ try {
                 <div class="call-card" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}">
                     <h5><i class="fas fa-phone"></i> Call to ${callData.customerNumber} <span class="live-icon" style="color: #28a745; margin-left: 10px;"><i class="fas fa-circle"></i></span></h5>
                     <div class="status ${callData.status || 'calling'}">${callData.status ? callData.status.charAt(0).toUpperCase() + callData.status.slice(1) : 'Calling...'}</div>
-                    <p>Channel: ${callData.CallChannel}</p>
+                    <p <?=boolval(env('APP_DEBUG'))?null:'class="d-none"';?> >Channel: ${callData.CallChannel}</p>
                     <div class="details">
                         <p><strong>Institution:</strong> ${callData.institutionName}</p>
                         <p><strong>Customer:</strong> ${callData.customerName}</p>
@@ -549,7 +549,7 @@ try {
                         <p><strong>Merchant:</strong> ${callData.merchantName}</p>
                         <p><strong>Amount:</strong> $${parseFloat(callData.amount).toFixed(2)}</p>
                     </div>
-                    <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input??'N/A'}</h4>
+                    <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input ?? 'N/A'}</h4>
                     <div class="buttons">
                         <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
                         <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" >End Call</button>
@@ -591,21 +591,21 @@ try {
                             const response = main_response.response;
                             if (response.success && activeCalls[callId]) {
                                 activeCalls[callId].status = response.status;
-                                activeCalls[callId].dtmf_input = response.dtmf_input??'N/A';
+                                activeCalls[callId].dtmf_input = response.dtmf_input ?? 'N/A';
                                 $(`.call-card[data-call-id="${callId}"] .status`)
                                     .addClass(response.status)
                                     .text(response.status.charAt(0).toUpperCase() + response
                                         .status.slice(1));
                                 // dtmf write
                                 $(`.call-card[data-call-id="${callId}"] .dtmf_input`)
-                                    .text(`DTMF: ${response.dtmf_input??'N/A'}`);
+                                    .text(`DTMF: ${response.dtmf_input ?? 'N/A'}`);
                                 $(`.mini-call-card[data-call-id="${callId}"] .status`)
                                     .addClass(response.status)
                                     .text(response.status.charAt(0).toUpperCase() + response
                                         .status.slice(1));
                                 // dtmf write
                                 $(`.mini-call-card[data-call-id="${callId}"] .dtmf_input`)
-                                    .text(`DTMF: ${response.dtmf_input??'N/A'}`);
+                                    .text(`DTMF: ${response.dtmf_input ?? 'N/A'}`);
                                 sessionStorage.setItem('activeCalls', JSON.stringify(
                                     activeCalls));
                                 if (['answered', 'up'].includes(response.status)) {
