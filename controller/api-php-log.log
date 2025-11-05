@@ -3018,3 +3018,622 @@
 [2025-11-04 22:54:27]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata"}
 [2025-11-04 22:54:28]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error:x:x:":null}
 [2025-11-04 22:54:29]Ended call: call_id=290, callChannel=SIP/2002-00000045, CDR Uniqueid=call_690a34bf8f8d0
+[2025-11-05 07:36:53]Starting api.php
+[2025-11-05 07:36:53]Database connection successful
+[2025-11-05 07:36:53]MagnusBilling initialized successfully
+[2025-11-05 07:36:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:36:54]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:03]Starting api.php
+[2025-11-05 07:37:03]Database connection successful
+[2025-11-05 07:37:03]MagnusBilling initialized successfully
+[2025-11-05 07:37:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:03]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:13]Starting api.php
+[2025-11-05 07:37:13]Database connection successful
+[2025-11-05 07:37:13]MagnusBilling initialized successfully
+[2025-11-05 07:37:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:13]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:23]Starting api.php
+[2025-11-05 07:37:23]Database connection successful
+[2025-11-05 07:37:23]MagnusBilling initialized successfully
+[2025-11-05 07:37:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:23]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:33]Starting api.php
+[2025-11-05 07:37:33]Database connection successful
+[2025-11-05 07:37:33]MagnusBilling initialized successfully
+[2025-11-05 07:37:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:33]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:43]Starting api.php
+[2025-11-05 07:37:43]Database connection successful
+[2025-11-05 07:37:43]MagnusBilling initialized successfully
+[2025-11-05 07:37:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:43]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:37:53]Starting api.php
+[2025-11-05 07:37:53]Database connection successful
+[2025-11-05 07:37:53]MagnusBilling initialized successfully
+[2025-11-05 07:37:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:37:53]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:03]Starting api.php
+[2025-11-05 07:38:03]Database connection successful
+[2025-11-05 07:38:03]MagnusBilling initialized successfully
+[2025-11-05 07:38:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:03]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:13]Starting api.php
+[2025-11-05 07:38:13]Database connection successful
+[2025-11-05 07:38:13]MagnusBilling initialized successfully
+[2025-11-05 07:38:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:13]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:23]Starting api.php
+[2025-11-05 07:38:23]Database connection successful
+[2025-11-05 07:38:23]MagnusBilling initialized successfully
+[2025-11-05 07:38:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:23]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:33]Starting api.php
+[2025-11-05 07:38:33]Database connection successful
+[2025-11-05 07:38:33]MagnusBilling initialized successfully
+[2025-11-05 07:38:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:33]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:43]Starting api.php
+[2025-11-05 07:38:43]Database connection successful
+[2025-11-05 07:38:43]MagnusBilling initialized successfully
+[2025-11-05 07:38:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:43]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:38:53]Starting api.php
+[2025-11-05 07:38:53]Database connection successful
+[2025-11-05 07:38:53]MagnusBilling initialized successfully
+[2025-11-05 07:38:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:38:53]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:03]Starting api.php
+[2025-11-05 07:39:03]Database connection successful
+[2025-11-05 07:39:03]MagnusBilling initialized successfully
+[2025-11-05 07:39:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:03]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:13]Starting api.php
+[2025-11-05 07:39:13]Database connection successful
+[2025-11-05 07:39:13]MagnusBilling initialized successfully
+[2025-11-05 07:39:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:13]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:23]Starting api.php
+[2025-11-05 07:39:23]Database connection successful
+[2025-11-05 07:39:23]MagnusBilling initialized successfully
+[2025-11-05 07:39:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:23]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:33]Starting api.php
+[2025-11-05 07:39:33]Database connection successful
+[2025-11-05 07:39:33]MagnusBilling initialized successfully
+[2025-11-05 07:39:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:33]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:43]Starting api.php
+[2025-11-05 07:39:43]Database connection successful
+[2025-11-05 07:39:43]MagnusBilling initialized successfully
+[2025-11-05 07:39:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:43]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:39:53]Starting api.php
+[2025-11-05 07:39:53]Database connection successful
+[2025-11-05 07:39:53]MagnusBilling initialized successfully
+[2025-11-05 07:39:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:39:53]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:04]Starting api.php
+[2025-11-05 07:40:04]Database connection successful
+[2025-11-05 07:40:04]MagnusBilling initialized successfully
+[2025-11-05 07:40:04]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:04]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:14]Starting api.php
+[2025-11-05 07:40:14]Database connection successful
+[2025-11-05 07:40:14]MagnusBilling initialized successfully
+[2025-11-05 07:40:14]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:14]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:24]Starting api.php
+[2025-11-05 07:40:24]Database connection successful
+[2025-11-05 07:40:24]MagnusBilling initialized successfully
+[2025-11-05 07:40:24]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:24]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:34]Starting api.php
+[2025-11-05 07:40:34]Database connection successful
+[2025-11-05 07:40:34]MagnusBilling initialized successfully
+[2025-11-05 07:40:34]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:34]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:44]Starting api.php
+[2025-11-05 07:40:44]Database connection successful
+[2025-11-05 07:40:44]MagnusBilling initialized successfully
+[2025-11-05 07:40:44]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:44]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:40:54]Starting api.php
+[2025-11-05 07:40:54]Database connection successful
+[2025-11-05 07:40:54]MagnusBilling initialized successfully
+[2025-11-05 07:40:54]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:40:54]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:42:32]Starting api.php
+[2025-11-05 07:42:32]Database connection successful
+[2025-11-05 07:42:32]MagnusBilling initialized successfully
+[2025-11-05 07:42:32]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:42:32]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:54:27]Starting api.php
+[2025-11-05 07:54:27]Database connection successful
+[2025-11-05 07:54:27]MagnusBilling initialized successfully
+[2025-11-05 07:54:27]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:54:27]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:54:33]Starting api.php
+[2025-11-05 07:54:33]Database connection successful
+[2025-11-05 07:54:33]MagnusBilling initialized successfully
+[2025-11-05 07:54:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:54:33]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:54:43]Starting api.php
+[2025-11-05 07:54:43]Database connection successful
+[2025-11-05 07:54:43]MagnusBilling initialized successfully
+[2025-11-05 07:54:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:54:43]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:54:53]Starting api.php
+[2025-11-05 07:54:53]Database connection successful
+[2025-11-05 07:54:53]MagnusBilling initialized successfully
+[2025-11-05 07:54:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:54:53]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:55:03]Starting api.php
+[2025-11-05 07:55:03]Database connection successful
+[2025-11-05 07:55:03]MagnusBilling initialized successfully
+[2025-11-05 07:55:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:55:03]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:55:13]Starting api.php
+[2025-11-05 07:55:13]Database connection successful
+[2025-11-05 07:55:13]MagnusBilling initialized successfully
+[2025-11-05 07:55:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:55:13]Fetched 0 DTMF inputs for user_id: 7
+[2025-11-05 07:55:23]Starting api.php
+[2025-11-05 07:55:23]Database connection successful
+[2025-11-05 07:55:23]MagnusBilling initialized successfully
+[2025-11-05 07:55:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:55:33]Starting api.php
+[2025-11-05 07:55:33]Database connection successful
+[2025-11-05 07:55:33]MagnusBilling initialized successfully
+[2025-11-05 07:55:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:56:13]Starting api.php
+[2025-11-05 07:56:13]Database connection successful
+[2025-11-05 07:56:13]MagnusBilling initialized successfully
+[2025-11-05 07:56:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:56:23]Starting api.php
+[2025-11-05 07:56:23]Database connection successful
+[2025-11-05 07:56:23]MagnusBilling initialized successfully
+[2025-11-05 07:56:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:56:33]Starting api.php
+[2025-11-05 07:56:33]Database connection successful
+[2025-11-05 07:56:33]MagnusBilling initialized successfully
+[2025-11-05 07:56:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:56:43]Starting api.php
+[2025-11-05 07:56:43]Database connection successful
+[2025-11-05 07:56:43]MagnusBilling initialized successfully
+[2025-11-05 07:56:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:56:53]Starting api.php
+[2025-11-05 07:56:53]Database connection successful
+[2025-11-05 07:56:53]MagnusBilling initialized successfully
+[2025-11-05 07:56:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:03]Starting api.php
+[2025-11-05 07:57:03]Database connection successful
+[2025-11-05 07:57:03]MagnusBilling initialized successfully
+[2025-11-05 07:57:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:13]Starting api.php
+[2025-11-05 07:57:13]Database connection successful
+[2025-11-05 07:57:13]MagnusBilling initialized successfully
+[2025-11-05 07:57:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:23]Starting api.php
+[2025-11-05 07:57:23]Database connection successful
+[2025-11-05 07:57:23]MagnusBilling initialized successfully
+[2025-11-05 07:57:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:33]Starting api.php
+[2025-11-05 07:57:33]Database connection successful
+[2025-11-05 07:57:33]MagnusBilling initialized successfully
+[2025-11-05 07:57:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:43]Starting api.php
+[2025-11-05 07:57:43]Database connection successful
+[2025-11-05 07:57:43]MagnusBilling initialized successfully
+[2025-11-05 07:57:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:57:53]Starting api.php
+[2025-11-05 07:57:53]Database connection successful
+[2025-11-05 07:57:53]MagnusBilling initialized successfully
+[2025-11-05 07:57:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:03]Starting api.php
+[2025-11-05 07:58:03]Database connection successful
+[2025-11-05 07:58:03]MagnusBilling initialized successfully
+[2025-11-05 07:58:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:13]Starting api.php
+[2025-11-05 07:58:13]Database connection successful
+[2025-11-05 07:58:13]MagnusBilling initialized successfully
+[2025-11-05 07:58:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:23]Starting api.php
+[2025-11-05 07:58:23]Database connection successful
+[2025-11-05 07:58:23]MagnusBilling initialized successfully
+[2025-11-05 07:58:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:33]Starting api.php
+[2025-11-05 07:58:33]Database connection successful
+[2025-11-05 07:58:33]MagnusBilling initialized successfully
+[2025-11-05 07:58:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:43]Starting api.php
+[2025-11-05 07:58:43]Database connection successful
+[2025-11-05 07:58:43]MagnusBilling initialized successfully
+[2025-11-05 07:58:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:58:53]Starting api.php
+[2025-11-05 07:58:53]Database connection successful
+[2025-11-05 07:58:53]MagnusBilling initialized successfully
+[2025-11-05 07:58:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:03]Starting api.php
+[2025-11-05 07:59:03]Database connection successful
+[2025-11-05 07:59:03]MagnusBilling initialized successfully
+[2025-11-05 07:59:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:13]Starting api.php
+[2025-11-05 07:59:13]Database connection successful
+[2025-11-05 07:59:13]MagnusBilling initialized successfully
+[2025-11-05 07:59:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:23]Starting api.php
+[2025-11-05 07:59:23]Database connection successful
+[2025-11-05 07:59:23]MagnusBilling initialized successfully
+[2025-11-05 07:59:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:33]Starting api.php
+[2025-11-05 07:59:33]Database connection successful
+[2025-11-05 07:59:33]MagnusBilling initialized successfully
+[2025-11-05 07:59:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:43]Starting api.php
+[2025-11-05 07:59:43]Database connection successful
+[2025-11-05 07:59:43]MagnusBilling initialized successfully
+[2025-11-05 07:59:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 07:59:53]Starting api.php
+[2025-11-05 07:59:53]Database connection successful
+[2025-11-05 07:59:53]MagnusBilling initialized successfully
+[2025-11-05 07:59:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:03]Starting api.php
+[2025-11-05 08:00:03]Database connection successful
+[2025-11-05 08:00:03]MagnusBilling initialized successfully
+[2025-11-05 08:00:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:13]Starting api.php
+[2025-11-05 08:00:13]Database connection successful
+[2025-11-05 08:00:13]MagnusBilling initialized successfully
+[2025-11-05 08:00:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:23]Starting api.php
+[2025-11-05 08:00:23]Database connection successful
+[2025-11-05 08:00:23]MagnusBilling initialized successfully
+[2025-11-05 08:00:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:33]Starting api.php
+[2025-11-05 08:00:33]Database connection successful
+[2025-11-05 08:00:33]MagnusBilling initialized successfully
+[2025-11-05 08:00:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:43]Starting api.php
+[2025-11-05 08:00:43]Database connection successful
+[2025-11-05 08:00:43]MagnusBilling initialized successfully
+[2025-11-05 08:00:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:00:53]Starting api.php
+[2025-11-05 08:00:53]Database connection successful
+[2025-11-05 08:00:53]MagnusBilling initialized successfully
+[2025-11-05 08:00:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:03]Starting api.php
+[2025-11-05 08:01:03]Database connection successful
+[2025-11-05 08:01:03]MagnusBilling initialized successfully
+[2025-11-05 08:01:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:13]Starting api.php
+[2025-11-05 08:01:13]Database connection successful
+[2025-11-05 08:01:13]MagnusBilling initialized successfully
+[2025-11-05 08:01:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:23]Starting api.php
+[2025-11-05 08:01:23]Database connection successful
+[2025-11-05 08:01:23]MagnusBilling initialized successfully
+[2025-11-05 08:01:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:33]Starting api.php
+[2025-11-05 08:01:33]Database connection successful
+[2025-11-05 08:01:33]MagnusBilling initialized successfully
+[2025-11-05 08:01:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:43]Starting api.php
+[2025-11-05 08:01:43]Database connection successful
+[2025-11-05 08:01:43]MagnusBilling initialized successfully
+[2025-11-05 08:01:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:01:53]Starting api.php
+[2025-11-05 08:01:53]Database connection successful
+[2025-11-05 08:01:53]MagnusBilling initialized successfully
+[2025-11-05 08:01:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:03]Starting api.php
+[2025-11-05 08:02:03]Database connection successful
+[2025-11-05 08:02:03]MagnusBilling initialized successfully
+[2025-11-05 08:02:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:13]Starting api.php
+[2025-11-05 08:02:13]Database connection successful
+[2025-11-05 08:02:13]MagnusBilling initialized successfully
+[2025-11-05 08:02:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:23]Starting api.php
+[2025-11-05 08:02:23]Database connection successful
+[2025-11-05 08:02:23]MagnusBilling initialized successfully
+[2025-11-05 08:02:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:33]Starting api.php
+[2025-11-05 08:02:33]Database connection successful
+[2025-11-05 08:02:33]MagnusBilling initialized successfully
+[2025-11-05 08:02:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:43]Starting api.php
+[2025-11-05 08:02:43]Database connection successful
+[2025-11-05 08:02:43]MagnusBilling initialized successfully
+[2025-11-05 08:02:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:02:53]Starting api.php
+[2025-11-05 08:02:53]Database connection successful
+[2025-11-05 08:02:53]MagnusBilling initialized successfully
+[2025-11-05 08:02:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:03]Starting api.php
+[2025-11-05 08:03:03]Database connection successful
+[2025-11-05 08:03:03]MagnusBilling initialized successfully
+[2025-11-05 08:03:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:13]Starting api.php
+[2025-11-05 08:03:13]Database connection successful
+[2025-11-05 08:03:13]MagnusBilling initialized successfully
+[2025-11-05 08:03:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:23]Starting api.php
+[2025-11-05 08:03:23]Database connection successful
+[2025-11-05 08:03:23]MagnusBilling initialized successfully
+[2025-11-05 08:03:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:33]Starting api.php
+[2025-11-05 08:03:33]Database connection successful
+[2025-11-05 08:03:33]MagnusBilling initialized successfully
+[2025-11-05 08:03:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:43]Starting api.php
+[2025-11-05 08:03:43]Database connection successful
+[2025-11-05 08:03:43]MagnusBilling initialized successfully
+[2025-11-05 08:03:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:03:53]Starting api.php
+[2025-11-05 08:03:53]Database connection successful
+[2025-11-05 08:03:53]MagnusBilling initialized successfully
+[2025-11-05 08:03:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:03]Starting api.php
+[2025-11-05 08:04:03]Database connection successful
+[2025-11-05 08:04:03]MagnusBilling initialized successfully
+[2025-11-05 08:04:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:13]Starting api.php
+[2025-11-05 08:04:13]Database connection successful
+[2025-11-05 08:04:13]MagnusBilling initialized successfully
+[2025-11-05 08:04:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:23]Starting api.php
+[2025-11-05 08:04:23]Database connection successful
+[2025-11-05 08:04:23]MagnusBilling initialized successfully
+[2025-11-05 08:04:23]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:33]Starting api.php
+[2025-11-05 08:04:33]Database connection successful
+[2025-11-05 08:04:33]MagnusBilling initialized successfully
+[2025-11-05 08:04:33]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:43]Starting api.php
+[2025-11-05 08:04:43]Database connection successful
+[2025-11-05 08:04:43]MagnusBilling initialized successfully
+[2025-11-05 08:04:43]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:04:53]Starting api.php
+[2025-11-05 08:04:53]Database connection successful
+[2025-11-05 08:04:53]MagnusBilling initialized successfully
+[2025-11-05 08:04:53]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:05:03]Starting api.php
+[2025-11-05 08:05:03]Database connection successful
+[2025-11-05 08:05:03]MagnusBilling initialized successfully
+[2025-11-05 08:05:03]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:05:13]Starting api.php
+[2025-11-05 08:05:13]Database connection successful
+[2025-11-05 08:05:13]MagnusBilling initialized successfully
+[2025-11-05 08:05:13]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:05:24]Starting api.php
+[2025-11-05 08:05:24]Database connection successful
+[2025-11-05 08:05:24]MagnusBilling initialized successfully
+[2025-11-05 08:05:24]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:05:24]Fetched 3 contacts for user_id: 7
+[2025-11-05 08:05:24]Starting api.php
+[2025-11-05 08:05:24]Database connection successful
+[2025-11-05 08:05:24]MagnusBilling initialized successfully
+[2025-11-05 08:05:24]Processing action: get_sip_info, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:05:24]get_sip_info requested for user_id: 7
+[2025-11-05 08:05:24]Fetched SIP info for user_id: 7, username: ldata, response: {"success":true,"sip_domain":"72.60.25.185","sip_username":"ldata","sip_password":"Data1017$$"}
+[2025-11-05 08:21:17]Starting api.php
+[2025-11-05 08:21:17]Database connection successful
+[2025-11-05 08:21:17]MagnusBilling initialized successfully
+[2025-11-05 08:21:17]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:21:17]Fetched 1 institutions for user_id: 7
+[2025-11-05 08:21:17]Starting api.php
+[2025-11-05 08:21:17]Database connection successful
+[2025-11-05 08:21:17]MagnusBilling initialized successfully
+[2025-11-05 08:21:17]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:21:18]Fetched 3 contacts for user_id: 7
+[2025-11-05 08:21:18]Starting api.php
+[2025-11-05 08:21:18]Database connection successful
+[2025-11-05 08:21:18]MagnusBilling initialized successfully
+[2025-11-05 08:21:18]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:21:18]Fetched 1 merchants for user_id: 7
+[2025-11-05 08:21:18]Starting api.php
+[2025-11-05 08:21:18]Database connection successful
+[2025-11-05 08:21:18]MagnusBilling initialized successfully
+[2025-11-05 08:21:18]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:21:18]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 08:22:21]Starting api.php
+[2025-11-05 08:22:21]Database connection successful
+[2025-11-05 08:22:21]MagnusBilling initialized successfully
+[2025-11-05 08:22:21]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:22:21]Fetched 3 contacts for user_id: 7
+[2025-11-05 08:22:21]Starting api.php
+[2025-11-05 08:22:21]Database connection successful
+[2025-11-05 08:22:21]MagnusBilling initialized successfully
+[2025-11-05 08:22:21]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:22:21]Fetched 1 institutions for user_id: 7
+[2025-11-05 08:22:21]Starting api.php
+[2025-11-05 08:22:21]Database connection successful
+[2025-11-05 08:22:21]MagnusBilling initialized successfully
+[2025-11-05 08:22:21]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:22:21]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 08:22:21]Starting api.php
+[2025-11-05 08:22:21]Database connection successful
+[2025-11-05 08:22:21]MagnusBilling initialized successfully
+[2025-11-05 08:22:21]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:22:21]Fetched 1 merchants for user_id: 7
+[2025-11-05 08:24:14]Starting api.php
+[2025-11-05 08:24:14]Database connection successful
+[2025-11-05 08:24:14]MagnusBilling initialized successfully
+[2025-11-05 08:24:14]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:24:14]Fetched 3 contacts for user_id: 7
+[2025-11-05 08:24:14]Starting api.php
+[2025-11-05 08:24:14]Database connection successful
+[2025-11-05 08:24:14]MagnusBilling initialized successfully
+[2025-11-05 08:24:14]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:24:14]Fetched 1 merchants for user_id: 7
+[2025-11-05 08:24:14]Starting api.php
+[2025-11-05 08:24:14]Database connection successful
+[2025-11-05 08:24:14]MagnusBilling initialized successfully
+[2025-11-05 08:24:14]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:24:14]Fetched 1 institutions for user_id: 7
+[2025-11-05 08:24:14]Starting api.php
+[2025-11-05 08:24:14]Database connection successful
+[2025-11-05 08:24:14]MagnusBilling initialized successfully
+[2025-11-05 08:24:14]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 08:24:14]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:48:52]Starting api.php
+[2025-11-05 09:48:52]Database connection successful
+[2025-11-05 09:48:52]MagnusBilling initialized successfully
+[2025-11-05 09:48:52]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:48:52]Fetched 3 contacts for user_id: 7
+[2025-11-05 09:48:52]Starting api.php
+[2025-11-05 09:48:52]Database connection successful
+[2025-11-05 09:48:52]MagnusBilling initialized successfully
+[2025-11-05 09:48:52]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:48:52]Fetched 1 merchants for user_id: 7
+[2025-11-05 09:48:52]Starting api.php
+[2025-11-05 09:48:52]Database connection successful
+[2025-11-05 09:48:52]MagnusBilling initialized successfully
+[2025-11-05 09:48:52]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:48:53]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:48:53]Starting api.php
+[2025-11-05 09:48:53]Database connection successful
+[2025-11-05 09:48:53]MagnusBilling initialized successfully
+[2025-11-05 09:48:53]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:48:53]Fetched 1 institutions for user_id: 7
+[2025-11-05 09:49:55]Starting api.php
+[2025-11-05 09:49:55]Database connection successful
+[2025-11-05 09:49:55]MagnusBilling initialized successfully
+[2025-11-05 09:49:55]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:49:55]Fetched 3 contacts for user_id: 7
+[2025-11-05 09:49:55]Starting api.php
+[2025-11-05 09:49:55]Database connection successful
+[2025-11-05 09:49:55]MagnusBilling initialized successfully
+[2025-11-05 09:49:55]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:49:55]Fetched 1 merchants for user_id: 7
+[2025-11-05 09:49:55]Starting api.php
+[2025-11-05 09:49:55]Database connection successful
+[2025-11-05 09:49:55]MagnusBilling initialized successfully
+[2025-11-05 09:49:55]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:49:55]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:49:55]Starting api.php
+[2025-11-05 09:49:55]Database connection successful
+[2025-11-05 09:49:55]MagnusBilling initialized successfully
+[2025-11-05 09:49:55]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:49:55]Fetched 1 institutions for user_id: 7
+[2025-11-05 09:50:49]Starting api.php
+[2025-11-05 09:50:49]Database connection successful
+[2025-11-05 09:50:49]MagnusBilling initialized successfully
+[2025-11-05 09:50:49]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:50:49]Fetched 3 contacts for user_id: 7
+[2025-11-05 09:50:49]Starting api.php
+[2025-11-05 09:50:49]Database connection successful
+[2025-11-05 09:50:49]MagnusBilling initialized successfully
+[2025-11-05 09:50:49]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:50:49]Fetched 1 merchants for user_id: 7
+[2025-11-05 09:50:49]Starting api.php
+[2025-11-05 09:50:49]Database connection successful
+[2025-11-05 09:50:49]MagnusBilling initialized successfully
+[2025-11-05 09:50:49]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:50:49]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:50:49]Starting api.php
+[2025-11-05 09:50:49]Database connection successful
+[2025-11-05 09:50:49]MagnusBilling initialized successfully
+[2025-11-05 09:50:49]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:50:49]Fetched 1 institutions for user_id: 7
+[2025-11-05 09:51:27]Starting api.php
+[2025-11-05 09:51:27]Database connection successful
+[2025-11-05 09:51:27]MagnusBilling initialized successfully
+[2025-11-05 09:51:27]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:51:27]Fetched 3 contacts for user_id: 7
+[2025-11-05 09:51:27]Starting api.php
+[2025-11-05 09:51:27]Database connection successful
+[2025-11-05 09:51:27]MagnusBilling initialized successfully
+[2025-11-05 09:51:27]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:51:27]Fetched 1 merchants for user_id: 7
+[2025-11-05 09:51:27]Starting api.php
+[2025-11-05 09:51:27]Database connection successful
+[2025-11-05 09:51:27]MagnusBilling initialized successfully
+[2025-11-05 09:51:27]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:51:27]Fetched 1 institutions for user_id: 7
+[2025-11-05 09:51:28]Starting api.php
+[2025-11-05 09:51:28]Database connection successful
+[2025-11-05 09:51:28]MagnusBilling initialized successfully
+[2025-11-05 09:51:28]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:51:28]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:52:05]Starting api.php
+[2025-11-05 09:52:05]Database connection successful
+[2025-11-05 09:52:05]MagnusBilling initialized successfully
+[2025-11-05 09:52:05]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:52:05]Fetched 3 contacts for user_id: 7
+[2025-11-05 09:52:05]Starting api.php
+[2025-11-05 09:52:05]Database connection successful
+[2025-11-05 09:52:05]MagnusBilling initialized successfully
+[2025-11-05 09:52:05]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:52:05]Fetched 1 institutions for user_id: 7
+[2025-11-05 09:52:05]Starting api.php
+[2025-11-05 09:52:05]Database connection successful
+[2025-11-05 09:52:05]MagnusBilling initialized successfully
+[2025-11-05 09:52:05]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:52:05]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 09:52:05]Starting api.php
+[2025-11-05 09:52:05]Database connection successful
+[2025-11-05 09:52:05]MagnusBilling initialized successfully
+[2025-11-05 09:52:05]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 09:52:05]Fetched 1 merchants for user_id: 7
+[2025-11-05 11:23:03]Starting api.php
+[2025-11-05 11:23:04]Database connection successful
+[2025-11-05 11:23:04]MagnusBilling initialized successfully
+[2025-11-05 11:23:04]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:23:04]Fetched 3 contacts for user_id: 7
+[2025-11-05 11:23:04]Starting api.php
+[2025-11-05 11:23:04]Database connection successful
+[2025-11-05 11:23:04]MagnusBilling initialized successfully
+[2025-11-05 11:23:04]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:23:04]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 11:23:04]Starting api.php
+[2025-11-05 11:23:04]Database connection successful
+[2025-11-05 11:23:04]MagnusBilling initialized successfully
+[2025-11-05 11:23:04]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:23:04]Fetched 1 merchants for user_id: 7
+[2025-11-05 11:23:04]Starting api.php
+[2025-11-05 11:23:04]Database connection successful
+[2025-11-05 11:23:04]MagnusBilling initialized successfully
+[2025-11-05 11:23:04]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:23:04]Fetched 1 institutions for user_id: 7
+[2025-11-05 11:25:17]Starting api.php
+[2025-11-05 11:25:17]Database connection successful
+[2025-11-05 11:25:17]MagnusBilling initialized successfully
+[2025-11-05 11:25:17]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:25:17]Fetched 3 contacts for user_id: 7
+[2025-11-05 11:25:17]Starting api.php
+[2025-11-05 11:25:17]Database connection successful
+[2025-11-05 11:25:17]MagnusBilling initialized successfully
+[2025-11-05 11:25:17]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:25:17]Fetched 1 institutions for user_id: 7
+[2025-11-05 11:25:17]Starting api.php
+[2025-11-05 11:25:17]Database connection successful
+[2025-11-05 11:25:17]MagnusBilling initialized successfully
+[2025-11-05 11:25:17]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:25:17]Fetched 1 merchants for user_id: 7
+[2025-11-05 11:25:17]Starting api.php
+[2025-11-05 11:25:18]Database connection successful
+[2025-11-05 11:25:18]MagnusBilling initialized successfully
+[2025-11-05 11:25:18]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:25:18]Fetched 0 IVR profiles for user_id: 7
+[2025-11-05 11:26:22]Starting api.php
+[2025-11-05 11:26:22]Database connection successful
+[2025-11-05 11:26:22]MagnusBilling initialized successfully
+[2025-11-05 11:26:22]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:26:22]Fetched 3 contacts for user_id: 7
+[2025-11-05 11:26:22]Starting api.php
+[2025-11-05 11:26:22]Database connection successful
+[2025-11-05 11:26:22]MagnusBilling initialized successfully
+[2025-11-05 11:26:22]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:26:22]Fetched 1 institutions for user_id: 7
+[2025-11-05 11:26:22]Starting api.php
+[2025-11-05 11:26:22]Database connection successful
+[2025-11-05 11:26:22]MagnusBilling initialized successfully
+[2025-11-05 11:26:22]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:26:22]Fetched 1 merchants for user_id: 7
+[2025-11-05 11:26:22]Starting api.php
+[2025-11-05 11:26:22]Database connection successful
+[2025-11-05 11:26:22]MagnusBilling initialized successfully
+[2025-11-05 11:26:22]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"365fbcdc174ca126c4cc4cea7e3ad54bf919a17de606593d8b1788f136ddee02","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-05 11:26:22]Fetched 0 IVR profiles for user_id: 7

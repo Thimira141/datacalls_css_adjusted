@@ -597,7 +597,7 @@ switch ($action) {
             'customer_number' => 'required|string|max:20',
             'caller_id' => 'required|string|max:20',
             'callback_method' => 'required|string|in:softphone,phone', // adjust options as needed
-            'callback_number' => 'required|string|max:20',
+            'callback_number' => 'required_if:callback_method,phone|string|max:20',
             'merchant_name' => 'required|string|max:255',
             'amount' => 'required|numeric|min:0',
             'magnus_ivr_id' => 'required|integer|min:1|nullable'
@@ -658,7 +658,23 @@ switch ($action) {
 
             $user = (array) $user;
 
-            $callback_destination = $callback_method === 'softphone' ? $user['username'] : $callback_number;
+            // $callback_destination = $callback_method === 'softphone' ? $user['username'] : $callback_number;
+            // get SIP user field value for call back destination when user use softphone option
+            if ($callback_method=='softphone') {
+                $sipUserInfo = \inc\classes\MenuAPI::getSIPUser('id', $user['sip_id']);
+                if ($sipUserInfo['success']) {
+                    $sipUserInfo = $sipUserInfo['result'];
+                    if (empty($sipUserInfo)) {
+                        custom_log("SIP USER NOT FOUND FOR [id=>{$user['sip_id']}]");
+                        echo json_encode(['success' => false, 'message' => 'SIP User not found']);
+                        break;
+                    }
+                    $callback_destination = $sipUserInfo['SIP user'];
+                }
+            } else {
+                $callback_destination = $callback_number;
+            }
+
 
             // FIXME: this part is not working so i ignore it, now its work @since 2025/09/19
             // if (!updateCallerId($user['username'], $caller_id, $magnusBilling)) {
@@ -727,10 +743,10 @@ switch ($action) {
                         'sessionbill' => '0.00',                   // String/decimal ≤ 50 chars
                         'buycost' => '0.00',                   // String/decimal ≤ 50 chars
                         'uniqueid' => $uniqueid,
-                        'dp_context' => $callback_method,
+                        'callback_method' => $callback_method,
                         'customer_name' => $customer_name,
                         'customer_number' => $customer_number,
-                        'callback_destination' => '2001'//FIXME:$callback_destination
+                        'callback_destination' => $callback_destination
                     ], $user['username'] ?? 'support');
                     // call init failed!
                     custom_log('CallManager Output: ' . json_encode($result));
@@ -915,9 +931,9 @@ switch ($action) {
 
     case 'get_call_status':
         // $o = [
-        // 'ring'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ring","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null],
-        // 'up'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"up","status_detail"=>null,"dtmf_input"=>1,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null],
-        // 'end'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ended","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error:x:x:"=>null]
+        // 'ring'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ring","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error"=>null],
+        // 'up'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"up","status_detail"=>null,"dtmf_input"=>1,"dtmf_updated_at"=>null,"raw_stat"=>null],"error"=>null],
+        // 'end'=> ["success"=>true,"response" => ["success"=>true,"channel"=>"Local/2002@from-user-000000dd;2","status"=>"ended","status_detail"=>null,"dtmf_input"=>null,"dtmf_updated_at"=>null,"raw_stat"=>null],"error"=>null]
         // ];
         // echo json_encode($o['end']);
         // break;
@@ -956,6 +972,13 @@ switch ($action) {
             echo json_encode(['success' => false, 'message' => 'Failed to get call status: ' . ($result['error'] ?? 'Unknown error')]);
             break;
         }
+        // update call stat and dtmf in calls table
+        $callsUpdate = DB::table('calls')
+            ->where('id', $validate->getValue('call_id'))->update([
+            'dtmf_input' => $result['dtmf_input'],
+            'call_status' => $result['status']
+        ]);
+        if (!$callsUpdate) {custom_log("Failed to update DTMF input and Call Status into <calls> table");}
         // json decode and client side connect
         echo json_encode($result);
 
@@ -1016,6 +1039,7 @@ switch ($action) {
         break;
 
     case 'check_dtmf':
+        // NOTE: remove with caution, code usage not found
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             custom_log("check_dtmf: MagnusBilling not initialized");
@@ -1116,6 +1140,7 @@ switch ($action) {
         break;
 
     case 'toggle_mute':
+        // NOTE: remove with caution, code block no longer used
         if (!$magnusBilling) {
             echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
             custom_log("toggle_mute: MagnusBilling not initialized");
@@ -1201,21 +1226,31 @@ switch ($action) {
 
     case 'get_dtmf':
         try {
-            $dtmf_inputs = DB::table('dtmf_inputs')
-                ->join('calls', 'dtmf_inputs.call_id', '=', 'calls.id')
-                ->where('calls.user_id', $user_id)
-                ->orderBy('dtmf_inputs.created_at', 'desc')
-                ->get(['dtmf_inputs.phone_number', 'dtmf_inputs.dtmf_keys', 'dtmf_inputs.created_at'])
-                ->toArray();
-            custom_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
-            echo json_encode(['success' => true, 'dtmf_inputs' => $dtmf_inputs]);
-        } catch (Exception $e) {
+            $dtmf_inputs = DB::table('calls')
+            ->where('user_id', $user_id)
+            ->orderBy('created_at', 'desc')
+            ->get(['customer_number','dtmf_input','created_at']);
+        } catch (\Throwable $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch DTMF inputs: ' . $e->getMessage()]);
             custom_log("Get DTMF error: " . $e->getMessage());
         }
+        // try {
+        //     $dtmf_inputs = DB::table('dtmf_inputs')
+        //         ->join('calls', 'dtmf_inputs.call_id', '=', 'calls.id')
+        //         ->where('calls.user_id', $user_id)
+        //         ->orderBy('dtmf_inputs.created_at', 'desc')
+        //         ->get(['dtmf_inputs.phone_number', 'dtmf_inputs.dtmf_keys', 'dtmf_inputs.created_at'])
+        //         ->toArray();
+        //     custom_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
+        //     echo json_encode(['success' => true, 'dtmf_inputs' => $dtmf_inputs]);
+        // } catch (Exception $e) {
+        //     echo json_encode(['success' => false, 'message' => 'Failed to fetch DTMF inputs: ' . $e->getMessage()]);
+        //     custom_log("Get DTMF error: " . $e->getMessage());
+        // }
         break;
 
     case 'receive_dtmf':
+        // NOTE: remove with caution, code usage not found
         // Validate input
         $validator = new Validator;
         $rules = [
