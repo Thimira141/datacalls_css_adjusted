@@ -54,25 +54,36 @@ $option = $_POST['option'] ?? null;
 switch ($option) {
     case 'get_sip_user':
         // table => pkg_sip
-        if ($id_user = $_POST['id_user'] ?? null) {
-            try {
-                $stmt = $pdo->prepare("SELECT id_user,name as `SIP user`,callerid,accountcode as `Username` from pkg_sip WHERE id_user=:id_user");
-                $stmt->execute(['id_user' => (string) $id_user]);
-                $data = (array) $stmt->fetch(PDO::FETCH_ASSOC);
-                // send response
-                echo json_encode([
-                    'success' => true,
-                    'result' => $data
-                ]);
-            } catch (\Throwable $th) {
-                json_error("DB ERROR: " . $th->getMessage(), 500);
+        // check required data
+        $data = [];
+        $cols = ['field', 'field_value'];
+        foreach ($cols as $col) {
+            $data[$col] = sanitizeText($_POST[$col] ?? null);
+            if (!$data[$col] || empty($data[$col])) {
+                json_error('Missing required field(s)');
             }
-        } else {
-            json_error("Missing required field(s)");
         }
-        
+        // check fields validity
+        $supportedFields = ['id', 'id_user', 'SIP user', 'callerid', 'Username'];
+        if (!in_array($data['field'], $supportedFields)) {
+            json_error("Invalid Field");
+        }
+        // sql query
+        try {
+            $stmt = $pdo->prepare(query: "SELECT id,id_user,name as `SIP user`,callerid,accountcode as `Username` from pkg_sip WHERE {$data['field']}=:field_value LIMIT 1");
+            $stmt->execute(['field_value' => (string) $data['field_value']]);
+            $data = (array) $stmt->fetch(PDO::FETCH_ASSOC);
+            // send response
+            echo json_encode([
+                'success' => true,
+                'result' => $data
+            ]);
+        } catch (\Throwable $th) {
+            json_error("DB ERROR: " . $th->getMessage(), 500);
+        }
+
         break;
-    
+
     default:
         json_error("Option not found!", 404);
         break;

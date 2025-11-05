@@ -43,3 +43,39 @@
 [2025-11-05 09:52:05] {"success":true,"result":[false]}
 [2025-11-05 09:52:05] 
 [2025-11-05 09:52:05] 200
+[2025-11-05 11:22:59] {"option":"get_modules"}
+[2025-11-05 11:22:59] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":{"field":["id_user","SIP user","callerid","Username"],"0":"field_value"},"return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 11:22:59] 
+[2025-11-05 11:22:59] 200
+[2025-11-05 11:23:00] {"field":"id_user","field_value":"24","option":"get_sip_user"}
+[2025-11-05 11:23:00] {"success":false,"error":"Invalid Field"}
+[2025-11-05 11:23:00] 
+[2025-11-05 11:23:00] 400
+[2025-11-05 11:23:03] {"field":"id_user","field_value":"20","option":"get_sip_user"}
+[2025-11-05 11:23:03] {"success":false,"error":"Invalid Field"}
+[2025-11-05 11:23:03] 
+[2025-11-05 11:23:03] 400
+[2025-11-05 11:25:14] {"option":"get_modules"}
+[2025-11-05 11:25:14] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":{"field":["id_user","SIP user","callerid","Username"],"0":"field_value"},"return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 11:25:14] 
+[2025-11-05 11:25:14] 200
+[2025-11-05 11:25:16] {"field":"id_user","field_value":"24","option":"get_sip_user"}
+[2025-11-05 11:25:16] {"success":true,"result":{"id":25,"id_user":24,"SIP user":"testuserIVR","callerid":"2002052500","Username":"testuserIVR"}}
+[2025-11-05 11:25:16] 
+[2025-11-05 11:25:16] 200
+[2025-11-05 11:25:17] {"field":"id_user","field_value":"20","option":"get_sip_user"}
+[2025-11-05 11:25:17] {"success":true,"result":[false]}
+[2025-11-05 11:25:17] 
+[2025-11-05 11:25:17] 200
+[2025-11-05 11:26:19] {"option":"get_modules"}
+[2025-11-05 11:26:19] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":{"field":["id","id_user","SIP user","callerid","Username"],"0":"field_value"},"return fields":["id","id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 11:26:19] 
+[2025-11-05 11:26:19] 200
+[2025-11-05 11:26:20] {"field":"id_user","field_value":"24","option":"get_sip_user"}
+[2025-11-05 11:26:20] {"success":true,"result":{"id":25,"id_user":24,"SIP user":"testuserIVR","callerid":"2002052500","Username":"testuserIVR"}}
+[2025-11-05 11:26:20] 
+[2025-11-05 11:26:20] 200
+[2025-11-05 11:26:22] {"field":"id_user","field_value":"20","option":"get_sip_user"}
+[2025-11-05 11:26:22] {"success":true,"result":[false]}
+[2025-11-05 11:26:22] 
+[2025-11-05 11:26:22] 200

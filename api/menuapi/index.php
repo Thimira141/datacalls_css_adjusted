@@ -60,8 +60,11 @@ switch ($option) {
             'sip' => [
                 'get_sip_user' => [
                     'description' => 'get sip user info',
-                    'required fields' => 'id_user',
-                    'return fields' => ['id_user','SIP user','callerid','Username'],
+                    'required fields' => [
+                        'field' => ['id','id_user','SIP user','callerid','Username'], 
+                        'field_value'
+                    ],
+                    'return fields' => ['id','id_user','SIP user','callerid','Username'],
                 ]
             ]
         ]);

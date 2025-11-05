@@ -26,13 +26,14 @@ final class MenuAPI
 
     /**
      * Get SIP user information from server
-     * @param string $id_user
+     * @param string $field
+     * @param string $field_value
      * @return array
      * @author Thimira Dilshan <thimirad865@gmail.com>
      */
-    public static function getSIPUser(string $id_user)
+    public static function getSIPUser(string $field, string $field_value)
     {
-        return self::makeCurl('sip', ['id_user' => $id_user, 'option'=>'get_sip_user']);
+        return self::makeCurl('sip', ['field'=>$field, 'field_value'=>$field_value, 'option'=>'get_sip_user']);
     }
 
     /**
