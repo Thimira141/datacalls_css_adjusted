@@ -228,10 +228,11 @@ try {
         const end = start + itemsPerPage;
         const paginatedData = data.slice(start, end);
         paginatedData.forEach(entry => {
+            const dtmfKeys = entry.dtmf_input ?? 'N/A';
             tableBody.append(`
             <tr>
-                <td><span class="dtmf-keys">${entry.phone_number}</span></td>
-                <td><span class="dtmf-keys">${formatDTMFKeys(entry.dtmf_keys)}</span></td>
+                <td><span class="dtmf-keys">${entry.customer_number}</span></td>
+                <td><span class="dtmf-keys">${dtmfKeys}</span></td>
                 <td>${new Date(entry.created_at).toLocaleString()}</td>
             </tr>
         `);

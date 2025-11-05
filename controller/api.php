@@ -662,21 +662,19 @@ switch ($action) {
             // get SIP user field value for call back destination when user use softphone option
             if ($callback_method=='softphone') {
                 $sipUserInfo = \inc\classes\MenuAPI::getSIPUser('id', $user['sip_id']);
-                if ($sipUserInfo['success']) {
-                    $sipUserInfo = $sipUserInfo['result'];
-                    if (empty($sipUserInfo)) {
-                        custom_log("SIP USER NOT FOUND FOR [id=>{$user['sip_id']}]");
-                        echo json_encode(['success' => false, 'message' => 'SIP User not found']);
-                        break;
-                    }
-                    $callback_destination = $sipUserInfo['SIP user'];
+                if ($sipUserInfo['response']['success'] && !empty($sipUserInfo['response']['result'])) {
+                    $callback_destination = $sipUserInfo['response']['result']['SIP user'];
+                } else {
+                    custom_log("SIP USER NOT FOUND FOR [id=>{$user['sip_id']}]");
+                    echo json_encode(['success' => false, 'message' => 'SIP User not found']);
                 }
             } else {
                 $callback_destination = $callback_number;
             }
 
 
-            // FIXME: this part is not working so i ignore it, now its work @since 2025/09/19
+
+            // NOTE: this part is not working so i ignore it, now its work @since 2025/09/19
             // if (!updateCallerId($user['username'], $caller_id, $magnusBilling)) {
             //     echo json_encode(['success' => false, 'message' => 'Failed to update Caller ID']);
             //     break;
@@ -973,12 +971,17 @@ switch ($action) {
             break;
         }
         // update call stat and dtmf in calls table
-        $callsUpdate = DB::table('calls')
-            ->where('id', $validate->getValue('call_id'))->update([
-            'dtmf_input' => $result['dtmf_input'],
-            'call_status' => $result['status']
-        ]);
-        if (!$callsUpdate) {custom_log("Failed to update DTMF input and Call Status into <calls> table");}
+        try {
+            $callsUpdate = DB::table('calls')
+                ->where('id', $validate->getValue('call_id'))->update([
+                'dtmf_input' => $result['response']['dtmf_input'],
+                'call_status' => $result['response']['status']
+            ]);
+            if (!$callsUpdate) {custom_log("Failed to update DTMF input and Call Status into <calls> table");}
+            //code...
+        } catch (\Throwable $th) {
+            custom_log("Failed to update DTMF input and Call Status into <calls> table\n" . $th->getMessage());
+        }
         // json decode and client side connect
         echo json_encode($result);
 
@@ -1230,6 +1233,8 @@ switch ($action) {
             ->where('user_id', $user_id)
             ->orderBy('created_at', 'desc')
             ->get(['customer_number','dtmf_input','created_at']);
+            custom_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
+            echo json_encode(['success' => true, 'dtmf_inputs' => $dtmf_inputs]);
         } catch (\Throwable $e) {
             echo json_encode(['success' => false, 'message' => 'Failed to fetch DTMF inputs: ' . $e->getMessage()]);
             custom_log("Get DTMF error: " . $e->getMessage());
