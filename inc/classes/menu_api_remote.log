@@ -1,0 +1,45 @@
+[2025-11-05 09:48:52] {"option":"get_modules"}
+[2025-11-05 09:48:52] <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<hr>
+<address>Apache/2.4.65 (Debian) Server at 72.60.25.185 Port 80</address>
+</body></html>
+
+[2025-11-05 09:48:52] 
+[2025-11-05 09:48:52] 404
+[2025-11-05 09:49:55] {"option":"get_modules"}
+[2025-11-05 09:49:55] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":"id_user","return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 09:49:55] 
+[2025-11-05 09:49:55] 200
+[2025-11-05 09:50:48] {"option":"get_modules"}
+[2025-11-05 09:50:48] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":"id_user","return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 09:50:48] 
+[2025-11-05 09:50:48] 200
+[2025-11-05 09:50:49] {"id_user":"24"}
+[2025-11-05 09:50:49] {"success":false,"error":"Option not found!"}
+[2025-11-05 09:50:49] 
+[2025-11-05 09:50:49] 404
+[2025-11-05 09:51:26] {"option":"get_modules"}
+[2025-11-05 09:51:26] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":"id_user","return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 09:51:26] 
+[2025-11-05 09:51:26] 200
+[2025-11-05 09:51:27] {"id_user":"24","option":"get_sip_user"}
+[2025-11-05 09:51:27] {"success":true,"result":{"id_user":24,"SIP user":"testuserIVR","callerid":"2002052500","Username":"testuserIVR"}}
+[2025-11-05 09:51:27] 
+[2025-11-05 09:51:27] 200
+[2025-11-05 09:51:59] {"option":"get_modules"}
+[2025-11-05 09:51:59] {"sip":{"get_sip_user":{"description":"get sip user info","required fields":"id_user","return fields":["id_user","SIP user","callerid","Username"]}}}
+[2025-11-05 09:51:59] 
+[2025-11-05 09:51:59] 200
+[2025-11-05 09:52:01] {"id_user":"24","option":"get_sip_user"}
+[2025-11-05 09:52:01] {"success":true,"result":{"id_user":24,"SIP user":"testuserIVR","callerid":"2002052500","Username":"testuserIVR"}}
+[2025-11-05 09:52:01] 
+[2025-11-05 09:52:01] 200
+[2025-11-05 09:52:05] {"id_user":"20","option":"get_sip_user"}
+[2025-11-05 09:52:05] {"success":true,"result":[false]}
+[2025-11-05 09:52:05] 
+[2025-11-05 09:52:05] 200
