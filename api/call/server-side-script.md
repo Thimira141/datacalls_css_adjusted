@@ -133,7 +133,7 @@ exten => s,1,NoOp(*** Starting Live Chat Session ***)
  same => n,GotoIf($["${TARGET}"=""]?fallback,1)
 
  ; Optional: record the session
- same => n,MixMonitor(${CHANNEL_ID}.wav,b)
+ ;same => n,MixMonitor(${CHANNEL_ID}.wav,b)
 
  ; Optional: play bgm while waiting
  same => n,Playback(music/hold)
