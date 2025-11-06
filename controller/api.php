@@ -744,7 +744,8 @@ switch ($action) {
                         'callback_method' => $callback_method,
                         'customer_name' => $customer_name,
                         'customer_number' => $customer_number,
-                        'callback_destination' => $callback_destination
+                        'callback_destination' => $callback_destination,
+                        'originate_tech' => 'sip' // support techs -> sip, telnum
                     ], $user['username'] ?? 'support');
                     // call init failed!
                     custom_log('CallManager Output: ' . json_encode($result));

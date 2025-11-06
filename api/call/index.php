@@ -71,7 +71,7 @@ try {
 switch ($_POST['action']) {
     case 'make_call':
         $data = [];
-        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'callback_method', 'callback_destination', 'customer_name', 'customer_number'];
+        $cols = ['id_user', 'id_plan', 'calledstation', 'callerid', 'starttime', 'sessiontime', 'sessionbill', 'buycost', 'uniqueid', 'callback_method', 'callback_destination', 'customer_name', 'customer_number', 'originate_tech'];
         foreach ($cols as $col) {
             $data[$col] = sanitizeText($_POST[$col] ?? null);
             if (!$data[$col] || empty($data[$col])) {
@@ -86,10 +86,18 @@ switch ($_POST['action']) {
         $targetNumber = $data['calledstation'];
         $customer_name = $data['customer_name'] ?: 'customer_name';
         $customer_number = $data['customer_number'] ?: 'customer_number';
-        // $callback_destination = $data['callback_destination'];
         $callback_destination = "SIP/" . ($data['callback_method'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
+        // originateTechArray
+        $originateTech = [
+            'sip' => 'SIP',
+            'telnum' => 'SIP/Telnum'
+        ];
+        if (!array_key_exists($data['originate_tech'], $originateTech)) {
+            json_error('Invalid Channel Driver!', 400);
+        }
+        $originateTech = $originateTech[$data['originate_tech']];
         // remove unwanted parts for db
-        unset($data['callback_method'], $data['callback_destination'], $data['customer_name'], $data['customer_number']);
+        unset($data['callback_method'], $data['callback_destination'], $data['customer_name'], $data['customer_number'], $data['originate_tech']);
         // new PAMI instance
         $ami = new AsteriskClient();
         // set asterisk variables
@@ -101,8 +109,7 @@ switch ($_POST['action']) {
             'CALLBACK_DESTINATION' => $callback_destination,
         ];
         // originate call
-        $tech = 'SIP';
-        $originateCall = $ami->originateCall($tech, $callerId, $callerName, $targetNumber, 's', 'playback-test', $astDBkeys);
+        $originateCall = $ami->originateCall($originateTech, $callerId, $callerName, $targetNumber, 's', 'playback-test', $astDBkeys);
         $ami->close();
         // process call output
         if ($originateCall['success']) {
