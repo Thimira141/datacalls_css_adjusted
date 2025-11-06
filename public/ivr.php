@@ -308,7 +308,7 @@ try {
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
                             <h6 class="dtmf_input">DTMF: ${callData.dtmf_input ?? 'N/A'}</h6>
                             <div class="buttons">
-                                <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
+                                <button class="btn btn-mute d-none ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
                                 <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}">End Call</button>
                             </div>
                         </div>
@@ -551,7 +551,7 @@ try {
                     </div>
                     <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input ?? 'N/A'}</h4>
                     <div class="buttons">
-                        <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
+                        <button class="btn btn-mute d-none ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
                         <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" >End Call</button>
                     </div>
                 </div>
