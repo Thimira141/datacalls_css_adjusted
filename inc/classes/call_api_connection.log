@@ -1343,3 +1343,323 @@
 [2025-11-05 22:53:48] {"success":true,"channel":"SIP\/2002-0000004b","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-11-05 17:15:07","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-05 17:15:07"}}
 [2025-11-05 22:53:48] 
 [2025-11-05 22:53:48] 200
+[2025-11-07 16:13:48] Starting Calling...
+[2025-11-07 16:13:55] {"callerName":"ldata","action":"make_call","id_user":20,"id_plan":1,"calledstation":"2002","callerid":"18005318722","starttime":"2025-11-07 16:13:48","stoptime":"2025-11-07 16:13:48","sessiontime":60,"sessionbill":"0.00","buycost":"0.00","uniqueid":"call_690dcd643ec73","callback_method":"softphone","customer_name":"jhone smith","customer_number":"2002","callback_destination":"ldata","originate_tech":"sip"}
+[2025-11-07 16:13:55] {"success":true,"output":{"success":true,"ami_response":{"response":"Success","actionid":"orig_690dcd63c3ba8","message":"Originate successfully queued"},"channel":"SIP\/2002-0000004d","error":null},"channel":"SIP\/2002-0000004d","cdr_uniqueid":"call_690dcd643ec73"}
+[2025-11-07 16:13:55] 
+[2025-11-07 16:13:55] 200
+[2025-11-07 16:13:57] Starting get call stat...
+[2025-11-07 16:13:58] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:13:58] {"success":true,"channel":"SIP\/2002-0000004d","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:13:58] 
+[2025-11-07 16:13:58] 200
+[2025-11-07 16:13:59] Starting get call stat...
+[2025-11-07 16:14:00] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:00] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:14:00] 
+[2025-11-07 16:14:00] 200
+[2025-11-07 16:14:01] Starting get call stat...
+[2025-11-07 16:14:02] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:02] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:14:02] 
+[2025-11-07 16:14:02] 200
+[2025-11-07 16:14:03] Starting get call stat...
+[2025-11-07 16:14:09] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:09] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:14:09] 
+[2025-11-07 16:14:09] 200
+[2025-11-07 16:14:09] Starting get call stat...
+[2025-11-07 16:14:11] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:11] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:14:11] 
+[2025-11-07 16:14:11] 200
+[2025-11-07 16:14:11] Starting get call stat...
+[2025-11-07 16:14:12] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:12] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]}
+[2025-11-07 16:14:12] 
+[2025-11-07 16:14:12] 200
+[2025-11-07 16:14:12] Starting get call stat...
+[2025-11-07 16:14:14] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:14] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:14] 
+[2025-11-07 16:14:14] 200
+[2025-11-07 16:14:14] Starting get call stat...
+[2025-11-07 16:14:15] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:15] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:15] 
+[2025-11-07 16:14:15] 200
+[2025-11-07 16:14:15] Starting get call stat...
+[2025-11-07 16:14:17] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:17] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:17] 
+[2025-11-07 16:14:17] 200
+[2025-11-07 16:14:17] Starting get call stat...
+[2025-11-07 16:14:18] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:18] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:18] 
+[2025-11-07 16:14:18] 200
+[2025-11-07 16:14:19] Starting get call stat...
+[2025-11-07 16:14:20] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:20] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:20] 
+[2025-11-07 16:14:20] 200
+[2025-11-07 16:14:20] Starting get call stat...
+[2025-11-07 16:14:21] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:21] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:21] 
+[2025-11-07 16:14:21] 200
+[2025-11-07 16:14:21] Starting get call stat...
+[2025-11-07 16:14:23] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:23] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:23] 
+[2025-11-07 16:14:23] 200
+[2025-11-07 16:14:23] Starting get call stat...
+[2025-11-07 16:14:24] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:24] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:24] 
+[2025-11-07 16:14:24] 200
+[2025-11-07 16:14:25] Starting get call stat...
+[2025-11-07 16:14:26] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:26] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:26] 
+[2025-11-07 16:14:26] 200
+[2025-11-07 16:14:27] Starting get call stat...
+[2025-11-07 16:14:28] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:28] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:28] 
+[2025-11-07 16:14:28] 200
+[2025-11-07 16:14:29] Starting get call stat...
+[2025-11-07 16:14:30] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:30] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:30] 
+[2025-11-07 16:14:30] 200
+[2025-11-07 16:14:31] Starting get call stat...
+[2025-11-07 16:14:32] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:32] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:32] 
+[2025-11-07 16:14:32] 200
+[2025-11-07 16:14:33] Starting get call stat...
+[2025-11-07 16:14:34] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:34] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:34] 
+[2025-11-07 16:14:34] 200
+[2025-11-07 16:14:35] Starting get call stat...
+[2025-11-07 16:14:36] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:36] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:36] 
+[2025-11-07 16:14:36] 200
+[2025-11-07 16:14:37] Starting get call stat...
+[2025-11-07 16:14:38] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:38] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:38] 
+[2025-11-07 16:14:38] 200
+[2025-11-07 16:14:39] Starting get call stat...
+[2025-11-07 16:14:40] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:40] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:40] 
+[2025-11-07 16:14:40] 200
+[2025-11-07 16:14:41] Starting get call stat...
+[2025-11-07 16:14:42] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:42] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:42] 
+[2025-11-07 16:14:42] 200
+[2025-11-07 16:14:43] Starting get call stat...
+[2025-11-07 16:14:44] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:44] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:44] 
+[2025-11-07 16:14:44] 200
+[2025-11-07 16:14:45] Starting get call stat...
+[2025-11-07 16:14:46] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:46] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:46] 
+[2025-11-07 16:14:46] 200
+[2025-11-07 16:14:47] Starting get call stat...
+[2025-11-07 16:14:48] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:48] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:48] 
+[2025-11-07 16:14:48] 200
+[2025-11-07 16:14:49] Starting get call stat...
+[2025-11-07 16:14:50] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:50] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:50] 
+[2025-11-07 16:14:50] 200
+[2025-11-07 16:14:51] Starting get call stat...
+[2025-11-07 16:14:52] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:52] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:52] 
+[2025-11-07 16:14:52] 200
+[2025-11-07 16:14:53] Starting get call stat...
+[2025-11-07 16:14:54] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:54] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:54] 
+[2025-11-07 16:14:54] 200
+[2025-11-07 16:14:55] Starting get call stat...
+[2025-11-07 16:14:56] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:56] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:56] 
+[2025-11-07 16:14:56] 200
+[2025-11-07 16:14:57] Starting get call stat...
+[2025-11-07 16:14:58] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:14:58] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:14:58] 
+[2025-11-07 16:14:58] 200
+[2025-11-07 16:14:59] Starting get call stat...
+[2025-11-07 16:15:00] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:00] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:00] 
+[2025-11-07 16:15:00] 200
+[2025-11-07 16:15:01] Starting get call stat...
+[2025-11-07 16:15:02] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:02] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:02] 
+[2025-11-07 16:15:02] 200
+[2025-11-07 16:15:03] Starting get call stat...
+[2025-11-07 16:15:07] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:07] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:07] 
+[2025-11-07 16:15:07] 200
+[2025-11-07 16:15:07] Starting get call stat...
+[2025-11-07 16:15:09] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:09] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:09] 
+[2025-11-07 16:15:09] 200
+[2025-11-07 16:15:09] Starting get call stat...
+[2025-11-07 16:15:10] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:10] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:10] 
+[2025-11-07 16:15:10] 200
+[2025-11-07 16:15:10] Starting get call stat...
+[2025-11-07 16:15:11] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:11] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:11] 
+[2025-11-07 16:15:11] 200
+[2025-11-07 16:15:12] Starting get call stat...
+[2025-11-07 16:15:13] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:13] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:13] 
+[2025-11-07 16:15:13] 200
+[2025-11-07 16:15:13] Starting get call stat...
+[2025-11-07 16:15:14] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:14] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:14] 
+[2025-11-07 16:15:14] 200
+[2025-11-07 16:15:15] Starting get call stat...
+[2025-11-07 16:15:16] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:16] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:16] 
+[2025-11-07 16:15:16] 200
+[2025-11-07 16:15:17] Starting get call stat...
+[2025-11-07 16:15:18] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:18] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:18] 
+[2025-11-07 16:15:18] 200
+[2025-11-07 16:15:19] Starting get call stat...
+[2025-11-07 16:15:20] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:20] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:20] 
+[2025-11-07 16:15:20] 200
+[2025-11-07 16:15:21] Starting get call stat...
+[2025-11-07 16:15:22] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:22] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:22] 
+[2025-11-07 16:15:22] 200
+[2025-11-07 16:15:23] Starting get call stat...
+[2025-11-07 16:15:24] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:24] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:24] 
+[2025-11-07 16:15:24] 200
+[2025-11-07 16:15:25] Starting get call stat...
+[2025-11-07 16:15:26] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:26] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:26] 
+[2025-11-07 16:15:26] 200
+[2025-11-07 16:15:27] Starting get call stat...
+[2025-11-07 16:15:28] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:28] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:28] 
+[2025-11-07 16:15:28] 200
+[2025-11-07 16:15:29] Starting get call stat...
+[2025-11-07 16:15:30] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:30] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:30] 
+[2025-11-07 16:15:30] 200
+[2025-11-07 16:15:31] Starting get call stat...
+[2025-11-07 16:15:32] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:32] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:32] 
+[2025-11-07 16:15:32] 200
+[2025-11-07 16:15:33] Starting get call stat...
+[2025-11-07 16:15:34] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:34] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:34] 
+[2025-11-07 16:15:34] 200
+[2025-11-07 16:15:35] Starting get call stat...
+[2025-11-07 16:15:36] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:36] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:36] 
+[2025-11-07 16:15:36] 200
+[2025-11-07 16:15:37] Starting get call stat...
+[2025-11-07 16:15:38] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:38] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:38] 
+[2025-11-07 16:15:38] 200
+[2025-11-07 16:15:39] Starting get call stat...
+[2025-11-07 16:15:40] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:40] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:40] 
+[2025-11-07 16:15:40] 200
+[2025-11-07 16:15:41] Starting get call stat...
+[2025-11-07 16:15:42] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:42] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:42] 
+[2025-11-07 16:15:42] 200
+[2025-11-07 16:15:43] Starting get call stat...
+[2025-11-07 16:15:44] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:44] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:44] 
+[2025-11-07 16:15:44] 200
+[2025-11-07 16:15:45] Starting get call stat...
+[2025-11-07 16:15:46] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:46] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:46] 
+[2025-11-07 16:15:46] 200
+[2025-11-07 16:15:47] Starting get call stat...
+[2025-11-07 16:15:48] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:48] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:48] 
+[2025-11-07 16:15:48] 200
+[2025-11-07 16:15:49] Starting get call stat...
+[2025-11-07 16:15:50] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:50] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:50] 
+[2025-11-07 16:15:50] 200
+[2025-11-07 16:15:51] Starting get call stat...
+[2025-11-07 16:15:52] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:52] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:52] 
+[2025-11-07 16:15:52] 200
+[2025-11-07 16:15:53] Starting get call stat...
+[2025-11-07 16:15:54] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:54] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:54] 
+[2025-11-07 16:15:54] 200
+[2025-11-07 16:15:55] Starting get call stat...
+[2025-11-07 16:15:56] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:56] {"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:56] 
+[2025-11-07 16:15:56] 200
+[2025-11-07 16:15:57] Starting get call stat...
+[2025-11-07 16:15:58] {"callChannel":"SIP\/2002-0000004d","action":"status_call"}
+[2025-11-07 16:15:58] {"success":true,"channel":"SIP\/2002-0000004d","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}}
+[2025-11-07 16:15:58] 
+[2025-11-07 16:15:58] 200
+[2025-11-07 16:16:21] Starting Call Ending...
+[2025-11-07 16:16:23] {"action":"end_call","stoptime":"2025-11-07 16:16:21","sessiontime":153,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_690dcd643ec73","callChannel":"SIP\/2002-0000004d"}
+[2025-11-07 16:16:23] {"success":true,"output":"No such channel"}
+[2025-11-07 16:16:23] 
+[2025-11-07 16:16:23] 200
+[2025-11-07 16:16:24] Starting Call Ending...
+[2025-11-07 16:16:26] {"action":"end_call","stoptime":"2025-11-07 16:16:24","sessiontime":149503,"sessionbill":"0.00","buycost":"0.00","terminatecauseid":"1","uniqueid":"call_690b8601ecdee","callChannel":"SIP\/2002-0000004b"}
+[2025-11-07 16:16:26] {"success":true,"output":"No such channel"}
+[2025-11-07 16:16:26] 
+[2025-11-07 16:16:26] 200

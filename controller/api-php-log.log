@@ -6389,3 +6389,404 @@
 [2025-11-05 23:12:22]MagnusBilling initialized successfully
 [2025-11-05 23:12:22]Processing action: get_dtmf, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata"}
 [2025-11-05 23:12:22]Fetched 125 DTMF inputs for user_id: 7
+[2025-11-07 16:12:19]Starting api.php
+[2025-11-07 16:12:19]Database connection successful
+[2025-11-07 16:12:19]MagnusBilling initialized successfully
+[2025-11-07 16:12:19]Processing action: get_institutions, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:12:19]Fetched 1 institutions for user_id: 7
+[2025-11-07 16:12:19]Starting api.php
+[2025-11-07 16:12:19]Database connection successful
+[2025-11-07 16:12:19]MagnusBilling initialized successfully
+[2025-11-07 16:12:19]Processing action: get_contacts, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:12:19]Fetched 3 contacts for user_id: 7
+[2025-11-07 16:12:19]Starting api.php
+[2025-11-07 16:12:19]Database connection successful
+[2025-11-07 16:12:19]MagnusBilling initialized successfully
+[2025-11-07 16:12:19]Processing action: get_merchants, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:12:19]Fetched 1 merchants for user_id: 7
+[2025-11-07 16:12:19]Starting api.php
+[2025-11-07 16:12:19]Database connection successful
+[2025-11-07 16:12:19]MagnusBilling initialized successfully
+[2025-11-07 16:12:19]Processing action: get_ivr_profiles, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:12:19]Fetched 0 IVR profiles for user_id: 7
+[2025-11-07 16:13:17]Starting api.php
+[2025-11-07 16:13:17]Database connection successful
+[2025-11-07 16:13:17]MagnusBilling initialized successfully
+[2025-11-07 16:13:17]Processing action: initiate_call, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:13:55]CallManager Output: {"success":true,"response":{"success":true,"output":{"success":true,"ami_response":{"response":"Success","actionid":"orig_690dcd63c3ba8","message":"Originate successfully queued"},"channel":"SIP\/2002-0000004d","error":null},"channel":"SIP\/2002-0000004d","cdr_uniqueid":"call_690dcd643ec73"},"error":null}
+[2025-11-07 16:13:55]CallManager Output(2): {"success":true,"output":{"success":true,"ami_response":{"response":"Success","actionid":"orig_690dcd63c3ba8","message":"Originate successfully queued"},"channel":"SIP\/2002-0000004d","error":null},"channel":"SIP\/2002-0000004d","cdr_uniqueid":"call_690dcd643ec73"}
+[2025-11-07 16:13:55]Initiated call: call_id=294, magnus_call_id=call_690dcd643ec73, customer_number=2002, callback_method=softphone
+[2025-11-07 16:13:57]Starting api.php
+[2025-11-07 16:13:57]Database connection successful
+[2025-11-07 16:13:57]MagnusBilling initialized successfully
+[2025-11-07 16:13:57]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:13:58]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"ringing","status_detail":"Call is ringing at the destination (not yet answered)","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:13:59]Starting api.php
+[2025-11-07 16:13:59]Database connection successful
+[2025-11-07 16:13:59]MagnusBilling initialized successfully
+[2025-11-07 16:13:59]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:00]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:14:01]Starting api.php
+[2025-11-07 16:14:01]Database connection successful
+[2025-11-07 16:14:01]MagnusBilling initialized successfully
+[2025-11-07 16:14:01]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:02]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:14:02]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:03]Starting api.php
+[2025-11-07 16:14:03]Database connection successful
+[2025-11-07 16:14:03]MagnusBilling initialized successfully
+[2025-11-07 16:14:03]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:09]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:14:09]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:09]Starting api.php
+[2025-11-07 16:14:09]Database connection successful
+[2025-11-07 16:14:09]MagnusBilling initialized successfully
+[2025-11-07 16:14:09]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:11]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:14:11]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:11]Starting api.php
+[2025-11-07 16:14:11]Database connection successful
+[2025-11-07 16:14:11]MagnusBilling initialized successfully
+[2025-11-07 16:14:11]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:12]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":null,"dtmf_updated_at":null,"dtmf_array":[false]},"error":null}
+[2025-11-07 16:14:12]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:12]Starting api.php
+[2025-11-07 16:14:12]Database connection successful
+[2025-11-07 16:14:12]MagnusBilling initialized successfully
+[2025-11-07 16:14:12]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:14]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:14]Starting api.php
+[2025-11-07 16:14:14]Database connection successful
+[2025-11-07 16:14:14]MagnusBilling initialized successfully
+[2025-11-07 16:14:14]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:15]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:15]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:15]Starting api.php
+[2025-11-07 16:14:15]Database connection successful
+[2025-11-07 16:14:15]MagnusBilling initialized successfully
+[2025-11-07 16:14:15]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:17]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:17]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:17]Starting api.php
+[2025-11-07 16:14:17]Database connection successful
+[2025-11-07 16:14:17]MagnusBilling initialized successfully
+[2025-11-07 16:14:17]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:18]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:18]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:18]Starting api.php
+[2025-11-07 16:14:18]Database connection successful
+[2025-11-07 16:14:18]MagnusBilling initialized successfully
+[2025-11-07 16:14:18]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:20]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:20]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:20]Starting api.php
+[2025-11-07 16:14:20]Database connection successful
+[2025-11-07 16:14:20]MagnusBilling initialized successfully
+[2025-11-07 16:14:20]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:21]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:21]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:21]Starting api.php
+[2025-11-07 16:14:21]Database connection successful
+[2025-11-07 16:14:21]MagnusBilling initialized successfully
+[2025-11-07 16:14:21]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:23]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:23]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:23]Starting api.php
+[2025-11-07 16:14:23]Database connection successful
+[2025-11-07 16:14:23]MagnusBilling initialized successfully
+[2025-11-07 16:14:23]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:24]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:24]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:25]Starting api.php
+[2025-11-07 16:14:25]Database connection successful
+[2025-11-07 16:14:25]MagnusBilling initialized successfully
+[2025-11-07 16:14:25]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:26]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:26]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:27]Starting api.php
+[2025-11-07 16:14:27]Database connection successful
+[2025-11-07 16:14:27]MagnusBilling initialized successfully
+[2025-11-07 16:14:27]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:28]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:28]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:29]Starting api.php
+[2025-11-07 16:14:29]Database connection successful
+[2025-11-07 16:14:29]MagnusBilling initialized successfully
+[2025-11-07 16:14:29]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:30]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:30]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:31]Starting api.php
+[2025-11-07 16:14:31]Database connection successful
+[2025-11-07 16:14:31]MagnusBilling initialized successfully
+[2025-11-07 16:14:31]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:32]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:32]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:33]Starting api.php
+[2025-11-07 16:14:33]Database connection successful
+[2025-11-07 16:14:33]MagnusBilling initialized successfully
+[2025-11-07 16:14:33]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:34]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:34]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:35]Starting api.php
+[2025-11-07 16:14:35]Database connection successful
+[2025-11-07 16:14:35]MagnusBilling initialized successfully
+[2025-11-07 16:14:35]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:36]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:36]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:37]Starting api.php
+[2025-11-07 16:14:37]Database connection successful
+[2025-11-07 16:14:37]MagnusBilling initialized successfully
+[2025-11-07 16:14:37]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:38]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:38]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:39]Starting api.php
+[2025-11-07 16:14:39]Database connection successful
+[2025-11-07 16:14:39]MagnusBilling initialized successfully
+[2025-11-07 16:14:39]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:40]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:40]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:41]Starting api.php
+[2025-11-07 16:14:41]Database connection successful
+[2025-11-07 16:14:41]MagnusBilling initialized successfully
+[2025-11-07 16:14:41]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:42]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:42]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:43]Starting api.php
+[2025-11-07 16:14:43]Database connection successful
+[2025-11-07 16:14:43]MagnusBilling initialized successfully
+[2025-11-07 16:14:43]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:44]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:44]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:45]Starting api.php
+[2025-11-07 16:14:45]Database connection successful
+[2025-11-07 16:14:45]MagnusBilling initialized successfully
+[2025-11-07 16:14:45]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:46]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:46]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:47]Starting api.php
+[2025-11-07 16:14:47]Database connection successful
+[2025-11-07 16:14:47]MagnusBilling initialized successfully
+[2025-11-07 16:14:47]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:48]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:48]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:49]Starting api.php
+[2025-11-07 16:14:49]Database connection successful
+[2025-11-07 16:14:49]MagnusBilling initialized successfully
+[2025-11-07 16:14:49]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:50]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:50]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:51]Starting api.php
+[2025-11-07 16:14:51]Database connection successful
+[2025-11-07 16:14:51]MagnusBilling initialized successfully
+[2025-11-07 16:14:51]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:52]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:52]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:53]Starting api.php
+[2025-11-07 16:14:53]Database connection successful
+[2025-11-07 16:14:53]MagnusBilling initialized successfully
+[2025-11-07 16:14:53]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:54]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:54]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:55]Starting api.php
+[2025-11-07 16:14:55]Database connection successful
+[2025-11-07 16:14:55]MagnusBilling initialized successfully
+[2025-11-07 16:14:55]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:56]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:56]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:57]Starting api.php
+[2025-11-07 16:14:57]Database connection successful
+[2025-11-07 16:14:57]MagnusBilling initialized successfully
+[2025-11-07 16:14:57]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:14:58]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:14:58]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:14:59]Starting api.php
+[2025-11-07 16:14:59]Database connection successful
+[2025-11-07 16:14:59]MagnusBilling initialized successfully
+[2025-11-07 16:14:59]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:00]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:00]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:01]Starting api.php
+[2025-11-07 16:15:01]Database connection successful
+[2025-11-07 16:15:01]MagnusBilling initialized successfully
+[2025-11-07 16:15:01]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:02]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:02]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:03]Starting api.php
+[2025-11-07 16:15:03]Database connection successful
+[2025-11-07 16:15:03]MagnusBilling initialized successfully
+[2025-11-07 16:15:03]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:07]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:07]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:07]Starting api.php
+[2025-11-07 16:15:07]Database connection successful
+[2025-11-07 16:15:07]MagnusBilling initialized successfully
+[2025-11-07 16:15:07]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:09]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:09]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:09]Starting api.php
+[2025-11-07 16:15:09]Database connection successful
+[2025-11-07 16:15:09]MagnusBilling initialized successfully
+[2025-11-07 16:15:09]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:10]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:10]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:10]Starting api.php
+[2025-11-07 16:15:10]Database connection successful
+[2025-11-07 16:15:10]MagnusBilling initialized successfully
+[2025-11-07 16:15:10]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:11]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:11]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:11]Starting api.php
+[2025-11-07 16:15:11]Database connection successful
+[2025-11-07 16:15:11]MagnusBilling initialized successfully
+[2025-11-07 16:15:11]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:13]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:13]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:13]Starting api.php
+[2025-11-07 16:15:13]Database connection successful
+[2025-11-07 16:15:13]MagnusBilling initialized successfully
+[2025-11-07 16:15:13]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:14]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:14]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:15]Starting api.php
+[2025-11-07 16:15:15]Database connection successful
+[2025-11-07 16:15:15]MagnusBilling initialized successfully
+[2025-11-07 16:15:15]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:16]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:16]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:17]Starting api.php
+[2025-11-07 16:15:17]Database connection successful
+[2025-11-07 16:15:17]MagnusBilling initialized successfully
+[2025-11-07 16:15:17]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:18]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:18]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:19]Starting api.php
+[2025-11-07 16:15:19]Database connection successful
+[2025-11-07 16:15:19]MagnusBilling initialized successfully
+[2025-11-07 16:15:19]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:20]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:20]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:21]Starting api.php
+[2025-11-07 16:15:21]Database connection successful
+[2025-11-07 16:15:21]MagnusBilling initialized successfully
+[2025-11-07 16:15:21]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:22]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:22]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:23]Starting api.php
+[2025-11-07 16:15:23]Database connection successful
+[2025-11-07 16:15:23]MagnusBilling initialized successfully
+[2025-11-07 16:15:23]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:24]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:24]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:25]Starting api.php
+[2025-11-07 16:15:25]Database connection successful
+[2025-11-07 16:15:25]MagnusBilling initialized successfully
+[2025-11-07 16:15:25]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:26]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:26]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:27]Starting api.php
+[2025-11-07 16:15:27]Database connection successful
+[2025-11-07 16:15:27]MagnusBilling initialized successfully
+[2025-11-07 16:15:27]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:28]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:28]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:29]Starting api.php
+[2025-11-07 16:15:29]Database connection successful
+[2025-11-07 16:15:29]MagnusBilling initialized successfully
+[2025-11-07 16:15:29]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:30]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:30]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:31]Starting api.php
+[2025-11-07 16:15:31]Database connection successful
+[2025-11-07 16:15:31]MagnusBilling initialized successfully
+[2025-11-07 16:15:31]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:32]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:32]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:33]Starting api.php
+[2025-11-07 16:15:33]Database connection successful
+[2025-11-07 16:15:33]MagnusBilling initialized successfully
+[2025-11-07 16:15:33]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:34]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:34]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:35]Starting api.php
+[2025-11-07 16:15:35]Database connection successful
+[2025-11-07 16:15:35]MagnusBilling initialized successfully
+[2025-11-07 16:15:35]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:36]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:36]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:37]Starting api.php
+[2025-11-07 16:15:37]Database connection successful
+[2025-11-07 16:15:37]MagnusBilling initialized successfully
+[2025-11-07 16:15:37]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:38]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:38]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:39]Starting api.php
+[2025-11-07 16:15:39]Database connection successful
+[2025-11-07 16:15:39]MagnusBilling initialized successfully
+[2025-11-07 16:15:39]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:40]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:40]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:41]Starting api.php
+[2025-11-07 16:15:41]Database connection successful
+[2025-11-07 16:15:41]MagnusBilling initialized successfully
+[2025-11-07 16:15:41]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:42]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:42]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:43]Starting api.php
+[2025-11-07 16:15:43]Database connection successful
+[2025-11-07 16:15:43]MagnusBilling initialized successfully
+[2025-11-07 16:15:43]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:44]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:44]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:45]Starting api.php
+[2025-11-07 16:15:45]Database connection successful
+[2025-11-07 16:15:45]MagnusBilling initialized successfully
+[2025-11-07 16:15:45]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:46]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:46]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:47]Starting api.php
+[2025-11-07 16:15:47]Database connection successful
+[2025-11-07 16:15:47]MagnusBilling initialized successfully
+[2025-11-07 16:15:47]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:48]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:48]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:49]Starting api.php
+[2025-11-07 16:15:49]Database connection successful
+[2025-11-07 16:15:49]MagnusBilling initialized successfully
+[2025-11-07 16:15:49]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:50]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:50]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:51]Starting api.php
+[2025-11-07 16:15:51]Database connection successful
+[2025-11-07 16:15:51]MagnusBilling initialized successfully
+[2025-11-07 16:15:51]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:52]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:52]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:53]Starting api.php
+[2025-11-07 16:15:53]Database connection successful
+[2025-11-07 16:15:53]MagnusBilling initialized successfully
+[2025-11-07 16:15:53]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:54]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:54]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:55]Starting api.php
+[2025-11-07 16:15:55]Database connection successful
+[2025-11-07 16:15:55]MagnusBilling initialized successfully
+[2025-11-07 16:15:55]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:56]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"up","status_detail":"Call is active and answered - media is flowing","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:15:56]Failed to update DTMF input and Call Status into <calls> table
+[2025-11-07 16:15:57]Starting api.php
+[2025-11-07 16:15:57]Database connection successful
+[2025-11-07 16:15:57]MagnusBilling initialized successfully
+[2025-11-07 16:15:57]Processing action: get_call_status, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:15:58]Raw Call Stat: {"success":true,"response":{"success":true,"channel":"SIP\/2002-0000004d","status":"ended","status_detail":"Channel no longer exists","dtmf_input":"2","dtmf_updated_at":"2025-11-07 10:44:10","dtmf_array":{"dtmf_input":"2","updated_at":"2025-11-07 10:44:10"}},"error":null}
+[2025-11-07 16:16:20]Starting api.php
+[2025-11-07 16:16:21]Database connection successful
+[2025-11-07 16:16:21]MagnusBilling initialized successfully
+[2025-11-07 16:16:21]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:16:23]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error":null}
+[2025-11-07 16:16:23]Ended call: call_id=294, callChannel=SIP/2002-0000004d, CDR Uniqueid=call_690dcd643ec73
+[2025-11-07 16:16:24]Starting api.php
+[2025-11-07 16:16:24]Database connection successful
+[2025-11-07 16:16:24]MagnusBilling initialized successfully
+[2025-11-07 16:16:24]Processing action: end_call, User ID: 7, Session data: {"csrf_token":"9e567ecbe14387147011fe1fdd28386c3ac43e919e0423d2bebb7fcb6521a7cf","user_id":7,"username":"ldata","magnus_user_id":21}
+[2025-11-07 16:16:26]CallManager Output: {"success":true,"response":{"success":true,"output":"No such channel"},"error":null}
+[2025-11-07 16:16:26]Ended call: call_id=293, callChannel=SIP/2002-0000004b, CDR Uniqueid=call_690b8601ecdee
