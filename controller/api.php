@@ -681,19 +681,19 @@ switch ($action) {
             // }
 
             $tts_script = "Hello, this is $institution_name calling for $customer_name regarding a security matter with your account. We’ve detected a recent transaction of $$amount at $merchant_name that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.";
-            // google tts api TODO: disable the google tts for debug process
-            // $googleTTS = new GoogleTTSService;
-            // $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
+            // google tts api // NOTE: disable the google tts for debug process
+            $googleTTS = new GoogleTTSService;
+            $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
             try {
-                // $synthesize = $googleTTS->synthesize($ssml_script);
-                if (/*$synthesize*/true) {
-                    // $tts_audio_url = $googleTTS->getFileURL();
-                    $tts_audio_url = 'http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3';
-                    // $tts_audio_path = $googleTTS->getFilePath();
-                    // custom_log("tts url: $tts_audio_url\n tts path: $tts_audio_path");
-                    $tts_audio_path = 'D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3';
+                $synthesize = $googleTTS->synthesize($ssml_script);
+                if ($synthesize) {
+                    $tts_audio_url = $googleTTS->getFileURL();
+                    // $tts_audio_url = 'http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
+                    $tts_audio_path = $googleTTS->getFilePath();
+                    custom_log("tts url: $tts_audio_url\n tts path: $tts_audio_path");
+                    // $tts_audio_path = 'D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
                     // close the google tts
-                    // $googleTTS->close();
+                    $googleTTS->close();
                     // call data
                     $callData = [
                         'destination' => 'custom-ivr-call,s,1',
