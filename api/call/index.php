@@ -86,66 +86,184 @@ switch ($_POST['action']) {
         $targetNumber = $data['calledstation'];
         $customer_name = $data['customer_name'] ?: 'customer_name';
         $customer_number = $data['customer_number'] ?: 'customer_number';
-        $callback_destination = "SIP/" . ($data['callback_method'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
+        // $callback_destination = "SIP/" . ($data['callback_method'] == "softphone" ? "" : "Telnum/") . $data['callback_destination'];
+        $callback_destination = $data['callback_destination'];
         // originateTechArray
-        $originateTech = [
+        $originateTechs = [
             'sip' => 'SIP',
             'telnum' => 'SIP/Telnum'
         ];
-        if (!array_key_exists($data['originate_tech'], $originateTech)) {
+        if (!array_key_exists($data['originate_tech'], $originateTechs)) {
             json_error('Invalid Channel Driver!', 400);
         }
-        $originateTech = $originateTech[$data['originate_tech']];
+        $originateTechIvrConfirm = $originateTechs[$data['originate_tech']];
+        $originateTechSupportWait = $data['callback_method'] == 'softphone' ? 'SIP' : 'SIP/Telnum';
         // remove unwanted parts for db
         unset($data['callback_method'], $data['callback_destination'], $data['customer_name'], $data['customer_number'], $data['originate_tech']);
         // new PAMI instance
-        $ami = new AsteriskClient();
-        // set asterisk variables
-        $astDBkeys = [
-            'CID' => $callerId,
-            'CNAME' => $callerName,
-            'CUSTOMER_NUM' => $customer_number,
-            'CUSTOMER_NAME' => $customer_name,
-            'CALLBACK_DESTINATION' => $callback_destination,
-        ];
-        // originate call
-        $originateCall = $ami->originateCall($originateTech, $callerId, $callerName, $targetNumber, 's', 'playback-test', $astDBkeys);
-        $ami->close();
-        // process call output
-        if ($originateCall['success']) {
-            // capture channel and send it back as response
-            $channel = $originateCall['channel']??'NULL';
-            // db CDR insert
-            $db_output = cdr_create_record($pdo, $data);
-            if (!$db_output['success']) {
-                // CDR db failed, then cancel the call
-                $call_end = call_end($channel);
-                $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
-                $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
-                json_error(
-                    $message
-                );
+        try {
+            //code...
+            $ami = new AsteriskClient();
+            // set asterisk variables
+            // TODO: run and test the code
+            // originate call via new function
+            $originateTwoLegConditionalCall = $ami->twoLegConditionalCall(
+                $originateTechSupportWait,
+                $customer_number,
+                $customer_name,
+                $callback_destination,
+                's',
+                'support-wait',
+                [],
+                $originateTechIvrConfirm,
+                $callerId,
+                $callerName,
+                $targetNumber,
+                's',
+                'ivr-confirm',
+                []
+            );
+            if ($originateTwoLegConditionalCall['success']) {
+                $channel = $originateTwoLegConditionalCall['confirm']['channel'] ?? NULL;
+                $db_output = cdr_create_record($pdo, $data);
+                if (!$db_output['success']) {
+                    // CDR db failed, then cancel the call
+                    $call_end = call_end($channel);
+                    $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
+                    $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
+                    json_error($message);
+                }
+                // send result
+                echo json_encode([
+                    'success' => true,
+                    'output' => $originateTwoLegConditionalCall,
+                    'channel' => $channel,
+                    'channels_array' => $originateTwoLegConditionalCall['channels_array'],
+                    'cdr_uniqueid' => $data['uniqueid']
+                ]);
+            } else {
+                http_response_code(500);
+                echo json_encode([
+                    'success' => false,
+                    'output' => $originateTwoLegConditionalCall,
+                    'error' => '$originateTwoLegConditionalCall->failed'
+                ]);
             }
-            // send result
-            echo json_encode([
-                'success' => true,
-                'output' => $originateCall,
-                'channel' => $channel,
-                'cdr_uniqueid' => $data['uniqueid']
-            ]);
-        } else {
-            http_response_code(503);
+            // ami close
+            $ami->close();
+        } catch (\Throwable $th) {
+            http_response_code(500);
             echo json_encode([
                 'success' => false,
-                'output' => $originateCall,
+                'output' => $th->__tostring(),
+                'error' => $th->getMessage()
             ]);
+        }
+        // $astDBkeys = [
+        //     // 'CID' => $callerId,
+        //     // 'CNAME' => $callerName,
+        //     // 'CUSTOMER_NUM' => $customer_number,
+        //     // 'CUSTOMER_NAME' => $customer_name,
+        //     // 'CALLBACK_DESTINATION' => $callback_destination,
+        // ];
+        // originate call for customer support
+        // $originateSupportWait = $ami->originateCall($originateTechSupportWait, $customer_number, $customer_name, $callback_destination, 's', 'support-wait');
+        // process call output
+
+
+        // if ($originateSupportWait['success']) {
+        //     // capture channel and send it back as response
+        //     $channelWait = $originateSupportWait['channel'] ?? NULL;
+        //     if ($channelWait) {
+        //         // originate call for customer
+        //         $originateIvrConfirm = $ami->originateCall($originateTechIvrConfirm, $callerId, $callerName, $targetNumber, 's', 'ivr-confirm', ['SUPPORT_CHANNEL' => $channel]);
+        //         if ($originateIvrConfirm['success']) {
+        //             $channelConfirm = $originateIvrConfirm['channel'] ?? NULL;
+        //             // db CDR insert
+        //             $db_output = cdr_create_record($pdo, $data);
+        //             if (!$db_output['success']) {
+        //                 // CDR db failed, then cancel the call
+        //                 $call_end = call_end($channel);
+        //                 $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
+        //                 $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
+        //                 json_error($message);
+        //             }
+        //             // send result
+        //             echo json_encode([
+        //                 'success' => true,
+        //                 'output' => $originateIvrConfirm,
+        //                 'channel' => $channelConfirm,
+        //                 'cdr_uniqueid' => $data['uniqueid']
+        //             ]);
+        //         } else {
+        //             // todo: hangup the SupportWait channel
+        //             http_response_code(503);
+        //             echo json_encode([
+        //                 'success' => false,
+        //                 'output' => $originateIvrConfirm,
+        //                 'error' => '$originateIvrConfirm->Failed!'
+        //             ]);
+        //         }
+        //     } else {
+        //         http_response_code(503);
+        //         echo json_encode([
+        //             'success' => false,
+        //             'output' => $originateSupportWait,
+        //             'error' => '$originateSupportWait->success, channel capture failed!'
+        //         ]);
+        //     }
+        // todo: clear unsuccessful calls that originate in this session
+        // // ami close
+        // $ami->close();
+        // } else {
+        //     http_response_code(503);
+        //     echo json_encode([
+        //         'success' => false,
+        //         'output' => $originateSupportWait,
+        //         'error' => '$originateSupportWait->Failed!'
+        //     ]);
+        // }
+        break;
+
+    case 'bridge_permit':
+        $data = [];
+        $cols = ['callChannel', 'supportChannel', 'permit'];
+        foreach ($cols as $col) {
+            $data[$col] = sanitizeText($_POST[$col] ?? null);
+            if (!$data[$col] || empty($data[$col])) {
+                json_error('Missing required field(s)');
+            }
+        }
+
+        $callChannel = str_replace('\\/', '/', $data['callChannel']);
+        $supportChannel = str_replace('\\/', '/', $data['supportChannel']);
+
+        $ami = new AsteriskClient();
+
+        // Optional: check both channels are still alive
+        $statusA = $ami->getChannelStatus($callChannel);
+        $statusB = $ami->getChannelStatus($supportChannel);
+
+        if ($statusA === 'ended' || $statusB === 'ended') {
+            $ami->close();
+            json_error("One or both channels are no longer active");
+        }
+
+        // Perform AMI Bridge
+        $bridgeResult = $ami->bridgeChannels($callChannel, $supportChannel);
+        $ami->close();
+
+        if ((bool) $bridgeResult['success']) {
+            echo json_encode(['success' => true, 'output' => $bridgeResult]);
+        } else {
+            json_error("Bridge failed: " . $bridgeResult['output'], 500);
         }
         break;
 
     case 'end_call':
         // decode and validate url inputs
         $data = [];
-        $cols = ['sessiontime', 'sessionbill', 'buycost', 'terminatecauseid', 'uniqueid', 'callChannel'];
+        $cols = ['sessiontime', 'sessionbill', 'buycost', 'terminatecauseid', 'uniqueid', 'callChannel', 'supportChannel'];
         foreach ($cols as $col) {
             $data[$col] = sanitizeText($_POST[$col] ?? null);
             if (!$data[$col] || empty($data[$col])) {
@@ -153,7 +271,8 @@ switch ($_POST['action']) {
             }
         }
         $callChannel = $data['callChannel'];
-        unset($data['callChannel']);
+        $supportChannel = $data['supportChannel'];
+        unset($data['callChannel'], $data['supportChannel']);
         // shell execute
         // $call_end = call_end($callChannel);
         // // check execution
@@ -162,11 +281,17 @@ switch ($_POST['action']) {
         // }
         // use AMI interface for call hangup
         $ami = new AsteriskClient();
-        $status = $ami->getChannelStatus($callChannel);
-        $hangup = $ami->hangupChannel($callChannel);
+        $collector = [];
+        foreach (['callChannel' => $callChannel, 'supportChannel' => $supportChannel] as $key => $channel) {
+            $status = $ami->getChannelStatus($channel);
+            $hangup = $ami->hangupChannel($channel);
+            if ($hangup->getKey('Response') != 'Success' && $status != 'ended') {
+                $collector[] = "$key - Response: {$hangup->getKey('Response')} | Message: {$hangup->getKey('Message')}";
+            }
+        }
         $ami->close();
-        if ($hangup->getKey('Response') != 'Success' && $status != 'ended') {
-            json_error("Response: {$hangup->getKey('Response')} | Message: {$hangup->getKey('Message')}");
+        if (!empty($collector)) {
+            json_error(implode(", ", $collector));
         }
         // db update
         $db_output = cdr_update_data($pdo, $data);
@@ -226,3 +351,6 @@ switch ($_POST['action']) {
         json_error("Invalid Action!", 403);
         break;
 }
+
+$pdo = null;
+exit;

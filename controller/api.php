@@ -660,7 +660,7 @@ switch ($action) {
 
             // $callback_destination = $callback_method === 'softphone' ? $user['username'] : $callback_number;
             // get SIP user field value for call back destination when user use softphone option
-            if ($callback_method=='softphone') {
+            if ($callback_method == 'softphone') {
                 $sipUserInfo = \inc\classes\MenuAPI::getSIPUser('id', $user['sip_id']);
                 if ($sipUserInfo['response']['success'] && !empty($sipUserInfo['response']['result'])) {
                     $callback_destination = $sipUserInfo['response']['result']['SIP user'];
@@ -682,18 +682,19 @@ switch ($action) {
 
             $tts_script = "Hello, this is $institution_name calling for $customer_name regarding a security matter with your account. We’ve detected a recent transaction of $$amount at $merchant_name that may be unauthorized. If you recognize and authorized this transaction, please press 1. If you did not authorize this transaction or would like to speak with a representative, please press 2 now. To repeat this message, press 3.";
             // google tts api // NOTE: disable the google tts for debug process
-            $googleTTS = new GoogleTTSService;
-            $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
+            // $googleTTS = new GoogleTTSService;
+            // $ssml_script = $googleTTS->buildSSML($institution_name, $customer_name, $amount, $merchant_name);
             try {
-                $synthesize = $googleTTS->synthesize($ssml_script);
+                // $synthesize = $googleTTS->synthesize($ssml_script);
+                $synthesize = true; // NOTE: enable tts for debug process
                 if ($synthesize) {
-                    $tts_audio_url = $googleTTS->getFileURL();
-                    // $tts_audio_url = 'http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
-                    $tts_audio_path = $googleTTS->getFilePath();
-                    custom_log("tts url: $tts_audio_url\n tts path: $tts_audio_path");
-                    // $tts_audio_path = 'D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
+                    // $tts_audio_url = $googleTTS->getFileURL();
+                    $tts_audio_url = 'http://localhost/projects/datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
+                    // $tts_audio_path = $googleTTS->getFilePath();
+                    // custom_log("tts url: $tts_audio_url\n tts path: $tts_audio_path");
+                    $tts_audio_path = 'D:\xampp\htdocs\projects\datacalls_css_adjusted/storage/audio/tts__2025_10_14_02_30_22__68ed686612019.mp3'; // NOTE: used in debug process
                     // close the google tts
-                    $googleTTS->close();
+                    // $googleTTS->close();
                     // call data
                     $callData = [
                         'destination' => 'custom-ivr-call,s,1',
@@ -758,15 +759,15 @@ switch ($action) {
                     $result = $result['response'];
                     $callChannel = $result['channel'] ?? null;
                     custom_log('CallManager Output(2): ' . json_encode($result));
-                    if (!$callChannel || empty($callChannel)) {
+                    if ((!$callChannel || empty($callChannel)) && empty($result['channels_array']??[])) {
                         // when empty call channel got
-                        custom_log("Failed to fetch call channel!");
-                        echo json_encode(['success' => false, 'message' => "Failed to fetch call channel!"]);
+                        custom_log("Failed to fetch call channel(s)!");
+                        echo json_encode(['success' => false, 'message' => "Failed to fetch call channel(s)!"]);
                         break;
                     }
                     // handle cdr id
                     $cdr_uniqueid = $result['cdr_uniqueid'] ?? null;
-                    if (!$callChannel || empty($callChannel)) {
+                    if (!$cdr_uniqueid || empty($cdr_uniqueid)) {
                         // when empty call channel got
                         custom_log("Failed to fetch CDR uniqueid!");
                         echo json_encode(['success' => false, 'message' => "Failed to fetch CDR uniqueid!"]);
@@ -794,10 +795,10 @@ switch ($action) {
 
                     if ((bool) $call_id) {
                         custom_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid]);
+                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array'=>$result['channels_array']]);
                     } else {
                         custom_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid]);
+                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array'=>$result['channels_array']]);
                     }
                 } else {
                     custom_log("TTS synthesize failed ");
@@ -830,6 +831,7 @@ switch ($action) {
         $rules = [
             'call_id' => 'required|integer|min:1',
             'callChannel' => 'required|string',
+            'supportChannel' => 'required|string',
             'cdr_uniqueid' => 'required|string'
         ];
         $messages = [
@@ -839,7 +841,7 @@ switch ($action) {
         ];
 
         $validate = $validator->validate($_POST, $rules, $messages);
-        $validate->setAliases(['call_id' => 'Call ID', 'callChannel' => 'Call Channel', 'cdr_uniqueid' => 'CDR Uniqueid']);
+        $validate->setAliases(['call_id' => 'Call ID', 'callChannel' => 'Call Channel', 'cdr_uniqueid' => 'CDR Uniqueid', 'supportChannel'=>'Support Agent call channel']);
 
         if (!$validate->passes()) {
             echo json_encode([
@@ -851,6 +853,7 @@ switch ($action) {
 
         $call_id = $validate->getValue('call_id');
         $callChannel = $validate->getValue('callChannel');
+        $supportChannel = $validate->getValue('supportChannel');
         $cdr_uniqueid = $validate->getValue('cdr_uniqueid');
 
         try {
@@ -877,7 +880,8 @@ switch ($action) {
                 'buycost' => '0.00',
                 'terminatecauseid' => '1',
                 'uniqueid' => $cdr_uniqueid,
-                'callChannel' => $callChannel
+                'callChannel' => $callChannel,
+                'supportChannel' => $supportChannel
             ]);
             // check result success
             custom_log('CallManager Output: ' . json_encode($result));
@@ -942,6 +946,7 @@ switch ($action) {
         $rules = [
             'call_id' => 'required|integer|min:1',
             'callChannel' => 'required|string',
+            // 'supportChannel' => 'required|string',
             'cdr_uniqueid' => 'required|string'
         ];
         $messages = [
@@ -952,6 +957,7 @@ switch ($action) {
 
         $validate = $validator->validate($_POST, $rules, $messages);
         $validate->setAlias('callChannel', 'Call Channel');
+        // $validate->setAlias('supportChannel', 'Support agent Call Channel');
 
         if (!$validate->passes()) {
             echo json_encode([
@@ -962,6 +968,7 @@ switch ($action) {
         }
 
         $callChannel = $validate->getValue('callChannel');
+        // $supportChannel = $validate->getValue('supportChannel');
         // callManager class
         $result = \inc\classes\CallManager::getCallStat($callChannel);
         custom_log("Raw Call Stat: " . json_encode($result));
@@ -975,10 +982,12 @@ switch ($action) {
         try {
             $callsUpdate = DB::table('calls')
                 ->where('id', $validate->getValue('call_id'))->update([
-                'dtmf_input' => $result['response']['dtmf_input'],
-                'call_status' => $result['response']['status']
-            ]);
-            if (!$callsUpdate) {custom_log("Failed to update DTMF input and Call Status into <calls> table");}
+                        'dtmf_input' => $result['response']['dtmf_input'],
+                        'call_status' => $result['response']['status']
+                    ]);
+            if (!$callsUpdate) {
+                custom_log("Failed to update DTMF input and Call Status into <calls> table");
+            }
             //code...
         } catch (\Throwable $th) {
             custom_log("Failed to update DTMF input and Call Status into <calls> table\n" . $th->getMessage());
@@ -1144,31 +1153,18 @@ switch ($action) {
         break;
 
     case 'toggle_mute':
-        // NOTE: remove with caution, code block no longer used
-        if (!$magnusBilling) {
-            echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
-            custom_log("toggle_mute: MagnusBilling not initialized");
-            break;
-        }
         // Validate input
         $validator = new Validator;
 
         $rules = [
-            'call_id' => 'required|integer|min:1',
-            'mute' => 'required|boolean'
+            'callChannel' => 'required|string',
+            'supportChannel' => 'required|string',
         ];
 
-        $messages = [
-            'required' => ':attribute is required',
-            'integer' => ':attribute must be a valid integer',
-            'boolean' => ':attribute must be true or false',
-            'min' => ':attribute must be at least :min'
-        ];
-
-        $validate = $validator->validate($_POST, $rules, $messages);
+        $validate = $validator->validate($_POST, $rules);
         $validate->setAliases([
-            'call_id' => 'Call ID',
-            'mute' => 'Mute Flag'
+            'callChannel' => 'Call Channel',
+            'supportChannel' => 'Support agent Call Channel'
         ]);
 
         if (!$validate->passes()) {
@@ -1178,62 +1174,114 @@ switch ($action) {
             ]);
             exit;
         }
-
-        $call_id = $validate->getValue('call_id');
-        $mute = $validate->getValue('mute');
-
         try {
-            $call = DB::table('calls')
-                ->select('magnus_call_id', 'callback_method', 'customer_number')
-                ->where('id', $call_id)
-                ->where('user_id', $user_id)
-                ->first();
-
-            if (!$call || !$call->magnus_call_id) {
-                echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
-                exit;
+            $callChannel = $validate->getValue('callChannel');
+            $supportChannel = $validate->getValue('supportChannel');
+            // send request to server via CallManager Class
+            $result = \inc\classes\CallManager::setCallBridge($callChannel, $supportChannel);
+            custom_log("Raw Call Set Bridge: " . json_encode($result));
+            // process output
+            if (!$result['success']) {
+                custom_log('Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error'));
+                echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error')]);
+                break;
             }
-
-            $user = DB::table('users')
-                ->select('username')
-                ->where('id', $user_id)
-                ->first();
-
-            if (!$user) {
-                echo json_encode(['success' => false, 'message' => 'User not found']);
-                exit;
-            }
-
-            $result = $magnusBilling->query([
-                'module' => 'callOnLine',
-                'action' => 'toggleMute',
-                'id' => $call->magnus_call_id,
-                'sipuser' => $user->username,
-                'mute' => $mute ? '1' : '0'
-            ]);
-
-            if (!empty($result['success'])) {
-                custom_log("Mute toggled for call_id: $call_id, mute: " . ($mute ? 'on' : 'off'));
-                echo json_encode(['success' => true, 'message' => 'Mute toggled successfully']);
-            } else {
-                custom_log("MagnusBilling API Error (toggle_mute): " . json_encode($result));
-                echo json_encode([
-                    'success' => false,
-                    'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error')
-                ]);
-            }
-        } catch (Exception $e) {
+            // echo result
+            echo json_encode($result);
+        } catch (\Exception $e) {
             custom_log("Toggle mute error: " . $e->getMessage());
             echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . $e->getMessage()]);
         }
+
+        // if (!$magnusBilling) {
+        //     echo json_encode(['success' => false, 'message' => 'MagnusBilling not initialized']);
+        //     custom_log("toggle_mute: MagnusBilling not initialized");
+        //     break;
+        // }
+        // // Validate input
+        // $validator = new Validator;
+
+        // $rules = [
+        //     'call_id' => 'required|integer|min:1',
+        //     'mute' => 'required|boolean'
+        // ];
+
+        // $messages = [
+        //     'required' => ':attribute is required',
+        //     'integer' => ':attribute must be a valid integer',
+        //     'boolean' => ':attribute must be true or false',
+        //     'min' => ':attribute must be at least :min'
+        // ];
+
+        // $validate = $validator->validate($_POST, $rules, $messages);
+        // $validate->setAliases([
+        //     'call_id' => 'Call ID',
+        //     'mute' => 'Mute Flag'
+        // ]);
+
+        // if (!$validate->passes()) {
+        //     echo json_encode([
+        //         'success' => false,
+        //         'message' => implode('<br>', $validate->errors()->all())
+        //     ]);
+        //     exit;
+        // }
+
+        // $call_id = $validate->getValue('call_id');
+        // $mute = $validate->getValue('mute');
+
+        // try {
+        //     $call = DB::table('calls')
+        //         ->select('magnus_call_id', 'callback_method', 'customer_number')
+        //         ->where('id', $call_id)
+        //         ->where('user_id', $user_id)
+        //         ->first();
+
+        //     if (!$call || !$call->magnus_call_id) {
+        //         echo json_encode(['success' => false, 'message' => 'Invalid or unauthorized call ID']);
+        //         exit;
+        //     }
+
+        //     $user = DB::table('users')
+        //         ->select('username')
+        //         ->where('id', $user_id)
+        //         ->first();
+
+        //     if (!$user) {
+        //         echo json_encode(['success' => false, 'message' => 'User not found']);
+        //         exit;
+        //     }
+
+        //     $result = $magnusBilling->query([
+        //         'module' => 'callOnLine',
+        //         'action' => 'toggleMute',
+        //         'id' => $call->magnus_call_id,
+        //         'sipuser' => $user->username,
+        //         'mute' => $mute ? '1' : '0'
+        //     ]);
+
+        //     if (!empty($result['success'])) {
+        //         custom_log("Mute toggled for call_id: $call_id, mute: " . ($mute ? 'on' : 'off'));
+        //         echo json_encode(['success' => true, 'message' => 'Mute toggled successfully']);
+        //     } else {
+        //         custom_log("MagnusBilling API Error (toggle_mute): " . json_encode($result));
+        //         echo json_encode([
+        //             'success' => false,
+        //             'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error')
+        //         ]);
+        //     }
+        // } catch (Exception $e) {
+        //     custom_log("Toggle mute error: " . $e->getMessage());
+        //     echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . $e->getMessage()]);
+        // }
         break;
 
     case 'get_dtmf':
         try {
             $dtmf_inputs = DB::table('calls')
-            ->where('user_id', $user_id)
-            ->orderBy('created_at', 'desc')
-            ->get(['customer_number','dtmf_input','created_at']);
+                ->where('user_id', $user_id)
+                ->orderBy('created_at', 'desc')
+                ->get(['customer_number', 'dtmf_input', 'created_at']);
             custom_log("Fetched " . count($dtmf_inputs) . " DTMF inputs for user_id: $user_id");
             echo json_encode(['success' => true, 'dtmf_inputs' => $dtmf_inputs]);
         } catch (\Throwable $e) {

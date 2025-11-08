@@ -183,3 +183,447 @@
 [2025-11-07 16:13:20] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
 [2025-11-07 16:13:20] 
 [2025-11-07 16:13:20] 200
+[2025-11-07 16:34:52] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 16:34:52] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 16:34:52] 
+[2025-11-07 16:34:52] 200
+[2025-11-07 16:44:38] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 16:44:38] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 16:44:38] 
+[2025-11-07 16:44:38] 200
+[2025-11-07 16:45:08] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 16:45:08] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 16:45:08] 
+[2025-11-07 16:45:08] 200
+[2025-11-07 17:33:55] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 17:33:56] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 17:33:56] 
+[2025-11-07 17:33:56] 200
+[2025-11-07 17:36:20] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 17:36:20] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 17:36:20] 
+[2025-11-07 17:36:20] 200
+[2025-11-07 17:36:51] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 17:36:51] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 17:36:51] 
+[2025-11-07 17:36:51] 200
+[2025-11-07 17:38:16] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 17:38:16] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 17:38:16] 
+[2025-11-07 17:38:16] 200
+[2025-11-07 21:00:18] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 21:00:18] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 21:00:18] 
+[2025-11-07 21:00:18] 200
+[2025-11-07 21:03:54] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 21:03:54] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 21:03:54] 
+[2025-11-07 21:03:54] 200
+[2025-11-07 23:45:55] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:45:55] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:45:55] 
+[2025-11-07 23:45:55] 200
+[2025-11-07 23:48:31] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:48:31] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:48:31] 
+[2025-11-07 23:48:31] 200
+[2025-11-07 23:48:37] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:48:37] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:48:37] 
+[2025-11-07 23:48:37] 200
+[2025-11-07 23:49:13] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:49:13] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:49:13] 
+[2025-11-07 23:49:13] 200
+[2025-11-07 23:53:32] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:53:32] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:53:32] 
+[2025-11-07 23:53:32] 200
+[2025-11-07 23:53:56] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:53:56] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:53:56] 
+[2025-11-07 23:53:56] 200
+[2025-11-07 23:57:15] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:57:15] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:57:15] 
+[2025-11-07 23:57:15] 200
+[2025-11-07 23:58:17] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-07 23:58:17] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-07 23:58:17] 
+[2025-11-07 23:58:17] 200
+[2025-11-08 00:04:50] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:04:50] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:04:50] 
+[2025-11-08 00:04:50] 200
+[2025-11-08 00:06:27] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:06:27] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:06:27] 
+[2025-11-08 00:06:27] 200
+[2025-11-08 00:16:57] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:16:57] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:16:57] 
+[2025-11-08 00:16:57] 200
+[2025-11-08 00:17:39] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:17:39] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:17:39] 
+[2025-11-08 00:17:39] 200
+[2025-11-08 00:22:41] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:22:41] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:22:41] 
+[2025-11-08 00:22:41] 200
+[2025-11-08 00:23:15] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:23:15] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:23:15] 
+[2025-11-08 00:23:15] 200
+[2025-11-08 00:23:45] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:23:45] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:23:45] 
+[2025-11-08 00:23:45] 200
+[2025-11-08 00:27:37] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 00:27:37] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 00:27:37] 
+[2025-11-08 00:27:37] 200
+[2025-11-08 09:23:00] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:23:00] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:23:00] 
+[2025-11-08 09:23:00] 200
+[2025-11-08 09:23:34] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:23:34] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:23:34] 
+[2025-11-08 09:23:34] 200
+[2025-11-08 09:24:02] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:24:02] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:24:02] 
+[2025-11-08 09:24:02] 200
+[2025-11-08 09:24:30] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:24:30] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:24:30] 
+[2025-11-08 09:24:30] 200
+[2025-11-08 09:40:26] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:40:26] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:40:26] 
+[2025-11-08 09:40:26] 200
+[2025-11-08 09:41:15] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 09:41:15] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 09:41:15] 
+[2025-11-08 09:41:15] 200
+[2025-11-08 10:26:47] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:26:47] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:26:47] 
+[2025-11-08 10:26:47] 200
+[2025-11-08 10:28:22] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:28:22] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:28:22] 
+[2025-11-08 10:28:22] 200
+[2025-11-08 10:34:00] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:34:00] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:34:00] 
+[2025-11-08 10:34:00] 200
+[2025-11-08 10:38:39] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:38:39] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:38:39] 
+[2025-11-08 10:38:39] 200
+[2025-11-08 10:44:54] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:44:54] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:44:54] 
+[2025-11-08 10:44:54] 200
+[2025-11-08 10:48:46] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:48:46] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:48:46] 
+[2025-11-08 10:48:46] 200
+[2025-11-08 10:53:01] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 10:53:01] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 10:53:01] 
+[2025-11-08 10:53:01] 200
+[2025-11-08 11:04:59] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:04:59] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:04:59] 
+[2025-11-08 11:04:59] 200
+[2025-11-08 11:14:22] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:14:22] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:14:22] 
+[2025-11-08 11:14:22] 200
+[2025-11-08 11:25:26] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:25:26] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:25:26] 
+[2025-11-08 11:25:26] 200
+[2025-11-08 11:35:07] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:35:07] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:35:07] 
+[2025-11-08 11:35:07] 200
+[2025-11-08 11:35:55] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:35:55] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:35:55] 
+[2025-11-08 11:35:55] 200
+[2025-11-08 11:36:40] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:36:40] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:36:40] 
+[2025-11-08 11:36:40] 200
+[2025-11-08 11:44:33] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:44:33] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:44:33] 
+[2025-11-08 11:44:33] 200
+[2025-11-08 11:49:17] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:49:17] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:49:17] 
+[2025-11-08 11:49:17] 200
+[2025-11-08 11:50:57] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 11:50:57] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 11:50:57] 
+[2025-11-08 11:50:57] 200
+[2025-11-08 20:15:23] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:15:23] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:15:23] 
+[2025-11-08 20:15:23] 200
+[2025-11-08 20:17:17] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:17:17] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:17:17] 
+[2025-11-08 20:17:17] 200
+[2025-11-08 20:18:41] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:18:41] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:18:41] 
+[2025-11-08 20:18:41] 200
+[2025-11-08 20:24:52] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:24:52] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:24:52] 
+[2025-11-08 20:24:52] 200
+[2025-11-08 20:26:12] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:26:12] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:26:12] 
+[2025-11-08 20:26:12] 200
+[2025-11-08 20:34:35] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:34:35] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:34:35] 
+[2025-11-08 20:34:35] 200
+[2025-11-08 20:51:07] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:51:07] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:51:07] 
+[2025-11-08 20:51:07] 200
+[2025-11-08 20:53:13] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:53:13] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:53:13] 
+[2025-11-08 20:53:13] 200
+[2025-11-08 20:54:08] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:54:08] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:54:08] 
+[2025-11-08 20:54:08] 200
+[2025-11-08 20:55:11] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:55:11] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:55:11] 
+[2025-11-08 20:55:11] 200
+[2025-11-08 20:56:25] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 20:56:25] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 20:56:25] 
+[2025-11-08 20:56:25] 200
+[2025-11-08 21:04:58] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:04:58] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:04:58] 
+[2025-11-08 21:04:58] 200
+[2025-11-08 21:05:53] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:05:53] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:05:53] 
+[2025-11-08 21:05:53] 200
+[2025-11-08 21:06:15] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:06:15] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:06:15] 
+[2025-11-08 21:06:15] 200
+[2025-11-08 21:07:05] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:07:05] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:07:05] 
+[2025-11-08 21:07:05] 200
+[2025-11-08 21:17:58] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:17:58] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:17:58] 
+[2025-11-08 21:17:58] 200
+[2025-11-08 21:18:15] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:18:15] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:18:15] 
+[2025-11-08 21:18:15] 200
+[2025-11-08 21:18:36] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:18:36] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:18:36] 
+[2025-11-08 21:18:36] 200
+[2025-11-08 21:19:21] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:19:21] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:19:21] 
+[2025-11-08 21:19:21] 200
+[2025-11-08 21:24:00] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:24:00] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:24:00] 
+[2025-11-08 21:24:00] 200
+[2025-11-08 21:28:20] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:28:20] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:28:20] 
+[2025-11-08 21:28:20] 200
+[2025-11-08 21:29:06] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:29:06] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:29:06] 
+[2025-11-08 21:29:06] 200
+[2025-11-08 21:32:16] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:32:16] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:32:16] 
+[2025-11-08 21:32:16] 200
+[2025-11-08 21:32:35] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:32:35] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:32:35] 
+[2025-11-08 21:32:35] 200
+[2025-11-08 21:33:12] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 21:33:12] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 21:33:12] 
+[2025-11-08 21:33:12] 200
+[2025-11-08 23:17:31] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:17:31] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:17:31] 
+[2025-11-08 23:17:31] 200
+[2025-11-08 23:19:53] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:19:53] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:19:53] 
+[2025-11-08 23:19:53] 200
+[2025-11-08 23:21:08] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:21:08] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:21:08] 
+[2025-11-08 23:21:08] 200
+[2025-11-08 23:22:10] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:22:10] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:22:10] 
+[2025-11-08 23:22:10] 200
+[2025-11-08 23:23:07] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:23:07] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:23:07] 
+[2025-11-08 23:23:07] 200
+[2025-11-08 23:24:44] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:24:44] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:24:44] 
+[2025-11-08 23:24:44] 200
+[2025-11-08 23:25:45] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:25:45] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:25:45] 
+[2025-11-08 23:25:45] 200
+[2025-11-08 23:27:37] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:27:37] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:27:37] 
+[2025-11-08 23:27:37] 200
+[2025-11-08 23:31:44] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:31:44] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:31:44] 
+[2025-11-08 23:31:44] 200
+[2025-11-08 23:34:27] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:34:27] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:34:27] 
+[2025-11-08 23:34:27] 200
+[2025-11-08 23:35:07] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:35:07] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:35:07] 
+[2025-11-08 23:35:07] 200
+[2025-11-08 23:36:07] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:36:07] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:36:07] 
+[2025-11-08 23:36:07] 200
+[2025-11-08 23:39:00] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:39:00] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:39:00] 
+[2025-11-08 23:39:00] 200
+[2025-11-08 23:41:41] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:41:41] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:41:41] 
+[2025-11-08 23:41:41] 200
+[2025-11-08 23:45:12] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:45:12] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:45:12] 
+[2025-11-08 23:45:12] 200
+[2025-11-08 23:52:45] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-08 23:52:45] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-08 23:52:45] 
+[2025-11-08 23:52:45] 200
+[2025-11-09 00:00:23] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:00:23] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:00:23] 
+[2025-11-09 00:00:23] 200
+[2025-11-09 00:02:24] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:02:24] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:02:24] 
+[2025-11-09 00:02:24] 200
+[2025-11-09 00:08:27] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:08:27] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:08:27] 
+[2025-11-09 00:08:27] 200
+[2025-11-09 00:09:58] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:09:58] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:09:58] 
+[2025-11-09 00:09:58] 200
+[2025-11-09 00:11:21] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:11:21] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:11:21] 
+[2025-11-09 00:11:21] 200
+[2025-11-09 00:12:33] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:12:33] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:12:33] 
+[2025-11-09 00:12:33] 200
+[2025-11-09 00:18:57] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:18:57] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:18:57] 
+[2025-11-09 00:18:57] 200
+[2025-11-09 00:25:29] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 00:25:29] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 00:25:29] 
+[2025-11-09 00:25:29] 200
+[2025-11-09 03:32:19] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 03:32:19] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 03:32:19] 
+[2025-11-09 03:32:19] 200
+[2025-11-09 03:44:20] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 03:44:20] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 03:44:20] 
+[2025-11-09 03:44:20] 200
+[2025-11-09 03:44:33] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 03:44:33] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 03:44:33] 
+[2025-11-09 03:44:33] 200
+[2025-11-09 03:45:46] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 03:45:46] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 03:45:46] 
+[2025-11-09 03:45:46] 200
+[2025-11-09 04:15:04] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:15:04] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:15:04] 
+[2025-11-09 04:15:04] 200
+[2025-11-09 04:16:22] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:16:22] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:16:22] 
+[2025-11-09 04:16:22] 200
+[2025-11-09 04:18:16] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:18:16] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:18:16] 
+[2025-11-09 04:18:16] 200
+[2025-11-09 04:27:21] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:27:21] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:27:21] 
+[2025-11-09 04:27:21] 200
+[2025-11-09 04:28:36] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:28:36] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:28:36] 
+[2025-11-09 04:28:36] 200
+[2025-11-09 04:31:10] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:31:10] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:31:10] 
+[2025-11-09 04:31:10] 200
+[2025-11-09 04:32:32] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:32:32] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:32:32] 
+[2025-11-09 04:32:32] 200
+[2025-11-09 04:33:24] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:33:24] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:33:24] 
+[2025-11-09 04:33:24] 200
+[2025-11-09 04:34:41] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:34:41] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:34:41] 
+[2025-11-09 04:34:41] 200
+[2025-11-09 04:36:45] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:36:45] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:36:45] 
+[2025-11-09 04:36:45] 200
+[2025-11-09 04:38:22] {"field":"id","field_value":"20","option":"get_sip_user"}
+[2025-11-09 04:38:22] {"success":true,"result":{"id":20,"id_user":21,"SIP user":"ldata","callerid":"193093893802","Username":"ldata"}}
+[2025-11-09 04:38:22] 
+[2025-11-09 04:38:22] 200

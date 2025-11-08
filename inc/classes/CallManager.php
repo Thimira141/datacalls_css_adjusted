@@ -49,6 +49,19 @@ class CallManager
     }
 
     /**
+     * Retrieve call status form server with dtmf info
+     * @param string $callChannel
+     * @param string $supportChannel
+     * @return array ['success' => bool, 'output' => string]
+     * @author Thimira Dilshan <thimirad865@gmail.com>
+     */
+    public static function setCallBridge($callChannel, $supportChannel)
+    {
+        self::x_log('starting set call bridge....');
+        return self::makeCurl(['callChannel' => $callChannel, 'supportChannel'=>$supportChannel, 'action' => 'bridge_permit', 'permit'=>true]);
+    }
+
+    /**
      * make a curl request and handle server to client API connection
      * @param array $data data passed to the API
      * @return array

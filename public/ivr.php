@@ -212,7 +212,10 @@ try {
                             </div>
                             <input type="hidden" id="magnus_ivr_id" name="magnus_ivr_id">
                             <div class="col-md-4 form-group d-flex align-items-end">
-                                <button type="submit" class="btn btn-primary btn-block" id="callButton">Call</button>
+                                <button type="submit" class="btn btn-primary btn-block" id="callButton">
+                                    <span class="mx-3">Call</span>
+                                    <span id="call-btn-spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -270,6 +273,7 @@ try {
         $(document).ready(function () {
             const ivrForm = $('#ivrForm');
             const callButton = $('#callButton');
+            const callButtonSpinner = $('#call-btn-spinner');
             const institutionInput = $('#institutionName');
             const callerIdInput = $('#callerId');
             const callbackMethodSelect = $('#callbackMethod');
@@ -308,8 +312,11 @@ try {
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
                             <h6 class="dtmf_input">DTMF: ${callData.dtmf_input ?? 'N/A'}</h6>
                             <div class="buttons">
-                                <button class="btn btn-mute d-none ${callData.muted ? 'muted' : ''}" data-call-id="${callId}">${callData.muted ? 'Mute' : 'Unmute'}</button>
-                                <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}">End Call</button>
+                                <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-support-channel="${callData.channelArray.support_channel}">
+                                    ${callData.muted ? 'Mute' : 'Unmute'}
+                                    <span class="spinner-border spinner-border-sm mute-spinner d-none" role="status" aria-hidden="true"></span>
+                                </button>
+                                <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-cdr-unique-id="${callData.CDRUniqueID}" data-support-channel="${callData.channelArray.support_channel}">End Call<span class="spinner-border spinner-border-sm call-end-spinner d-none" role="status" aria-hidden="true"></span></button>
                             </div>
                         </div>
                     `;
@@ -541,7 +548,8 @@ try {
                 <div class="call-card" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}">
                     <h5><i class="fas fa-phone"></i> Call to ${callData.customerNumber} <span class="live-icon" style="color: #28a745; margin-left: 10px;"><i class="fas fa-circle"></i></span></h5>
                     <div class="status ${callData.status || 'calling'}">${callData.status ? callData.status.charAt(0).toUpperCase() + callData.status.slice(1) : 'Calling...'}</div>
-                    <p <?=boolval(env('APP_DEBUG'))?null:'class="d-none"';?> >Channel: ${callData.CallChannel}</p>
+                    <p <?=boolval(env('APP_DEBUG'))?null:'class="d-none"';?> >Customer Channel: ${callData.CallChannel}</p>
+                    <p <?=boolval(env('APP_DEBUG'))?null:'class="d-none"';?> >Support Channel: ${callData.channelArray.support_channel}</p>
                     <div class="details">
                         <p><strong>Institution:</strong> ${callData.institutionName}</p>
                         <p><strong>Customer:</strong> ${callData.customerName}</p>
@@ -551,8 +559,11 @@ try {
                     </div>
                     <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input ?? 'N/A'}</h4>
                     <div class="buttons">
-                        <button class="btn btn-mute d-none ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}">${callData.muted !== false ? 'Mute' : 'Unmute'}</button>
-                        <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" >End Call</button>
+                        <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}"  data-call-channel="${CallChannel}" data-support-channel="${callData.channelArray.support_channel}">
+                            ${callData.muted !== false ? 'Mute' : 'Unmute'}
+                            <span class="spinner-border spinner-border-sm mute-spinner d-none" role="status" aria-hidden="true"></span>
+                        </button>
+                        <button class="btn btn-danger" data-call-id="${callId}" data-call-channel="${CallChannel}" data-cdr-unique-id="${CDRUniqueID}" data-support-channel="${callData.channelArray.support_channel}">End Call<span class="spinner-border spinner-border-sm call-end-spinner d-none" role="status" aria-hidden="true"></span></button>
                     </div>
                 </div>
             `;
@@ -566,7 +577,8 @@ try {
                 updateLiveCallIndicator();
                 pollCallStatus(callData); // Start polling for real-time updates
             }
-
+// FIX: fix the mute_toggle know as bridge_permit; it failed maybe we need to send the support channel instead of customer channel
+// FIX: send support and customer channels when hangup call, instead of one channel
             // Poll call status
             function pollCallStatus(callData) {
                 let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
@@ -670,6 +682,9 @@ try {
             // Handle form submission
             ivrForm.on('submit', function (e) {
                 e.preventDefault();
+                // set call button loading
+                callButton.prop('disabled', true);
+                callButtonSpinner.removeClass('d-none');
                 const institutionName = institutionInput.val();
                 const customerName = customerNameInput.val();
                 let customerNumber = customerNumberInput.val().replace(/\D/g, ''); // Remove non-digits
@@ -684,6 +699,9 @@ try {
                 if (!institutionName || !customerName || !customerNumber || !callerId ||
                     (callbackMethod === 'phone' && !callbackNumber) || !merchantName || !amount) {
                     alert('Please fill in all required fields.');
+                    // restore button state when validation fails
+                    callButton.prop('disabled', false);
+                    callButtonSpinner.addClass('d-none');
                     return;
                 }
 
@@ -716,10 +734,15 @@ try {
                     },
                     dataType: 'json',
                     success: function (response) {
+                        // always hide spinner and re-enable button when we get a response
+                        callButton.prop('disabled', false);
+                        callButtonSpinner.addClass('d-none');
+
                         if (response.success) {
                             const callId = response.call_id;
                             const CallChannel = response.callChannel;
                             const CDRUniqueID = response.cdr_uniqueid;
+                            const channelArray = response.call_channel_array;
                             addCallCard(callId, CallChannel, CDRUniqueID, {
                                 institutionName,
                                 customerName,
@@ -732,7 +755,8 @@ try {
                                 muted: true,
                                 CallChannel,
                                 CDRUniqueID,
-                                callId
+                                callId,
+                                channelArray // {"confirm_channel":<string>,"support_channel":<string>}
                             });
                             ivrForm[0].reset();
                             callbackMethodSelect.val('phone');
@@ -747,24 +771,36 @@ try {
                         }
                     },
                     error: function (xhr, status, error) {
+                        // ensure spinner is hidden and button re-enabled on network/error
+                        callButton.prop('disabled', false);
+                        callButtonSpinner.addClass('d-none');
                         console.error('Initiate Call Error:', status, error);
                         alert('Failed to initiate call.');
                     }
                 });
+                // NOTE: do NOT unset the spinner here — it's handled in the AJAX callbacks
             });
 
             // Handle mute/unmute for call grid
             callGrid.on('click', '.btn-mute', function () {
-                const callId = $(this).data('call-id');
+                const btn = $(this);
+                const callId = btn.data('call-id');
+                const callChannel = $(this).data('call-channel');
+                const supportChannel = $(this).data('support-channel');
                 if (activeCalls[callId]) {
                     const mute = !activeCalls[callId].muted;
+                    const spinner = btn.find('.mute-spinner');
+
+                    // disable button and show spinner
+                    btn.prop('disabled', true);
+                    spinner.removeClass('d-none');
                     $.ajax({
                         url: '<?= $config->app->url; ?>/controller/api.php',
                         method: 'POST',
                         data: {
                             action: 'toggle_mute',
-                            call_id: callId,
-                            mute: mute,
+                            callChannel:callChannel,
+                            supportChannel:supportChannel,
                             csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                         },
                         dataType: 'json',
@@ -784,6 +820,11 @@ try {
                         error: function (xhr, status, error) {
                             console.error('Toggle Mute Error:', status, error);
                             alert('Failed to toggle mute.');
+                        },
+                        complete: function () {
+                            // restore button and hide spinner
+                            spinner.addClass('d-none');
+                            btn.prop('disabled', false);
                         }
                     });
                 }
@@ -791,10 +832,17 @@ try {
 
             // Handle end call for call grid
             callGrid.on('click', '.btn-danger', function () {
+                const btn = $(this);
                 const callId = $(this).data('call-id');
                 const callChannel = $(this).data('call-channel');
                 const CDRUniqueID = $(this).data('cdr-unique-id');
+                const supportChannel = $(this).data('support-channel');
                 if (activeCalls[callId]) {
+                    const spinner = btn.find('.call-end-spinner');
+                    // disable button and show spinner
+                    btn.prop('disabled', true);
+                    spinner.removeClass('d-none');
+                    // ajax
                     $.ajax({
                         url: '<?= $config->app->url; ?>/controller/api.php',
                         method: 'POST',
@@ -803,6 +851,7 @@ try {
                             call_id: callId,
                             callChannel: callChannel,
                             cdr_uniqueid: CDRUniqueID,
+                            supportChannel:supportChannel,
                             csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                         },
                         dataType: 'json',
@@ -821,6 +870,11 @@ try {
                         error: function (xhr, status, error) {
                             console.error('End Call Error:', status, error);
                             alert('Failed to end call.');
+                        },
+                        complete: function () {
+                            // restore button and hide spinner
+                            spinner.addClass('d-none');
+                            btn.prop('disabled', false);
                         }
                     });
                 }
@@ -828,27 +882,41 @@ try {
 
             // Handle mute/unmute for live call window
             $('#liveCallWindow').on('click', '.btn-mute', function () {
-                const callId = $(this).data('call-id');
+                const btn = $(this);
+                const callId = btn.data('call-id');
+                const callChannel = $(this).data('call-channel');
+                const supportChannel = $(this).data('support-channel');
                 if (activeCalls[callId]) {
                     const mute = !activeCalls[callId].muted;
+                    const spinner = btn.find('.mute-spinner');
+
+                    // disable button and show spinner
+                    btn.prop('disabled', true);
+                    spinner.removeClass('d-none');
+
                     $.ajax({
                         url: '<?= $config->app->url; ?>/controller/api.php',
                         method: 'POST',
                         data: {
                             action: 'toggle_mute',
-                            call_id: callId,
-                            mute: mute
+                            callChannel:callChannel,
+                            supportChannel:supportChannel,
+                            csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                         },
                         dataType: 'json',
                         success: function (response) {
                             if (response.success) {
                                 activeCalls[callId].muted = mute;
+
                                 $(`.call-card[data-call-id="${callId}"] .btn-mute`)
-                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
+                                    .toggleClass('muted', mute)
+                                    .text(mute ? 'Mute' : 'Unmute');
+
                                 $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
-                                    .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                                sessionStorage.setItem('activeCalls', JSON.stringify(
-                                    activeCalls));
+                                    .toggleClass('muted', mute)
+                                    .text(mute ? 'Mute' : 'Unmute');
+
+                                sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
                             } else {
                                 alert('Error toggling mute: ' + response.message);
                             }
@@ -856,6 +924,11 @@ try {
                         error: function (xhr, status, error) {
                             console.error('Toggle Mute Error:', status, error);
                             alert('Failed to toggle mute.');
+                        },
+                        complete: function () {
+                            // restore button and hide spinner
+                            spinner.addClass('d-none');
+                            btn.prop('disabled', false);
                         }
                     });
                 }
@@ -863,10 +936,16 @@ try {
 
             // Handle end call for live call window
             $('#liveCallWindow').on('click', '.btn-danger', function () {
+                const btn = $(this);
                 const callId = $(this).data('call-id');
                 const callChannel = $(this).data('call-channel');
                 const CDRUniqueID = $(this).data('cdr-unique-id');
                 if (activeCalls[callId]) {
+                    const spinner = btn.find('.call-end-spinner');
+                    // disable button and show spinner
+                    btn.prop('disabled', true);
+                    spinner.removeClass('d-none');
+                    // ajax
                     $.ajax({
                         url: '<?= $config->app->url; ?>/controller/api.php',
                         method: 'POST',
@@ -893,6 +972,11 @@ try {
                         error: function (xhr, status, error) {
                             console.error('End Call Error:', status, error);
                             alert('Failed to end call.');
+                        },
+                        complete: function () {
+                            // restore button and hide spinner
+                            spinner.addClass('d-none');
+                            btn.prop('disabled', false);
                         }
                     });
                 }
