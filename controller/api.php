@@ -759,7 +759,7 @@ switch ($action) {
                     $result = $result['response'];
                     $callChannel = $result['channel'] ?? null;
                     custom_log('CallManager Output(2): ' . json_encode($result));
-                    if ((!$callChannel || empty($callChannel)) && empty($result['channels_array']??[])) {
+                    if ((!$callChannel || empty($callChannel)) && empty($result['channels_array'] ?? [])) {
                         // when empty call channel got
                         custom_log("Failed to fetch call channel(s)!");
                         echo json_encode(['success' => false, 'message' => "Failed to fetch call channel(s)!"]);
@@ -795,10 +795,10 @@ switch ($action) {
 
                     if ((bool) $call_id) {
                         custom_log("Initiated call: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array'=>$result['channels_array']]);
+                        echo json_encode(['success' => true, 'message' => 'Call initiated successfully', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array' => $result['channels_array']]);
                     } else {
                         custom_log("Initiated call failed: call_id=$call_id, magnus_call_id=$magnus_call_id, customer_number=$customer_number, callback_method=$callback_method");
-                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array'=>$result['channels_array']]);
+                        echo json_encode(['success' => false, 'message' => 'Call initiated false', 'call_id' => $call_id, 'callChannel' => $callChannel, 'cdr_uniqueid' => $cdr_uniqueid, 'call_channel_array' => $result['channels_array']]);
                     }
                 } else {
                     custom_log("TTS synthesize failed ");
@@ -841,7 +841,7 @@ switch ($action) {
         ];
 
         $validate = $validator->validate($_POST, $rules, $messages);
-        $validate->setAliases(['call_id' => 'Call ID', 'callChannel' => 'Call Channel', 'cdr_uniqueid' => 'CDR Uniqueid', 'supportChannel'=>'Support Agent call channel']);
+        $validate->setAliases(['call_id' => 'Call ID', 'callChannel' => 'Call Channel', 'cdr_uniqueid' => 'CDR Uniqueid', 'supportChannel' => 'Support Agent call channel']);
 
         if (!$validate->passes()) {
             echo json_encode([
@@ -1164,7 +1164,7 @@ switch ($action) {
         $validate = $validator->validate($_POST, $rules);
         $validate->setAliases([
             'callChannel' => 'Call Channel',
-            'supportChannel' => 'Support agent Call Channel'
+            'supportChannel' => 'Support agent Call Channel',
         ]);
 
         if (!$validate->passes()) {
@@ -1177,20 +1177,24 @@ switch ($action) {
         try {
             $callChannel = $validate->getValue('callChannel');
             $supportChannel = $validate->getValue('supportChannel');
+            $serverAction = $validate->getValue('serverAction');
+            $toggleValue = $validate->getValue('toggleValue');
             // send request to server via CallManager Class
             $result = \inc\classes\CallManager::setCallBridge($callChannel, $supportChannel);
             custom_log("Raw Call Set Bridge: " . json_encode($result));
             // process output
             if (!$result['success']) {
                 custom_log('Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error'));
-                echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error')]);
+                echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . ($result['error'] ?? 'Unknown error'), 'serverAction' => $serverAction, 'toggleValue' => $toggleValue]);
                 break;
             }
             // echo result
+            $result['serverAction'] = 'hold-un-hold'; // 'hold-un-hold' | 'bridge-permit'
+            $result['toggleValue'] = 'hold-bridge'; // 'hold-bridge' | 'resume-bridge' | 'bridge-permit-true'
             echo json_encode($result);
         } catch (\Exception $e) {
             custom_log("Toggle mute error: " . $e->getMessage());
-            echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . $e->getMessage()]);
+            echo json_encode(['success' => false, 'message' => 'Failed to toggle mute: ' . $e->getMessage(), 'serverAction' => $serverAction, 'toggleValue' => $toggleValue]);
         }
 
         // if (!$magnusBilling) {

@@ -301,8 +301,9 @@ switch ($_POST['action']) {
         echo json_encode(['success' => true, 'output' => $hangup->getKey('Message')]);
         break;
 
-    case 'hold_call':
-        break;
+    // case 'hold_call':
+        // // IMPORTANT: don't overcomplicated stuff let the native VOIP Application to handle call hold/resume function
+    //     break;
 
     case 'status_call':
         // decode and validate url inputs

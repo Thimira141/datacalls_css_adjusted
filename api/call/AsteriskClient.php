@@ -440,7 +440,7 @@ class AsteriskClient
                 'support_channel' => $supportChannel
             ],
             'error' => $confirmResult['success'] ? null : 'Customer leg failed',
-            'debug' => $debug
+            'debug' => []//$debug
         ];
     }
 
@@ -484,6 +484,15 @@ class AsteriskClient
         $channel2 = str_replace('\\/', '/', $channel2);
 
         try {
+            // Pre-check: are channels already bridged together?
+            $bridge1 = $this->getChannelBridgeId($channel1);
+            $bridge2 = $this->getChannelBridgeId($channel2);
+
+            if ($bridge1 && $bridge2 && $bridge1 === $bridge2) {
+                return ['success' => true, 'output' => 'Channels are already bridged'];
+            }
+
+            // Attempt bridge
             $action = new \PAMI\Message\Action\BridgeAction($channel1, $channel2);
             $response = $this->client->send($action);
 
@@ -491,24 +500,60 @@ class AsteriskClient
                 return ['success' => true, 'output' => 'Bridge succeeded'];
             }
 
-            // Retry once if timeout
-            if (stripos($response->getMessage(), 'timeout') !== false) {
-                usleep(500000); // wait 0.5s
+            // Retry on timeout
+            $MaxRetry = 5;
+            $attempt = 0;
+            $responseMessage = $response->getMessage();
+            $retry = null;
+
+            while ($attempt < $MaxRetry && stripos($responseMessage, 'timeout') !== false) {
+                usleep(2500000); // wait 2.5s
                 $retry = $this->client->send($action);
-
+                $responseMessage = $retry->getMessage();
                 if ($retry->isSuccess()) {
-                    return ['success' => true, 'output' => 'Bridge succeeded on retry'];
+                    return ['success' => true, 'output' => 'Bridge succeeded on retry #' . ($attempt + 1)];
                 }
-
-                return ['success' => false, 'output' => 'Bridge retry failed: ' . $retry->getMessage()];
+                $attempt++;
             }
 
-            return ['success' => false, 'output' => 'Bridge failed: ' . $response->getMessage()];
+            // Final fallback: check if bridge succeeded anyway
+            usleep(300000);
+            $bridge1 = $this->getChannelBridgeId($channel1);
+            $bridge2 = $this->getChannelBridgeId($channel2);
+
+            if ($bridge1 && $bridge1 === $bridge2) {
+                return ['success' => true, 'output' => 'Bridge succeeded despite AMI error'];
+            }
+
+            return ['success' => false, 'output' => 'Bridge failed after ' . $MaxRetry . ' retries: ' . ($retry ? $retry->getMessage() : $responseMessage)];
+
         } catch (\Exception $e) {
             return ['success' => false, 'output' => 'Bridge exception: ' . $e->getMessage()];
         }
     }
 
+
+    /**
+     * Summary of getChannelBridgeId
+     * @param string $channel
+     * @return string|null
+     * @author Thimira Dilshan <thimirad865@gmail.com>
+     */
+    public function getChannelBridgeId(string $channel): ?string
+    {
+        try {
+            $action = new \PAMI\Message\Action\StatusAction($channel);
+            $response = $this->client->send($action);
+            foreach ($response->getEvents() as $event) {
+                if ($event->getKey('Channel') === $channel) {
+                    return $event->getKey('BridgeID') ?? null;
+                }
+            }
+        } catch (\Exception $e) {
+            return null;
+        }
+        return null;
+    }
 
 
     /**

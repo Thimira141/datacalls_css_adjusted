@@ -312,7 +312,7 @@ try {
                             <div class="status ${callData.status}">${callData.status.charAt(0).toUpperCase() + callData.status.slice(1)}</div>
                             <h6 class="dtmf_input">DTMF: ${callData.dtmf_input ?? 'N/A'}</h6>
                             <div class="buttons">
-                                <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-support-channel="${callData.channelArray.support_channel}">
+                                <button class="btn btn-mute ${callData.muted ? 'muted' : ''}" data-call-id="${callId}" data-call-channel="${callData.CallChannel}" data-support-channel="${callData.channelArray.support_channel}" disabled >
                                     ${callData.muted ? 'Mute' : 'Unmute'}
                                     <span class="spinner-border spinner-border-sm mute-spinner d-none" role="status" aria-hidden="true"></span>
                                 </button>
@@ -559,7 +559,7 @@ try {
                     </div>
                     <h4 class="dtmf_input text-center">DTMF: ${callData.dtmf_input ?? 'N/A'}</h4>
                     <div class="buttons">
-                        <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}"  data-call-channel="${CallChannel}" data-support-channel="${callData.channelArray.support_channel}">
+                        <button class="btn btn-mute ${callData.muted !== false ? 'muted' : ''}" data-call-id="${callId}"  data-call-channel="${CallChannel}" data-support-channel="${callData.channelArray.support_channel}" disabled >
                             ${callData.muted !== false ? 'Mute' : 'Unmute'}
                             <span class="spinner-border spinner-border-sm mute-spinner d-none" role="status" aria-hidden="true"></span>
                         </button>
@@ -577,8 +577,6 @@ try {
                 updateLiveCallIndicator();
                 pollCallStatus(callData); // Start polling for real-time updates
             }
-// FIX: fix the mute_toggle know as bridge_permit; it failed maybe we need to send the support channel instead of customer channel
-// FIX: send support and customer channels when hangup call, instead of one channel
             // Poll call status
             function pollCallStatus(callData) {
                 let activeCalls = JSON.parse(sessionStorage.getItem('activeCalls')) || {};
@@ -620,6 +618,11 @@ try {
                                     .text(`DTMF: ${response.dtmf_input ?? 'N/A'}`);
                                 sessionStorage.setItem('activeCalls', JSON.stringify(
                                     activeCalls));
+                                // set mute/unmute button enable when dtmf==2
+                                if (response.dtmf_input=='2') {
+                                    $(`.btn-mute[data-call-id="${callId}"]`).prop('disabled', false);
+                                }
+
                                 if (['answered', 'up'].includes(response.status)) {
                                     // pollDtmfInput(callData);
                                     // alert('call picked up');
@@ -778,7 +781,6 @@ try {
                         alert('Failed to initiate call.');
                     }
                 });
-                // NOTE: do NOT unset the spinner here — it's handled in the AJAX callbacks
             });
 
             // Handle mute/unmute for call grid
@@ -811,8 +813,11 @@ try {
                                     .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
                                 $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
                                     .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
-                                sessionStorage.setItem('activeCalls', JSON.stringify(
-                                    activeCalls));
+                                $(`.call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
+                                // add a div with text into the button's parent element
+                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call! 818</div>');
+                                sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
+                                alert("Bridge success: Use your VoIP app to hold/resume the call!");
                             } else {
                                 alert('Error toggling mute: ' + response.message);
                             }
@@ -915,7 +920,9 @@ try {
                                 $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
                                     .toggleClass('muted', mute)
                                     .text(mute ? 'Mute' : 'Unmute');
-
+                                $(`.call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
+                                // add a div with text into the button's parent element
+                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call! 952</div>');
                                 sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
                             } else {
                                 alert('Error toggling mute: ' + response.message);

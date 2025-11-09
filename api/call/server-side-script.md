@@ -73,10 +73,11 @@ fi
 
 ```ini
 ; =========================
-; Customer support two leg conditional bridge dial-plan
+; Customer support two-leg conditional bridge dial-plan
 ; =========================
-; Added by Thimira Dilshan<thimirad865@gmail.com> Y2025/M11/D08
-; Last Updated by Thimira Dilshan<thimirad865@gmail.com> Y2025/M11/D08
+; Author: Thimira Dilshan <thimirad865@gmail.com>
+; Last Updated: Y2025/M11/D09
+
 [billing]
 include => ivr-confirm
 
@@ -87,8 +88,8 @@ exten => s,1,Answer()
  same => n,NoOp(Call tag is ${CALL_TAG})
  same => n,StartMusicOnHold(support-waiting)
  same => n,NoOp(Support leg is now waiting to be bridged)
- same => n,Wait(3600)
- same => n,StopMusicOnHold()
+ same => n,Wait(3600) ; keep alive until redirected
+ ; DO NOT add Hangup() here — it kills the leg before resume
 
 [ivr-confirm]
 exten => s,1,Answer()
@@ -112,11 +113,26 @@ exten => waitbridge,1,StartMusicOnHold(customer-waiting)
  same => n,StopMusicOnHold()
  same => n,Hangup()
 
-exten => bridge,1,Bridge(${SUPPORT_CHANNEL})
- same => n,NoOp(Bridge completed)
- same => n,Hangup()
+exten => bridge,1,NoOp(Bridge triggered externally)
+ same => n,Wait(3600) ; keep channel alive until bridged
 
 exten => fallback,1,Playback(vm-goodbye)
  same => n,Goto(s,start)
- 
+
+[hold-bridge]
+exten => s,1,NoOp(Call is now on hold)
+ same => n,StartMusicOnHold(hold-music)
+ same => n,Wait(3600)
+
+[resume-wait]
+exten => s,1,Wait(3600)
+
+[resume-bridge]
+exten => s,1,NoOp(Resuming bridge)
+ same => n,Bridge(${OTHER_CHANNEL})
+ same => n,Hangup()
+
+[hang]
+exten => s,1,Wait(3600)
+ same => n,Hangup()
 ```
