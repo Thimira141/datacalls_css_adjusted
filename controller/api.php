@@ -739,14 +739,14 @@ switch ($action) {
                         'starttime' => date('Y-m-d H:i:s'),      // MySQL datetime
                         'stoptime' => date('Y-m-d H:i:s'),      // MySQL datetime
                         'sessiontime' => 60,                       // Integer (seconds)
-                        'sessionbill' => '0.00',                   // String/decimal ≤ 50 chars
-                        'buycost' => '0.00',                   // String/decimal ≤ 50 chars
+                        'sessionbill' => (string) env('SESSION_BILL'),
+                        'buycost' => (string) env('BUY_COST'),
                         'uniqueid' => $uniqueid,
                         'callback_method' => $callback_method,
                         'customer_name' => $customer_name,
                         'customer_number' => $customer_number,
                         'callback_destination' => $callback_destination,
-                        'originate_tech' => 'sip' // support techs -> sip, telnum
+                        'originate_tech' => (string) env('ORIGINATE_TEC')
                     ], $user['username'] ?? 'support');
                     // call init failed!
                     custom_log('CallManager Output: ' . json_encode($result));
