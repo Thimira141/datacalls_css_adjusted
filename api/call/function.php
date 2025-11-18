@@ -1,4 +1,5 @@
 <?php
+require_once 'AsteriskClient.php';
 /**
  * Common Utility Functions
  *
@@ -69,7 +70,7 @@ function cdr_create_record(PDO $pdo, array $data)
         if ($stmt->execute($data)) {
             return ['success' => true, 'message' => 'Data insert success'];
         } else {
-            return ['success' => false, 'message' => 'Error: Data insert failed!'];    
+            return ['success' => false, 'message' => 'Error: Data insert failed!'];
         }
     } catch (\PDOException $e) {
         return ['success' => false, 'message' => 'Error: ' . $e->getMessage()];
@@ -102,13 +103,19 @@ function cdr_update_data(PDO $pdo, array $data)
 
 /**
  * execute end call server
- * @param mixed $callChannel
- * @return array{output: array|null, status: int|null}
+ * @param string $channel
+ * @return string|bool
  * @author Thimira Dilshan <thimirad865@gmail.com>
  */
-function call_end($callChannel)
+function call_end($channel)
 {
-    $cmd = escapeshellcmd("/usr/local/bin/asterisk_call_end.sh $callChannel");
-    exec("sudo $cmd", $output, $status);
-    return ['status' => $status, 'output' => $output];
+    $ami = new AsteriskClient();
+    $collector = true;
+    $status = $ami->getChannelStatus($channel);
+    $hangup = $ami->hangupChannel($channel);
+    if ($hangup->getKey('Response') != 'Success' && $status != 'ended') {
+        $collector = "Response: {$hangup->getKey('Response')} | Message: {$hangup->getKey('Message')}";
+    }
+    $ami->close();
+    return $collector;
 }

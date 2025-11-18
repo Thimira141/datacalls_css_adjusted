@@ -105,7 +105,6 @@ switch ($_POST['action']) {
             //code...
             $ami = new AsteriskClient();
             // set asterisk variables
-            // TODO: run and test the code
             // originate call via new function
             $originateTwoLegConditionalCall = $ami->twoLegConditionalCall(
                 $originateTechSupportWait,
@@ -123,14 +122,20 @@ switch ($_POST['action']) {
                 'ivr-confirm',
                 []
             );
-            if ($originateTwoLegConditionalCall['success']) {
+            if (
+                $originateTwoLegConditionalCall['success'] &&
+                // both channels need to be present to success the call
+                (count(array_values($originateTwoLegConditionalCall['channels_array'])) == 2)
+            ) {
                 $channel = $originateTwoLegConditionalCall['confirm']['channel'] ?? NULL;
                 $db_output = cdr_create_record($pdo, $data);
                 if (!$db_output['success']) {
                     // CDR db failed, then cancel the call
-                    $call_end = call_end($channel);
                     $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
-                    $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
+                    foreach ($originateTwoLegConditionalCall['channels_array'] as $key => $tChannel) {
+                        $call_end = call_end($tChannel);
+                        $message .= $call_end === true ? '' : '\n'.$key . '-' . $call_end;
+                    }
                     json_error($message);
                 }
                 // send result
@@ -142,10 +147,17 @@ switch ($_POST['action']) {
                     'cdr_uniqueid' => $data['uniqueid']
                 ]);
             } else {
+                // terminate incomplete calls
+                $call_end_log = [];
+                foreach ($originateTwoLegConditionalCall['channels_array'] as $key => $tChannel) {
+                    $call_end = call_end($tChannel);
+                    $call_end === true ? NULL : ($call_end_log[] = $key . '-' . $call_end);
+                }
                 http_response_code(500);
                 echo json_encode([
                     'success' => false,
                     'output' => $originateTwoLegConditionalCall,
+                    'call_end_log' => empty($call_end_log) ? 'Success' : $call_end_log,
                     'error' => '$originateTwoLegConditionalCall->failed'
                 ]);
             }
@@ -159,70 +171,6 @@ switch ($_POST['action']) {
                 'error' => $th->getMessage()
             ]);
         }
-        // $astDBkeys = [
-        //     // 'CID' => $callerId,
-        //     // 'CNAME' => $callerName,
-        //     // 'CUSTOMER_NUM' => $customer_number,
-        //     // 'CUSTOMER_NAME' => $customer_name,
-        //     // 'CALLBACK_DESTINATION' => $callback_destination,
-        // ];
-        // originate call for customer support
-        // $originateSupportWait = $ami->originateCall($originateTechSupportWait, $customer_number, $customer_name, $callback_destination, 's', 'support-wait');
-        // process call output
-
-
-        // if ($originateSupportWait['success']) {
-        //     // capture channel and send it back as response
-        //     $channelWait = $originateSupportWait['channel'] ?? NULL;
-        //     if ($channelWait) {
-        //         // originate call for customer
-        //         $originateIvrConfirm = $ami->originateCall($originateTechIvrConfirm, $callerId, $callerName, $targetNumber, 's', 'ivr-confirm', ['SUPPORT_CHANNEL' => $channel]);
-        //         if ($originateIvrConfirm['success']) {
-        //             $channelConfirm = $originateIvrConfirm['channel'] ?? NULL;
-        //             // db CDR insert
-        //             $db_output = cdr_create_record($pdo, $data);
-        //             if (!$db_output['success']) {
-        //                 // CDR db failed, then cancel the call
-        //                 $call_end = call_end($channel);
-        //                 $message = 'CDR DB Failed!' . $db_output['message'] . " ---- ";
-        //                 $message .= ($call_end['status'] !== 0) ? "Shell Execute Failed! : " . json_encode($call_end['output']) : null;
-        //                 json_error($message);
-        //             }
-        //             // send result
-        //             echo json_encode([
-        //                 'success' => true,
-        //                 'output' => $originateIvrConfirm,
-        //                 'channel' => $channelConfirm,
-        //                 'cdr_uniqueid' => $data['uniqueid']
-        //             ]);
-        //         } else {
-        //             // todo: hangup the SupportWait channel
-        //             http_response_code(503);
-        //             echo json_encode([
-        //                 'success' => false,
-        //                 'output' => $originateIvrConfirm,
-        //                 'error' => '$originateIvrConfirm->Failed!'
-        //             ]);
-        //         }
-        //     } else {
-        //         http_response_code(503);
-        //         echo json_encode([
-        //             'success' => false,
-        //             'output' => $originateSupportWait,
-        //             'error' => '$originateSupportWait->success, channel capture failed!'
-        //         ]);
-        //     }
-        // todo: clear unsuccessful calls that originate in this session
-        // // ami close
-        // $ami->close();
-        // } else {
-        //     http_response_code(503);
-        //     echo json_encode([
-        //         'success' => false,
-        //         'output' => $originateSupportWait,
-        //         'error' => '$originateSupportWait->Failed!'
-        //     ]);
-        // }
         break;
 
     case 'bridge_permit':
@@ -302,7 +250,7 @@ switch ($_POST['action']) {
         break;
 
     // case 'hold_call':
-        // // IMPORTANT: don't overcomplicated stuff let the native VOIP Application to handle call hold/resume function
+    // // IMPORTANT: don't overcomplicated stuff let the native VOIP Application to handle call hold/resume function
     //     break;
 
     case 'status_call':
