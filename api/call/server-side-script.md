@@ -119,20 +119,11 @@ exten => bridge,1,NoOp(Bridge triggered externally)
 exten => fallback,1,Playback(vm-goodbye)
  same => n,Goto(s,start)
 
-[hold-bridge]
-exten => s,1,NoOp(Call is now on hold)
- same => n,StartMusicOnHold(hold-music)
- same => n,Wait(3600)
-
-[resume-wait]
-exten => s,1,Wait(3600)
-
-[resume-bridge]
-exten => s,1,NoOp(Resuming bridge)
- same => n,Bridge(${OTHER_CHANNEL})
- same => n,Hangup()
+; Removed hold-bridge / resume-wait / resume-bridge contexts
+; since SIP apps now handle native hold/unhold
 
 [hang]
 exten => s,1,Wait(3600)
  same => n,Hangup()
+
 ```
