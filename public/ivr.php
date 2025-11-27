@@ -814,8 +814,9 @@ try {
                                 $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
                                     .toggleClass('muted').text(mute ? 'Mute' : 'Unmute');
                                 $(`.call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
+                                $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
                                 // add a div with text into the button's parent element
-                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call! 818</div>');
+                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call!</div>');
                                 sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
                                 alert("Bridge success: Use your VoIP app to hold/resume the call!");
                             } else {
@@ -920,9 +921,10 @@ try {
                                 $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`)
                                     .toggleClass('muted', mute)
                                     .text(mute ? 'Mute' : 'Unmute');
+                                $(`.mini-call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
                                 $(`.call-card[data-call-id="${callId}"] .btn-mute`).addClass('d-none'); // i like to remove the btn but it will cause troubles
                                 // add a div with text into the button's parent element
-                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call! 952</div>');
+                                btn.parent().parent().append('<div class="alert alert-success">Bridge success: Use your VoIP app to hold/resume the call! </div>');
                                 sessionStorage.setItem('activeCalls', JSON.stringify(activeCalls));
                             } else {
                                 alert('Error toggling mute: ' + response.message);
@@ -947,6 +949,7 @@ try {
                 const callId = $(this).data('call-id');
                 const callChannel = $(this).data('call-channel');
                 const CDRUniqueID = $(this).data('cdr-unique-id');
+                const supportChannel = $(this).data('support-channel');
                 if (activeCalls[callId]) {
                     const spinner = btn.find('.call-end-spinner');
                     // disable button and show spinner
@@ -960,6 +963,7 @@ try {
                             action: 'end_call',
                             call_id: callId,
                             callChannel: callChannel,
+                            supportChannel:supportChannel,
                             cdr_uniqueid: CDRUniqueID,
                             csrf_token: '<?php echo htmlspecialchars($_SESSION['csrf_token']); ?>'
                         },
